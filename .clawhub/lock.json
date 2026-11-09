@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "@staybased/client-discovery": {
+      "version": "1.0.0",
+      "installedAt": 1794239501197,
+      "ownerHandle": "staybased"
+    }
+  }
+}

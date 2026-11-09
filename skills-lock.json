@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "skills": {
+    "Lead Research Assistant": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "skillPath": "lead-research/SKILL.md",
+      "computedHash": "0fa74099704cb3a4aa49520cffcbd4933f7a2bf09d35f7de2e75cec861c3e4e8"
+    },
+    "account-research": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/account-research/SKILL.md",
+      "computedHash": "56374a1aa46c79aa158d63a46b652bd94dff5fb0f9f516a17ce3f64f7a5f582c"
+    },
+    "analyst-research": {
+      "source": "genli-ai/market-research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/analyst-research/SKILL.md",
+      "computedHash": "3c0bbf548f051867d94ab487cb210ad602c86d3335dd240305b4c8b833e70778"
+    },
+    "call-prep": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/call-prep/SKILL.md",
+      "computedHash": "3d9be9de4cc731baa7c443b0b64b8c75f65b10904963c7d0af264b181ab9f39d"
+    },
+    "compose-outreach": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/compose-outreach/SKILL.md",
+      "computedHash": "7c1a4a1e24947e02261dc44b775d2b1582aecc506b1c4dea4d83778e3e98f502"
+    },
+    "contact-research": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/contact-research/SKILL.md",
+      "computedHash": "5d796e84502e9efe52c6763e7e9d5baeb93866169aa03b77106f82d52c17b5be"
+    },
+    "discovery-interview-prep": {
+      "source": "deanpeters/Product-Manager-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/discovery-interview-prep/SKILL.md",
+      "computedHash": "b6a30665e24f963eb78347e84e4dffb56f186b0d4a79ab7ff2ece3cc7221a264"
+    },
+    "discovery-process": {
+      "source": "deanpeters/Product-Manager-Skills",
+      "sourceType": "github",
+      "skillPath": "skills/discovery-process/SKILL.md",
+      "computedHash": "17dfe9ae456818d8b22825f35c9452b5700a94d018523ff8d509399dde79bc41"
+    },
+    "first-customer-finder": {
+      "source": "leo-proger/claude-first-customer-finder-skill",
+      "sourceType": "github",
+      "skillPath": "first-customer-finder/SKILL.md",
+      "computedHash": "118fec11c302fcbfb0bb13768d1571b8702f3cd2a5aae2034d40a2b68a8bd309"
+    },
+    "lead-generation": {
+      "source": "superagnt/plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/superagnt/skills/lead-generation/SKILL.md",
+      "computedHash": "ff7bf3674a8ce364914d7d75d70952ffd773212a5c4f65cf37ffd95efd10b167"
+    },
+    "lead-qualification": {
+      "source": "athina-ai/goose-skills",
+      "sourceType": "github",
+      "skillPath": "skills/shared/lead-qualification/SKILL.md",
+      "computedHash": "ba483eb76207c1896917ca5ce9901c127c8bac77b493b20f3db28b36ad392a31"
+    },
+    "lead-research-assistant": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "skillPath": "cli-tool/components/skills/business-marketing/lead-research-assistant/SKILL.md",
+      "computedHash": "08cf5477dfdcbefa0758fad431c226efb9f09e108c8c6477b4a14db2d6810889"
+    },
+    "local-vault": {
+      "source": "genli-ai/market-research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/local-vault/SKILL.md",
+      "computedHash": "d988b9233e0cc3cdaa8e6493cde6d100de18afdb5e5bbf5d2f1c6763b4535539"
+    },
+    "lookalike-prospect": {
+      "source": "lusha-oss/lusha-mcp-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/lookalike-prospect/SKILL.md",
+      "computedHash": "0bcd8a29b749695654ef67523dfc34ce025c6a75229862aadc159db20f7efbed"
+    },
+    "prospect": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/prospect/SKILL.md",
+      "computedHash": "99ab494fe998b8aaa897cd5dce2eca65a6dc6abfac80834e79c2542d6cb16772"
+    },
+    "prospect-research": {
+      "source": "Promptless/last-call",
+      "sourceType": "github",
+      "skillPath": "examples/prospect-research/SKILL.md",
+      "computedHash": "7ecdf365d2903a28757a28a889066ff8359ba236629ce36dc96ecb3fc1a2bf3e"
+    },
+    "signal-prospect": {
+      "source": "lusha-oss/lusha-mcp-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/signal-prospect/SKILL.md",
+      "computedHash": "8dc0e02df9ebb422bd7edc4563ce6ab062f3c7db148f814166549dc6ef3ae1e6"
+    },
+    "signal-scout": {
+      "source": "julienamorgan/signal-prospecting-kit",
+      "sourceType": "github",
+      "skillPath": "skills/signal-scout/SKILL.md",
+      "computedHash": "5494ba9877001860c0108e61f84963663a321cccd19de055cbc36b18acd6267d"
+    },
+    "topic-brief": {
+      "source": "genli-ai/market-research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/topic-brief/SKILL.md",
+      "computedHash": "451375cb545ce3da83cef16c83b1711c56f0b0f2d343418118b3e2423928e0c0"
+    },
+    "verifying": {
+      "source": "genli-ai/market-research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/verifying/SKILL.md",
+      "computedHash": "dc2231c880f7f99d4ffce69c0f3f3d857e3a2acbfcf5a7ed3180e5883fd0979d"
+    },
+    "weekly-prep-brief": {
+      "source": "common-room/claude-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/weekly-prep-brief/SKILL.md",
+      "computedHash": "d60fe1eeaa88a22898acd94a21f4028d85b6ce0a43f26e19abaf3bab78899a97"
+    }
+  }
+}
