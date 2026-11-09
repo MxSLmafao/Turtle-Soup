@@ -1,0 +1,12 @@
+{
+  "version": "0.1.6",
+  "installedAt": "2026-11-09T14:44:06.763Z",
+  "components": [
+    "skill_clone",
+    "commands"
+  ],
+  "files": [
+    ".claude/commands/clone-website.md",
+    ".claude/skills/clone-website/SKILL.md"
+  ]
+}
