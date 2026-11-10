@@ -1,0 +1,348 @@
+<!--
+  Placeholder brand: "Hearthline Kitchen". All copy, names and imagery are invented.
+  Sample content only. Design study of a Singapore caterer homepage (catering-led F&B site).
+  No photos, logos or licensed fonts are used; artwork is inline SVG and CSS gradients.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearthline Kitchen | Catering and daily boxes</title>
+  <meta name="description" content="Sample catering homepage: daily boxes, celebrations and catering for every size of gathering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Figtree:wght@300;400;500;700&family=Ultra&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="announce" role="region" aria-label="Announcement">
+  <p>New this month: a smoked brisket tasting menu, now on our catering list at <a href="#catering">hearthline.example</a></p>
+  <button class="announce__close" type="button" aria-label="Dismiss announcement">
+    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a class="wordmark" href="#top" aria-label="Hearthline Kitchen home">
+      <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><path d="M14 2c3 4 6 7 6 12a6 6 0 0 1-12 0c0-5 3-8 6-12z" fill="currentColor"/><path d="M14 14v12" stroke="#7b0007" stroke-width="1.6"/></svg>
+      <span>HEARTHLINE</span>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main">
+      <a href="#daily">Daily Boxes</a>
+      <a href="#celebrations">Celebrations</a>
+      <a href="#catering">Catering</a>
+      <a href="#seasonal">Seasonal</a>
+    </nav>
+    <a class="header-cta" href="#contact">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <defs>
+          <linearGradient id="heroSage" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c9cfa4"/><stop offset="0.55" stop-color="#c1c89d"/><stop offset="0.62" stop-color="#8e1224"/><stop offset="1" stop-color="#7b0007"/>
+          </linearGradient>
+          <radialGradient id="roastGlow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#b5452f"/><stop offset="1" stop-color="#5a1408"/>
+          </radialGradient>
+          <radialGradient id="bowlYellow" cx="0.45" cy="0.35" r="0.7">
+            <stop offset="0" stop-color="#ffd84a"/><stop offset="1" stop-color="#d89a0b"/>
+          </radialGradient>
+          <radialGradient id="bowlRed" cx="0.45" cy="0.3" r="0.75">
+            <stop offset="0" stop-color="#e5493a"/><stop offset="1" stop-color="#8f0a12"/>
+          </radialGradient>
+          <linearGradient id="plateCream" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6efe2"/><stop offset="1" stop-color="#d9cdb6"/>
+          </linearGradient>
+          <linearGradient id="drinkAmber" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f4c58a"/><stop offset="1" stop-color="#d4824a"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="800" fill="url(#heroSage)"/>
+        <!-- wall texture -->
+        <g fill="#b8be8e" opacity="0.35">
+          <circle cx="120" cy="90" r="14"/><circle cx="410" cy="60" r="10"/><circle cx="880" cy="110" r="16"/><circle cx="1210" cy="70" r="12"/><circle cx="1330" cy="260" r="18"/><circle cx="60" cy="380" r="12"/>
+        </g>
+        <!-- candles -->
+        <g>
+          <rect x="60" y="60" width="26" height="180" rx="4" fill="#f5efe6"/>
+          <rect x="190" y="200" width="22" height="150" rx="4" fill="#efe6d6"/>
+          <ellipse cx="75" cy="58" rx="13" ry="7" fill="#e9b96a" opacity="0.8"/>
+        </g>
+        <!-- table cloth -->
+        <path d="M0 470 Q720 430 1440 470 L1440 800 L0 800 Z" fill="#7b0007"/>
+        <path d="M0 520 Q720 480 1440 520 L1440 800 L0 800 Z" fill="#8f0a12" opacity="0.55"/>
+        <!-- roast centrepiece on board -->
+        <path d="M400 430 L780 330 L840 420 L470 520 Z" fill="#c9a36a"/>
+        <path d="M430 400 Q600 290 760 330 L740 360 Q600 330 450 420 Z" fill="#4a1a10"/>
+        <path d="M480 420 Q600 350 730 380 L700 404 Q610 380 500 436 Z" fill="#b8323c"/>
+        <g fill="#ff4a58" opacity="0.9"><circle cx="520" cy="392" r="4"/><circle cx="600" cy="354" r="4"/><circle cx="672" cy="366" r="4"/><circle cx="640" cy="410" r="4"/></g>
+        <!-- rice pan (left) -->
+        <ellipse cx="180" cy="590" rx="210" ry="82" fill="#2f6b3b"/>
+        <ellipse cx="180" cy="580" rx="180" ry="62" fill="#f3d26a"/>
+        <g fill="#e05a2c"><circle cx="110" cy="580" r="7"/><circle cx="170" cy="566" r="6"/><circle cx="240" cy="590" r="7"/><circle cx="290" cy="572" r="6"/></g>
+        <g fill="#2f8a4a"><circle cx="140" cy="600" r="4"/><circle cx="220" cy="560" r="4"/></g>
+        <!-- salad bowl -->
+        <ellipse cx="540" cy="620" rx="100" ry="34" fill="#e8b322"/>
+        <path d="M440 620 Q440 700 540 700 Q640 700 640 620 Z" fill="url(#bowlYellow)"/>
+        <g fill="#2e7a3a"><circle cx="490" cy="600" r="22"/><circle cx="530" cy="586" r="20"/><circle cx="580" cy="600" r="22"/><circle cx="560" cy="620" r="16"/></g>
+        <g fill="#f5a04a"><circle cx="510" cy="620" r="6"/><circle cx="600" cy="612" r="5"/></g>
+        <!-- nacho / chicken bowl -->
+        <ellipse cx="740" cy="710" rx="130" ry="46" fill="#8f0a12"/>
+        <path d="M620 700 Q620 790 740 790 Q860 790 860 700 Z" fill="url(#bowlRed)"/>
+        <path d="M660 690 L720 650 L770 690 L740 720 Z" fill="#f5e7b8"/>
+        <path d="M700 660 L760 630 L800 668 L760 700 Z" fill="#f2d78e"/>
+        <path d="M690 700 Q740 668 790 700" stroke="#5c2412" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <!-- side plate -->
+        <ellipse cx="1000" cy="675" rx="130" ry="46" fill="url(#plateCream)"/>
+        <g fill="#f08a2a"><circle cx="950" cy="665" r="10"/><circle cx="1000" cy="655" r="8"/></g>
+        <g fill="#d64632"><circle cx="1030" cy="680" r="7"/><circle cx="975" cy="690" r="7"/></g>
+        <g fill="#f3c44e"><circle cx="1050" cy="662" r="6"/></g>
+        <!-- cake stand -->
+        <ellipse cx="1080" cy="525" rx="190" ry="55" fill="#a56a3a"/>
+        <ellipse cx="1080" cy="505" rx="160" ry="42" fill="#c4854e"/>
+        <path d="M1070 530 L1080 600 L1090 530 Z" fill="#7b4a22"/>
+        <ellipse cx="1080" cy="600" rx="60" ry="14" fill="#7b4a22"/>
+        <ellipse cx="1050" cy="478" rx="130" ry="50" fill="#f1ddb6"/>
+        <path d="M980 470 Q1050 420 1130 470" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.8"/>
+        <g fill="#e34a3a"><circle cx="1000" cy="466" r="6"/><circle cx="1070" cy="458" r="6"/><circle cx="1120" cy="476" r="5"/></g>
+        <!-- drinks -->
+        <path d="M1300 520 L1290 700 Q1290 740 1330 740 Q1370 740 1370 700 L1360 520 Z" fill="url(#drinkAmber)" opacity="0.95"/>
+        <path d="M1296 560 L1290 700 Q1290 740 1330 740" stroke="#fff3da" stroke-width="2" fill="none" opacity="0.6"/>
+        <path d="M1318 480 L1330 530" stroke="#2f7a3a" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="1330" cy="520" r="8" fill="#2f7a3a"/>
+        <!-- candle holder and gold -->
+        <ellipse cx="200" cy="335" rx="120" ry="20" fill="#c79a3e"/>
+        <rect x="170" y="300" width="60" height="40" rx="6" fill="#b58a35"/>
+        <!-- foreground silverware -->
+        <path d="M800 740 L1200 690" stroke="#9aa2a8" stroke-width="7" stroke-linecap="round"/>
+        <path d="M300 760 L340 720" stroke="#9aa2a8" stroke-width="6" stroke-linecap="round"/>
+        <!-- cloche glow -->
+        <ellipse cx="620" cy="250" rx="420" ry="90" fill="#fff3d0" opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="hero__copy">
+      <h1 id="hero-title">Gather everyone.<br>Let the kitchen do the rest.</h1>
+      <p class="hero__sub">Seasonal plates, honest flavours and a spread that looks as good as it tastes.</p>
+      <a class="btn btn--yellow btn--lg" href="#catering">Set the table</a>
+    </div>
+  </section>
+
+  <!-- Product cards -->
+  <section class="products" aria-label="Our services">
+    <div class="products__grid">
+
+      <a class="product product--daily" id="daily" href="#daily">
+        <div class="product__bg" aria-hidden="true">
+          <svg viewBox="0 0 459 480" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="dailyWood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c5a33"/><stop offset="1" stop-color="#3b2415"/></linearGradient>
+              <linearGradient id="dailyPaper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eee2"/><stop offset="1" stop-color="#ddd3bf"/></linearGradient>
+            </defs>
+            <rect width="459" height="480" fill="url(#dailyWood)"/>
+            <g opacity="0.15" stroke="#f3d7a8" stroke-width="2"><path d="M0 60 H459 M0 130 H459 M0 200 H459 M0 270 H459 M0 340 H459 M0 410 H459"/></g>
+            <g>
+              <rect x="30" y="170" width="170" height="92" rx="10" fill="url(#dailyPaper)" transform="rotate(-6 115 216)"/>
+              <rect x="240" y="150" width="180" height="100" rx="10" fill="url(#dailyPaper)" transform="rotate(4 330 200)"/>
+              <rect x="110" y="280" width="200" height="90" rx="10" fill="url(#dailyPaper)"/>
+            </g>
+            <g fill="#e05a2c" opacity="0.9"><circle cx="90" cy="200" r="9" transform="rotate(-6 115 216)"/><circle cx="130" cy="240" r="7"/></g>
+            <g fill="#3f8f4c"><circle cx="300" cy="180" r="10"/><circle cx="330" cy="200" r="8"/></g>
+            <g fill="#f3c44e"><circle cx="200" cy="312" r="8"/><circle cx="250" cy="330" r="7"/></g>
+            <path d="M0 300 Q120 260 240 300 T459 290 L459 480 L0 480 Z" fill="#000" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="product__copy">
+          <h2 class="product__title">Daily Boxes</h2>
+          <p class="product__byline">Wholesome lunch boxes, packed fresh and delivered the same day.</p>
+          <span class="btn btn--yellow">Order now</span>
+        </div>
+      </a>
+
+      <a class="product product--celebrations" id="celebrations" href="#celebrations">
+        <div class="product__bg" aria-hidden="true">
+          <svg viewBox="0 0 459 480" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="celebBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3c33"/><stop offset="1" stop-color="#1b1412"/></linearGradient>
+              <radialGradient id="celebLight" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#f1d9a7" stop-opacity="0.6"/><stop offset="1" stop-color="#f1d9a7" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="459" height="480" fill="url(#celebBg)"/>
+            <rect width="459" height="480" fill="url(#celebLight)"/>
+            <g fill="none" stroke="#e7d3a2" stroke-width="1.5" opacity="0.5"><ellipse cx="230" cy="230" rx="180" ry="60"/><ellipse cx="230" cy="250" rx="140" ry="44"/></g>
+            <g fill="#f4ecdc"><ellipse cx="230" cy="250" rx="120" ry="30"/></g>
+            <g fill="#1b1412"><rect x="120" y="180" width="6" height="60"/><rect x="330" y="180" width="6" height="60"/></g>
+            <g fill="#c9a24b"><circle cx="122" cy="176" r="10"/><circle cx="333" cy="176" r="10"/></g>
+            <g fill="#e2573f"><circle cx="210" cy="232" r="6"/><circle cx="250" cy="236" r="6"/><circle cx="230" cy="222" r="5"/></g>
+            <g fill="#f6e3b0" opacity="0.8"><path d="M90 300 l10 -20 l10 20z M360 300 l10 -20 l10 20z M180 340 l8 -16 l8 16z"/></g>
+            <path d="M0 340 Q230 300 459 340 L459 480 L0 480 Z" fill="#000" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="product__copy">
+          <h2 class="product__title">Celebrations</h2>
+          <p class="product__byline">Make your big day effortless, with plated courses and a dedicated host.</p>
+          <span class="btn btn--yellow">Plan now</span>
+        </div>
+      </a>
+
+      <a class="product product--catering" id="catering" href="#catering">
+        <div class="product__bg" aria-hidden="true">
+          <svg viewBox="0 0 459 480" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="cateringBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a4a2e"/><stop offset="1" stop-color="#22160d"/></linearGradient>
+              <linearGradient id="chafe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7d9dc"/><stop offset="0.5" stop-color="#9ea3a9"/><stop offset="1" stop-color="#5f646a"/></linearGradient>
+            </defs>
+            <rect width="459" height="480" fill="url(#cateringBg)"/>
+            <rect x="0" y="240" width="459" height="240" fill="#2a1a10"/>
+            <!-- chafing dishes -->
+            <g>
+              <rect x="30" y="250" width="110" height="34" rx="4" fill="url(#chafe)"/>
+              <rect x="30" y="284" width="110" height="60" rx="3" fill="#7e858c"/>
+              <rect x="170" y="250" width="120" height="34" rx="4" fill="url(#chafe)"/>
+              <rect x="170" y="284" width="120" height="60" rx="3" fill="#7e858c"/>
+              <rect x="320" y="250" width="110" height="34" rx="4" fill="url(#chafe)"/>
+              <rect x="320" y="284" width="110" height="60" rx="3" fill="#7e858c"/>
+            </g>
+            <g>
+              <path d="M36 262 Q85 232 134 262 Z" fill="#e8b33a"/>
+              <path d="M176 262 Q230 226 284 262 Z" fill="#cf5a2a"/>
+              <path d="M326 262 Q375 232 424 262 Z" fill="#7aa34a"/>
+            </g>
+            <g fill="#f9dc8d" opacity="0.7"><circle cx="60" cy="256" r="6"/><circle cx="230" cy="250" r="6"/><circle cx="360" cy="256" r="6"/></g>
+            <!-- serving tray with trays of food -->
+            <g fill="#f4eee2"><rect x="60" y="360" width="150" height="26" rx="6"/><rect x="250" y="360" width="150" height="26" rx="6"/></g>
+            <g fill="#e05a2c"><circle cx="100" cy="373" r="10"/><circle cx="130" cy="373" r="9"/><circle cx="160" cy="373" r="10"/></g>
+            <g fill="#3f8f4c"><circle cx="290" cy="373" r="9"/><circle cx="320" cy="373" r="10"/><circle cx="350" cy="373" r="9"/></g>
+            <path d="M0 400 Q230 380 459 400 L459 480 L0 480 Z" fill="#000" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="product__copy">
+          <h2 class="product__title">Catering</h2>
+          <p class="product__byline">Generous spreads for offices, gatherings and events of every size.</p>
+          <span class="btn btn--yellow">Plan now</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" aria-labelledby="testimonials-title">
+    <div class="testimonials__inner">
+      <h2 id="testimonials-title" class="testimonials__title">Kind words from our hosts</h2>
+      <div class="carousel" data-carousel>
+        <div class="carousel__track">
+          <figure class="testimonial is-active">
+            <blockquote><p>"Ordering was simple and the food was classy yet hearty. Delivery was on time, the team was flexible, and even the serveware looked great."</p></blockquote>
+            <figcaption>Mei Ling, events lead</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote><p>"Everyone cleaned their plates. The only complaint is that everything was so good that nobody could pick a favourite."</p></blockquote>
+            <figcaption>Daniel, office manager</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote><p>"We have ordered for two years and used them for our own wedding. Reliable, thoughtful, and the price made sense every time."</p></blockquote>
+            <figcaption>Aisha, bride</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote><p>"It tastes like a home-cooked meal from a friend who loves to host. Even the fussiest eater asked for seconds."</p></blockquote>
+            <figcaption>Farid, family host</figcaption>
+          </figure>
+        </div>
+        <div class="carousel__dots" role="tablist" aria-label="Choose testimonial">
+          <button type="button" class="is-active" aria-label="Testimonial 1"></button>
+          <button type="button" aria-label="Testimonial 2"></button>
+          <button type="button" aria-label="Testimonial 3"></button>
+          <button type="button" aria-label="Testimonial 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary banner -->
+  <section class="banner" id="seasonal" aria-labelledby="banner-title">
+    <div class="banner__split" aria-hidden="true">
+      <div class="banner__left"></div>
+      <div class="banner__right"></div>
+    </div>
+    <div class="banner__copy">
+      <h2 id="banner-title">Ready when you are</h2>
+      <a href="#about">Read our kitchen story</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <svg viewBox="0 0 28 28" width="34" height="34" aria-hidden="true"><path d="M14 2c3 4 6 7 6 12a6 6 0 0 1-12 0c0-5 3-8 6-12z" fill="#fff"/><path d="M14 14v12" stroke="#000" stroke-width="1.6"/></svg>
+    </div>
+    <div class="site-footer__cols">
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#people">Our people</a></li>
+          <li><a href="#stories">Our stories</a></li>
+          <li><a href="#area">Delivery area</a></li>
+          <li><a href="#careers">We're hiring</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#daily">Daily Boxes</a></li>
+          <li><a href="#celebrations">Celebrations</a></li>
+          <li><a href="#catering">Catering</a></li>
+          <li><a href="#seasonal">Seasonal</a></li>
+          <li><a href="#gift">Gift Cards</a></li>
+          <li><a href="#rewards">Hearth Rewards</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__badges" aria-label="Accreditations">
+        <span class="badge badge--round">DEMO</span>
+        <span class="badge badge--iso">CERT<small>DEMO</small></span>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <div class="legal-links">
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+      <div class="social" aria-label="Social">
+        <a href="#facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M14 8V6.5c0-.8.4-1.2 1.2-1.2H17V2h-2.6C11.9 2 11 3.6 11 5.6V8H9v3.2h2V22h3V11.2h2.4L17 8z" fill="currentColor"/></svg>
+        </a>
+        <a href="#instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="#contact" aria-label="Chat with us">
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 3C8.8 3 3 8.6 3 15.5c0 3.5 1.5 6.7 4 9L6 29l4.8-2.5c1.7.5 3.5.8 5.2.8 7.2 0 13-5.6 13-12.5S23.2 3 16 3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 13h10M11 18h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

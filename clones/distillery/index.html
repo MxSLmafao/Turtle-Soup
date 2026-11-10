@@ -1,0 +1,505 @@
+<!doctype html>
+<!--
+  Placeholder brand: "Copper Heron Distilling Co." (fictional).
+  Sample content only: all copy, product names, prices and awards are invented.
+  Design study of: Wineries & distilleries (craft gin distillery homepage with age gate,
+  announcement bar, hero slideshow, marquees, product carousel, stamp-card experiences and
+  social gallery). No photos, logos or fonts were copied; imagery is hand-drawn SVG.
+-->
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Copper Heron Distilling Co. | Small-Batch Gin</title>
+  <meta name="description" content="Small-batch gins distilled with Southeast Asian botanicals. Tours, gin schools and tastings at the Copper Heron distillery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Shared SVG art: bottle, still, coupe glass, sheen gradients. Referenced with <use>. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="sheen" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".22" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".38" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#7A3A1E"/>
+      <stop offset=".3" stop-color="#D9824A"/>
+      <stop offset=".5" stop-color="#F2B07A"/>
+      <stop offset=".72" stop-color="#B9622F"/>
+      <stop offset="1" stop-color="#6A2F18"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F4D08A"/>
+      <stop offset=".5" stop-color="#DC9B27"/>
+      <stop offset="1" stop-color="#9A6414"/>
+    </linearGradient>
+
+    <!-- Bottle: fill via --liquid, --label, --cap -->
+    <symbol id="bottle" viewBox="0 0 120 300">
+      <ellipse cx="60" cy="292" rx="52" ry="6" fill="#000" opacity=".35"/>
+      <path d="M50 6h20v40H50z" style="fill:var(--cap,#C99A5B)"/>
+      <rect x="47" y="44" width="26" height="26" rx="2" fill="#fff" opacity=".18"/>
+      <path d="M47 68C20 86 14 112 14 150V264C14 280 24 290 40 290H80C96 290 106 280 106 264V150C106 112 100 86 73 68Z" fill="#fff" opacity=".16"/>
+      <path d="M16 128Q60 118 104 128V264C104 280 96 288 80 288H40C24 288 16 280 16 264Z" style="fill:var(--liquid,#6fa39a)" opacity=".9"/>
+      <path d="M47 68C20 86 14 112 14 150V264C14 280 24 290 40 290H80C96 290 106 280 106 264V150C106 112 100 86 73 68Z" fill="url(#sheen)"/>
+      <rect x="26" y="156" width="68" height="100" rx="3" style="fill:var(--label,#2d4a4f)"/>
+      <path d="M60 168L78 192L60 216L42 192Z" fill="url(#gold)"/>
+      <path d="M60 176L70 192L60 208L50 192Z" fill="none" stroke="#2b1d08" stroke-opacity=".35" stroke-width="1"/>
+      <text x="60" y="244" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="7.4" letter-spacing=".7" fill="#F3EADC">COPPER HERON</text>
+      <text x="60" y="144" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="600" font-size="7" letter-spacing="1.6" fill="#F3EADC" opacity=".9">SMALL BATCH</text>
+    </symbol>
+
+    <!-- Copper still: 300 x 400 -->
+    <symbol id="still" viewBox="0 0 300 400">
+      <rect x="34" y="366" width="232" height="22" rx="6" fill="#4B2A18"/>
+      <rect x="54" y="372" width="192" height="6" rx="3" fill="#7A4A2A" opacity=".6"/>
+      <path d="M150 90C164 90 176 100 178 130C200 150 228 178 228 250C228 320 196 352 150 352C104 352 72 320 72 250C72 178 100 150 122 130C124 100 136 90 150 90Z" fill="url(#copper)"/>
+      <ellipse cx="150" cy="120" rx="44" ry="16" fill="#F7C690" opacity=".55"/>
+      <path d="M134 80H166V112H134Z" fill="url(#copper)"/>
+      <ellipse cx="150" cy="78" rx="36" ry="18" fill="#E9A064"/>
+      <path d="M150 70C170 60 240 44 262 72" stroke="#A9552C" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <rect x="250" y="80" width="30" height="230" rx="15" fill="url(#copper)"/>
+      <rect x="236" y="300" width="58" height="12" rx="6" fill="#7A3E1E"/>
+      <circle cx="150" cy="260" r="10" fill="#FFE2B8" opacity=".5"/>
+      <g fill="#6A2F18" opacity=".7"><rect x="82" y="200" width="136" height="3" rx="1.5"/><rect x="82" y="290" width="136" height="3" rx="1.5"/></g>
+      <g fill="#FFE2B8" opacity=".85"><circle cx="105" cy="215" r="3"/><circle cx="195" cy="215" r="3"/><circle cx="105" cy="275" r="3"/><circle cx="195" cy="275" r="3"/></g>
+    </symbol>
+
+    <!-- Coupe glass: 100 x 160 -->
+    <symbol id="coupe" viewBox="0 0 100 160">
+      <ellipse cx="50" cy="150" rx="28" ry="5" fill="#000" opacity=".3"/>
+      <rect x="46" y="80" width="8" height="66" fill="#fff" opacity=".35"/>
+      <ellipse cx="50" cy="146" rx="26" ry="5" fill="#fff" opacity=".3"/>
+      <path d="M8 18H92C92 60 74 86 50 86C26 86 8 60 8 18Z" style="fill:var(--liquid,#8a3b8f)" opacity=".85"/>
+      <path d="M8 18H92C92 60 74 86 50 86C26 86 8 60 8 18Z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.6"/>
+      <ellipse cx="50" cy="18" rx="42" ry="6" fill="#fff" opacity=".4"/>
+    </symbol>
+
+    <!-- Juniper berry -->
+    <symbol id="berry" viewBox="0 0 20 20">
+      <radialGradient id="berryG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#5E7FC4"/><stop offset="1" stop-color="#1F2F5C"/></radialGradient>
+      <circle cx="10" cy="10" r="8.5" fill="url(#berryG)" stroke="#111" stroke-opacity=".5" stroke-width=".8"/>
+      <ellipse cx="7" cy="6.5" rx="2" ry="1.2" fill="#fff" opacity=".5"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ AGE GATE (dismissible overlay) ============ -->
+<div class="gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate__inner">
+    <div class="gate__logo" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="44" height="44"><path d="M32 4 L60 32 L32 60 L4 32Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M32 16 L46 32 L32 48 L18 32Z" fill="currentColor" opacity=".9"/></svg>
+      <span>COPPER HERON</span>
+    </div>
+    <div class="gate__panel" data-gate-step="ask">
+      <h2 id="gateTitle" class="gate__title">Are you 18 or older?</h2>
+      <div class="gate__actions">
+        <button type="button" class="btn btn--outline" data-gate="no">Not yet</button>
+        <button type="button" class="btn btn--solid" data-gate="yes">Yes, I am 18+</button>
+      </div>
+    </div>
+    <div class="gate__panel" data-gate-step="no" hidden>
+      <h2 class="gate__title">Sorry, our spirits are for adults only.</h2>
+      <p class="gate__text">Come back when you are older. We will be here, distilling.</p>
+      <div class="gate__actions">
+        <button type="button" class="btn btn--outline" data-gate="back">Go back</button>
+      </div>
+    </div>
+    <div class="gate__emblem" aria-hidden="true">
+      <svg viewBox="0 0 120 150" width="92"><ellipse cx="60" cy="138" rx="30" ry="5" fill="#000" opacity=".15"/><path d="M60 12C84 12 96 36 96 62C96 84 84 96 74 108L60 126L46 108C36 96 24 84 24 62C24 36 36 12 60 12Z" fill="#DC9B27" opacity=".9"/><path d="M60 30C72 36 78 50 78 64C78 78 70 88 60 98C50 88 42 78 42 64C42 50 48 36 60 30Z" fill="#F3EADC" opacity=".8"/><path d="M60 48V92M50 62L60 72L70 62" stroke="#45464B" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NEWSLETTER POPUP ============ -->
+<div class="news" id="newsPop" hidden>
+  <div class="news__backdrop" data-news-close></div>
+  <div class="news__card" role="dialog" aria-modal="true" aria-labelledby="newsTitle">
+    <button class="news__close" type="button" aria-label="Close" data-news-close>
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <div class="news__art" aria-hidden="true">
+      <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+        <defs><linearGradient id="newsBg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5A3520"/><stop offset="1" stop-color="#1D1A18"/></linearGradient></defs>
+        <rect width="400" height="200" fill="url(#newsBg)"/>
+        <rect y="150" width="400" height="50" fill="#2A2725"/>
+        <use href="#bottle" x="30" y="30" width="78" height="195" style="--liquid:#E6EEE8;--label:#2D4A4F"/>
+        <use href="#bottle" x="104" y="20" width="84" height="210" style="--liquid:#2A3F73;--label:#1E2D52"/>
+        <use href="#bottle" x="186" y="8" width="90" height="225" style="--liquid:#D9826B;--label:#7A2B2B"/>
+        <use href="#bottle" x="270" y="24" width="82" height="205" style="--liquid:#3A2A12;--label:#14182E"/>
+        <use href="#bottle" x="330" y="34" width="78" height="190" style="--liquid:#C48A3C;--label:#2F2418"/>
+      </svg>
+    </div>
+    <div class="news__body">
+      <h2 id="newsTitle" class="news__title">Get 10% off your first bottle</h2>
+      <form class="news__form" data-news-form>
+        <label class="sr-only" for="newsEmail">Email</label>
+        <input id="newsEmail" type="email" name="email" placeholder="Email" required autocomplete="email">
+        <button type="submit" class="btn btn--ink">Subscribe</button>
+      </form>
+      <p class="news__note" data-news-msg>New releases and private offers, straight to your inbox</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="announce">
+  <a href="#awards" class="announce__link">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0V4Z M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M12 13v4M8 21h8M9 17h6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/></svg>
+    <span>Gold medal at the 2025 Harbour Spirits Awards. Read more.</span>
+  </a>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="siteHeader">
+  <div class="header__in">
+    <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path class="l1" d="M4 7h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="l2" d="M4 12h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="l3" d="M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <a class="logo" href="#top" aria-label="Copper Heron Distilling Co., home">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="26" height="26"><path d="M20 3L37 20L20 37L3 20Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 11L29 20L20 29L11 20Z" fill="currentColor"/></svg>
+      </span>
+      <span class="logo__text"><b>COPPER HERON</b><small>DISTILLING CO.</small></span>
+    </a>
+    <div class="header__icons">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a class="icon-btn" href="#account" aria-label="Account">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="8.5" r="4" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M4.5 20.5c1.4-3.6 4-5.2 7.5-5.2s6.1 1.6 7.5 5.2" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      </a>
+      <a class="icon-btn cart" href="#cart" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 4h2.5l2.2 10.5h10.6L20.5 7H7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/></svg>
+        <span class="cart__count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Drawer (menu) -->
+<div class="drawer-scrim" data-drawer-close></div>
+<nav class="drawer" id="drawer" aria-label="Main">
+  <ul>
+    <li><a href="#gins">Shop All Gins</a></li>
+    <li><a href="#experiences">Experiences</a></li>
+    <li><a href="#merch">Merchandise</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#visit">Visit the Distillery</a></li>
+    <li><a href="#recipes">Recipes</a></li>
+    <li><a href="#journal">Journal</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ============ 1. HERO SLIDESHOW ============ -->
+<section class="hero" id="top" aria-roledescription="carousel" aria-label="Featured">
+  <div class="slides">
+    <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 2">
+      <div class="slide__art" aria-hidden="true">
+        <svg viewBox="0 0 1440 863" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D2622"/><stop offset=".6" stop-color="#1B1714"/><stop offset="1" stop-color="#0E0C0B"/></linearGradient>
+            <pattern id="brick" width="96" height="44" patternUnits="userSpaceOnUse"><rect width="96" height="44" fill="none" stroke="#B88D65" stroke-opacity=".12"/><rect x="48" width="48" height="22" fill="none" stroke="#B88D65" stroke-opacity=".08"/></pattern>
+            <radialGradient id="glow1" cx=".42" cy=".38" r=".5"><stop offset="0" stop-color="#F0B56A" stop-opacity=".55"/><stop offset="1" stop-color="#F0B56A" stop-opacity="0"/></radialGradient>
+            <linearGradient id="bench" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A3532"/><stop offset="1" stop-color="#121011"/></linearGradient>
+          </defs>
+          <rect width="1440" height="863" fill="url(#wall)"/>
+          <rect width="1440" height="863" fill="url(#brick)"/>
+          <rect width="1440" height="863" fill="url(#glow1)"/>
+          <!-- pipework -->
+          <path d="M1000 160H1210V360" stroke="#8C5530" stroke-width="16" fill="none"/>
+          <path d="M1210 360V520" stroke="#6F4324" stroke-width="10" fill="none"/>
+          <circle cx="1210" cy="360" r="20" fill="#B56A3A"/>
+          <!-- pressure gauge -->
+          <circle cx="1190" cy="330" r="30" fill="#1C1A19" stroke="#C99A5B" stroke-width="5"/>
+          <path d="M1190 330L1206 318" stroke="#F3EADC" stroke-width="2"/>
+          <!-- still (large, background) -->
+          <use href="#still" x="300" y="-40" width="420" height="560" opacity=".55"/>
+          <!-- bench -->
+          <rect y="640" width="1440" height="223" fill="url(#bench)"/>
+          <rect y="640" width="1440" height="4" fill="#6B5B52" opacity=".5"/>
+          <!-- bottles -->
+          <g>
+            <use href="#bottle" x="168" y="330" width="132" height="330" style="--liquid:#E6EEE8;--label:#2D4A4F;--cap:#C99A5B"/>
+            <use href="#bottle" x="318" y="290" width="138" height="345" style="--liquid:#B0573A;--label:#5A2A1B;--cap:#D4AE6F"/>
+            <use href="#bottle" x="470" y="268" width="146" height="365" style="--liquid:#E3EEF0;--label:#2C3E5A;--cap:#C99A5B"/>
+            <use href="#bottle" x="636" y="296" width="138" height="345" style="--liquid:#2B1E1A;--label:#24262D;--cap:#D4AE6F"/>
+            <use href="#bottle" x="790" y="322" width="132" height="330" style="--liquid:#D8A35A;--label:#3E2A16;--cap:#C99A5B"/>
+          </g>
+          <ellipse cx="620" cy="650" rx="560" ry="14" fill="#000" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200" width="200" height="200">
+          <defs><path id="badgeRing" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <circle cx="100" cy="100" r="96" fill="#C99A24"/>
+          <circle cx="100" cy="100" r="84" fill="none" stroke="#2A2208" stroke-opacity=".5" stroke-width="1.5"/>
+          <text font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="15" letter-spacing="2.4" fill="#1F1703"><textPath href="#badgeRing">HARBOUR SPIRITS AWARDS 2025 • GOLD •</textPath></text>
+          <circle cx="100" cy="100" r="46" fill="#1F1703"/>
+          <text x="100" y="98" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#F4D08A">GOLD</text>
+          <text x="100" y="118" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="600" font-size="9" letter-spacing="1.5" fill="#F4D08A">DRY GIN</text>
+        </svg>
+      </div>
+      <div class="slide__copy">
+        <h1 class="hero__title">Small batch.<br>Bold spirit.</h1>
+        <p class="hero__text">Copper Heron was awarded gold at the Harbour Spirits Awards for its dry gin, made with botanicals from the Southeast Asian spice trail.</p>
+        <a class="btn btn--amber" href="#gins">Learn More</a>
+      </div>
+    </div>
+
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true">
+      <div class="slide__art" aria-hidden="true">
+        <svg viewBox="0 0 1440 863" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6B3B1E"/><stop offset=".55" stop-color="#2A1A12"/><stop offset="1" stop-color="#120B08"/></linearGradient>
+            <radialGradient id="glow2" cx=".78" cy=".3" r=".55"><stop offset="0" stop-color="#F7C16B" stop-opacity=".6"/><stop offset="1" stop-color="#F7C16B" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="1440" height="863" fill="url(#dusk)"/>
+          <rect width="1440" height="863" fill="url(#glow2)"/>
+          <use href="#still" x="820" y="60" width="520" height="693" opacity=".5"/>
+          <rect y="660" width="1440" height="203" fill="#0E0906"/>
+          <rect y="660" width="1440" height="3" fill="#DC9B27" opacity=".4"/>
+          <use href="#bottle" x="110" y="350" width="120" height="300" style="--liquid:#D9826B;--label:#7A2B2B;--cap:#C99A5B"/>
+          <use href="#bottle" x="250" y="330" width="130" height="330" style="--liquid:#2A3F73;--label:#1E2D52;--cap:#C99A5B"/>
+          <use href="#bottle" x="400" y="356" width="120" height="300" style="--liquid:#E6EEE8;--label:#2D4A4F;--cap:#D4AE6F"/>
+        </svg>
+      </div>
+      <div class="slide__copy">
+        <h1 class="hero__title hero__title--alt">Taste the distillery.</h1>
+        <p class="hero__text">Hands-on tours of our copper stills, guided gin tastings and a bar that mixes with what we distil.</p>
+        <a class="btn btn--amber" href="#experiences">Book an Experience</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide-nav">
+    <span class="slide-nav__count" aria-live="polite"><span data-count-now>1</span> / 2</span>
+    <button class="round-btn" type="button" aria-label="Previous slide" data-hero-prev>
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M14.5 6L8.5 12L14.5 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+    <button class="round-btn" type="button" aria-label="Next slide" data-hero-next>
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9.5 6L15.5 12L9.5 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============ 2. MARQUEE 1 ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Hand-distilled in small batches</span><span>Hand-distilled in small batches</span><span>Hand-distilled in small batches</span><span>Hand-distilled in small batches</span><span>Hand-distilled in small batches</span><span>Hand-distilled in small batches</span>
+  </div>
+</div>
+
+<!-- ============ 3. PRODUCT SLIDER ============ -->
+<section class="gins" id="gins" aria-label="Our gins">
+  <div class="gins__track" data-gin-track>
+    <!-- 7 bottles, generated by script.js from data; markup kept for no-JS fallback below -->
+  </div>
+  <div class="gins__info" aria-live="polite">
+    <h2 class="gins__name" data-gin-name>Harbour Dry Gin</h2>
+    <p class="gins__tag" data-gin-tag>Crisp, zesty and clean.</p>
+    <a class="btn btn--amber" href="#gins" data-gin-link>Learn More</a>
+  </div>
+  <div class="gins__nav">
+    <span class="slide-nav__count"><span data-gin-count>1</span> / 7</span>
+    <button class="round-btn" type="button" aria-label="Previous gin" data-gin-prev>
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M14.5 6L8.5 12L14.5 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+    <button class="round-btn" type="button" aria-label="Next gin" data-gin-next>
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9.5 6L15.5 12L9.5 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============ 4. WHO WE ARE ============ -->
+<section class="about" id="about">
+  <svg class="sprig sprig--left" viewBox="0 0 260 200" aria-hidden="true">
+    <path d="M10 190C60 150 90 110 150 60C180 36 210 22 250 14" stroke="#2F6B45" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g fill="#3E8A57" stroke="#1F4A2D" stroke-width="1.5">
+      <path d="M60 140C70 118 96 116 104 124C92 138 74 146 60 140Z"/>
+      <path d="M96 104C104 84 128 80 140 88C128 102 110 110 96 104Z"/>
+      <path d="M140 74C146 56 168 50 182 58C172 72 156 80 140 74Z"/>
+      <path d="M180 46C186 32 204 28 216 34C208 46 194 52 180 46Z" fill="#C9A23A"/>
+    </g>
+    <circle cx="200" cy="90" r="4" fill="#2F4F8F" stroke="#15223F"/>
+  </svg>
+  <svg class="sprig sprig--right" viewBox="0 0 120 120" aria-hidden="true">
+    <use href="#berry" x="10" y="20" width="26" height="26"/>
+    <use href="#berry" x="66" y="60" width="22" height="22"/>
+    <use href="#berry" x="30" y="78" width="18" height="18"/>
+  </svg>
+  <svg class="sprig sprig--chip" viewBox="0 0 80 80" aria-hidden="true">
+    <path d="M10 60L40 20L70 52L58 70Z" fill="#E8B43C" stroke="#5B3A12" stroke-width="2"/>
+    <path d="M26 56L40 36M40 50L50 36M30 66L34 56" stroke="#5B3A12" stroke-width="1.6"/>
+  </svg>
+  <p class="eyebrow">Who we are</p>
+  <h2 class="about__title">Made slowly, rooted in spice-trade heritage, and reimagined for today.</h2>
+  <h2 class="about__title about__title--2">Every bottle is a small batch we would happily pour for our own friends.</h2>
+  <a class="btn btn--amber" href="#story">Learn More</a>
+</section>
+
+<!-- ============ 5. MARQUEE 2 ============ -->
+<div class="marquee marquee--2" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Spice route, bottled</span><span>Spice route, bottled</span><span>Spice route, bottled</span><span>Spice route, bottled</span><span>Spice route, bottled</span><span>Spice route, bottled</span>
+  </div>
+</div>
+
+<!-- ============ 6. EXPERIENCES (stamp cards) ============ -->
+<section class="experiences" id="experiences">
+  <div class="experiences__head">
+    <h2 class="section-title">Come behind the still</h2>
+    <p class="section-lead">From hands-on still tours to guided tastings, discover the craft and the spice-route flavours behind every bottle.</p>
+    <a class="btn btn--outline" href="#experiences">See all visits</a>
+  </div>
+  <div class="stamps" data-stamps>
+    <a class="stamp" href="#tour">
+      <div class="stamp__img">
+        <svg viewBox="0 0 300 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="tourBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2B22"/><stop offset="1" stop-color="#1A1310"/></linearGradient></defs>
+          <rect width="300" height="260" fill="url(#tourBg)"/>
+          <g stroke="#C99A5B" stroke-opacity=".25"><path d="M20 0V260M60 0V260M100 0V260M140 0V260M180 0V260M220 0V260M260 0V260"/></g>
+          <use href="#still" x="70" y="20" width="160" height="213"/>
+          <circle cx="250" cy="60" r="12" fill="#E8B43C" opacity=".8"/>
+        </svg>
+      </div>
+      <span class="stamp__label">Distillery<br>Tour</span>
+    </a>
+    <a class="stamp" href="#school">
+      <div class="stamp__img">
+        <svg viewBox="0 0 300 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="schoolBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C98E4A"/><stop offset="1" stop-color="#6E4524"/></linearGradient></defs>
+          <rect width="300" height="260" fill="url(#schoolBg)"/>
+          <ellipse cx="150" cy="190" rx="120" ry="34" fill="#E9CFA5"/>
+          <ellipse cx="150" cy="186" rx="108" ry="26" fill="#F3E2C2"/>
+          <g><circle cx="100" cy="180" r="9" fill="#2D4A4F"/><circle cx="130" cy="172" r="8" fill="#B0573A"/><circle cx="170" cy="176" r="8" fill="#E8B43C"/><circle cx="200" cy="184" r="9" fill="#2A3F73"/><circle cx="150" cy="192" r="7" fill="#6B8F4E"/></g>
+          <path d="M80 110Q150 70 220 110" stroke="#2D4A4F" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+          <rect x="132" y="60" width="36" height="14" rx="3" fill="#5A2A1B" transform="rotate(-18 150 67)"/>
+          <circle cx="150" cy="110" r="22" fill="#F3EADC" opacity=".25"/>
+        </svg>
+      </div>
+      <span class="stamp__label">Gin<br>School</span>
+    </a>
+    <a class="stamp" href="#tasting">
+      <div class="stamp__img">
+        <svg viewBox="0 0 300 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="tastBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2420"/><stop offset="1" stop-color="#0E0B09"/></linearGradient></defs>
+          <rect width="300" height="260" fill="url(#tastBg)"/>
+          <rect y="180" width="300" height="80" fill="#4A3324"/>
+          <use href="#coupe" x="20" y="60" width="90" height="144" style="--liquid:#E8DDE7"/>
+          <use href="#coupe" x="105" y="40" width="100" height="160" style="--liquid:#B45A3A"/>
+          <use href="#coupe" x="190" y="66" width="90" height="144" style="--liquid:#E8B43C"/>
+        </svg>
+      </div>
+      <span class="stamp__label">Gin<br>Tasting</span>
+    </a>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ============ 7. COCKTAIL BAND ============ -->
+<section class="band" aria-label="Cocktails">
+  <svg class="band__art" viewBox="0 0 1440 650" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="barBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0C0908"/><stop offset=".6" stop-color="#1B1210"/><stop offset="1" stop-color="#2B1D12"/></linearGradient>
+      <radialGradient id="bokeh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD58A" stop-opacity=".9"/><stop offset=".6" stop-color="#F0A13A" stop-opacity=".35"/><stop offset="1" stop-color="#F0A13A" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1440" height="650" fill="url(#barBg)"/>
+    <g fill="url(#bokeh)">
+      <circle cx="60" cy="90" r="40"/><circle cx="300" cy="60" r="28"/><circle cx="520" cy="110" r="36"/><circle cx="740" cy="70" r="22"/>
+      <circle cx="960" cy="100" r="44"/><circle cx="1180" cy="60" r="30"/><circle cx="1380" cy="120" r="40"/><circle cx="1260" cy="210" r="18"/>
+      <circle cx="180" cy="210" r="22"/><circle cx="640" cy="230" r="26"/><circle cx="1080" cy="240" r="20"/>
+    </g>
+    <g fill="#5A3A22" opacity=".55">
+      <use href="#bottle" x="0" y="150" width="130" height="330"/>
+      <use href="#bottle" x="180" y="130" width="130" height="330"/>
+      <use href="#bottle" x="380" y="150" width="130" height="330"/>
+      <use href="#bottle" x="1120" y="140" width="130" height="330"/>
+      <use href="#bottle" x="1290" y="160" width="130" height="330"/>
+    </g>
+    <rect y="470" width="1440" height="180" fill="#2A1C12"/>
+    <rect y="470" width="1440" height="4" fill="#DC9B27" opacity=".35"/>
+    <!-- three coupes toasting -->
+    <use href="#coupe" x="470" y="200" width="250" height="400" style="--liquid:#7B3A8F" transform="rotate(-6 595 400)"/>
+    <use href="#coupe" x="610" y="220" width="250" height="400" style="--liquid:#4A2316" transform="rotate(4 735 420)"/>
+    <use href="#coupe" x="760" y="200" width="250" height="400" style="--liquid:#E9A93E" transform="rotate(-2 885 400)"/>
+  </svg>
+</section>
+
+<!-- ============ 8. SOCIAL GALLERY ============ -->
+<section class="social" id="social" aria-label="Social gallery">
+  <h2 class="social__handle">@copperheron.distilling</h2>
+  <a class="btn btn--outline btn--light" href="#social">Follow along</a>
+  <div class="social__grid">
+    <div class="tile tile--1"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#2B5B66"/><circle cx="160" cy="54" r="26" fill="#F3D08A" opacity=".8"/><use href="#bottle" x="26" y="40" width="70" height="160" style="--liquid:#E6EEE8;--label:#1E3B40"/><use href="#bottle" x="92" y="58" width="60" height="140" style="--liquid:#B0573A;--label:#5A2A1B"/></svg></div>
+    <div class="tile tile--2"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#5B2E1F"/><use href="#coupe" x="18" y="48" width="70" height="112" style="--liquid:#E8DDE7"/><use href="#coupe" x="78" y="30" width="78" height="124" style="--liquid:#E8B43C"/><use href="#coupe" x="136" y="56" width="66" height="106" style="--liquid:#B45A3A"/></svg></div>
+    <div class="tile tile--3"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#3A2F2A"/><use href="#still" x="40" y="18" width="136" height="180"/></svg></div>
+    <div class="tile tile--4"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#7A3B2A"/><circle cx="108" cy="108" r="64" fill="#F3EADC" opacity=".9"/><path d="M108 56 L132 108 L108 160 L84 108Z" fill="#B0573A"/><circle cx="108" cy="108" r="6" fill="#45464B"/></svg></div>
+    <div class="tile tile--5"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#D9A048"/><use href="#bottle" x="48" y="30" width="120" height="180" style="--liquid:#2B1E1A;--label:#24262D;--cap:#C99A5B"/></svg></div>
+    <div class="tile tile--6"><svg viewBox="0 0 216 216" aria-hidden="true"><rect width="216" height="216" fill="#1F3550"/><use href="#coupe" x="46" y="34" width="124" height="198" style="--liquid:#D9826B"/><circle cx="170" cy="170" r="14" fill="#E8B43C" opacity=".7"/></svg></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col footer__col--news">
+      <h3 class="footer__head">Join the Circle</h3>
+      <form class="footer__form" data-news-form-footer>
+        <label class="sr-only" for="footEmail">Email</label>
+        <input id="footEmail" type="email" placeholder="Email" required>
+        <button type="submit" aria-label="Subscribe">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9.5 6L15.5 12L9.5 18" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        </button>
+      </form>
+      <p class="footer__legal">By subscribing you agree to the <a href="#terms">Terms of Use</a> &amp; <a href="#privacy">Privacy Policy</a>.</p>
+    </div>
+    <nav class="footer__col" aria-label="Footer">
+      <h3 class="footer__head">Explore</h3>
+      <ul>
+        <li><a href="#gins">Shop</a></li>
+        <li><a href="#gins">Gins</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="footer__col footer__col--logo">
+      <div class="footer__logo" aria-hidden="true">
+        <svg viewBox="0 0 160 160" width="150" height="150">
+          <circle cx="80" cy="80" r="74" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M80 26L124 80L80 134L36 80Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M80 50L104 80L80 110L56 80Z" fill="currentColor"/>
+          <path d="M80 60V100" stroke="#DC9B27" stroke-width="3"/>
+        </svg>
+        <b>COPPER HERON</b><small>DISTILLING CO.</small>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026, Copper Heron Distilling Co. Sample site.</span>
+    <button class="to-top" type="button" aria-label="Back to top" data-to-top>
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 19V6M6 11L12 5L18 11" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
