@@ -1,0 +1,532 @@
+<!doctype html>
+<!--
+  Placeholder brand: "Lantern Row Bakehouse". Sample content only.
+  Design study of the category "Bakeries & patisseries" (homepage layout, type, palette and motion).
+  All imagery is hand-drawn inline SVG or CSS. No original photos, logos, icons or fonts are used.
+-->
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lantern Row Bakehouse | Slow-Fermented Pastries</title>
+  <meta name="description" content="Lantern Row Bakehouse: slow-fermented croissants and pastries, baked in small batches. Sample design study.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+
+<!-- Shared SVG symbol library (kept off-screen, referenced with <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gCroissant" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6C474"/>
+      <stop offset="0.55" stop-color="#D1883A"/>
+      <stop offset="1" stop-color="#9A5220"/>
+    </linearGradient>
+    <linearGradient id="gPain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3BE68"/>
+      <stop offset="1" stop-color="#A75A22"/>
+    </linearGradient>
+    <radialGradient id="gSwirl" cx="0.45" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#FBE3A6"/>
+      <stop offset="0.6" stop-color="#E1A052"/>
+      <stop offset="1" stop-color="#9B5121"/>
+    </radialGradient>
+    <linearGradient id="gFoam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8B57C"/>
+      <stop offset="1" stop-color="#B7733F"/>
+    </linearGradient>
+    <linearGradient id="gMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8F8F8"/>
+      <stop offset="0.5" stop-color="#9AA0A8"/>
+      <stop offset="1" stop-color="#E8EAEE"/>
+    </linearGradient>
+
+    <!-- Croissant, viewBox 0 0 300 200 -->
+    <symbol id="croissant" viewBox="0 0 300 200">
+      <g stroke="#7A3E12" stroke-width="3" fill="url(#gCroissant)">
+        <ellipse cx="55" cy="128" rx="30" ry="42" transform="rotate(-35 55 128)"/>
+        <ellipse cx="100" cy="82" rx="32" ry="46" transform="rotate(-15 100 82)"/>
+        <ellipse cx="150" cy="66" rx="34" ry="48"/>
+        <ellipse cx="200" cy="82" rx="32" ry="46" transform="rotate(15 200 82)"/>
+        <ellipse cx="245" cy="128" rx="30" ry="42" transform="rotate(35 245 128)"/>
+      </g>
+      <g fill="none" stroke="#FFE7AE" stroke-width="3" stroke-linecap="round" opacity="0.7">
+        <path d="M40 118 Q50 100 66 96"/>
+        <path d="M88 64 Q100 52 118 50"/>
+        <path d="M134 40 Q150 34 166 40"/>
+        <path d="M184 50 Q200 52 212 64"/>
+        <path d="M258 116 Q250 100 234 96"/>
+      </g>
+      <g fill="none" stroke="#8A4818" stroke-width="2" opacity="0.6">
+        <path d="M78 110 Q80 96 92 92"/>
+        <path d="M128 90 Q150 80 172 90"/>
+        <path d="M222 110 Q220 96 208 92"/>
+      </g>
+    </symbol>
+
+    <!-- Pain au chocolat, viewBox 0 0 200 140 -->
+    <symbol id="pain" viewBox="0 0 200 140">
+      <rect x="6" y="18" width="188" height="110" rx="46" fill="url(#gPain)" stroke="#7A3E12" stroke-width="3"/>
+      <path d="M30 40 Q100 20 170 40" fill="none" stroke="#FFE3A3" stroke-width="4" opacity="0.55" stroke-linecap="round"/>
+      <path d="M26 70 Q100 52 174 70" fill="none" stroke="#8A4818" stroke-width="3" opacity="0.45"/>
+      <path d="M30 98 Q100 84 170 98" fill="none" stroke="#8A4818" stroke-width="3" opacity="0.45"/>
+      <rect x="82" y="36" width="36" height="72" rx="10" fill="#3A1A0A" opacity="0.9"/>
+      <path d="M96 42 L100 56 L104 42" fill="#6B3418" opacity="0.8"/>
+    </symbol>
+
+    <!-- Coffee cup with latte art, viewBox 0 0 240 180 -->
+    <symbol id="cup" viewBox="0 0 240 180">
+      <ellipse cx="110" cy="164" rx="92" ry="10" fill="#E7DBC9"/>
+      <path d="M170 64 Q212 62 212 92 Q212 122 166 120" fill="none" stroke="#EDE5D7" stroke-width="12"/>
+      <path d="M26 46 H170 V88 Q170 146 98 146 Q26 146 26 88 Z" fill="#F7F2E9" stroke="#CDBFA8" stroke-width="2"/>
+      <ellipse cx="98" cy="46" rx="72" ry="20" fill="url(#gFoam)"/>
+      <ellipse cx="98" cy="46" rx="60" ry="14" fill="none" stroke="#FBE6C6" stroke-width="2" opacity="0.7"/>
+      <path d="M98 58 C86 48 80 42 84 37 C88 33 96 36 98 41 C100 36 108 33 112 37 C116 42 110 48 98 58 Z" fill="#FFF4E2" opacity="0.85"/>
+    </symbol>
+
+    <!-- Pastry cross-section swirl, viewBox 0 0 200 200 -->
+    <symbol id="swirl" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="96" fill="url(#gSwirl)" stroke="#7A3E12" stroke-width="3"/>
+      <g fill="none" stroke="#8A4818" stroke-width="3" opacity="0.55">
+        <circle cx="100" cy="100" r="80"/>
+        <circle cx="100" cy="100" r="66"/>
+        <circle cx="100" cy="100" r="52"/>
+        <circle cx="100" cy="100" r="38"/>
+        <circle cx="100" cy="100" r="24"/>
+      </g>
+      <path d="M100 100 C 100 88, 116 86, 116 100 C 116 116, 88 118, 86 96 C 84 74, 118 70, 124 98 C 130 128, 84 136, 74 100 C 64 62, 118 52, 136 98" fill="none" stroke="#FFE7AE" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="announce" role="region" aria-label="Announcements">
+  <div class="announce__track">
+    <span>Now baking: Sesame Honey Twist + 3 glazes. Pre-order before Friday noon.</span>
+    <span>Now baking: Sesame Honey Twist + 3 glazes. Pre-order before Friday noon.</span>
+    <span>Now baking: Sesame Honey Twist + 3 glazes. Pre-order before Friday noon.</span>
+    <span>Now baking: Sesame Honey Twist + 3 glazes. Pre-order before Friday noon.</span>
+  </div>
+</div>
+
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <nav class="nav nav--left" aria-label="Primary">
+      <ul class="nav__list" id="primary-nav">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#find-us">Find Us</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#order">Order Ahead</a></li>
+      </ul>
+    </nav>
+
+    <a class="brand" href="#top" aria-label="Lantern Row Bakehouse home">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 6 C22 6 18 14 18 20 L46 20 C46 14 42 6 32 6 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <rect x="20" y="20" width="24" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M26 30 V40 M38 30 V40 M26 40 H38" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="32" cy="35" r="3" fill="currentColor"/>
+      </svg>
+      <span class="brand__word">Lantern Row<small>Bakehouse</small></span>
+    </a>
+
+    <div class="site-header__actions">
+      <a class="cart-link" href="#cart">Cart <span class="cart-link__count">(0)</span></a>
+      <a class="btn btn--teal btn--sm" href="#app">Download app</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__stage">
+      <div class="hero__copy">
+        <div class="stamp stamp--hero" id="hero-title">
+          <svg class="stamp__badge" viewBox="0 0 80 50" aria-hidden="true"><path d="M8 26 Q14 6 40 8 Q66 6 72 26 Q66 46 40 44 Q14 46 8 26Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M30 22 L36 30 L44 18 M52 22 L58 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="stamp__title">Slow dough.<br>Sharp shape.</p>
+          <p class="stamp__sub">Patience you can taste in every ring</p>
+        </div>
+      </div>
+
+      <div class="hero__figure" aria-hidden="true">
+        <svg class="hero__art" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice">
+          <!-- metal arms -->
+          <path d="M-20 690 L560 730 Q640 738 672 782" fill="none" stroke="url(#gMetal)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M1470 520 L1240 460 Q1190 448 1158 420" fill="none" stroke="url(#gMetal)" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="1140" cy="410" r="12" fill="#2b2b2b"/>
+          <circle cx="690" cy="790" r="14" fill="#2b2b2b"/>
+          <!-- lens -->
+          <circle cx="950" cy="320" r="140" fill="rgba(255,255,255,0.22)" stroke="url(#gMetal)" stroke-width="7"/>
+          <path d="M860 250 Q900 210 960 200" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+          <path d="M1078 382 L1095 398" stroke="#9AA0A8" stroke-width="14" stroke-linecap="round"/>
+          <!-- shadows -->
+          <ellipse cx="1210" cy="600" rx="170" ry="60" fill="#7E5A90" opacity="0.28"/>
+          <ellipse cx="1100" cy="770" rx="220" ry="36" fill="#7E5A90" opacity="0.2"/>
+          <!-- croissant (rotated upright) -->
+          <use href="#croissant" x="745" y="190" width="420" height="600" transform="rotate(0 955 490)" style="filter: drop-shadow(0 18px 14px rgba(70,20,70,0.25))"/>
+        </svg>
+        <div class="hero__inset">
+          <svg class="hero__inset-pattern" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <pattern id="cells" width="34" height="30" patternUnits="userSpaceOnUse">
+                <ellipse cx="17" cy="15" rx="12" ry="9" fill="none" stroke="#D89B4D" stroke-width="2" opacity="0.6"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="260" fill="url(#cells)"/>
+          </svg>
+          <p class="hero__inset-title">Open crumb</p>
+          <p class="hero__inset-sub">Hand-laminated, airy &amp; tender</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PRODUCT FEATURE -->
+  <section class="section product" aria-labelledby="product-title">
+    <div class="product__grid">
+      <figure class="product__media reveal">
+        <svg viewBox="0 0 660 660" preserveAspectRatio="xMidYMid slice" aria-hidden="true" class="product__art">
+          <defs>
+            <linearGradient id="studioBg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0b0907"/>
+              <stop offset="0.45" stop-color="#2a221c"/>
+              <stop offset="0.62" stop-color="#EDE6DA"/>
+              <stop offset="1" stop-color="#FFFBF4"/>
+            </linearGradient>
+            <radialGradient id="glowSpot" cx="0.5" cy="0.6" r="0.5">
+              <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+              <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="660" height="660" fill="url(#studioBg)"/>
+          <ellipse cx="330" cy="520" rx="260" ry="60" fill="url(#glowSpot)"/>
+          <!-- saucers and cups -->
+          <ellipse cx="200" cy="470" rx="110" ry="28" fill="#0d3b47"/>
+          <ellipse cx="200" cy="462" rx="82" ry="18" fill="#123f4c"/>
+          <ellipse cx="500" cy="500" rx="130" ry="32" fill="#EDE6DA"/>
+          <ellipse cx="500" cy="494" rx="84" ry="20" fill="#E0D7C7"/>
+          <use href="#cup" x="110" y="330" width="170" height="130"/>
+          <!-- croissants -->
+          <use href="#croissant" x="250" y="170" width="300" height="200" transform="rotate(20 400 270)"/>
+          <use href="#croissant" x="150" y="390" width="210" height="140" transform="rotate(-8 255 460)"/>
+        </svg>
+      </figure>
+
+      <div class="product__copy reveal">
+        <h2 class="display" id="product-title">The Giant Croissant <span class="nowrap">+ 3 Spreads</span></h2>
+        <p class="lede">One oversized croissant. Three bold spreads for dipping.</p>
+        <p class="product__detail"><strong>32cm of layered, buttery dough, served with Chilli Crab, Pandan Custard and Brown Butter Honey spreads.</strong></p>
+        <p class="product__note">Order at least 3 days ahead, before 12pm. Collect in store from 2pm until close. No delivery.</p>
+        <p class="product__price">$32.00 (excludes GST)</p>
+        <a class="btn btn--teal" href="#order">Order now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROCESS CAROUSEL -->
+  <section class="section process" aria-labelledby="process-title">
+    <header class="section__head reveal">
+      <h2 class="h2" id="process-title">How a Good Croissant Comes Together</h2>
+      <p class="section__sub">Crisp on the outside. Flaky through every layer. Light, buttery and tender in the middle.</p>
+    </header>
+
+    <div class="rail-wrap">
+      <div class="rail process__rail" data-rail>
+        <article class="proc-card proc-card--side">
+          <div class="proc-card__art proc-card__art--dough">
+            <div class="stamp stamp--card">
+              <span class="stamp__label">Slow-fermented</span>
+              <span class="stamp__big">Dough</span>
+              <span class="stamp__small">Deeper flavour, better lift</span>
+            </div>
+          </div>
+        </article>
+        <article class="proc-card proc-card--centre">
+          <div class="proc-card__art proc-card__art--swirl">
+            <svg viewBox="0 0 400 400" aria-hidden="true"><use href="#swirl" x="60" y="60" width="280" height="280"/></svg>
+          </div>
+          <h3 class="proc-card__title">Baked Fresh in Small Batches</h3>
+          <p class="proc-card__text">We bake through the day in small runs, so every pastry reaches you warm, crisp and at its best.</p>
+        </article>
+        <article class="proc-card proc-card--side">
+          <div class="proc-card__art proc-card__art--butter">
+            <div class="stamp stamp--card">
+              <span class="stamp__label">Cultured</span>
+              <span class="stamp__big">Butter</span>
+              <span class="stamp__small">Richer taste, softer bite</span>
+            </div>
+          </div>
+        </article>
+        <article class="proc-card proc-card--side">
+          <div class="proc-card__art proc-card__art--layers" aria-hidden="true"></div>
+        </article>
+      </div>
+      <div class="arrows">
+        <button class="arrow arrow--lilac" type="button" data-dir="-1" aria-label="Previous">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="arrow arrow--lilac" type="button" data-dir="1" aria-label="Next">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PAIRINGS -->
+  <section class="section pairing" aria-labelledby="pairing-title">
+    <svg class="pairing__doodle reveal" viewBox="0 0 200 120" aria-hidden="true">
+      <path d="M20 60 Q40 20 70 40 Q100 62 80 84 Q56 100 46 72 Q40 52 66 52 Q92 52 100 80 Q108 110 150 100 Q180 90 178 50" fill="none" stroke="#C57A34" stroke-width="2.4" stroke-linecap="round" opacity="0.7"/>
+      <path d="M128 14 Q150 4 170 18 Q178 34 160 40 Q138 46 136 30" fill="none" stroke="#2F7B5B" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    </svg>
+    <div class="pairing__grid">
+      <div class="pairing__cut pairing__cut--left reveal">
+        <span class="pairing__bg" aria-hidden="true"></span>
+        <svg viewBox="0 0 200 140" aria-hidden="true"><use href="#pain" x="0" y="0" width="200" height="140"/></svg>
+      </div>
+      <div class="pairing__copy reveal">
+        <h2 class="h1" id="pairing-title">A Perfect <br>Pairing</h2>
+        <p class="section__sub">Bread and butter, pastry and coffee, your corner bakery and a slow morning. Good things go together.</p>
+      </div>
+      <div class="pairing__cut pairing__cut--right reveal">
+        <span class="pairing__bg" aria-hidden="true"></span>
+        <svg viewBox="0 0 240 180" aria-hidden="true"><use href="#cup" x="0" y="0" width="240" height="180"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. LOYALTY / APP -->
+  <section class="section app" id="app" aria-labelledby="app-title">
+    <h2 class="h1 app__title reveal" id="app-title">Join The Rise Club!</h2>
+
+    <div class="app__stage">
+      <svg class="app__doodle reveal" viewBox="0 0 160 160" aria-hidden="true">
+        <path d="M40 70 Q34 30 74 26 Q118 24 124 62 Q132 102 96 118 Q60 130 46 104 Q34 90 52 80" fill="none" stroke="#3F87C9" stroke-width="3" stroke-linecap="round"/>
+        <path d="M60 46 Q92 40 104 70 Q112 96 84 102" fill="none" stroke="#E0952C" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+        <path d="M74 36 L88 22 L100 34" fill="none" stroke="#3F87C9" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+
+      <ul class="app__perks app__perks--left">
+        <li class="perk reveal"><strong>Order ahead</strong> and skip the queue for faster coffee and pastry pickups.</li>
+        <li class="perk reveal">Track your spend and <strong>climb member tiers</strong> for added perks and discounts.</li>
+        <li class="perk reveal"><strong>Save your favourites</strong> for quick reordering.</li>
+      </ul>
+
+      <div class="phone reveal" aria-hidden="true">
+        <div class="phone__screen">
+          <div class="phone__top">
+            <svg viewBox="0 0 64 64"><path d="M32 6 C22 6 18 14 18 20 L46 20 C46 14 42 6 32 6 Z" fill="none" stroke="#004251" stroke-width="2.5"/><rect x="20" y="20" width="24" height="30" rx="4" fill="none" stroke="#004251" stroke-width="2.5"/><circle cx="32" cy="35" r="3" fill="#004251"/></svg>
+            <span class="phone__bell">1</span>
+          </div>
+          <p class="phone__hi">Hi Sam</p>
+          <svg class="phone__hero" viewBox="0 0 300 160">
+            <path d="M30 120 Q150 30 270 120" fill="none" stroke="#521B04" stroke-width="10" stroke-linecap="round"/>
+            <use href="#croissant" x="90" y="34" width="120" height="80" transform="rotate(-10 150 74)"/>
+            <rect x="0" y="134" width="300" height="2" fill="#521B04" opacity="0.25"/>
+          </svg>
+          <div class="phone__tier">
+            <div><span>Current tier</span><b>Flake Newcomer</b></div>
+            <div><span>Next tier</span><b>Spend $200</b></div>
+          </div>
+          <div class="phone__card">
+            <p class="phone__card-title">Stamp card</p>
+            <div class="phone__stamps">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="free">Free</i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="app__perks app__perks--right">
+        <li class="perk reveal">Earn a digital stamp with every <strong>$10 spend</strong> and unlock rewards along the way.</li>
+        <li class="perk reveal"><strong>Member-only offers</strong> and early drops, all in the app.</li>
+        <li class="perk reveal">Send gift cards straight from the app, <strong>making gifting easy</strong>.</li>
+      </ul>
+    </div>
+
+    <p class="app__stores reveal">Coming soon to iOS and Android</p>
+  </section>
+
+  <!-- 6. GALLERY -->
+  <section class="section gallery" aria-labelledby="gallery-title">
+    <h2 class="h2 center reveal" id="gallery-title">A Few Moments From The Bakehouse</h2>
+    <div class="rail-wrap rail-wrap--tall">
+      <div class="rail gallery__rail" data-rail>
+        <figure class="moment moment--mint">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="325" height="577" fill="#EEF0D6"/>
+            <path d="M0 470 H325 V577 H0Z" fill="#E1E6BF"/>
+            <ellipse cx="165" cy="460" rx="110" ry="18" fill="#C8CFA0"/>
+            <path d="M110 180 H215 L205 430 Q204 448 186 448 H139 Q121 448 120 430 Z" fill="#D7EAB1" stroke="#7E9B4D" stroke-width="2" opacity="0.95"/>
+            <path d="M118 260 H207 L203 430 Q202 442 186 442 H139 Q123 442 122 430 Z" fill="#B9D88C"/>
+            <path d="M112 186 H213 L210 194 H115Z" fill="#E7C44F"/>
+            <path d="M116 200 Q120 224 118 260 M203 200 Q206 230 205 260" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.6"/>
+            <circle cx="160" cy="225" r="5" fill="#E9B94B"/>
+            <circle cx="182" cy="290" r="4" fill="#E9B94B"/>
+            <circle cx="142" cy="340" r="3" fill="#E9B94B"/>
+            <circle cx="170" cy="380" r="4" fill="#E9B94B"/>
+            <path d="M166 90 L178 60 M174 110 L196 80" stroke="#7E9B4D" stroke-width="2"/>
+          </svg>
+        </figure>
+
+        <figure class="moment moment--cafe">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="cafeWall" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7A2C2A"/>
+                <stop offset="1" stop-color="#2F1A18"/>
+              </linearGradient>
+            </defs>
+            <rect width="325" height="577" fill="url(#cafeWall)"/>
+            <rect x="0" y="40" width="325" height="150" fill="#F4D7A0" opacity="0.55"/>
+            <g fill="#B9504B" opacity="0.9">
+              <rect x="20" y="30" width="36" height="120" rx="4"/><rect x="66" y="30" width="36" height="120" rx="4"/><rect x="112" y="30" width="36" height="120" rx="4"/><rect x="158" y="30" width="36" height="120" rx="4"/><rect x="204" y="30" width="36" height="120" rx="4"/><rect x="250" y="30" width="36" height="120" rx="4"/>
+            </g>
+            <rect x="0" y="200" width="325" height="140" fill="#E0A96B"/>
+            <g fill="#F7E2B8" opacity="0.6">
+              <circle cx="40" cy="240" r="12"/><circle cx="110" cy="236" r="12"/><circle cx="182" cy="240" r="12"/><circle cx="252" cy="236" r="12"/>
+            </g>
+            <rect x="0" y="340" width="325" height="237" fill="#F3EBDD"/>
+            <g fill="#B7503D">
+              <rect x="0" y="352" width="325" height="18"/>
+            </g>
+            <g fill="#2D3E3B">
+              <ellipse cx="90" cy="410" rx="48" ry="16"/><ellipse cx="230" cy="420" rx="48" ry="16"/>
+              <rect x="88" y="410" width="6" height="60"/><rect x="228" y="420" width="6" height="60"/>
+            </g>
+            <path d="M160 170 L240 100 L270 130 L190 210 Z" fill="#2A8F6A" opacity="0.9"/>
+            <text x="186" y="180" font-family="Alfa Slab One, serif" font-size="30" fill="#F4EEE0" transform="rotate(-38 186 180)">LR</text>
+            <g fill="#6B3418" opacity="0.8"><circle cx="70" cy="470" r="22"/><circle cx="210" cy="480" r="18"/></g>
+          </svg>
+        </figure>
+
+        <figure class="moment moment--park">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4E8B3A"/>
+                <stop offset="1" stop-color="#2D6024"/>
+              </linearGradient>
+            </defs>
+            <rect width="325" height="577" fill="url(#grass)"/>
+            <g stroke="#6FA94E" stroke-width="2" opacity="0.4">
+              <path d="M0 80 H325 M0 160 H325 M0 240 H325 M0 320 H325 M0 400 H325 M0 480 H325 M0 560 H325"/>
+            </g>
+            <polygon points="60,300 280,350 240,420 40,380" fill="#EDD9A4" opacity="0.95"/>
+            <g fill="#89D3C4"><rect x="190" y="328" width="34" height="22" rx="3"/></g>
+            <g fill="#ffffff" opacity="0.8"><rect x="90" y="350" width="22" height="10" rx="2"/></g>
+            <path d="M210 355 L238 344 L240 360 L212 372 Z" fill="#CFE8DD"/>
+            <g fill="#8E4A2A">
+              <ellipse cx="150" cy="420" rx="48" ry="18"/>
+              <ellipse cx="128" cy="402" rx="24" ry="8" fill="#B4623A"/>
+              <rect x="122" y="430" width="8" height="28" rx="3"/>
+              <rect x="170" y="430" width="8" height="28" rx="3"/>
+            </g>
+            <ellipse cx="236" cy="420" rx="6" ry="2" fill="#1A3A18"/>
+            <path d="M120 390 Q140 378 176 382" stroke="#F1D9A4" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </svg>
+        </figure>
+
+        <figure class="moment moment--tart">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="tartBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E8C7B8"/>
+                <stop offset="1" stop-color="#B98B78"/>
+              </linearGradient>
+            </defs>
+            <rect width="325" height="577" fill="url(#tartBg)"/>
+            <rect x="0" y="390" width="325" height="30" fill="#EEDCC2"/>
+            <rect x="0" y="420" width="325" height="157" fill="#D7B999" opacity="0.7"/>
+            <g>
+              <ellipse cx="80" cy="260" rx="62" ry="54" fill="#FAF0E2"/>
+              <ellipse cx="240" cy="330" rx="66" ry="56" fill="#FAF0E2"/>
+              <ellipse cx="90" cy="410" rx="60" ry="46" fill="#FAF0E2"/>
+            </g>
+            <g fill="#D8443F">
+              <circle cx="60" cy="236" r="10"/><circle cx="92" cy="228" r="10"/><circle cx="112" cy="260" r="9"/><circle cx="74" cy="270" r="9"/>
+              <circle cx="218" cy="308" r="10"/><circle cx="246" cy="304" r="10"/><circle cx="264" cy="330" r="9"/><circle cx="236" cy="350" r="9"/>
+            </g>
+            <g fill="#F5C9D2" opacity="0.8">
+              <ellipse cx="62" cy="400" rx="8" ry="4"/><ellipse cx="112" cy="418" rx="8" ry="4"/>
+            </g>
+          </svg>
+        </figure>
+      </div>
+      <div class="arrows arrows--teal">
+        <button class="arrow arrow--teal" type="button" data-dir="-1" aria-label="Previous">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="arrow arrow--teal" type="button" data-dir="1" aria-label="Next">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. REVIEWS -->
+  <section class="section reviews" aria-labelledby="reviews-title">
+    <h2 class="h2 center reveal" id="reviews-title">Kind Words</h2>
+    <div class="reviews__card reveal">
+      <p class="stars" aria-label="Rated 5 out of 5">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+      <blockquote class="reviews__quote">
+        <p>Lovely crumb, a warm aroma and a gentle caramel finish. The house blend pairs beautifully with the pastries.</p>
+      </blockquote>
+      <p class="reviews__by">&mdash; Sample Reviewer</p>
+    </div>
+    <div class="arrows arrows--teal arrows--end">
+      <button class="arrow arrow--teal" type="button" aria-label="Previous review">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="arrow arrow--teal" type="button" aria-label="Next review">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <nav class="footer-nav footer-nav--main" aria-label="Footer primary">
+      <a href="#menu">Menu</a>
+      <a href="#find-us">Find us</a>
+      <a href="#rewards">Rewards</a>
+      <a href="#order">Order ahead</a>
+    </nav>
+    <nav class="footer-nav" aria-label="Footer secondary">
+      <a href="#care">Storage &amp; reheating guide</a>
+      <a href="#careers">Careers</a>
+      <a href="#privacy">Privacy policy</a>
+      <a href="#terms">Terms &amp; conditions</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-1.56 19.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 12 2z" fill="currentColor"/></svg>
+      </a>
+      <a href="#instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+      </a>
+    </div>
+    <form class="newsletter" action="#" method="post">
+      <h2 class="newsletter__title">Sign up and stay in the loop</h2>
+      <label class="visually-hidden" for="email">Email address</label>
+      <input id="email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+      <button class="btn btn--cream btn--block" type="submit">Subscribe</button>
+    </form>
+    <p class="site-footer__legal">&copy; 2026 Lantern Row Bakehouse. Sample design study.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

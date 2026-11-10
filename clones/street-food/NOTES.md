@@ -1,0 +1,33 @@
+# Design notes: street-food clone (source: https://www.liaofanhawkerchan.com/ , homepage)
+
+Extraction: render works (Playwright, chromium). Computed styles probed at 1440px. Theme CSS fetched
+(style.css, main.css, responsive.css) but the clone is built from measured values, not copied code.
+
+## Layout (1440px desktop, page height ~2792px)
+1. Fixed header 116px: navy toolbar 32px (social icons right), then white nav 84px with shadow
+   (0 0 32px). Logo left, links right (nav link ~16px, 30px vertical padding), CTA pill (lang switch).
+2. Hero slideshow, full width, 665px tall, starts under header (margin-top 116px). Full-bleed photo.
+   Small mouse-scroll indicator centred at bottom.
+3. Intro split row 635px: left 2/3 full-bleed food photo; right 1/3 panel, 3em padding, centred:
+   award emblem, bold navy headline (red sub line), address lines, H2 "WELCOME" (32px, 500, +2px tracking),
+   16px body 1.5em line height, red "> Read more" link.
+4. Recommendations: H2 32px centred with red "> See menu" link right; row of 4 cards
+   (294x207, 7px white border, grey shadow 0 0 16px, hover zoom on image).
+5. Link grid: 2x2, each tile 618x412 image, caption H4 24px centred below, 2px tracking.
+6. Footer: red (#ff0000) bar 52px, white 16px text, padding 10px 72px, copyright left, links right.
+
+## Type
+- Lato (Regular 400, Medium 500 for headings). Base 16px / 32px line-height, letter-spacing 1px.
+- H2 32px/38.4px, weight 500, letter-spacing 2px. H4 24px/28.8px.
+
+## Palette (measured)
+- Text #212529, white #fff, toolbar navy #150958, accent red #ff0000, card shadow #aaa.
+
+## Interactions
+- Header becomes fixed; hero offset equals header height on desktop.
+- Image zoom on hover (zoom-animation), scroll-in fade for `.animation-element`.
+- Mobile (<990px): nav collapses to a MENU bar with slide-down overlay.
+
+## Gaps
+- Real photography and logo are not reproduced; replaced with CSS/SVG art at same sizes.
+- Hero slider is a simple auto-advancing single slide with placeholder art.

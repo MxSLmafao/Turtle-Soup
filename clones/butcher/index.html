@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Placeholder brand: "Hollis & Crane Butchery" (fictional).
+  Sample content only: all products, prices, copy, and images are invented.
+  Design study of the "Butchers & delis" category (homepage layout, type, colour, motion).
+  No original imagery, logos, fonts files, or copy are used.
+-->
+<title>Hollis &amp; Crane Butchery | Sample Homepage</title>
+<meta name="description" content="Sample butcher and deli homepage design study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Top utility bar -->
+<div class="utility">
+  <div class="wrap utility-inner">
+    <a class="btn-outline-sm" href="#">&lsaquo; Festive Hampers</a>
+    <div class="utility-right">
+      <ul class="social" aria-label="Social">
+        <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.8.4-1.2 1.2-1.2H17V2h-2.6C11.9 2 11 3.5 11 5.5V8H9v3.2h2V22h3V11.2h2.4L17 8z"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2"/></svg></a></li>
+        <li><a href="#" aria-label="Video"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#ed1b24"/></svg></a></li>
+        <li><a href="#" aria-label="Business"><svg viewBox="0 0 24 24"><path d="M4 9h3v11H4zM5.5 3a1.7 1.7 0 110 3.4 1.7 1.7 0 010-3.4zM10 9h3v1.5c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.3V20h-3v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V20h-3z"/></svg></a></li>
+      </ul>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Search" aria-label="Search">
+        <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </form>
+      <a class="util-link" href="#">Log in</a>
+      <a class="util-link" href="#">Register</a>
+      <a class="util-link cart" href="#">Cart <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="logo" href="#" aria-label="Hollis &amp; Crane Butchery home">
+      <svg class="logo-mark" viewBox="0 0 60 60" aria-hidden="true">
+        <path d="M8 46 L20 14 L26 14 L14 46 Z" fill="#ed1b24"/>
+        <path d="M30 46 L42 14 L48 14 L36 46 Z" fill="#ed1b24"/>
+        <rect x="12" y="30" width="38" height="5" fill="#111"/>
+      </svg>
+      <span class="logo-text"><strong>Hollis &amp; Crane</strong><em>Butchery</em></span>
+      <span class="logo-tag">Cut fresh, every day</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Counter</a></li>
+        <li><a href="#">Deli</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero slider -->
+  <section class="hero" aria-label="Featured">
+    <div class="slider" id="slider">
+      <div class="slides">
+
+        <article class="slide slide-a is-active">
+          <div class="slide-art" aria-hidden="true">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="g1" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#7a1f1f"/><stop offset="1" stop-color="#2a0c0c"/></radialGradient>
+              </defs>
+              <rect width="400" height="260" fill="url(#g1)"/>
+              <circle cx="90" cy="60" r="26" fill="#f3c46b" opacity=".35"/>
+              <circle cx="310" cy="50" r="18" fill="#f3c46b" opacity=".3"/>
+              <ellipse cx="200" cy="170" rx="150" ry="28" fill="#c9a16a"/>
+              <ellipse cx="200" cy="160" rx="150" ry="22" fill="#e9c58b"/>
+              <rect x="110" y="110" width="180" height="40" rx="18" fill="#a4552e"/>
+              <rect x="120" y="100" width="160" height="22" rx="10" fill="#c57a45"/>
+              <circle cx="150" cy="150" r="7" fill="#5a2a14"/><circle cx="235" cy="150" r="7" fill="#5a2a14"/>
+            </svg>
+          </div>
+          <div class="slide-copy">
+            <p class="kicker">This week</p>
+            <h2>Slow-smoked brisket, sliced to order</h2>
+            <p>Our pitmaster rubs each brisket by hand and cooks it low for twelve hours. Ask the counter for thick or thin cuts.</p>
+            <a class="btn" href="#">Order now</a>
+          </div>
+        </article>
+
+        <article class="slide slide-b">
+          <div class="slide-art" aria-hidden="true">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#3b3b3b"/></linearGradient></defs>
+              <rect width="400" height="260" fill="url(#g2)"/>
+              <g transform="translate(120 70)">
+                <rect x="0" y="20" width="70" height="110" rx="6" fill="#e8e0d0" transform="rotate(-8 35 75)"/>
+                <rect x="70" y="10" width="70" height="120" rx="6" fill="#f4eee2" transform="rotate(6 105 70)"/>
+                <rect x="30" y="0" width="22" height="40" fill="#ed1b24" transform="rotate(-8 41 20)"/>
+              </g>
+              <circle cx="330" cy="200" r="30" fill="#f2a53a" opacity=".5"/>
+              <circle cx="60" cy="210" r="22" fill="#f2a53a" opacity=".4"/>
+            </svg>
+          </div>
+          <div class="slide-copy">
+            <p class="kicker">New arrival</p>
+            <h2>Cured pantry staples, now on the shelf</h2>
+            <p>Three cured, dried and aged favourites from our deli team, sold in gift-ready tins and boxes.</p>
+            <a class="btn" href="#">Discover</a>
+          </div>
+        </article>
+
+        <article class="slide slide-c">
+          <div class="slide-art" aria-hidden="true">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1a0c"/><stop offset="1" stop-color="#0c0806"/></linearGradient></defs>
+              <rect width="400" height="260" fill="url(#g3)"/>
+              <g fill="#c79a3c" opacity=".9"><rect x="70" y="60" width="34" height="150" rx="6"/><rect x="170" y="48" width="34" height="162" rx="6"/><rect x="270" y="60" width="34" height="150" rx="6"/></g>
+              <g fill="#e9d7a5" opacity=".9"><rect x="70" y="60" width="34" height="18"/><rect x="170" y="48" width="34" height="18"/><rect x="270" y="60" width="34" height="18"/></g>
+              <rect x="40" y="206" width="320" height="10" rx="4" fill="#5b3e1c"/>
+            </svg>
+          </div>
+          <div class="slide-copy">
+            <p class="kicker">Cellar pick</p>
+            <h2>A sparkling white for the weekend table</h2>
+            <p>Crisp, citrus-bright and easy with grilled seafood. Chilled and ready to take home on the way to dinner.</p>
+            <a class="btn" href="#">Shop wine</a>
+          </div>
+        </article>
+
+      </div>
+      <button class="arrow arrow-prev" id="prevBtn" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      <button class="arrow arrow-next" id="nextBtn" aria-label="Next slide"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Trending products -->
+  <section class="section trending reveal" aria-labelledby="trendHead">
+    <div class="wrap">
+      <h2 class="section-head" id="trendHead">Now trending</h2>
+      <ul class="product-grid">
+
+        <li class="product">
+          <div class="product-img">
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <rect width="300" height="300" fill="#f1ddc4"/>
+              <rect x="60" y="130" width="180" height="120" rx="10" fill="#d9b48a"/>
+              <rect x="60" y="130" width="180" height="26" fill="#ecc89c"/>
+              <circle cx="150" cy="95" r="34" fill="#f8e6c9" stroke="#c28d55" stroke-width="3"/>
+              <path d="M130 95h40M150 78v34" stroke="#c28d55" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <span class="badge-new"><i></i>New</span>
+          </div>
+          <h3 class="product-title">Hearth Smoked Pancetta Roll</h3>
+          <p class="price">$24.50</p>
+          <div class="product-opts">
+            <label>Units <select><option>1</option><option>2</option><option>3</option></select></label>
+            <label>Size <select><option>200g</option><option>400g</option></select></label>
+          </div>
+          <button class="btn-cart" data-add>Add to cart</button>
+        </li>
+
+        <li class="product">
+          <div class="product-img">
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <rect width="300" height="300" fill="#e9ebef"/>
+              <rect x="0" y="230" width="300" height="70" fill="#d6d9de"/>
+              <path d="M136 50h28v40c0 12 14 18 14 40v130a10 10 0 01-10 10h-36a10 10 0 01-10-10V130c0-22 14-28 14-40z" fill="#5b0f1d"/>
+              <rect x="136" y="50" width="28" height="12" fill="#2b2b2b"/>
+              <rect x="128" y="150" width="44" height="54" fill="#f7f4ee"/>
+            </svg>
+            <span class="badge-new"><i></i>New</span>
+          </div>
+          <h3 class="product-title">Grange Reserve Red, Single Vineyard</h3>
+          <p class="price">$33.00</p>
+          <div class="product-opts">
+            <label>Units <select><option>1</option><option>2</option><option>6</option></select></label>
+            <label>Size <select><option>750ml</option><option>1.5L</option></select></label>
+          </div>
+          <button class="btn-cart" data-add>Add to cart</button>
+        </li>
+
+        <li class="product">
+          <div class="product-img">
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <rect width="300" height="300" fill="#2d2d2f"/>
+              <rect x="30" y="60" width="240" height="190" rx="14" fill="#4a2f1f" transform="rotate(-4 150 150)"/>
+              <path d="M60 110 Q150 80 240 120 L240 210 Q150 240 60 200 Z" fill="#b8553a" transform="rotate(-4 150 150)"/>
+              <g fill="#f5d6b8" opacity=".9"><circle cx="105" cy="150" r="5"/><circle cx="150" cy="170" r="5"/><circle cx="190" cy="140" r="5"/><circle cx="220" cy="180" r="5"/></g>
+              <circle cx="230" cy="60" r="20" fill="#e8e8e8" opacity=".5"/>
+            </svg>
+            <span class="badge-new"><i></i>New</span>
+          </div>
+          <h3 class="product-title">Cured Ham, Hand-Sliced</h3>
+          <p class="price">$7.80<span>/100g</span></p>
+          <div class="product-opts">
+            <label>Units <select><option>1</option><option>2</option></select></label>
+            <label>Size <select><option>100g</option><option>200g</option></select></label>
+          </div>
+          <button class="btn-cart" data-add>Add to cart</button>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Store / counter tiles -->
+  <section class="section store reveal" aria-labelledby="storeHead">
+    <div class="wrap">
+      <h2 class="section-head" id="storeHead">The counter</h2>
+      <div class="tiles">
+        <a class="tile t-lg" href="#">
+          <div class="tile-art ta-1"></div>
+          <div class="tile-cap"><span>Fresh cuts</span></div>
+        </a>
+        <a class="tile" href="#">
+          <div class="tile-art ta-2"></div>
+          <div class="tile-cap"><span>Charcuterie</span></div>
+        </a>
+        <a class="tile" href="#">
+          <div class="tile-art ta-3"></div>
+          <div class="tile-cap"><span>Cheese</span></div>
+        </a>
+        <a class="tile t-wide" href="#">
+          <div class="tile-art ta-4"></div>
+          <div class="tile-cap"><span>Ready meals</span></div>
+        </a>
+        <a class="tile" href="#">
+          <div class="tile-art ta-5"></div>
+          <div class="tile-cap"><span>Bakery</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video strip -->
+  <section class="section videos reveal" aria-labelledby="vidHead">
+    <div class="wrap">
+      <h2 class="section-head" id="vidHead">From the block</h2>
+      <ul class="video-row">
+        <li><a href="#" class="video-card">
+          <span class="thumb v1"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          <span class="v-title">How we break down a whole lamb</span>
+        </a></li>
+        <li><a href="#" class="video-card">
+          <span class="thumb v2"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          <span class="v-title">Building a board for six people</span>
+        </a></li>
+        <li><a href="#" class="video-card">
+          <span class="thumb v3"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          <span class="v-title">Dry-aging, explained in three minutes</span>
+        </a></li>
+        <li><a href="#" class="video-card">
+          <span class="thumb v4"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+          <span class="v-title">Sunday roast, the butcher's way</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Our promise</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    <p class="copy">&copy; 2026 Hollis &amp; Crane Butchery. Sample design study.</p>
+    <ul class="badges" aria-label="Accreditations (placeholder)">
+      <li><span>Badge A</span></li>
+      <li><span>Badge B</span></li>
+      <li><span>Badge C</span></li>
+      <li><span>Badge D</span></li>
+      <li><span>Badge E</span></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

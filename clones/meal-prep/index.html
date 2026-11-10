@@ -1,0 +1,502 @@
+<!--
+  Placeholder brand: "Fernhollow Kitchen". Sample content only.
+  Design study of the Meal-prep & ghost kitchens category (homepage layout, type, colour, section order).
+  No images, logos, fonts or copy from the original site are used. Imagery is drawn inline with SVG.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Fernhollow Kitchen - Balanced meals delivered across the city</title>
+  <meta name="description" content="Fernhollow Kitchen: chef-designed, nutrition-led meals, meal plans, catering and dine-in. Placeholder design study.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Shared SVG sprite: meal tray parts drawn in-house -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gKraft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe3c9"/><stop offset="1" stop-color="#d9c6a0"/>
+    </linearGradient>
+    <linearGradient id="gProtein" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b5652e"/><stop offset="1" stop-color="#6e3416"/>
+    </linearGradient>
+    <linearGradient id="gSalmon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7a27a"/><stop offset="1" stop-color="#e0643e"/>
+    </linearGradient>
+    <radialGradient id="gGreen" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#8fd06a"/><stop offset="1" stop-color="#2f7d3b"/>
+    </radialGradient>
+    <radialGradient id="gRice" cx=".5" cy=".4" r=".7">
+      <stop offset="0" stop-color="#fff6dc"/><stop offset="1" stop-color="#e9c977"/>
+    </radialGradient>
+    <radialGradient id="gBerry" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#e86a86"/><stop offset="1" stop-color="#8e1d46"/>
+    </radialGradient>
+    <radialGradient id="gCarrot" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#ffb066"/><stop offset="1" stop-color="#e0661a"/>
+    </radialGradient>
+
+    <!-- Tray body, drawn at 200 x 140 -->
+    <g id="tray">
+      <ellipse cx="100" cy="129" rx="92" ry="6" fill="#000" opacity=".13"/>
+      <path d="M12 56 Q12 38 30 38 H170 Q188 38 188 56 L180 114 Q178 128 162 128 H38 Q22 128 20 114 Z" fill="url(#gKraft)"/>
+      <path d="M22 60 H178 L172 112 Q170 120 160 120 H40 Q30 120 28 112 Z" fill="#fbf6ea"/>
+      <path d="M22 60 H178" stroke="#d7c49d" stroke-width="2"/>
+      <path d="M98 62 V119" stroke="#e2d4b5" stroke-width="2"/>
+    </g>
+    <g id="sauce">
+      <circle cx="150" cy="74" r="13" fill="#fff" stroke="#d8ccb3" stroke-width="1.5"/>
+      <circle cx="150" cy="74" r="8.5" fill="#5b2a17"/>
+      <ellipse cx="147" cy="71" rx="2.5" ry="1.5" fill="#fff" opacity=".35"/>
+    </g>
+    <g id="rice">
+      <ellipse cx="62" cy="92" rx="34" ry="13" fill="url(#gRice)"/>
+      <g fill="#d9a94a" opacity=".55">
+        <circle cx="48" cy="90" r="1.3"/><circle cx="60" cy="96" r="1.3"/><circle cx="72" cy="88" r="1.3"/>
+        <circle cx="54" cy="86" r="1.2"/><circle cx="68" cy="97" r="1.2"/><circle cx="82" cy="93" r="1.2"/>
+      </g>
+    </g>
+    <g id="protein">
+      <path d="M98 74 Q124 64 146 78 Q150 96 130 104 Q108 110 96 98 Z" fill="url(#gProtein)"/>
+      <g stroke="#f2c894" stroke-width="1.6" opacity=".45" fill="none">
+        <path d="M104 84 Q118 78 134 86"/><path d="M106 94 Q120 90 136 96"/>
+      </g>
+    </g>
+    <g id="salmon">
+      <path d="M118 80 Q140 70 160 80 Q168 90 158 100 Q138 108 118 98 Q110 90 118 80 Z" fill="url(#gSalmon)"/>
+      <g stroke="#fff" stroke-width="1.4" opacity=".5" fill="none">
+        <path d="M124 86 L150 84"/><path d="M126 94 L152 92"/>
+      </g>
+    </g>
+    <g id="greens">
+      <circle cx="40" cy="70" r="11" fill="url(#gGreen)"/>
+      <circle cx="52" cy="62" r="10" fill="url(#gGreen)"/>
+      <circle cx="30" cy="80" r="9" fill="url(#gGreen)"/>
+      <circle cx="58" cy="78" r="8" fill="url(#gGreen)"/>
+      <circle cx="46" cy="52" r="7" fill="url(#gGreen)"/>
+    </g>
+    <g id="broccoli">
+      <circle cx="108" cy="68" r="9" fill="url(#gGreen)"/>
+      <circle cx="118" cy="64" r="8" fill="url(#gGreen)"/>
+      <circle cx="126" cy="72" r="7" fill="url(#gGreen)"/>
+      <rect x="112" y="72" width="4" height="12" rx="2" fill="#7bb35a"/>
+    </g>
+    <g id="carrots">
+      <circle cx="76" cy="66" r="6" fill="url(#gCarrot)"/>
+      <circle cx="88" cy="70" r="5.5" fill="url(#gCarrot)"/>
+      <circle cx="82" cy="60" r="5" fill="url(#gCarrot)"/>
+    </g>
+    <g id="berries">
+      <circle cx="132" cy="92" r="5" fill="url(#gBerry)"/>
+      <circle cx="142" cy="96" r="4.5" fill="url(#gBerry)"/>
+      <circle cx="138" cy="86" r="4" fill="url(#gBerry)"/>
+    </g>
+    <g id="egg">
+      <ellipse cx="150" cy="96" rx="13" ry="9" fill="#fff"/>
+      <circle cx="150" cy="95" r="4.5" fill="#f5b32e"/>
+    </g>
+    <g id="tofu">
+      <rect x="92" y="84" width="22" height="18" rx="3" fill="#f6dfa8"/>
+      <rect x="118" y="78" width="20" height="18" rx="3" fill="#efd28c"/>
+      <circle cx="104" cy="62" r="4" fill="#8b5e2a"/>
+      <circle cx="120" cy="58" r="3.5" fill="#8b5e2a"/>
+    </g>
+    <g id="fruit">
+      <circle cx="44" cy="94" r="7" fill="#ff8b6e"/>
+      <circle cx="54" cy="98" r="6" fill="#ffb84f"/>
+      <circle cx="36" cy="100" r="5" fill="#f25b74"/>
+    </g>
+
+    <!-- Logo monogram: circle, arc text placeholder, FK letters -->
+    <g id="logo-mark">
+      <circle cx="50" cy="50" r="48" fill="#fff"/>
+      <circle cx="50" cy="50" r="42" fill="none" stroke="#9b1f63" stroke-width="1.5" stroke-dasharray="2 3"/>
+      <path d="M36 66 V36 H56" fill="none" stroke="#9b1f63" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M36 52 H52" fill="none" stroke="#9b1f63" stroke-width="5" stroke-linecap="round"/>
+      <path d="M58 66 V46 Q58 36 68 36 Q78 36 78 46 V66" fill="none" stroke="#e8891f" stroke-width="5" stroke-linecap="round"/>
+      <path d="M58 52 H78" fill="none" stroke="#e8891f" stroke-width="5" stroke-linecap="round" opacity="0"/>
+    </g>
+
+    <!-- Line icons (stroke) -->
+    <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M10 38 C10 20 22 10 40 9 C40 27 30 38 14 38 Z M10 38 L26 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M24 14 V24 L31 28" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-people" viewBox="0 0 48 48"><circle cx="24" cy="15" r="6" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="12" cy="22" r="4.5" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="36" cy="22" r="4.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 38 Q12 28 24 28 Q36 28 36 38" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 48 48"><path d="M12 18 H36 L38 40 H10 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M18 18 V14 Q18 8 24 8 Q30 8 30 14 V18" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4 H5 L7.5 15 H18.5 L21 7 H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 L10 17 L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 L19 5 M9 5 H19 V15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9 L12 15 L18 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21 C12 21 19 14 19 9.5 A7 7 0 0 0 5 9.5 C5 14 12 21 12 21 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11 V8 A4 4 0 0 1 16 8 V11" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-fork" viewBox="0 0 24 24"><path d="M7 3 V10 M5 3 V8 Q5 10 7 10 Q9 10 9 8 V3 M7 10 V21 M16 21 V3 Q13 6 13 11 H16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20 L5.4 15.8 A8 8 0 1 1 9.2 18.6 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.5 Q9 13 12.5 15 Q14 14.5 14.5 13.5 L13 12.6 L12.3 13.2 Q10.6 12.4 10.1 10.7 L10.7 10 L9.8 8.5 Z" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7 L12 13 L20 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5 H20 V16 H10 L6 20 V16 H4 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3 L14.6 9 L21 9.4 L16 13.5 L17.7 20 L12 16.5 L6.3 20 L8 13.5 L3 9.4 L9.4 9 Z" fill="currentColor"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="currentColor"/><path d="M13.5 20 V13.5 H15.8 L16.2 11 H13.5 V9.6 Q13.5 8.6 14.6 8.6 H16.3 V6.4 Q15.4 6.2 14.2 6.2 Q11.1 6.2 11.1 9.2 V11 H8.8 V13.5 H11.1 V20 Z" fill="#fff"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="4" fill="currentColor"/><path d="M10.2 9 L15.2 12 L10.2 15 Z" fill="#fff"/></symbol>
+    <symbol id="i-pin2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="M12 6.5 Q15.5 6.5 15.5 10 Q15.5 15 12 18 Q8.5 15 8.5 10 Q8.5 6.5 12 6.5 Z" fill="#fff"/></symbol>
+  </defs>
+</svg>
+
+<!-- Announcement strip -->
+<div class="announce" role="region" aria-label="Announcement">
+  <div class="announce-inner">
+    <span class="announce-kicker">New</span>
+    <span class="announce-text">Fernhollow app is live: order, track and reorder in one place.</span>
+    <span class="announce-badges">
+      <a class="store-badge" href="#"><span class="store-glyph" aria-hidden="true"></span><span><small>Download on the</small>App Store</span></a>
+      <a class="store-badge" href="#"><span class="store-glyph play" aria-hidden="true"></span><span><small>Get it on</small>Google Play</span></a>
+    </span>
+  </div>
+  <span class="announce-blob b1" aria-hidden="true"></span>
+  <span class="announce-blob b2" aria-hidden="true"></span>
+</div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#top" aria-label="Fernhollow Kitchen home">
+      <svg viewBox="0 0 100 100" width="46" height="46" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="brand-word">Fernhollow<small>Kitchen</small></span>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#order">Order Plans</a>
+      <a href="#pass">Fern Pass</a>
+      <a href="#plans">Meal Plans</a>
+      <a href="#catering">Catering</a>
+      <a href="#dine">Dine In</a>
+      <a href="#journal">Journal</a>
+      <details class="more">
+        <summary>More <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+        <div class="more-panel">
+          <a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="#wallet">Wallet</a>
+        </div>
+      </details>
+    </nav>
+    <div class="header-actions">
+      <a class="cart-link" href="#cart" aria-label="Cart"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#i-cart"/></svg></a>
+      <span class="divider" aria-hidden="true"></span>
+      <a class="btn btn-white btn-sm" href="#signin">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-accent">Chef-designed meals, every weekday</p>
+      <h1 id="hero-title">Balanced Food,<br>Ready When You Are.</h1>
+      <p class="hero-lede">Protein-forward bowls, plant-led plates and seasonal sides, prepared fresh each morning in our city kitchen.</p>
+      <p class="hero-lede">Order for tonight, subscribe for the week, or book a table at our community restaurant.</p>
+      <p class="hero-lede hero-lede-strong">Good ingredients. Simple prep. Shared impact.</p>
+      <div class="hero-actions">
+        <a class="btn btn-plum" href="#menu">Explore the menu</a>
+        <a class="btn btn-plum" href="#pass">Discover Fern Pass</a>
+        <a class="btn btn-plum" href="#dine">Book a table</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <svg class="hero-mascot" viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" fill="#3e8a64"/><circle cx="60" cy="58" r="26" fill="#63b07f"/><circle cx="52" cy="54" r="4" fill="#20251f"/><circle cx="68" cy="54" r="4" fill="#20251f"/><path d="M50 68 Q60 76 70 68" stroke="#20251f" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M60 30 Q52 12 40 16 Q48 26 60 30 Z M60 30 Q68 12 80 16 Q72 26 60 30 Z" fill="#8fd06a"/></svg>
+      <div class="hero-tray hero-tray-main">
+        <svg viewBox="0 0 200 140"><use href="#tray"/><use href="#rice"/><use href="#protein"/><use href="#greens"/><use href="#carrots"/><use href="#sauce"/></svg>
+      </div>
+      <div class="hero-tray hero-tray-top">
+        <svg viewBox="0 0 200 140"><use href="#tray"/><use href="#salmon"/><use href="#broccoli"/><use href="#rice"/></svg>
+      </div>
+      <div class="hero-tray hero-tray-bottom">
+        <svg viewBox="0 0 200 140"><use href="#tray"/><use href="#tofu"/><use href="#greens"/><use href="#fruit"/></svg>
+      </div>
+      <span class="label label-1"><small>Bowl</small>Sunrise Grain</span>
+      <span class="label label-2"><small>Snack</small>Oat &amp; Date</span>
+      <span class="label label-3"><small>Drink</small>Green Press</span>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro reveal" id="about">
+    <h2 class="display-h2">Eat well. Feel good after the meal.</h2>
+    <p class="intro-lede">Fernhollow is a food company built around three things: fresh, balanced recipes, convenient ways to order them, and a kitchen that employs people from every background. Eat in, order online, cater the team lunch or grab something from a smart fridge in the lobby.</p>
+  </section>
+
+  <!-- Options -->
+  <section class="options" id="order">
+    <div class="section-head reveal">
+      <h2 class="display-h2">How would you like to enjoy Fernhollow?</h2>
+      <p class="section-sub">Four ways to eat well, sized to your appetite, budget and schedule.</p>
+    </div>
+    <div class="option-grid">
+      <article class="option-card reveal oc-orange">
+        <header class="oc-head">
+          <span class="oc-kicker">On demand</span>
+          <h3>Fernhollow Bowls</h3>
+          <div class="oc-art" aria-hidden="true"><svg viewBox="0 0 200 140"><use href="#tray"/><use href="#rice"/><use href="#protein"/><use href="#greens"/></svg></div>
+        </header>
+        <ul class="oc-list">
+          <li>Chef-built bowls, ready in minutes</li>
+          <li>Ordering cut-off at 11pm</li>
+          <li>From $9.50 per serving</li>
+        </ul>
+        <a class="oc-cta" href="#menu">See details</a>
+      </article>
+
+      <article class="option-card reveal oc-plum is-featured">
+        <span class="popular-tag">Most popular</span>
+        <header class="oc-head">
+          <span class="oc-kicker">Flexible</span>
+          <h3>Fern Pass</h3>
+          <div class="oc-art" aria-hidden="true"><svg viewBox="0 0 200 140"><use href="#tray"/><use href="#tofu"/><use href="#broccoli"/><use href="#carrots"/></svg></div>
+        </header>
+        <ul class="oc-list">
+          <li>Enjoy meals on any weekday</li>
+          <li>Up to 10 meal credits a day</li>
+          <li>Credits never expire on active plans</li>
+          <li>Delivery and service fees excluded</li>
+        </ul>
+        <a class="oc-cta" href="#pass">See details</a>
+      </article>
+
+      <article class="option-card reveal oc-green">
+        <header class="oc-head">
+          <span class="oc-kicker">Bulk orders</span>
+          <h3>Fernhollow Catering</h3>
+          <div class="oc-art" aria-hidden="true"><svg viewBox="0 0 200 140"><use href="#tray"/><use href="#salmon"/><use href="#berries"/><use href="#egg"/></svg></div>
+        </header>
+        <ul class="oc-list">
+          <li>Team lunches, workshops and town halls</li>
+          <li>Custom menus with dietary notes</li>
+          <li>From $9 to $25 per person</li>
+        </ul>
+        <a class="oc-cta" href="#catering">See details</a>
+      </article>
+
+      <article class="option-card reveal oc-red">
+        <header class="oc-head">
+          <span class="oc-kicker">Dine in</span>
+          <h3>Fernhollow Community Table</h3>
+          <div class="oc-art" aria-hidden="true"><svg viewBox="0 0 200 140"><use href="#tray"/><use href="#rice"/><use href="#egg"/><use href="#fruit"/></svg></div>
+        </header>
+        <ul class="oc-list">
+          <li>Bookings for lunch and dinner</li>
+          <li>Private rooms for events</li>
+          <li>Full menu with drinks and snacks</li>
+          <li>Buffet set-up on request</li>
+        </ul>
+        <a class="oc-cta" href="#dine">See details</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Popular -->
+  <section class="popular" id="menu">
+    <div class="section-head reveal">
+      <h2 class="display-h2">Popular this week</h2>
+    </div>
+    <div class="filter-row reveal" role="tablist" aria-label="Filter meals">
+      <button class="chip is-active" role="tab" aria-selected="true" data-cat="pass">Fern Pass</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="restaurant">Restaurant</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="vending">Smart fridge</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="catering">Catering</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="learning">Learning kitchen</button>
+      <a class="chip chip-all" href="#menu">See the full menu <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="meal-grid" id="meal-grid" aria-live="polite"></div>
+    <noscript><p class="noscript-note">Enable JavaScript to browse the popular meals.</p></noscript>
+  </section>
+
+  <!-- Why -->
+  <section class="why" id="why">
+    <h2 class="display-h2 reveal">Why choose Fernhollow</h2>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <svg class="why-icon c-green" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-leaf"/></svg>
+        <h3>Nutrition-first, always</h3>
+        <p>Recipes written by dietitians, portion-checked and clearly labelled for calories, protein and carbs.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg class="why-icon c-orange" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-clock"/></svg>
+        <h3>Quick and dependable</h3>
+        <p>Order in a few taps and get fresh meals delivered across the city. Less planning, more time to eat well.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg class="why-icon c-lime" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-people"/></svg>
+        <h3>Good work, shared</h3>
+        <p>A social enterprise kitchen that trains and hires people with disabilities and returns a share of profits to them.</p>
+      </div>
+      <div class="why-item reveal">
+        <svg class="why-icon c-plum" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-bag"/></svg>
+        <h3>Flexible for you</h3>
+        <p>Choose what works: a flexible Fern Pass, on-demand bowls, a weekly plan, or catering for the whole team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dine in banner -->
+  <section class="dine" id="dine">
+    <div class="dine-bg" aria-hidden="true"><span></span><span></span></div>
+    <div class="dine-card reveal">
+      <div class="dine-copy">
+        <p class="eyebrow">Prefer to dine in?</p>
+        <h2>Visit our community restaurant in Enablement Park</h2>
+        <p>A warm, bright space for office lunches, team meetings, family dinners and friendly catch-ups. Private events on request.</p>
+        <ul class="dine-features">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fork"/></svg>Wholesome dining</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lock"/></svg>Private events</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-people"/></svg>Corporate meetings</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Easy to reach</li>
+        </ul>
+      </div>
+      <div class="dine-actions">
+        <a class="btn btn-plum btn-block" href="#reserve">Reserve a table</a>
+        <a class="text-link" href="#restaurant">Restaurant info <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="reviews" id="journal">
+    <h2 class="reviews-title reveal">Loved by our customers and partners</h2>
+    <div class="review-grid">
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Lunch for the whole team is now sorted. The food is tasty, the portions are right and the team looks forward to it."</blockquote>
+        <figcaption>HR Manager, sample company</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"I love how flexible the pass is. Perfect for a busy week when I don't have time to cook."</blockquote>
+        <figcaption>Sample Customer</figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" aria-label="5 out of 5">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>"Fresh, filling and genuinely nutritious. It has become my go-to for clean eating on the move."</blockquote>
+        <figcaption>Sample Member</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Enquiry band -->
+  <section class="enquiry" id="catering">
+    <div class="enquiry-copy">
+      <h2>Need catering, meal plans or a custom enquiry?</h2>
+      <p>Our team is here to help you plan, order and eat better.</p>
+    </div>
+    <div class="enquiry-actions">
+      <a class="btn btn-wa" href="#chat"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Message us</a>
+      <a class="btn btn-outline" href="#contact"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg>Contact us</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <svg viewBox="0 0 200 200" class="footer-seal" aria-hidden="true">
+        <defs><path id="arcTop" d="M30 100 A70 70 0 0 1 170 100"/><path id="arcBot" d="M22 100 A78 78 0 0 0 178 100"/></defs>
+        <circle cx="100" cy="100" r="96" fill="#fff"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="2 4" opacity=".8"/>
+        <text font-family="Bebas Neue, sans-serif" font-size="22" letter-spacing="3" fill="#9b1f63"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">FRESH DAILY</textPath></text>
+        <text font-family="Bebas Neue, sans-serif" font-size="20" letter-spacing="3" fill="#9b1f63"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">BALANCED</textPath></text>
+        <text x="100" y="118" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="58" fill="#9b1f63">FK</text>
+        <text x="100" y="146" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#9b1f63">Placeholder</text>
+      </svg>
+      <p class="footer-wordmark">FERNHOLLOW<span>KITCHEN</span></p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#terms">Terms &amp; conditions</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#pass">Fern Pass</a></li>
+        <li><a href="#wallet">Fern Wallet</a></li>
+        <li><a href="#restaurant">Community table</a></li>
+        <li><a href="#fridge">Smart fridges</a></li>
+        <li><a href="#catering">Catering</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#nutrition">Personalised nutrition</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#referral">Referral programme <span class="new">New</span></a></li>
+        <li><a href="#share">Transfer &amp; share <span class="new">New</span></a></li>
+        <li><a href="#market">Market</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-left">
+      <div class="socials">
+        <a href="#ig" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="#fb" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="#yt" aria-label="YouTube"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#i-yt"/></svg></a>
+        <a href="#pin" aria-label="Pinterest"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><use href="#i-pin2"/></svg></a>
+      </div>
+      <p class="footer-tagline">Feel good after food</p>
+      <p class="footer-help">Need to talk to a human? <br><span>Find our chat assistant</span></p>
+      <div class="footer-stores">
+        <a class="store-badge store-dark" href="#"><span class="store-glyph" aria-hidden="true"></span><span><small>Download on the</small>App Store</span></a>
+        <a class="store-badge store-dark" href="#"><span class="store-glyph play" aria-hidden="true"></span><span><small>Get it on</small>Google Play</span></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <ul class="badges" aria-label="Sustainability badges">
+        <li><span class="badge-ring"><i class="b-leaf"></i></span><small>Compostable</small></li>
+        <li><span class="badge-ring"><i class="b-drop"></i></span><small>Biodegradable</small></li>
+        <li><span class="badge-ring"><i class="b-co2"></i></span><small>Lower carbon</small></li>
+        <li><span class="badge-ring"><i class="b-sprout"></i></span><small>Renewable</small></li>
+        <li><span class="badge-ring"><i class="b-cycle"></i></span><small>Recyclable</small></li>
+        <li><span class="badge-ring"><i class="b-cane"></i></span><small>Plant fibre</small></li>
+      </ul>
+      <ul class="badges badges-cert" aria-label="Certification placeholders">
+        <li><span class="cert cert-a">Cert A</span></li>
+        <li><span class="cert cert-b">Cert B</span></li>
+        <li><span class="cert cert-c">Partner</span></li>
+        <li><span class="cert cert-d">Gold</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">Copyright &copy; 2026 Fernhollow Kitchen Pte. Ltd. (placeholder). All rights reserved.</p>
+</footer>
+
+<a class="chat-fab" href="#chat" aria-label="Chat on WhatsApp (placeholder)">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

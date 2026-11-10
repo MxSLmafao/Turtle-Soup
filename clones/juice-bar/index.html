@@ -1,0 +1,315 @@
+<!doctype html>
+<!--
+  Placeholder brand "Bloom Berry Bar" with sample content.
+  Design study of the "Juice, smoothie & acai bars" category (homepage layout, palette, type, motion).
+  All imagery is drawn with CSS gradients and inline SVG; no third-party assets, logos or copy are used.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom Berry Bar: Superfood Bowls</title>
+  <meta name="description" content="Bloom Berry Bar is a placeholder neighbourhood bowl bar serving blended acai bowls and smoothies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Lato:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="Bloom Berry Bar home">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="34" r="22" fill="#673D37"/>
+      <path d="M14 30 Q32 14 50 30 L50 34 Q32 22 14 34Z" fill="#7D7A45"/>
+      <circle cx="24" cy="38" r="3" fill="#FEF5EC"/>
+      <circle cx="36" cy="44" r="2.4" fill="#FEF5EC"/>
+      <circle cx="42" cy="36" r="2" fill="#DBD1E0"/>
+    </svg>
+    <span class="brand-word"><span>Bloom</span><span>Berry Bar</span></span>
+  </a>
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
+    <ul>
+      <li class="has-drop">
+        <a href="#about">About Us <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        <ul class="drop">
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#about">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#catering">Events &amp; Catering</a></li>
+      <li><a href="#rewards">Rewards &amp; FAQs</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li class="has-drop">
+        <a href="#join">Join Us <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        <ul class="drop">
+          <li><a href="#join">Careers</a></li>
+          <li><a href="#join">Partner With Us</a></li>
+        </ul>
+      </li>
+      <li><a href="#locations">Locations</a></li>
+    </ul>
+    <a class="btn btn-olive nav-cta" href="#order">Order</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- 1. Hero -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" class="hero-svg">
+        <defs>
+          <radialGradient id="heroLight" cx="50%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#a39c95"/>
+            <stop offset="1" stop-color="#5c5550"/>
+          </radialGradient>
+          <linearGradient id="bowlBase" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8c2f4b"/>
+            <stop offset="1" stop-color="#4e1a2c"/>
+          </linearGradient>
+          <linearGradient id="bowlTop" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#eef4f6" stop-opacity=".85"/>
+            <stop offset="1" stop-color="#cfd9dd" stop-opacity=".55"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="560" fill="url(#heroLight)"/>
+        <!-- bowl 1 -->
+        <g transform="translate(330 300)">
+          <ellipse cx="0" cy="98" rx="150" ry="16" fill="#000" opacity=".22"/>
+          <path d="M-150 0 Q-150 150 0 150 Q150 150 150 0Z" fill="url(#bowlBase)"/>
+          <ellipse cx="0" cy="0" rx="150" ry="34" fill="url(#bowlTop)"/>
+          <circle cx="-60" cy="-6" r="22" fill="#f9d86b"/>
+          <circle cx="-20" cy="-14" r="20" fill="#e5484d"/>
+          <circle cx="30" cy="-8" r="22" fill="#f6efe2"/>
+          <circle cx="78" cy="-10" r="18" fill="#6d9a3a"/>
+          <circle cx="-95" cy="-10" r="16" fill="#f2b8b5"/>
+        </g>
+        <!-- bowl 2 (centre, tallest) -->
+        <g transform="translate(720 280)">
+          <ellipse cx="0" cy="110" rx="180" ry="18" fill="#000" opacity=".25"/>
+          <path d="M-180 0 Q-180 170 0 170 Q180 170 180 0Z" fill="url(#bowlBase)"/>
+          <ellipse cx="0" cy="0" rx="180" ry="40" fill="url(#bowlTop)"/>
+          <ellipse cx="0" cy="-6" rx="150" ry="28" fill="#fdf2c8"/>
+          <circle cx="-110" cy="-14" r="20" fill="#e5484d"/>
+          <circle cx="-60" cy="-26" r="18" fill="#e5484d"/>
+          <circle cx="-10" cy="-18" r="20" fill="#e5484d"/>
+          <circle cx="50" cy="-22" r="18" fill="#e5484d"/>
+          <circle cx="110" cy="-12" r="18" fill="#e5484d"/>
+          <circle cx="-80" cy="-4" r="13" fill="#5f9a2f"/>
+          <circle cx="20" cy="-2" r="13" fill="#5f9a2f"/>
+          <circle cx="80" cy="0" r="12" fill="#5f9a2f"/>
+          <circle cx="-36" cy="4" r="10" fill="#2d2440"/>
+          <circle cx="60" cy="6" r="9" fill="#2d2440"/>
+        </g>
+        <!-- bowl 3 -->
+        <g transform="translate(1110 300)">
+          <ellipse cx="0" cy="98" rx="150" ry="16" fill="#000" opacity=".22"/>
+          <path d="M-150 0 Q-150 150 0 150 Q150 150 150 0Z" fill="url(#bowlBase)"/>
+          <ellipse cx="0" cy="0" rx="150" ry="34" fill="url(#bowlTop)"/>
+          <ellipse cx="0" cy="-4" rx="120" ry="24" fill="#c98a4b"/>
+          <path d="M-110 -6 q20 -14 40 0 t40 0 t40 0 t40 0" stroke="#8a4a1f" stroke-width="5" fill="none" opacity=".7"/>
+          <circle cx="-60" cy="-12" r="8" fill="#fff4d6"/>
+          <circle cx="0" cy="-14" r="8" fill="#fff4d6"/>
+          <circle cx="60" cy="-12" r="8" fill="#fff4d6"/>
+          <circle cx="-30" cy="6" r="6" fill="#2d2440"/>
+          <circle cx="40" cy="8" r="6" fill="#2d2440"/>
+        </g>
+      </svg>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-line">Every Little</span>
+      <span class="hero-line hero-line--alt">Thing You Crave</span>
+    </h1>
+  </section>
+
+  <!-- 2. Intro band -->
+  <section class="intro reveal" aria-labelledby="intro-h">
+    <div class="intro-row">
+      <svg class="doodle doodle-bowl" viewBox="0 0 120 80" aria-hidden="true">
+        <g fill="none" stroke="#533C24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 36 Q14 70 60 70 Q106 70 106 36"/>
+          <path d="M10 36 H110"/>
+          <path d="M30 40 q6 -8 12 0 t12 0 t12 0 t12 0" opacity=".7"/>
+          <path d="M42 24 l-2 -6 M54 24 l0 -8 M66 24 l2 -6" opacity=".8"/>
+        </g>
+        <circle cx="60" cy="54" r="6" fill="#533C24"/>
+      </svg>
+      <h2 id="intro-h" class="intro-title">Neighbourhood Bowls Since 2019</h2>
+      <svg class="doodle doodle-cup" viewBox="0 0 60 90" aria-hidden="true">
+        <g fill="none" stroke="#533C24" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M14 30 L20 84 H40 L46 30 Z"/>
+          <path d="M12 30 H48"/>
+          <path d="M34 30 L44 4"/>
+        </g>
+        <circle cx="30" cy="60" r="5" fill="#533C24"/>
+      </svg>
+    </div>
+    <p class="intro-sub">Harbour Road &middot; Market Street &middot; Eastside &middot; Central Mall</p>
+  </section>
+
+  <!-- 3. Three tiles -->
+  <section class="tiles reveal" aria-label="Explore">
+    <a class="tile tile--people" href="#join">
+      <div class="tile-art" aria-hidden="true">
+        <svg viewBox="0 0 400 470" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="t1bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#c8b8a4"/><stop offset="1" stop-color="#8a7662"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="470" fill="url(#t1bg)"/>
+          <rect y="300" width="400" height="170" fill="#d9cdbd"/>
+          <!-- two figures -->
+          <g>
+            <circle cx="130" cy="150" r="46" fill="#b9826a"/>
+            <path d="M80 230 Q130 190 180 230 L190 320 H70Z" fill="#e8dfd0"/>
+            <path d="M70 320 H190 V380 H70Z" fill="#6b5744"/>
+            <circle cx="270" cy="140" r="46" fill="#a86f58"/>
+            <path d="M220 225 Q270 185 320 225 L330 320 H210Z" fill="#2f3a46"/>
+            <path d="M210 320 H330 V380 H210Z" fill="#6b5744"/>
+          </g>
+        </svg>
+      </div>
+      <span class="tile-label">Join Us</span>
+    </a>
+    <a class="tile tile--menu" href="#menu">
+      <div class="tile-art" aria-hidden="true">
+        <svg viewBox="0 0 400 470" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="470" fill="#8b8792"/>
+          <ellipse cx="200" cy="360" rx="180" ry="50" fill="#5d5963"/>
+          <g>
+            <path d="M80 200 H130 L124 320 H86Z" fill="#e6d8c4"/>
+            <path d="M82 220 H128 L125 260 H85Z" fill="#fbd14a" opacity=".9"/>
+            <path d="M160 130 H220 L212 330 H168Z" fill="#7b2d54"/>
+            <path d="M166 150 H214 L213 180 H167Z" fill="#fff5e2"/>
+            <path d="M250 180 H310 L302 330 H258Z" fill="#dbc7a0"/>
+            <circle cx="186" cy="110" r="18" fill="#e5484d"/>
+            <circle cx="210" cy="104" r="14" fill="#5f9a2f"/>
+            <circle cx="280" cy="160" r="16" fill="#e5484d"/>
+          </g>
+        </svg>
+      </div>
+      <span class="tile-label">Our Menu</span>
+    </a>
+    <a class="tile tile--base" href="#shop">
+      <div class="tile-art" aria-hidden="true">
+        <svg viewBox="0 0 400 470" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="t3" cx="40%" cy="35%" r="75%">
+              <stop offset="0" stop-color="#a14a6e"/><stop offset=".6" stop-color="#6e2544"/><stop offset="1" stop-color="#3f1528"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="470" fill="url(#t3)"/>
+          <g fill="none" stroke="#c8789c" stroke-width="10" stroke-linecap="round" opacity=".45">
+            <path d="M-20 90 Q120 40 200 130 T420 110"/>
+            <path d="M-20 200 Q140 160 210 250 T420 230"/>
+            <path d="M-20 320 Q130 280 210 370 T420 350"/>
+            <path d="M-20 430 Q140 390 210 480 T420 470"/>
+          </g>
+        </svg>
+      </div>
+      <span class="tile-label">Our Base</span>
+    </a>
+  </section>
+
+  <!-- 4. Marquee band -->
+  <section class="marquee" aria-label="Tagline">
+    <div class="marquee-track" aria-hidden="true">
+      <span>Blended to order</span><span>Blended to order</span><span>Blended to order</span>
+    </div>
+  </section>
+
+  <!-- 5. Social grid -->
+  <section class="social reveal" aria-label="Social posts">
+    <span class="social-handle">@yourbrand</span>
+    <div class="social-grid">
+      <a class="social-tile" href="#social" style="--g1:#b9a68f;--g2:#6b5b4c">
+        <svg viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <circle cx="135" cy="260" r="110" fill="#e9dcc7" opacity=".25"/>
+          <path d="M40 360 Q135 300 230 360" stroke="#f4e9d8" stroke-width="22" fill="none" stroke-linecap="round"/>
+          <path d="M70 230 Q135 170 200 230" stroke="#f4e9d8" stroke-width="12" fill="none" stroke-linecap="round" opacity=".7"/>
+        </svg>
+        <span class="play" aria-hidden="true"></span>
+        <span class="social-cap">Layer by layer</span>
+      </a>
+      <a class="social-tile" href="#social" style="--g1:#a7b59c;--g2:#4d5a45">
+        <svg viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="30" y="250" width="210" height="150" fill="#d8ccb6" opacity=".7"/>
+          <rect x="60" y="280" width="30" height="110" fill="#8ca37d"/>
+          <rect x="120" y="280" width="30" height="110" fill="#8ca37d"/>
+          <rect x="180" y="280" width="30" height="110" fill="#8ca37d"/>
+          <circle cx="135" cy="180" r="34" fill="#e0b48c"/>
+        </svg>
+        <span class="play" aria-hidden="true"></span>
+        <span class="social-cap">Event day pop-up</span>
+      </a>
+      <a class="social-tile" href="#social" style="--g1:#8e7a92;--g2:#3e3144">
+        <svg viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M70 60 H200 L190 420 H80Z" fill="#c5c0d0" opacity=".35"/>
+          <path d="M96 240 H174 L168 420 H102Z" fill="#8e2e57"/>
+          <path d="M100 260 H170 V290 H100Z" fill="#f6dcdc" opacity=".8"/>
+        </svg>
+        <span class="play" aria-hidden="true"></span>
+        <span class="social-cap">Blending in progress</span>
+      </a>
+      <a class="social-tile" href="#social" style="--g1:#c9a58a;--g2:#6f4c34">
+        <svg viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="88" y="110" width="94" height="250" rx="10" fill="#e9b7c9"/>
+          <rect x="88" y="110" width="94" height="30" rx="8" fill="#f2d3dd"/>
+          <circle cx="135" cy="210" r="30" fill="#e0b48c"/>
+          <path d="M110 330 Q135 300 160 330" stroke="#3b2b22" stroke-width="10" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="play" aria-hidden="true"></span>
+        <span class="social-cap">Say hi at the counter</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h3>About Bloom Berry Bar</h3>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#join">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Social Media</h3>
+      <ul>
+        <li><a href="#social">Instagram</a></li>
+        <li><a href="#social">TikTok</a></li>
+        <li><a href="#social">Facebook</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#rewards">Rewards &amp; FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Terms &amp; Conditions</h3>
+      <ul>
+        <li><a href="#terms">Terms &amp; Conditions</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; Bloom Berry Bar 2019 &ndash; 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
