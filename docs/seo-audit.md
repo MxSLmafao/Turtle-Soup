@@ -65,7 +65,7 @@ language tag. Hawker Chan also has no sitemap. These are well-known brands relyi
 - Alt text is missing on most images everywhere except AMGD.
 - Only three sites declare LocalBusiness data (Common Man, Fossa, Project Açaí). That is what feeds map
   and "near me" results.
-- Heading structure is loose: three sites have no H1, six have more than one, and Huber's has 23.
+- Heading structure is loose: three sites have no H1, five have more than one, and Huber's has 23.
 - Two sites have no meta description; two more have one too long to display in full.
 - Only Burnt Ends and Brewerkz set image and snippet preview directives.
 
