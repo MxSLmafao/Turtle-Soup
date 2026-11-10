@@ -135,3 +135,30 @@ Status after the hero-photo follow-up (image generation quota: 429 on the first 
 | Logos, award badge, footer emblem | Logos and badges | Neutral placeholders | Deliberately not imitated. |
 
 Image metadata: `og:image` and `og:image:alt` and the JSON-LD `image` point to `https://www.example.com/distillery/img/hero-gin-botanicals.jpg`. The img/ folder holds one file, 120 KB, under the 4 MB limit.
+
+## Polish pass
+
+Tools: replica skill (capture at structure level, 1440x900 and 390x844; compare on a scratch copy with the added review section removed, so the scores measure the source sections only). Motion was not captured (no --motion), so motion is not scored. Pixels stay near 0 by design: photos, brand and copy differ on purpose.
+
+Scores (structure level):
+
+| Run | Layout | Style | Pixels | Notes |
+|---|---|---|---|---|
+| Baseline as shipped (added review section hidden with visibility, which keeps its height) | 17.6 | 82.2 | 0.0 | Score inflated by the 519px (1440) and 918px (390) review block that the compare keeps in layout. |
+| Baseline, added section excluded | 31.7 | 83.4 | 0.0 | Scratch copy without the review section. |
+| Final | 33.5 | 86.9 | 0.0 | Same excluded copy. |
+
+The layout axis is gated at 90 at this level, so NOT YET. The remaining layout items are not fixable without changing the design or copy: the source's hero is a looping video (no asset), the source's marquee and product copy differ on purpose, and the source's footer and gallery photos are different. Stopped there rather than chase the score.
+
+Changes made in this pass:
+- Layout: the six social tiles are links, as in the source (anchor elements, placeholder example.com target), with square corners at both widths.
+- Layout: the hero slides are wrapped in a whole-slide link beneath the copy, badge and controls, so the buttons stay clickable. Slide 1 link goes to the gins; slide 2 goes to experiences.
+- Layout: mobile stamp cards use 16px padding and a 262px image, closer to the source card proportions; mobile cocktail band is 500px tall, as in the source.
+- Style: amber buttons and the footer top rule use the 1px amber border from the source; the round slider arrows use a 2px border; the slide counter uses the source's 4px letter-spacing.
+- Checks: 1440, 768 and 390 with no overflow, no console errors or failed requests, one h1, JSON-LD parses, all images load and have alt text, no source-brand names in code.
+
+Still off, by reason:
+- Hero video (source) vs photo (clone): no video asset.
+- Copy-driven text in the marquees and the announcement bar: intentional, placeholder copy.
+- Gallery and stamp photos: drawn art, see "Photo slots".
+- Footer emblem: placeholder, see "Visual diff".

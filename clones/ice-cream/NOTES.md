@@ -145,3 +145,26 @@ Generated photos are in img/ (one file so far). Image generation returned a quot
 | Awards, press band | Placeholder by design | Neutral badges and typeset press names (no logos) |
 
 Next step once the quota resets: generate the four product photos and the six scoop-bar interiors using the section 7b prompts, optimise to JPEG under 300 KB each, and swap them into the matching slots.
+
+## Polish pass
+
+Method: replica capture of the source at 1440x900 and 390x844 (level structure, cookie and chat widgets hidden), then replica compare of the clone with the added sections (reviews, floating chat) hidden. Pixel scores are not a goal: photos and brand differ on purpose.
+
+| Axis | Baseline | Final | Gate (structure) |
+|---|---|---|---|
+| Layout | 6.5 | 13.4 | >= 90 (not met) |
+| Style | 74.8 | 78.4 | info |
+| Pixels | 0.0 | 0.0 (34 placeholders excluded) | info |
+| Motion | not measured | not measured | info |
+
+Layout is held back mainly by the source's photographic media (product photos, boutique and gallery images, icons) which the clone draws as placeholders, plus the source's wrapper structure. These placeholders are marked data-replica="placeholder" so their boxes are checked but their pixels are not scored.
+
+Changes:
+- Hero: photo on slide 1, stronger scrim with a centre pool behind the copy so the headline and CTA read clearly at 1440 and 390; text shadow strengthened.
+- Mobile rhythm: hero 442px, section top padding 40px, carousel arrows hidden on mobile, tighter award, quote, features and boutique spacing (matches the source's mobile order).
+- Desktop rhythm: approach, boutiques and community top padding 40px; features band 48px padding; press band 80px top margin; awards 40px top padding. Brings the 1440 page height from 5077 to 4775 (source 4303).
+- Style: mobile add-to-cart matches the source (weight 500, #000 on #e5e5e5); mobile footer accordion borders match; community heading 16.5px at 1440.
+- Interaction: focus-visible outlines on links, buttons, cards and footer headings; product and boutique titles change colour on hover; press feedback on arrows and buttons; Escape closes the mobile menu; accordion aria-expanded; reduced-motion keeps hover transforms off.
+- Replica placeholder markup: drawn product, approach, boutique and gallery art, the hero photo and feature icons are marked data-replica="placeholder".
+
+Left open: layout score well below the 90 gate; source photo tiles and icons are not matched; hero overlay is deliberately stronger than the source (black at 0.15) for legibility over the photo; motion not captured (no scroll or hover timing measured).

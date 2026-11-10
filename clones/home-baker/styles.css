@@ -854,3 +854,34 @@ button { font: inherit; }
   .hero { grid-template-columns: minmax(0, 1fr); }
   .hero-art { min-width: 0; }
 }
+
+/* ==========================================================
+   Polish pass, round 1 (replica compare)
+   ========================================================== */
+@media (max-width: 900px) {
+  .hero-art { width: 100%; height: auto; min-height: 0; aspect-ratio: 1 / 1; }
+  .grad-text { display: block; }
+  .footer-bottom { padding-top: 28px; gap: 18px; }
+  .pay li { padding: 6px 10px; font-size: 12px; }
+}
+.product-card p { min-height: 4.8em; }
+@media (max-width: 900px) {
+  .hero-copy { padding: 20px 0 48px; }
+  .footer-bottom { padding-top: 36px; }
+  .pay li { padding: 8px 12px; }
+  .product-card p { min-height: 0; }
+}
+.product-card { height: 100%; }
+.product-card p { min-height: 0; margin-bottom: 26px; }
+.product-card .btn-dark { margin-top: auto; }
+.social-grid { padding-left: calc(50% - 661px); }
+@media (max-width: 900px) {
+  .social-grid { padding-left: 15px; }
+  .loc-card { padding-bottom: 30px; }
+  .site-header .logo { font-size: 16px; line-height: 20px; }
+}
+@media (max-width: 900px) {
+  .story { gap: 12px; }
+  .story-copy .eyebrow { margin-bottom: 0; }
+  .story-copy h2 { margin-bottom: 0; }
+}

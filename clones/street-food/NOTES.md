@@ -123,3 +123,31 @@ Generated photos live in img/ (4 files, about 580 KB total). Each was checked by
 
 The hero has no text overlay, so there is no text contrast to check. Image generation hit the quota
 again after the 4th request in this round, so the remaining slots stay drawn.
+
+## Polish pass
+Tools: replica (capture + compare, level `structure`), screenshot-to-html loop, design-clone checks.
+Scratch: scratchpad/polish-street-food/ (reference capture, round reports, before-copies of index.html and styles.css).
+Compared with `--hide` on the added sections only (reviews, newsletter, chat button, order badge). Footer is compared.
+
+Scores (structure level; gate layout >= 90, motion >= 85, not reached):
+
+| Run | Layout | Style | Pixels (info) | Notes |
+|-----|--------|-------|---------------|-------|
+| Baseline (round 1, footer hidden by mistake) | 26.4 | 67.5 | 0.0 | hide list wrong, footer excluded |
+| Round 2 (footer counted, placeholders marked) | 25.5 | 67.9 | 0.0 | |
+| Round 3 (final, desktop logo 64px) | 25.7 | 69.2 | 0.0 | |
+
+Motion was not captured (no `--action` recording), so the motion score is not available.
+
+Changes made:
+- Mobile recommendation cards and link tiles are centred at source widths (321px) instead of left-aligned; tile height 214px.
+- Mobile logo block is 64px tall (source logo row); desktop logo 64px tall, wordmark 42px. This removed a 16px cascade on the cards below.
+- Mobile footer: centred, 97px min height.
+- Photo and tile placeholders marked with `data-replica="placeholder"` (generated photos and drawn art standing in for source photos), per the replica skill's rule for assets the project does not own.
+- Checked interaction: nav underline and link colour on hover, dropdown on hover and focus, card and tile zoom on hover, visible keyboard focus outline, reduced-motion media query present.
+- Final checks at 1440, 768 and 390: no horizontal overflow, no console errors, no failed requests, one h1, JSON-LD parses, no source-brand names or CDNs in code, all images have alt, no broken image paths.
+
+Remaining layout gap (not closed on purpose):
+- The source's link tiles and card photos are `<img>` elements; the clone's are drawn divs and placeholders. The matcher reports them as missing media. Closing this would mean changing the markup only to match the score, so it is left as is.
+- Source link captions sit outside the `<a>` elements; the clone puts captions inside the links for accessibility. This shifts row positions by about 225px on the matcher.
+- The award emblem and the source's own award badge image have no counterpart.

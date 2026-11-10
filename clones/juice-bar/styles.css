@@ -102,7 +102,7 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Hero ---------- */
 .hero {
-  position: relative; height: 759px; overflow: hidden;
+  position: relative; height: 759px; overflow: hidden; margin-top: -137px;
   background: #5c5550;
 }
 .hero-art { position: absolute; inset: 0; animation: heroDrift 18s ease-in-out infinite alternate; }
@@ -124,7 +124,7 @@ h1, h2, h3, p { margin: 0; }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Intro ---------- */
-.intro { padding: 96px var(--gutter) 72px; text-align: center; }
+.intro { padding: 51px var(--gutter) 51px; text-align: center; }
 .intro-row { display: flex; align-items: center; justify-content: center; gap: 28px; }
 .intro-title { font-family: var(--serif); font-weight: 400; font-size: calc(21.9px + .432vw); line-height: 1.17; color: var(--plum); letter-spacing: -.02em; }
 .doodle { width: 120px; height: 80px; flex: none; }
@@ -134,7 +134,7 @@ h1, h2, h3, p { margin: 0; }
 /* ---------- Tiles ---------- */
 .tiles {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
-  padding: 0 var(--gutter) 110px;
+  padding: 91px var(--gutter) 101px;
 }
 .tile { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; text-decoration: none; }
 .tile-art { position: absolute; inset: 0; transition: transform 1.2s var(--ease); }
@@ -166,14 +166,14 @@ h1, h2, h3, p { margin: 0; }
 @keyframes marquee { from { transform: translateX(0) rotate(-3deg); } to { transform: translateX(-33.333%) rotate(-3deg); } }
 
 /* ---------- Social grid ---------- */
-.social { position: relative; padding: 96px var(--gutter) 120px; }
+.social { position: relative; padding: 51px var(--gutter) 71px; }
 .social-handle {
-  position: absolute; left: calc(var(--gutter) + 14px); top: 112px; z-index: 2;
+  position: absolute; left: calc(var(--gutter) + 14px); top: 66px; z-index: 2;
   font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--plum);
 }
 .social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .social-tile {
-  position: relative; aspect-ratio: 2 / 3; overflow: hidden; display: block; text-decoration: none;
+  position: relative; aspect-ratio: 9 / 16; overflow: hidden; display: block; text-decoration: none;
   background: linear-gradient(160deg, var(--g1, #b9a68f), var(--g2, #6b5b4c));
 }
 .social-tile svg { width: 100%; height: 100%; transition: transform .8s var(--ease); }
@@ -195,14 +195,14 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--cocoa); color: var(--cream); padding: 72px var(--gutter) 48px; }
+.site-footer { background: var(--cocoa); color: var(--cream); padding: 60px var(--gutter) 40px; }
 .footer-cols { display: flex; flex-wrap: wrap; gap: 40px 64px; }
 .footer-col { min-width: 180px; max-width: 240px; flex: 0 1 auto; }
 .footer-col h2, .footer-col h3 { font-family: var(--serif); font-weight: 400; font-size: 21.184px; letter-spacing: -.02em; line-height: 1.19; margin-bottom: 28px; }
 .footer-col li + li { margin-top: 4px; }
 .footer-col a { font-size: 14.272px; line-height: 1.4; color: #CDBF9A; text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
 .footer-col a:hover { color: var(--cream); }
-.copyright { margin: 48px 0 0; text-align: right; font-size: 14.272px; line-height: 1.4; opacity: .85; }
+.copyright { margin: 36px 0 0; text-align: right; font-size: 14.272px; line-height: 1.4; opacity: .85; }
 
 /* ---------- Reveal ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
@@ -218,6 +218,7 @@ h1, h2, h3, p { margin: 0; }
 
 @media (max-width: 900px) {
   .site-header { height: 84px; padding: 0 20px; }
+  .hero { margin-top: -84px; }
   .brand-mark { width: 56px; height: 56px; }
   .nav-toggle { display: flex; }
   .site-nav {
@@ -231,9 +232,9 @@ h1, h2, h3, p { margin: 0; }
   .drop { position: static; opacity: 1; transform: none; pointer-events: auto; box-shadow: none; background: none; padding: 6px 0 0 14px; display: none; }
   .has-drop.is-open .drop { display: block; }
   .nav-cta { align-self: stretch; }
-  .tiles { grid-template-columns: 1fr; gap: 18px; padding-bottom: 80px; }
-  .tile { aspect-ratio: 4 / 3.4; }
-  .marquee { height: 200px; }
+  .tiles { grid-template-columns: 1fr; gap: 11px; padding: 20px var(--gutter) 80px; }
+  .tile { aspect-ratio: 343 / 409; }
+  .marquee { height: 129px; }
   .marquee-track { font-size: 64px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .site-footer { padding: 56px 24px 40px; }
@@ -242,21 +243,22 @@ h1, h2, h3, p { margin: 0; }
 }
 
 @media (max-width: 600px) {
-  :root { --gutter: 16px; }
-  .hero { height: 760px; }
+  :root { --gutter: 23px; }
+  .hero { height: 440px; }
   .hero-title { bottom: 22px; }
   .social-cap { font-size: 15px; bottom: 12px; }
   .play { top: 42%; width: 36px; height: 36px; margin: -18px 0 0 -18px; }
   .play::after { left: 12px; top: 7px; border-width: 11px 0 11px 18px; }
-  .intro { padding: 64px var(--gutter) 52px; }
+  .intro { padding: 155px var(--gutter) 155px; }
   .intro-row { gap: 14px; }
   .doodle { width: 74px; height: 50px; }
   .doodle-cup { width: 40px; height: 60px; }
   .intro-title { font-size: 22px; }
-  .social-grid { gap: 10px; }
-  .social { padding-bottom: 80px; }
-  .social-handle { top: 104px; left: 28px; }
-  .footer-cols { flex-direction: column; }
+  .social-grid { gap: 20px; }
+  .social-tile { aspect-ratio: 9 / 16; }
+  .social { padding-top: 76px; padding-bottom: 80px; }
+  .social-handle { top: 92px; left: 28px; }
+  .footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 16px; }
   .footer-col { max-width: none; }
   .reviews { padding: 24px var(--gutter) 80px; }
   .newsletter { padding: 56px var(--gutter); }
@@ -320,4 +322,16 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 600px) {
   .chat-fab { right: 16px; bottom: 16px; padding: 12px; }
   .chat-fab span { display: none; }
+}
+
+@media (max-width: 600px) {
+  .site-footer { padding: 48px var(--gutter) 40px; }
+}
+
+/* Keyboard focus, visible on every interactive element */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--olive); outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .footer-col { min-width: 0; }
 }

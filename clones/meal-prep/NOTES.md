@@ -141,3 +141,25 @@ Checks: one `h1`; JSON-LD parses; no `<img>` tags; no horizontal overflow at 390
 Image generation: the first attempt in this round returned a 429 quota error (reset in about 4h48m). Per the brief, generation stopped there and no further images were attempted. The only generated image in `img/` is the hero photo above. Remaining photo slots stay drawn.
 
 Metadata: `og:image`, `og:image:alt`, `twitter:image` and the JSON-LD `image` all point at `https://www.example.com/meal-prep/img/hero-meal-trays.jpg`.
+
+## Polish pass
+
+Tools: replica (structure level, reference captured at 1440x900 and 390x844). Scratch: `scratchpad/polish-meal-prep/`. The reference capture hid the source's floating chat button. The clone compare hid the newsletter and the floating chat button (gap-fix additions). The clone was compared with `--action reveal` so its scroll reveals had fired. The gap-fix sections are excluded.
+
+| Axis | Baseline (round 1) | Final (round 3) | Gate (structure) |
+|---|---|---|---|
+| Layout | 7.8 | 10.5 | ≥ 90 (not met) |
+| Style | 84.6 | 83.0 | info |
+| Pixels | 0.0 (36.6% differ) | 0.0 (not a target: brand, copy and photos differ on purpose) | info |
+| Motion | not captured | not captured | ≥ 85 (not measured) |
+
+The layout score is limited mainly by media, which is intentional: the source's ticker image, footer logo image, restaurant background photo and cartoon illustrations are replaced by drawn SVG or CSS art. Those items are matched as "missing" or "extra" by the tool, not as layout errors. Two compare rounds in a row gained under a point, so patching stopped per the skill's rule.
+
+Changes in this pass:
+- Phone side gutter raised from 16px to 32px, matching the source's phone inset. Option cards and buttons now sit at the same width as the source's.
+- Nav labels aligned to the source's item count and order (7 items plus More): Meal Assistant, Fern Pass, Meal Plans, Corporate, Restaurant, Cooking Classes. Labels are placeholder wording, not the source's copy.
+- The fourth option card has a sixth bullet to match the source's list length.
+
+Checks at 1440, 768 and 390: no horizontal overflow, no console errors, no failed or 4xx requests, one h1, JSON-LD parses, every img has alt (none are broken), reduced motion disables the reveal transition, no source-brand names in the folder.
+
+Still off: the ticker, footer logo image, restaurant background and the illustrated option headers (drawn, not photos); the motion axis was not measured (no motion capture of the source); the footer and enquiry band use drawn badges instead of colour logos.

@@ -1136,7 +1136,7 @@ button { font: inherit; }
 
 /* ---------- Phone ---------- */
 @media (max-width: 640px) {
-  :root { --gutter: 16px; }
+  :root { --gutter: 32px; }
   .announce-inner { gap: 10px; padding: 10px var(--gutter); }
   .announce { min-height: 36px; }
   .announce-inner { padding: 2px var(--gutter); }

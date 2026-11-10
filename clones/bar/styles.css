@@ -48,7 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--ink-soft); text-decoration: none; transition: color .25s ease; }
+a { color: var(--ink); text-decoration: none; transition: color .25s ease; }
 a:hover, a:focus-visible { color: var(--accent); }
 button { font: inherit; cursor: pointer; }
 p { margin: 0 0 10px; }
@@ -113,7 +113,7 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   line-height: 0;
 }
 .brand svg { display: block; width: 25px; height: 52px; }
-.menu { width: 100%; text-align: center; padding: 45px 40px 30px 110px; }
+.menu { width: 100%; text-align: center; padding: 45px 20px 30px 80px; }
 .menu ul {
   list-style: none;
   margin: 0;
@@ -125,13 +125,19 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .menu li {
   display: inline-block;
   white-space: nowrap;
-  padding: 0 4px;
-  letter-spacing: 3.2px;
+  padding: 0 2px;
+  letter-spacing: 0;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 17.1429px;
 }
-.menu a { color: var(--ink); font-family: var(--font-book); font-size: 12px; }
+/* 12px with 3.2px tracking at 1440px, scaling down so the list stays on one line from 1200px */
+.menu a {
+  color: var(--ink);
+  font-family: var(--font-book);
+  font-size: clamp(10px, calc(0.75vw + 1.2px), 12px);
+  letter-spacing: 0.2667em;
+}
 .menu a:hover, .menu a:focus-visible { color: var(--accent); }
 
 .menu-toggle {
@@ -604,4 +610,20 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 /* Narrower desktops: allow the nav to wrap rather than overflow */
 @media (min-width: 768px) and (max-width: 1399px) {
   .menu ul { flex-wrap: wrap; }
+}
+
+/* Desktop nav: one row from 1200px upward (below that it may wrap) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .menu ul { flex-wrap: wrap; }
+}
+/* Mobile subtitle spans the title block, like the source */
+@media (max-width: 767px) {
+  .home-sub { display: block; }
+}
+/* Footer rule with the short end segments from the source */
+.layout-footer .top-keyline { background: linear-gradient(to right, #a36457 0 50px, transparent 50px calc(100% - 50px), #a36457 calc(100% - 50px)), var(--gold-edge); }
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
 }

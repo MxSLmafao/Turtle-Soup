@@ -126,3 +126,31 @@ Still open: og:image (add once a photo exists in img/); the newsletter form has 
 | About photo (dining table) | Drawn art |
 
 Image generation: one photo generated. The next generation attempt hit the 429 quota error again (reset in about 4h48m), so generation stopped and no further images were made. Remaining slots stay drawn until quota resets and the brief's generation step is repeated.
+
+## Polish pass
+
+Baseline and final scores from `replica.mjs compare` (structure level, source homepage, added sections and floating button hidden):
+
+| Axis | Baseline | Final |
+|---|---|---|
+| layout (gate 90) | 7.7 | 6.0 to 7.8 (four runs on identical files: 6.0, 6.1, 7.6, 7.8) |
+| style | 86.6 | 86.9 to 87.2 |
+| pixels (info) | 0.0 | 0.0 |
+| overall | 7.7 | 6.0 to 7.8 |
+
+The run-to-run swing comes from the source's own carousels, which load different numbers of cards between runs (the reference's element count changed from 107 to 113). Treat the layout score as roughly 6 to 8 for this clone, not a single figure.
+
+The layout gate is not met. The report's largest "missing" items are source-only elements: the wrapper `.o-page` node, extra chef cards and review cards in the source carousels, and the source's photo-only menu cards. These follow from intentional content and structure differences and were not faked. Pixel score stays near zero because photography and copy differ on purpose.
+
+Changes kept:
+- How-it-works: container width set to 1170px and gap to 20px, matching the source grid.
+- Card shadow set to the measured source value `0 4px 8px 0 #1a262614`.
+- Mobile collage tiles set to `position: relative` so their drawn art stays inside each tile (fixes a tablet overlap found in the 768px check).
+
+Changes reverted after the score dropped:
+- Desktop how-card min-height of 336px (score fell to 5.6). Source card height measurement conflicts with the row layout and needs a separate look.
+- Card padding-top change combined with the min-height change (score fell to 5.4).
+
+Checks at 1440, 768 and 390: no horizontal overflow, no console errors, no broken images, exactly one h1, JSON-LD parses, no source-brand strings in index.html, styles.css or script.js. Replica's `capture` and `compare` were run from `.claude/skills/replica/scripts` with the installed node_modules; no `npm install` or `playwright install` was run.
+
+Not done: screenshot-to-html's rendered-state loop was covered by the per-section side-by-side review in 7a; design-clone was not run as a separate pass, but its multi-viewport and responsive checks were covered by the 1440/768/390 verification above. Hover states are the existing link, pill and card lift styles. The source's exact hover behaviour was not measured.

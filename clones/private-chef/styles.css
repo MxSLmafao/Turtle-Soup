@@ -627,7 +627,7 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
 @media (max-width: 991.98px) {
   .collage-wrap { height: auto; margin-top: 40px; }
   .collage { position: static; width: auto; height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .collage .tile { position: static !important; width: auto; height: 200px !important; }
+  .collage .tile { position: relative !important; left: auto !important; top: auto !important; width: auto; height: 200px !important; }
   #experience { padding-bottom: 72px; }
   .mosaic-wrap { width: auto; height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 40px; }
   .mosaic-wrap .tile { position: relative !important; left: auto !important; top: auto !important; width: auto; height: 180px !important; }
@@ -674,3 +674,6 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
 /* ============ PHOTO SLOTS: real images ============ */
 .tile-photo { background: #2b2a28; }
 .tile-photo img, .tile img.ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.card { box-shadow: 0 4px 8px 0 #1a262614; }
+.how .container { max-width: 1202px; }
+.how .steps { gap: 20px; }

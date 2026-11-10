@@ -54,9 +54,10 @@ p { margin: 0; }
   height: 84px; display: flex; align-items: center; justify-content: space-between;
   padding: 0 16px 0 80px;
 }
-.brand { display: flex; align-items: center; gap: 8px; }
-.brand-mark { width: 52px; height: 52px; }
-.brand-text { font-size: 36px; font-weight: 500; letter-spacing: .5px; line-height: 1; }
+.brand { display: flex; align-items: center; gap: 8px; height: 64px; }
+.brand-mark { width: 64px; height: 64px; }
+.brand-mark svg { width: 64px; height: 64px; }
+.brand-text { font-size: 42px; font-weight: 500; letter-spacing: .5px; line-height: 1; }
 .brand-text .b1 { color: var(--navy); }
 .brand-text .b2 { color: var(--accent); font-weight: 500; margin-left: 4px; }
 
@@ -293,9 +294,10 @@ main { display: block; }
   .toolbar { display: none; }
   .site-header { box-shadow: none; }
   .nav-bar { height: 84px; justify-content: center; padding: 0 16px; }
-  .brand-mark { width: 40px; height: 40px; }
-  .brand-mark svg { width: 40px; height: 40px; }
-  .brand-text { font-size: 30px; }
+  .brand { height: 64px; }
+  .brand-mark { width: 64px; height: 64px; }
+  .brand-mark svg { width: 64px; height: 64px; }
+  .brand-text { font-size: 40px; }
   .main-nav { display: none; }
   .menu-toggle {
     position: absolute; left: 0; right: 0; bottom: 0; height: 50px;
@@ -322,11 +324,11 @@ main { display: block; }
   .recos-head { margin-bottom: 24px; }
   .recos-head h2 { font-size: 20.8px; line-height: 24.96px; }
   .see-menu { position: static; transform: none; display: block; margin-top: 4px; }
-  .reco-grid { grid-template-columns: 321px; gap: 24px; }
+  .reco-grid { grid-template-columns: 321px; gap: 24px; justify-content: center; }
   .reco-img { width: 321px; height: 207px; }
   .tiles { padding: 0 16px 32px; }
-  .tile-grid { grid-template-columns: 1fr; gap: 32px; }
-  .tile-art { height: 240px; }
+  .tile-grid { grid-template-columns: 321px; gap: 32px; justify-content: center; }
+  .tile-art { height: 214px; }
   .tile-link h3 { font-size: 17.6px; line-height: 21.12px; letter-spacing: 2px; }
   .order-badge { width: 64px; height: 64px; right: 12px; bottom: 12px; font-size: 10px; line-height: 12px; }
   .chat-btn { right: 12px; bottom: 88px; width: 48px; height: 48px; }
@@ -339,7 +341,7 @@ main { display: block; }
   .signup-form { flex-direction: column; align-items: stretch; }
   .signup-form input { max-width: none; flex: none; height: 48px; width: 100%; }
   .signup-form button { width: 100%; }
-  .site-footer { padding: 14px 16px; flex-direction: column; align-items: flex-start; font-size: 12.8px; line-height: 25.6px; }
+  .site-footer { padding: 14px 16px; min-height: 97px; flex-direction: column; align-items: center; text-align: center; font-size: 12.8px; line-height: 25.6px; }
   .foot-right { gap: 8px; }
 }
 

@@ -1,0 +1,144 @@
+/**
+ * Init command - install skill to ~/.claude/skills/
+ */
+
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { exec as execCallback } from 'child_process';
+import { promisify } from 'util';
+import { copyRecursive, exists } from '../utils/copy.js';
+import { runAllChecks } from '../utils/validate.js';
+import { getSkillDest, getCommandsDest } from '../utils/paths.js';
+
+const exec = promisify(execCallback);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Source: package root (where SKILL.md is)
+const SKILL_SOURCE = path.resolve(__dirname, '../..');
+
+/**
+ * Install skill to Claude Code skills directory
+ * @param {string[]} args - CLI arguments
+ */
+export async function init(args) {
+  const force = args.includes('--force') || args.includes('-f');
+  const skipDeps = args.includes('--skip-deps');
+  const SKILL_DEST = getSkillDest();
+
+  console.log('design-clone skill installer\n');
+
+  // Pre-flight checks
+  console.log('Checking requirements...');
+  const checks = await runAllChecks();
+
+  console.log(`  Node.js: ${checks.node.ok ? '✓' : '✗'} ${checks.node.message}`);
+  console.log(`  Chrome:  ${checks.chrome.ok ? '✓' : '✗'} ${checks.chrome.message}`);
+  console.log('');
+
+  if (!checks.node.ok) {
+    console.error('Error: Node.js 18+ is required');
+    process.exit(1);
+  }
+
+  if (!checks.chrome.ok) {
+    console.warn('Warning: Chrome not found. Playwright will download Chromium during installation.');
+  }
+
+  // Check existing installation
+  const alreadyExists = await exists(SKILL_DEST);
+  if (alreadyExists && !force) {
+    console.log(`Skill already installed at: ${SKILL_DEST}`);
+    console.log('Use --force to overwrite existing installation.');
+    return;
+  }
+
+  // Copy skill files
+  console.log('Installing skill files...');
+  try {
+    // Ensure parent directory exists
+    await fs.mkdir(path.dirname(SKILL_DEST), { recursive: true });
+
+    // Remove existing if force
+    if (alreadyExists && force) {
+      await fs.rm(SKILL_DEST, { recursive: true, force: true });
+    }
+
+    // Copy files (excluding test files and node_modules)
+    await copyRecursive(SKILL_SOURCE, SKILL_DEST, {
+      exclude: [
+        'node_modules',
+        '.git',
+        '__pycache__',
+        'test-*.js',
+        'test-*.py',
+        'run-all-tests.js',
+        '.DS_Store',
+        '*.log',
+        'cloned-designs',
+        'test-output',
+        'icons'
+      ]
+    });
+
+    console.log(`  Copied to: ${SKILL_DEST}`);
+  } catch (error) {
+    console.error(`Error copying files: ${error.message}`);
+    process.exit(1);
+  }
+
+  // Copy slash commands to ~/.claude/commands/design/
+  console.log('Installing slash commands...');
+  try {
+    const COMMANDS_DEST = getCommandsDest();
+    const COMMANDS_SOURCE = path.join(SKILL_SOURCE, 'commands/design');
+
+    // Ensure commands directory exists
+    await fs.mkdir(COMMANDS_DEST, { recursive: true });
+
+    // Copy command files
+    const commandFiles = await fs.readdir(COMMANDS_SOURCE).catch(() => []);
+    for (const file of commandFiles) {
+      if (file.endsWith('.md')) {
+        const src = path.join(COMMANDS_SOURCE, file);
+        const dest = path.join(COMMANDS_DEST, file);
+        await fs.copyFile(src, dest);
+        console.log(`  Installed: /design:${file.replace('.md', '')}`);
+      }
+    }
+  } catch (error) {
+    console.warn(`  Warning: Could not install slash commands: ${error.message}`);
+  }
+
+  // Install dependencies
+  if (!skipDeps) {
+    // Node.js dependencies
+    console.log('Installing Node.js dependencies...');
+    try {
+      await exec('npm install --omit=dev', { cwd: SKILL_DEST });
+      console.log('  npm packages installed');
+    } catch (error) {
+      console.warn(`  Warning: npm install failed: ${error.message}`);
+    }
+
+    // Install Playwright browsers (chromium only for smaller footprint)
+    console.log('Installing Playwright browsers...');
+    try {
+      await exec('npx playwright install chromium', { cwd: SKILL_DEST, timeout: 300000 });
+      console.log('  Chromium browser installed');
+    } catch (browserError) {
+      console.warn(`  Warning: Browser install failed: ${browserError.message}`);
+      console.warn('  Run manually: npx playwright install chromium');
+    }
+  }
+
+  // Success
+  console.log('\n✓ design-clone skill installed successfully!\n');
+  console.log('Next steps:');
+  console.log('  1. AI analysis is built-in (no API key needed)');
+  console.log('  2. Use slash commands in Claude Code:');
+  console.log('     /design:clone      - Clone single page');
+  console.log('     /design:clone-site - Clone multiple pages');
+  console.log('     /design:clone-px   - Pixel-perfect clone');
+  console.log('\nRun "design-clone verify" to check installation status.');
+}

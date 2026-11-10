@@ -108,3 +108,33 @@ Status after the hero wiring round. The image tool returned HTTP 429 (quota exha
 | Badges (3) | Award logos | Neutral drawn placeholders (`aria-hidden`) | Placeholders by design. |
 
 Generated images in `img/`: 1 file, 142.8 KB total. Earlier discarded output: one festival-stall image with readable signage, excluded.
+
+## Polish pass
+
+Tools: replica (capture and compare, `--level structure`, hiding the added reviews, floating button and sr-only text), with the method from screenshot-to-html and design-clone applied by hand. Scratch: `scratchpad/polish-brewery/`.
+
+Scores (replica, structure level, gate layout ≥ 90):
+
+| Round | Layout | Style | Pixels | Change |
+|---|---|---|---|---|
+| 1 (baseline) | 18.8 | 75.3 | 0.0 | None |
+| 2 | 19.3 | 74.3 | 0.0 | Mobile header 104px; pillars padding; social band whitespace; newsletter and footer padding; header shadow on scroll; focus and hover states |
+| 3 | 18.5 | 76.7 | 0.0 | Style batch (input type, arrow colour, no drop-shadow on pillar art, 50px contact button). Reverted: score dropped. |
+| 4 (final) | 18.5 | 73.7 | 0.0 | Round 3 reverted. Layout moved by about 0.8 between identical runs, so treat ±1 as noise. |
+
+Stopped after round 4: two rounds gained under 1 point, per the skill. The layout gate is not reachable with this design. The remaining layout items are the source's photos (pillars, tiles), badge graphics and swiper chrome, which are drawn art here. Matching them as elements would mean copying the source's structure for its own sake, which the brief rules out.
+
+Changes kept:
+- Section heights at 1440 and 390 are matched to the source's measured bands. Mobile header is 104px (was 77px); social band and mobile newsletter/footer have the source's whitespace.
+- Header gains a shadow after 40px of scroll. Matches the source's sticky header behaviour.
+- Keyboard focus is a 2px amber outline on nav links, icon buttons, buttons, arrows, form fields, tiles and the logo.
+- Button press states (scale 0.98 and 0.94) and a lift on review cards.
+- Nav chevrons rotate on hover; arrows get a hover background. Reduced motion disables these transitions.
+
+Checked at 1440, 768 and 390: no horizontal overflow, one h1, no broken images, no console errors or failed requests, JSON-LD parses, no source-brand names in code.
+
+Known gaps:
+- Layout and pixel scores are limited by the drawn art (see above).
+- Hero slide 2 and slider logic are absent; arrows are visual only.
+- Pillar copy weight is 400. The source reports 500 on its first card, but it renders the same as the others.
+- The source's booking icon and the clone's contact button occupy the same slot; the clone uses a contact icon.

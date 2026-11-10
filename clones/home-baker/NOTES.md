@@ -130,3 +130,41 @@ Wired: the hero photo `img/hero-cookie-box.jpg` (1264x848, 113 KB) replaces the 
 Still drawn (SVG or gradient art, with role="img" labels): bestseller cards 1 to 4, the story split panel, ingredient tiles 1 to 4, location storefronts 1 to 5, and Instagram tiles 1 to 6. Image generation stopped at the first call: the quota error came back (429, reset in about 4h48m). The brief says not to retry, so no further photos were generated. img/ holds only the hero photo.
 
 Notes: the `.hero-svg` CSS rules are now unused but harmless.
+
+## Polish pass
+
+Tools: replica compare (layout, style, pixels), a rendered-state check per section at 1440 and 390, and the interaction and reduced-motion checks from the clone skills. Scratch and blueprints are in polish-home-baker/ under the scratchpad root.
+
+Scores (replica `structure` level, reference = source homepage at 1440 and 390):
+
+| Run | Layout | Style | Pixels | Notes |
+|-----|--------|-------|--------|-------|
+| Baseline (before polish) | 35.9 | 90.2 | 0.0 | Full page; added reviews section left in its space (hidden with visibility) |
+| Final, full page | 41.1 | 90.3 | 0.0 | Same as the deliverable, with added sections hidden |
+| Final, added sections excluded | 49.5 | 90.9 | 0.0 | Scratch copy with the reviews section and floating button removed, per the brief |
+
+The layout gate of 90 is not reached. Remaining layout items are mostly reference-only elements (an Instagram feed, the header's hidden heading link, and a location card structure with different markup), plus copy line-count differences. Pixels stay near zero because photos, copy and brand differ on purpose.
+
+Changes (in order):
+- Story headline: shortened to two lines to match the reference's height (115px).
+- Hero (mobile): image is a 390px square; hero copy spacing matched; grid uses minmax(0, 1fr) to stop overflow.
+- Bestsellers (mobile): the gradient "Fresh From The Oven" span is a block line, matching the two-line heading.
+- Bestsellers (desktop): descriptions use their natural height; buttons align to the card bottom (margin-top auto). One description shortened to match the two-line length.
+- Ingredients: one description shortened to one line.
+- Social band: row starts at x=59 on desktop, matching the reference.
+- Locations (mobile): cards 10px taller (bottom padding 30px), matching the reference card heights.
+- Story (mobile): gaps between eyebrow, headline, photo and paragraph tightened to 12px, matching the reference.
+- Footer (mobile): bottom bar spacing and payment badge size adjusted; footer height now matches (539px).
+- Header (mobile): wordmark 16px (was 24px).
+
+Interaction and accessibility (already in the clone, checked):
+- Hover: buttons lift 2px with a shadow; nav links underline; product and tile images scale; location cards lift.
+- Focus: visible keyboard focus ring on all links, buttons and form controls.
+- Header: sticky, background firms up after scrolling 40px.
+- Menus: mobile menu toggles with aria-expanded.
+- Transitions: 0.3s and cubic-bezier(0.25, 0.46, 0.45, 0.94), matching the source measurements.
+- Reduced motion: transitions and scroll reveal disabled for prefers-reduced-motion.
+
+Final checks at 1440, 768 and 390: no horizontal overflow, no console errors, no failed requests, one h1, JSON-LD parses, every image has alt text (the hero photo and the drawn art use role="img" with labels), and no source-brand names in code.
+
+Still off: Instagram feed (reference-only), location card markup, copy line counts in a few cards, photos (drawn art except the hero), and the header wordmark is a placeholder monogram rather than the source's logo.

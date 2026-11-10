@@ -132,7 +132,7 @@ button, input { font: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 52px;
+  height: 93px;
   background: var(--cream);
   border-bottom: 1px solid rgba(31, 29, 26, .06);
   transition: box-shadow .3s var(--ease);
@@ -316,7 +316,8 @@ button, input { font: inherit; }
 }
 
 /* ---------- Category tiles ---------- */
-.categories { background: var(--paper); padding-bottom: 32px; }
+.categories { background: var(--paper); padding: 43px 0 48px; }
+.categories .section-title { padding: 2px 0 42px; }
 .tile-grid {
   max-width: 1324px;
   margin: 0 auto;
@@ -370,7 +371,7 @@ button, input { font: inherit; }
 .tile:hover .tile-label::after { width: 180px; }
 
 /* ---------- Press band ---------- */
-.press { background: var(--cream); padding: 22px 0 34px; text-align: center; }
+.press { background: var(--cream); padding: 22px 0 45px; text-align: center; }
 .press-title { padding: 0 0 18px; }
 .press-row {
   max-width: 1324px;
@@ -437,7 +438,7 @@ button, input { font: inherit; }
 .split-panel:hover .split-cta::after { transform: scaleX(.6); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--cream); padding: 56px 32px 28px; }
+.site-footer { background: var(--cream); padding: 40px 32px 20px; }
 .footer-cols {
   max-width: var(--max);
   margin: 0 auto;
@@ -485,7 +486,7 @@ button, input { font: inherit; }
 .newsletter input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
 .footer-base {
   max-width: var(--max);
-  margin: 46px auto 0;
+  margin: 34px auto 0;
   padding-top: 18px;
   border-top: 1px solid rgba(31, 29, 26, .14);
   display: flex;
@@ -667,4 +668,61 @@ button, input { font: inherit; }
   .reviews .section-title { padding-bottom: 14px; }
   .chat-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; padding: 0; justify-content: center; }
   .chat-fab span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* ---------- Polish pass: mobile hero stacks like the source (photo, then text) ---------- */
+@media (max-width: 767px) {
+  .site-header { height: 108px; }
+  .hero { height: auto; background: var(--paper); }
+  .hero-photo { position: relative; inset: auto; height: 360px; }
+  .hero-shade { display: none; }
+  .hero-copy {
+    position: static;
+    transform: none;
+    width: auto;
+    padding: 26px var(--gutter) 28px;
+    color: var(--ink);
+  }
+  .hero-copy .eyebrow { color: var(--ink); }
+  .hero h1 { color: var(--ink); }
+  .hero h1 em { color: var(--chocolate); }
+  .hero-copy .lede { color: var(--muted); }
+  .btn-arrow { border-color: var(--ink); color: var(--ink); }
+  .btn-arrow:hover { background: var(--ink); color: var(--cream); }
+}
+
+/* ---------- Polish pass: tablet header collapses before the nav runs out of room ---------- */
+@media (max-width: 960px) {
+  .header-inner { grid-template-columns: auto 1fr auto; padding: 0 24px; }
+  .menu-toggle { display: flex; }
+  .brand { justify-self: center; grid-column: 2; }
+  .mainnav {
+    position: fixed;
+    top: 125px;
+    left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--cream);
+    padding: 8px 24px 24px;
+    border-bottom: 1px solid rgba(31, 29, 26, .1);
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: .02em;
+    display: none;
+  }
+  .mainnav.is-open { display: flex; }
+  .mainnav a { padding: 14px 0; border-bottom: 1px solid rgba(31, 29, 26, .08); }
+  .mainnav a::after { display: none; }
+  .header-actions .action-link { display: none; }
+}
+
+/* ---------- Polish pass: pressed states ---------- */
+.btn:active, .btn-arrow:active, .chat-fab:active { transform: translateY(1px); }
+@media (max-width: 960px) {
+  .press-row { grid-template-columns: repeat(3, 1fr); gap: 14px 10px; }
+  .press-bold { font-size: 22px; letter-spacing: .2em; }
+}
+@media (max-width: 960px) {
+  .footer-cols { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .newsletter { grid-column: 1 / -1; justify-self: stretch; max-width: none; }
 }

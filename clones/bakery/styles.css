@@ -1024,7 +1024,7 @@ body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-we
    Visual-diff round 1 (against the source at 1440 and 390)
    ============================================================ */
 .stores { text-align: center; margin-bottom: 3rem; }
-.stores .app__stores { margin-top: 0; }
+.stores .app__stores { margin-top: 0; margin-bottom: 0; }
 .store-pills { display: flex; justify-content: center; gap: 12px; margin-top: 1rem; }
 .store-pill {
   display: inline-flex; align-items: center; gap: 8px;
@@ -1159,6 +1159,127 @@ body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-we
   }
   .hero__art { display: none; }
   .hero__inset { left: auto; top: auto; right: 1.25rem; bottom: 1.25rem; width: 44%; height: auto; aspect-ratio: 1 / 1; }
+}
+
+
+/* ============================================================
+   Polish pass (replica / screenshot-to-html / design-clone skills)
+   Desktop vertical rhythm measured from the reference outline.
+   ============================================================ */
+@media (min-width: 990px) {
+  /* making: arrows sit beside the caption, out of flow (reference section = 912px) */
+  .process .rail-wrap { position: relative; }
+  .process .arrows { position: absolute; right: 40px; top: 556px; margin: 0; }
+  .process { padding-bottom: 59px; }
+  .reviews__card { padding: 28px 40px; }
+
+  /* pairing: 64px section padding, 648px grid (reference 2646-3422) */
+  .pairing { padding-top: 64px; padding-bottom: 64px; }
+  .pairing__grid { padding-top: 0; min-height: 648px; }
+  .pairing__doodle { top: 64px; }
+
+  /* app: title, 41px gap, 669px stage (reference 3422-4298) */
+  .app { padding-top: 64px; padding-bottom: 64px; }
+  .app__stage { margin-top: 41px; min-height: 669px; }
+
+  /* gallery head: badges, 128px gap, heading, 41px gap, cards, 20px arrows (reference 4298-5362) */
+  .gallery { padding-top: 64px; padding-bottom: 64px; }
+  .stores { margin-bottom: 128px; }
+  .gallery .h2 { margin-bottom: 41px; }
+  .gallery .arrows { margin-top: 20px; }
+
+  /* reviews: 40px under heading, card 202px, 49px to arrows (reference 5362-5855) */
+  .reviews { padding-top: 64px; padding-bottom: 64px; }
+  .reviews .h2 { margin-bottom: 40px; }
+  .reviews .arrows { margin-top: 49px; }
+}
+
+
+@media (max-width: 989px) {
+  /* mobile vertical rhythm from the 390px reference: 32px section padding */
+  :root { --section-y: 2rem; }
+  .product { padding-top: 32px; }
+  .process { padding-top: 32px; padding-bottom: 32px; }
+  .pairing { padding-top: 32px; padding-bottom: 0; }
+  .app { padding-top: 32px; padding-bottom: 32px; }
+  .gallery { padding-top: 32px; padding-bottom: 32px; }
+  .reviews { padding-top: 32px; padding-bottom: 32px; }
+}
+@media (max-width: 640px) {
+  /* header and marquee heights from the 390px reference */
+  :root { --header-h: 102px; --announce-h: 28px; }
+  .announce { height: 28px; }
+  .announce__track { font-size: 12px; }
+
+  /* pairing: heading, then one overlapping row of cutouts (reference 2286-2807) */
+  .pairing { overflow: hidden; }
+  .pairing__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; padding-top: 0; }
+  .pairing__cut { min-width: 0; }
+  .pairing__copy { grid-column: 1 / -1; grid-row: 1; padding: 0; }
+  .pairing__copy .section__sub { margin-top: 19px; }
+  .pairing__cut { grid-row: 2; height: 342px; min-height: 0; }
+  .pairing__cut--left { grid-column: 1; justify-self: end; margin-top: 16px; margin-right: -24px; }
+  .pairing__cut--right { grid-column: 2; justify-self: start; margin-top: 60px; margin-left: -24px; }
+  .pairing__cut svg { width: 283px; max-width: none; }
+  .pairing__cut--right svg { width: 272px; }
+  .pairing__bg { inset: 2% 0; }
+
+  /* app: phone block about 366px tall, as the reference app image (2917-3283) */
+  .phone { width: 250px; height: 366px; max-height: none; border-radius: 40px; padding: 10px; }
+  .phone__screen { border-radius: 30px; padding: 22px 14px 0; }
+  .phone::before { width: 84px; height: 22px; top: 16px; }
+  .app__stage { margin-top: 24px; min-height: 0; gap: 20px; }
+  .app__perks { padding-bottom: 0; }
+
+  /* footer link columns: reference footer is 603px tall */
+  .site-footer { padding: 32px 0 24px; }
+  .site-footer__inner { gap: 1.5rem 30px; }
+}
+
+
+@media (max-width: 640px) {
+  /* product copy spacing (reference product grid 850px tall) */
+  .lede, .product__detail, .product__note, .product__price { margin-top: 16px; }
+  .product__price { margin-bottom: 20px; }
+
+  /* pairing: cutout row overlaps the subtitle (reference row 2458-2800) */
+  .pairing__cut--left { margin-top: -24px; }
+  .pairing__cut--right { margin-top: -9px; }
+  .pairing__copy { position: relative; z-index: 2; }
+  .pairing { padding-bottom: 7px; }
+
+  /* app: title to phone 20px */
+  .app__stage { margin-top: 20px; }
+
+  /* gallery cards: about 620px tall on mobile (reference 277-898 region) */
+  .moment { width: 330px; height: 620px; aspect-ratio: auto; }
+}
+
+
+/* ============================================================
+   Polish pass round 2
+   ============================================================ */
+.pairing__cut { position: relative; }
+.pairing__cut::before {
+  content: "";
+  position: absolute;
+  inset: 4% 2%;
+  background: #FBF8F0;
+  clip-path: polygon(14% 4%, 88% 0, 100% 46%, 90% 94%, 26% 100%, 0 56%);
+}
+.pairing__cut--right::before {
+  clip-path: polygon(10% 12%, 92% 2%, 100% 40%, 96% 88%, 34% 100%, 4% 80%, 0 24%);
+}
+.pairing__cut svg { z-index: 1; }
+@media (max-width: 989px) {
+  .pairing__cut::before { inset: 2% 0; }
+}
+@media (min-width: 990px) {
+  /* gallery: first card starts partly off-screen, as in the source carousel */
+  .gallery__rail { margin-left: -129px; padding-left: 0; }
+  /* app perks: column starts 145px into the stage (reference 3710) */
+  .app__perks--left { align-self: flex-start; margin-top: 145px; }
+  .app__perks--right { align-self: flex-start; margin-top: 156px; }
 }
 
 /* ---------- Reduced motion ---------- */

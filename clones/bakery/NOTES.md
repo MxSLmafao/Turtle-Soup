@@ -158,3 +158,41 @@ Generation attempts: in this pass the only generation call (the product image) r
 Scratch and verification: `<scratchpad>/img-bakery/`. Checked at 1440 and 390: hero text readable over the photo, no overflow, no console errors, no broken image paths, one h1, JSON-LD parses, `og:image`, `twitter:image` and JSON-LD `image` all point to `https://www.example.com/bakery/img/hero-croissant-lilac.jpg`.
 
 Note: the "Generated photography (7b)" section above is superseded for the hero slot.
+
+## Polish pass
+
+Method: replica (measured blueprint, scored compare at `structure` level), screenshot-to-html (rendered side-by-side per section at 1440 and 390, fix what the eye catches), design-clone (multi-viewport capture, token and responsive checks, hover and focus review). Scratch and reports: `<scratchpad>/polish-bakery/` (`ref/` blueprint, `cmp1` to `cmp6` compare rounds).
+
+Scores (replica, `structure` level, source = reference; the gap-fix additions and the placeholder brand and photos are excluded from comparison by `--hide`):
+
+| | baseline (cmp1) | final (cmp6) |
+|---|---|---|
+| layout | 9.99 (gate ≥ 90) | 31.46 |
+| style | 81.41 | 82.64 |
+| pixels | 0.00 (34.9% differ) | 0.00 (see note) |
+| page height 1440 | 6143 vs 6269 (-126) | 6274 vs 6269 (+5) |
+| page height 390 | 5940 vs 5555 (+385) | 5558 vs 5555 (+3) |
+
+Result: NOT YET. The layout gate (≥ 90) is not met. The remaining layout gap is structural and deliberate: the source's photos and their markup (`img` elements), the source's copy wording, our hero and phone frame, the store badges (replaced with neutral pills), and our extra gap-fix sections. Pixels are not expected to match, since the brand, copy and photos are different on purpose.
+
+Changes applied in this pass:
+- Desktop vertical rhythm measured from the reference outline: process section 912px (arrows moved out of flow beside the caption); pairing 776px with a 648px grid; app 876px with a 669px stage and 41px title gap; gallery head 128px gap and 20px arrow offset; reviews card 202px.
+- Mobile rhythm: 32px section padding (product, process, pairing, app, gallery, reviews); header 102px and marquee 28px (reference 390 header 28 + 102 = 130 before the hero).
+- Pairing: 2-column grid with the heading spanning both columns and one overlapping row of cutouts (reference 2286-2807); cutout blobs are pseudo-elements, not extra nodes; copy sits above the blobs.
+- App (mobile): phone block 250 x 366 (reference app image 350 x 366), 20px title gap.
+- Product (mobile): copy spacing tightened to the reference product block (850px).
+- Gallery: first card starts partly off-screen as in the source carousel; mobile cards 330 x 620.
+- Announcement: shorter copy (the source's line is about 386px wide) and a section element, not a div. Copy is ours.
+- Store line is an `h3` (as in the source).
+- Reviews card padding 28px 40px (desktop).
+- Pairing and app: hidden overflow on mobile; grid columns clamped to `minmax(0, 1fr)` so the cutouts do not widen the page.
+
+Interaction polish (already present, checked this pass): nav underline on hover and focus; button press scale 0.98 and hover tints (0.1s ease-out-cubic transitions, as measured in the source); arrow buttons hover and press; rail arrows disable at the ends; review arrows cycle the three quotes; header gains a shadow on scroll; visible `:focus-visible` outline on links, buttons, inputs; `prefers-reduced-motion` turns off marquee, reveal and smooth scrolling. Hover and focus were not separately measured against the source (no source transitions were measurable in the blueprint beyond button transitions).
+
+Final checks (1440, 768, 390): no horizontal overflow; no console errors or warnings; no failed or broken requests; one `h1`; JSON-LD parses; every `img` has alt; no source-brand strings in `index.html`, `styles.css` or `script.js`.
+
+Still off after the polish pass:
+- Source photos are not in the clone yet (image quota). The pairing cutouts, process cards and gallery cards still use drawn art, so their layout boxes differ in element type from the source's `img` nodes.
+- Source's app-store badges are third-party trademarks and are replaced by neutral pills. The source's mobile app perks are one rail of six cards; the clone shows two rails (left and right groups), which adds height on mobile.
+- Hero: the source hero is a single photo with text overlay; the clone's hero has extra drawn overlays (magnifier, arms, honeycomb callout).
+- Source copy and our copy differ on purpose; the compare reports missing paragraphs for this reason.

@@ -62,7 +62,7 @@ button { font: inherit; }
   text-align: center;
 }
 .announce p { max-width: 900px; }
-.announce a { font-weight: 500; text-underline-offset: 2px; }
+.announce a { font-weight: 400; text-underline-offset: 2px; }
 .announce__close {
   position: absolute;
   right: 16px;
@@ -301,12 +301,13 @@ button { font: inherit; }
 .product__copy {
   position: relative;
   z-index: 2;
-  padding: 0 24px 48px;
+  padding: 0 24px 138px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
+.product__title, .product__byline { width: 100%; margin: 0 auto; }
 .product__title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -394,23 +395,18 @@ button { font: inherit; }
   align-items: center;
   justify-content: center;
   color: #fff;
-}
-.banner__split {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.banner__left {
-  background:
+  /* Two halves painted as background layers: left charcoal, right amber. */
+  background-color: #3a302d;
+  background-image:
     radial-gradient(ellipse 40% 60% at 60% 35%, #5c5552 0%, transparent 70%),
-    linear-gradient(180deg, #2b2827 0%, #6b5a54 60%, #3a302d 100%);
-}
-.banner__right {
-  background:
+    linear-gradient(180deg, #2b2827 0%, #6b5a54 60%, #3a302d 100%),
     radial-gradient(ellipse 45% 55% at 40% 40%, #e0a060 0%, transparent 70%),
     linear-gradient(160deg, #3b1c10 0%, #a4451d 55%, #e07e2a 100%);
+  background-size: 50% 100%, 50% 100%, 50% 100%, 50% 100%;
+  background-position: left top, left top, right top, right top;
+  background-repeat: no-repeat;
 }
+
 .banner__copy {
   position: relative;
   z-index: 2;
@@ -523,9 +519,10 @@ button { font: inherit; }
 .legal-links { display: flex; gap: 16px; padding-left: 0; }
 .legal-links a,
 .social a { color: #fff; text-decoration: none; }
+.social a { color: var(--cream); }
 .legal-links a:hover { text-decoration: underline; }
 .social { display: flex; gap: 12px; margin-left: 8px; }
-.social a { display: grid; place-items: center; width: 24px; height: 24px; }
+.social a { display: grid; place-items: center; width: 26px; height: 26px; color: var(--cream); }
 .social a:hover { opacity: .75; }
 
 /* ---------- Floating chat button ---------- */
@@ -652,11 +649,11 @@ button { font: inherit; }
   .site-header.is-open .primary-nav a:first-child { border-top: 0; }
 
   .site-footer__inner { grid-template-columns: 1fr; }
-  .site-footer__brand { grid-column: 1; text-align: center; padding: 0 0 36px; }
+  .site-footer__brand { grid-column: 1; text-align: center; padding: 0 0 52px; }
   .site-footer__brand svg { margin: 0 auto; width: 48px; height: 48px; }
   .site-footer__cols { grid-column: 1; grid-row: 2; grid-template-columns: 1fr; text-align: center; padding-bottom: 40px; }
-  .site-footer__cols > div + div { margin-top: 40px; }
-  .site-footer__badges { grid-column: 1; justify-content: center; }
+  .site-footer__cols > div + div { margin-top: 48px; }
+  .site-footer__badges { grid-column: 1; justify-content: center; margin-top: 8px; }
   .site-footer li + li { margin-top: 16px; }
 }
 
@@ -675,9 +672,9 @@ button { font: inherit; }
   .products { margin: 16px 0; }
   .products__grid { grid-template-columns: 1fr; padding: 0 16px; }
   .product { height: 506px; }
-  .product__copy { padding: 0 16px 40px; }
+  .product__copy { padding: 0 12px 48px; }
   .product__title { font-size: 28px; line-height: 36px; }
-  .product__byline { font-size: 16px; line-height: 24px; max-width: 300px; }
+  .product__byline { font-size: 16px; line-height: 24px; }
   .product .btn { font-size: 14px; line-height: 20px; }
 
   .testimonials { padding: 40px 16px 24px; }
@@ -696,6 +693,6 @@ button { font: inherit; }
   .site-footer { padding-top: 40px; }
   .site-footer h3 { font-size: 14px; }
   .site-footer__cols h3 { margin-bottom: 4px; }
-  .site-footer__legal-inner { flex-direction: column; align-items: center; padding-left: 0; }
+  .site-footer__legal-inner { flex-direction: column; align-items: center; padding: 28px 0 28px; }
   .legal-links { flex-wrap: wrap; justify-content: center; }
 }

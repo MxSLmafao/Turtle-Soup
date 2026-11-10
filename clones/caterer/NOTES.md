@@ -128,3 +128,29 @@ Generation attempts: 1 photo generated (hero). Further generation stopped at the
 Image metadata: hero `alt` describes the table; `og:image`, `og:image:width/height/alt`, `twitter:image` and JSON-LD `image` point to `https://www.example.com/caterer/img/hero-festive-spread.jpg`. Total img/ size: about 221 KB.
 
 Note: the hero source is 1264px wide, under the 1440px desktop slot. It is shown with `object-fit: cover`, so it is slightly soft on large screens.
+
+## Polish pass
+
+Replica (structure level, 1440x900 and 390x844), measured against the source with the added newsletter and chat button hidden on a scratch copy.
+
+| Run | Layout | Style | Pixels | Notes |
+|---|---|---|---|---|
+| Baseline (as delivered, newsletter included) | 38.5 | 88.7 | 0.0 | 310px extra height from the newsletter section |
+| Round 1 (newsletter excluded, banner merged) | 45.9 | 88.6 | 0.0 | Page heights match within 6px at 1440 |
+| Round 3 (final) | 61.6 | 89.8 | 0.0 | Card copy position, card text box, phone footer rhythm |
+
+Changes:
+- Banner: the two drawn halves are now background layers of one full-width `.banner` element (the source is one element). Same colours and split.
+- Product cards: bottom padding 138px on desktop (the source's card padding), 48px on phones. Title and byline boxes span the card text column, so the copy sits where the source's copy sits.
+- Phone product bylines: 320px max width, as in the source.
+- Phone footer: spacing between link groups (48px), logo gap and legal padding, bringing its height closer to the source (about 1000px vs 1071px).
+- Style: social icons use the cream footer colour and a 26px target; the announcement link uses weight 400 as in the source.
+- Interaction states (already present, verified): button hover darkens and lifts 1px; cards zoom the background to 110% on hover over 0.2s (source timing); nav and header links underline on hover; keyboard focus shows a 3px yellow outline; header turns solid after scrolling past the hero; testimonial carousel pauses on hover; reduced-motion disables transitions and the carousel timer.
+
+Final checks (1440, 768, 390): no horizontal overflow, no console errors or warnings, one h1, JSON-LD parses, every img has alt, no source-brand names in code.
+
+Still off, and why:
+- Layout gate (90) not reached. Most remaining "missing" items are copy and brand differences by design: nav and card titles, the banner headline, testimonial quotes, and the hidden source slides. The 'Grain' wordmark is an image in the source and a text wordmark here, which is 182px wide versus 81px.
+- Pixels score 0: brand, copy and photos differ on purpose; the hero is the only generated photo, and the three cards and both banner halves are still drawn.
+- Phone card bylines are two lines here and three in the source, because the copy is different.
+- Footer logo is a drawn placeholder mark.

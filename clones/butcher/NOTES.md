@@ -126,6 +126,39 @@ Generation: two images generated in total. The image model returned quota errors
 
 Mobile: on photo slides the body paragraph is hidden below 768px so the headline and button fit over the photo.
 
+## Polish pass
+
+Replica compare, structure level, source homepage captured with popups and cookie banner hidden. The added gap-fix sections (reviews, newsletter, chat button) are excluded from the compare.
+
+| Axis | Baseline (round 1) | Final (round 6) |
+|---|---|---|
+| Layout | 4.6 | 24.4 |
+| Style | 61.6 | 62.4 |
+| Pixels | 0.0 | 0.0 |
+
+Pixels stay at 0 on purpose: brand, copy and photos differ from the source. Layout and style are the axes that reflect the design. The structure gate (layout 90) is not reached.
+
+Changes that moved the score:
+- Hero: the phone slider shows a full-size slide with peeks (84vw, 200px). The hero top offset matches the source (49px on desktop, 0 on phone).
+- Logo block is 34px taller on desktop, so the nav and everything below start where the source's do.
+- Store: rows on the source pitch (230px tiles, 20px gaps on desktop; 83px tiles with 18px gaps on phones). On phones, the fourth tile is a single cell, matching the source's 1 / 2 / 2 / 1 pattern.
+- Store labels are h3 (the source uses headings here too; the single-h1 rule stays).
+- Phones: "Watch videos" becomes a red full-width button (18px white text, 82px tall) in place of the carousel. The placeholder badge row is hidden on phones.
+- Nav: visible links are 14px, 600 weight, normal tracking (earlier value came from a different element).
+- Add to cart border matches the source grey (#d3d3d3).
+- Visible keyboard focus ring on links, buttons, selects and inputs.
+- Tablet (768px): product images capped at 300px.
+
+Interactions confirmed: nav underline on hover and focus; buttons and Add to cart hover; product image zoom; tile label tint; video play-button scale; arrow hover; sticky header shadow after 40px scroll; mobile menu toggle; reduced-motion disables transitions and autoplay.
+
+Still off (known differences, by design or source-specific):
+- The source's phone homepage has stacked category tiles (STORE, BISTRO, SERVICES and so on) above the footer. The clone uses a hamburger menu.
+- The source's store has a fourth row of content, which is blank in the capture. Not reproduced.
+- The source's tile labels are h1 elements. The clone keeps one h1.
+- Source uses photos everywhere; the clone has drawn art for slots not yet photographed.
+- Source's mobile slide is a single linked banner; the clone's slides are articles with buttons.
+- Style gaps are mostly weight naming (semibold face declared as normal, so the source computes 700 or 500). The clone uses the visually matching weights.
+
 ## Known gaps
 - Scroll-reveal timing and the exact slider easing are approximated.
 - Original store section is taller and uses real product photography; the clone uses a 5-tile mosaic instead.

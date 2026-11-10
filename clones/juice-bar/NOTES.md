@@ -119,3 +119,33 @@ Verification: exactly one h1, every img has alt, JSON-LD parses, no console erro
 | Social tile 4 (counter) | Still drawn art |
 
 Photo count: 4 generated images in img/, about 464 KB total. Hero og:image and JSON-LD image point at img/hero-acai-bowls.jpg.
+
+## Polish pass
+
+Tools: replica (capture + compare, structure level), with the gap-fix sections (reviews, newsletter, chat button) excluded
+from the compared copy because they have no source counterpart. Scratch and reports are in the private polish-juice-bar/ folder.
+
+Scores (layout / style / pixels; pixels are info-only at structure level):
+
+| Run | Layout | Style | Pixels |
+|---|---|---|---|
+| Baseline, full clone (gap sections visible in the compare) | 10.0 | 81.1 | 0.0 (80.98% differ) |
+| Baseline, gap sections excluded | 5.7 | 81.3 | 0.0 (69.2% differ) |
+| Final, gap sections excluded | 31.1 | 80.8 | 0.0 (52.8% differ) |
+
+Final page heights against the source: 1440 is 2971px against 2929px (+42); 390 is 3542px against 3526px (+16). Target gate for structure is 90, so the layout axis still fails.
+
+Changes made:
+- Header now overlays the top of the hero (hero pulled up 137px desktop, 84px mobile), matching the source. This was the largest single fix.
+- Desktop: intro, tiles and social band spacing matched to measured section heights; social tiles changed to 9:16 (317x564 measured, not 2:3); footer padding trimmed.
+- Mobile: hero height 440px (source), gutter 23px, tiles 343x409 with 11px gaps and no top padding, marquee 129px, intro spacing so the tiles start where the source's do, social tiles 9:16 in two columns, footer in a two-column grid.
+- Focus: visible keyboard focus outline on links, buttons and inputs.
+- Interaction states already in place and checked: nav underline and dropdowns, button hover, tile hover zoom, social play hover, footer link hover, header shrink on scroll, mobile menu toggle, reduced-motion handling.
+- Footer columns no longer force horizontal overflow on mobile.
+
+Final checks: no horizontal overflow at 1440, 768 or 390; zero console errors; no broken image paths; one h1; JSON-LD parses; no source-brand names in code; external hosts are Google Fonts and the placeholder domain only.
+
+Left open:
+- Layout score: the remaining failures are structural. The source's headline is an SVG outline, its tiles and social items are wrapped in image links, and its marquee text and labels differ. The clone uses h1 and plain markup, so those boxes have no counterpart.
+- Style score is about 81 in both runs. The source uses Squarespace-specific tokens and some colours I did not reproduce exactly, such as the footer link olive, which is kept lighter for contrast.
+- Transition durations were not measured against the source (the source's motion is in scroll and parallax effects the clone does not reproduce).

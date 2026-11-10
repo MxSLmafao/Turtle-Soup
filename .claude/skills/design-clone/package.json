@@ -1,0 +1,57 @@
+{
+  "name": "design-clone",
+  "version": "4.0.0",
+  "type": "module",
+  "description": "Claude Code skill for cloning website designs via multi-viewport screenshots, HTML/CSS extraction, and AI analysis",
+  "bin": {
+    "design-clone": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "commands/",
+    "templates/",
+    "docs/",
+    "SKILL.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "screenshot": "node src/capture.js",
+    "filter-css": "node src/filter-css.js",
+    "extract-assets": "node src/extract-assets.js",
+    "clone-site": "node src/clone-site.js",
+    "test": "c8 node tests/run-all-tests.js",
+    "test:no-coverage": "node tests/run-all-tests.js",
+    "docs:dev": "npm run docs:dev --prefix docs",
+    "docs:build": "npm run docs:build --prefix docs",
+    "docs:preview": "npm run docs:preview --prefix docs"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skill",
+    "design",
+    "clone",
+    "screenshot",
+    "playwright",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bienhoang/design-clone"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "css-tree": "^2.3.1",
+    "playwright": "^1.58.1",
+    "sharp": "^0.34.5"
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "c8": "^10.1.3"
+  }
+}

@@ -226,6 +226,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .btn:hover { background: var(--ink); color: var(--bg); }
 .btn:hover .btn-arrow { transform: translate(2px, -2px); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible, .signup:focus-within, .float-chat:focus-visible, .side-tab:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.product-card:focus-within .product-art, .cafe-card:focus-within .cafe-art { transform: scale(1.02); }
 .btn-arrow { transition: transform .25s var(--ease); }
 .btn--light { border-color: var(--cream); color: var(--cream); }
 .btn--light:hover { background: var(--cream); color: var(--navy); border-color: var(--cream); }

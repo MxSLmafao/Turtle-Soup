@@ -147,3 +147,29 @@ Still drawn (CSS art): the six product tiles, the five café cards, the wholesal
 The image tool quota was hit again after the café banner (retry window about 4h48m). The remaining photo slots stay drawn.
 
 Total img/ size: about 592 KB. Generated images: 4.
+
+## Polish pass
+
+Tools: replica (capture of the source at 1440x900 and 390x844, level `structure`, compare with the reviews section and floating button hidden), then the screenshot and design-clone checks. Scratch output in polish-cafe/ (round-1 to round-6 reports).
+
+Scores (replica, level structure):
+
+| Round | Change | Layout | Style | Pixels | Result |
+|---|---|---|---|---|---|
+| 1 (baseline) | none | 7.3 | 80.2 | 0.0 | NOT YET |
+| 2 | `data-replica="placeholder"` on drawn art tiles | 6.9 | 80.1 | 0.0 | reverted (down) |
+| 3 | reverted, check of baseline | 7.3 | 80.2 | 0.0 | — |
+| 4 | shop section spacing and tile heights tightened | 6.1 | — | 0.0 | reverted (down) |
+| 5 | interaction states added (button press, focus rings, tile focus lift); an underline change was reverted as it lowered style | 7.3 | 80.2 | 0.0 | kept |
+
+Stopped at round 6: two rounds in a row gained nothing, so further patching was not worth it.
+
+Why the layout score stays low: the reference has a video hero, an iframe announcement bar, and a different DOM (more `<img>` elements, a different mobile structure). Its photo, header and carousel elements have no counterpart in this clone, and this clone's added icons do not exist in the source. The layout axis does not reach 90 without copying that DOM, which is out of scope.
+
+Changes kept:
+- Button press state (`translateY(1px)` on `:active`).
+- Visible focus ring on buttons, the newsletter form, the floating chat button and the side tab.
+- Product and café tiles lift slightly when focused by keyboard.
+- Existing: header hairline on scroll, carousel pause on hover and focus, `prefers-reduced-motion` disables reveals and animations.
+
+Final checks (1440, 768, 390): no horizontal overflow, zero console errors, zero failed or 4xx requests, exactly one h1, JSON-LD parses (two graph entries), and no source-brand names in the code.

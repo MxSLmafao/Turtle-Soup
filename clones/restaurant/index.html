@@ -115,14 +115,12 @@
 <a class="skip-link" href="#content">Skip to content</a>
 
 <header class="site-header" id="top">
-  <a class="brand" href="#top" aria-label="Ember &amp; Oak home">
-    <span class="brand__word">EMBER</span>
-    <span class="brand__word brand__word--2">&amp; OAK</span>
-    <span class="brand__tag">BAR &amp; GRILL</span>
+  <a class="brand" href="#top">
+    <img class="brand__logo" src="img/ember-oak-wordmark.png" width="120" height="106" alt="Ember &amp; Oak Bar &amp; Grill, home">
   </a>
 
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-    <span></span><span></span><span></span>
+    <svg class="bars" viewBox="0 0 22 16" width="22" height="16" aria-hidden="true" focusable="false"><rect class="bar bar--1" x="0" y="0" width="22" height="3" rx="1" fill="currentColor"/><rect class="bar bar--2" x="0" y="6.5" width="22" height="3" rx="1" fill="currentColor"/><rect class="bar bar--3" x="0" y="13" width="22" height="3" rx="1" fill="currentColor"/></svg>
   </button>
 
   <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -154,11 +152,7 @@
 
 <main id="content">
   <h1 class="visually-hidden">Ember &amp; Oak: wood-fired bar and grill in Singapore</h1>
-  <section class="hero" aria-label="Featured hero image">
-    <img class="art art--desk" src="img/hero-roast-on-coals-desktop.jpg" width="1024" height="1024" alt="Roast bird on glowing charcoal with wisps of smoke" fetchpriority="high" decoding="async">
-    <img class="art art--mob" src="img/hero-short-rib-plate-mobile.jpg" width="848" height="1264" alt="Braised short rib on a white plate with an oven glow behind" fetchpriority="high" decoding="async">
-    <span class="hero__shade" aria-hidden="true"></span>
-  </section>
+  <div class="hero" role="img" aria-label="Roast bird on glowing charcoal with wisps of smoke, served at the Ember &amp; Oak grill"></div>
   <section class="reviews" aria-labelledby="reviews-title">
     <!-- Sample content only: these quotes are invented placeholders with first names. Replace with real, attributable reviews before launch. -->
     <h2 id="reviews-title" class="section-title">What guests say</h2>

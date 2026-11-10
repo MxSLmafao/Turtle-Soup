@@ -97,3 +97,30 @@ Verification (1440 and 390): one h1; 0 img elements; JSON-LD parses; no horizont
 | Press band | Placeholder names | No logos on purpose (see Visual diff). |
 
 Image metadata: og:image, og:image:width/height/alt, twitter:image and JSON-LD image all point to https://www.example.com/artisan-producer/img/hero-chocolate-cacao.jpg.
+
+## Polish pass
+
+Tools: replica capture and compare (structure level), replica report read in order, plus rendered checks at 1440, 768 and 390. Scratch: polish-artisan-producer/. Hidden from scoring by design: .reviews, .chat-fab, .skip-link (gap-fix additions).
+
+Scores (baseline round-1 vs final round-5):
+- Layout: 0.87 -> 12.8 (gate >= 90, still NOT YET)
+- Style: 56.3 -> 57.0 (info only)
+- Pixels: 0.0 -> 0.0 (65% of pixels differ, expected: copy, brand, photos and logos differ on purpose)
+
+Changes:
+- Header: 52px -> 93px nav (with 32px announcement = 125px, matching the source header block). Fixed a misreading from the visual-diff pass.
+- Categories: padding 43px top, 48px bottom; heading row 42px so tiles start at the source's y=893. Section now 712px, matching the source.
+- Press band: bottom padding 45px, so the band is 171px, matching the source.
+- Footer: padding and copyright gap trimmed, so the footer is 252px against 256px in the source.
+- Hero: desktop unchanged at 654px (matches the source hero below the 125px header).
+- Mobile hero: header 108px (144px with announcement, matching the source top offset). Photo 360px, then copy below on paper, as in the source stack. The source's second 408px photo is not reproduced (no asset).
+- Tablet (<=960px): header collapses to the menu toggle; press band three columns; footer two columns with newsletter full width. Removes horizontal overflow at 768px (was 952px).
+- Pressed state: buttons and chat button translate 1px on :active.
+- Final checks: one h1; JSON-LD parses; no overflow at 1440, 768 or 390; no console errors; no source-brand names in index.html, styles.css or script.js.
+
+Still off (not fixable without assets or copy changes):
+- Photography: the source has about 7 photos (tiles, split panels, second hero image). Clone has one generated hero photo and drawn art elsewhere.
+- Press band: source shows six real press logos; clone shows placeholder names.
+- Copy: headings and body copy are the placeholder brand's, so text-based layout items score as missing.
+- Mobile: the source's category and split sections stack differently; mobile total height is about 990px taller than the source (4227px against 3233px), mostly from the added reviews section and the stacked layout.
+- Interaction: focus and hover states exist; no slider or accordion exists in the source homepage, so none was added.

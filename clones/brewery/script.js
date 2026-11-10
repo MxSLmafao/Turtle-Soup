@@ -9,6 +9,16 @@
     });
   }
 
+
+  // Header shadow once the page has scrolled (header behaviour from the source).
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 40); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Hero arrows: cycle focus-safe, no-op until a second slide exists (see NOTES.md).
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {

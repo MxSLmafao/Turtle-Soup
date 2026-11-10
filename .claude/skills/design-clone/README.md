@@ -1,0 +1,167 @@
+<div align="center">
+  <img src="./assets/images/logo.svg" alt="design-clone" width="120" height="120">
+  <h1>Design Clone</h1>
+  <p><strong>Clone website designs with multi-viewport screenshots, HTML/CSS extraction, and AI-powered design analysis.</strong></p>
+  <p>
+    <a href="https://www.npmjs.com/package/design-clone"><img src="https://img.shields.io/npm/v/design-clone" alt="npm"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg" alt="Node"></a>
+  </p>
+</div>
+
+---
+
+## Features
+
+- **Multi-viewport screenshots**: Desktop (1920px), Tablet (768px), Mobile (375px)
+- **HTML/CSS extraction**: Clean source files with unused CSS removal
+- **Hover state capture**: Screenshots and CSS for interactive element states (phase 2)
+- **AI structure analysis**: Built-in design analysis via Claude Code (no API key needed)
+- **Asset extraction**: Downloads images, fonts, icons
+- **Menu verification**: Tests responsive navigation functionality
+
+## Installation
+
+### Option 1: npm (Recommended)
+
+```bash
+npm install -g design-clone
+design-clone init
+```
+
+### Option 2: Manual
+
+```bash
+git clone https://github.com/bienhoang/design-clone.git
+cp -r design-clone ~/.claude/skills/design-clone
+cd ~/.claude/skills/design-clone
+npm install
+```
+
+### Verify Installation
+
+```bash
+design-clone verify
+```
+
+## Quick Start
+
+In Claude Code, use:
+
+```
+/design:clone https://example.com
+```
+
+For pixel-perfect clone with full asset extraction:
+
+```
+/design:clone-px https://example.com
+```
+
+## Commands
+
+### design:clone
+
+Basic design capture:
+- Screenshots at 3 viewports (desktop, tablet, mobile)
+- HTML extraction (scripts removed, cleaned)
+- CSS extraction with unused selector removal
+
+### design:clone-px
+
+Full pixel-perfect clone:
+- All basic clone features
+- Asset extraction (images, fonts, icons)
+- AI structure analysis (built-in, no API key needed)
+- Menu verification
+- Design token extraction
+
+## Output Structure
+
+```
+cloned-design/
+├── desktop.png              # 1920x1080 screenshot
+├── tablet.png               # 768x1024 screenshot
+├── mobile.png               # 375x812 screenshot
+├── source.html              # Cleaned HTML
+├── source.css               # Filtered CSS
+├── source-raw.css           # Original CSS (unfiltered)
+├── animations.css           # Extracted @keyframes definitions
+├── animation-tokens.json    # Animation metadata (keyframes, transitions, timings)
+├── hover.css                # Generated :hover CSS rules (with --capture-hover)
+├── structure.md             # AI analysis (built-in)
+├── tokens.json              # Extracted design tokens
+├── hover-states/            # Hover state captures (with --capture-hover)
+│   ├── hover-N-normal.png   # Element before hover
+│   ├── hover-N-hover.png    # Element during hover
+│   └── hover-diff.json      # Captured element summary
+└── assets/
+    ├── images/
+    ├── fonts/
+    └── icons/
+```
+
+## Requirements
+
+- Node.js 18+
+- Playwright + Chromium (auto-installed with `npm install`)
+
+## CLI Commands
+
+```bash
+design-clone init [--force]       # Install skill to ~/.claude/skills/
+design-clone verify               # Check installation status
+design-clone update [--force]     # Update to latest version
+design-clone uninstall [--yes]    # Remove skill installation
+design-clone --version            # Show version
+design-clone help                 # Show usage help
+```
+
+## Troubleshooting
+
+### Chrome not found
+
+```bash
+# macOS
+brew install --cask google-chrome
+
+# Ubuntu
+sudo apt install chromium-browser
+
+# Or set path manually
+export CHROME_PATH="/path/to/chrome"
+```
+
+### Playwright issues
+
+```bash
+# Install browsers (if not auto-installed)
+npx playwright install chromium
+
+# For Docker/CI environments
+export PLAYWRIGHT_BROWSERS_PATH=/tmp/pw-browsers
+```
+
+See full troubleshooting guide: [docs/troubleshooting.md](docs/troubleshooting.md)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
+
+## License
+
+MIT - See [LICENSE](LICENSE)
+
+## Credits
+
+Built for use with [Claude Code](https://claude.ai/code) by Anthropic.
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ for the Claude Code community</sub>
+</div>

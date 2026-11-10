@@ -138,3 +138,43 @@ A generated hero photo now exists in your `img/` folder (list the folder; Read t
    photo, no overflow, no console errors, no broken image paths.
 4. Update NOTES.md (which slots are photos, which are still drawn). Report briefly: images wired,
    images generated, slots still drawn. Only your clones/<slug>/ folder, no git, no subagents.
+
+## 10. Polish pass with the clone skills (follow-up)
+Three skills are now installed. Read each SKILL.md and use their METHODS to re-examine and polish your
+clone:
+- `/home/user/Turtle-Soup/.claude/skills/replica/SKILL.md` — measured blueprint + scored compare.
+- `/home/user/Turtle-Soup/.claude/skills/screenshot-to-html/SKILL.md` — rendered-state loop
+  (render -> screenshot -> compare -> refine), interaction states, final checks.
+- `/home/user/Turtle-Soup/.claude/skills/design-clone/SKILL.md` — multi-viewport capture, design-token
+  extraction, responsive and hover-state checks.
+
+Project rules OVERRIDE anything in those skills:
+- No source images, logos, icons, font files or copy; no source brand name. Do not use design-clone's
+  asset extraction output in the clone, do not hot-link Unsplash, do not add Font Awesome or any CDN.
+  The only external host allowed is Google Fonts. Keep your placeholder brand and copy.
+- Do not run `npm install` or `playwright install`; Playwright is already linked into the skills. If a
+  script needs a missing package (e.g. sharp, css-tree), skip that script and use the others.
+- No image generation (quota is exhausted). Keep the generated photos you have.
+- Keep the gap fixes from section 8 (one h1, JSON-LD, meta tags, reviews/newsletter/contact button).
+  Those added sections have no counterpart in the source; exclude them when comparing.
+- Private scratch folder `<scratchpad>/polish-<slug>/` for all captures, blueprints and reports.
+
+Steps:
+1. Replica: `cd /home/user/Turtle-Soup/.claude/skills/replica/scripts` then
+   `node replica.mjs capture <source url> --out <scratch>/ref --viewports 1440x900,390x844 --level structure --hide "<cookie/popup/chat selectors>"`
+   and `node replica.mjs compare <scratch>/ref file:///home/user/Turtle-Soup/clones/<slug>/index.html --hide "<your added sections + floating button>"`.
+   Record the baseline scores (layout, style, pixels, motion). Because brand, copy and photos differ on
+   purpose, pixels will stay low: target layout and style, and never game the score.
+2. Work through the report in order, a few fixes at a time, re-running compare after each batch:
+   element boxes, spacing, type, colours, borders, radii, shadows, section heights, at both widths.
+3. Rendered-state loop from screenshot-to-html: side-by-side screenshots per section at 1440 and 390,
+   fix what the eye catches that scores miss (alignment, optical spacing, image crops, text wrapping,
+   contrast of text over photos).
+4. Interaction polish: hover/focus/active states on nav, buttons, cards and links; header scroll
+   behaviour; menus, sliders, accordions; transitions (duration/easing) matched to the source where you
+   can measure them; visible keyboard focus; reduced-motion respected.
+5. Final checks at 1440, 768 and 390: no overflow, no console errors, no broken paths, one h1, JSON-LD
+   still parses, no source-brand names in code.
+6. NOTES.md: add "## Polish pass" with baseline vs final scores and the list of changes.
+Report briefly: scores before/after, top fixes, what is still off. Only your clones/<slug>/ folder
+(plus your scratch folder); no git, no subagents.

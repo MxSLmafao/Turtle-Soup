@@ -17,6 +17,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* Escape closes the mobile menu */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var m = document.getElementById('mobileMenu');
+    var t = document.querySelector('.menu-toggle');
+    if (m && m.classList.contains('is-open')) {
+      m.classList.remove('is-open'); m.hidden = true;
+      if (t) { t.setAttribute('aria-expanded', 'false'); t.focus(); }
+    }
+  });
+
   /* Mobile menu */
   var toggle = document.querySelector('.menu-toggle');
   var menu = document.getElementById('mobileMenu');
@@ -106,6 +117,7 @@
     function flip() {
       if (!window.matchMedia('(max-width: 860px)').matches) return;
       col.classList.toggle('is-open');
+      h.setAttribute('aria-expanded', String(col.classList.contains('is-open')));
     }
     h.addEventListener('click', flip);
     h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });

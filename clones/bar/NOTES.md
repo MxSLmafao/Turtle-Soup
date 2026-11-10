@@ -143,3 +143,34 @@ Hero image: `og:image`, `twitter:image` and JSON-LD `image` point to `https://ww
 ## Navigation (desktop)
 
 Items now sit on one row at 1440px. The list starts at x 110 (after the logo, as in the source) and uses `space-between`. Item padding is 4px and the text is unchanged at 12px with 3.2px tracking. Gaps are about 10px, tighter than the source's. Below 1400px the nav may wrap, as a fallback.
+
+## Polish pass
+
+Skills used: replica (capture and compare), screenshot-to-html (rendered-state loop), design-clone (multi-viewport checks). Scratch: `scratchpad/polish-bar/`.
+Compare used a scratch copy with the added sections (guest notes, newsletter, chat button) set to `display:none`, because `--hide` only sets visibility and would keep their space.
+
+| Axis | Baseline (round 2, clean) | Final (round 4) | Gate (structure) |
+|---|---|---|---|
+| Layout | 47.7 | 47.6 | >= 90 (not met) |
+| Style | 90.0 | 90.5 | info |
+| Pixels | 0.0 | 0.0 | info (photos and copy differ on purpose) |
+| Motion | not captured | not captured | >= 85 (not measured) |
+
+The first run (round 1) included the added sections, so its 16.7 is not a valid baseline.
+
+Changes:
+- Nav: one row from 1200px to 1600px. The list starts after the logo at x 80, uses `space-between`, and scales its font with `clamp(10px, 0.75vw + 1.2px, 12px)` (12px at 1440, 10.2px at 1200). Tracking is 0.2667em, so it scales with the font. Below 1200px the list may wrap.
+- Base link colour is now white (was the softer #d8d2cc), matching the source.
+- Footer rule has the short end segments from the source.
+- Mobile subtitle spans the title block.
+- Visible keyboard focus (1px accent outline, 4px offset) on links, buttons and inputs.
+
+Remaining layout gaps, all intentional or copy-driven:
+- Footer text and hours differ from the source's copy, so the matcher reports them as missing or extra.
+- The hero is a photo (`img/hero-lobby-bar.jpg`) where the source uses a background image.
+- The nav is one row, so it is shorter than the source's two-row nav (92px against 122px).
+- Two rounds gained under 1 point, so patching stopped there.
+
+Interaction states checked: hover (links turn accent, buttons fill with the gold gradient), focus (outline), mobile menu open and close, popup dismiss, newsletter sample submit, reduced-motion disables animation. The source has no header scroll behaviour on the homepage, and none was added.
+
+Final checks at 1440, 768 and 390: no overflow, no console errors, no broken `/img/` paths, one h1, JSON-LD parses, and no source-brand names in index.html, styles.css or script.js.

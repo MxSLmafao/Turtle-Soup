@@ -115,3 +115,48 @@ sample hours (Mon to Thu and Sun 12:00 to 22:00, Fri and Sat 12:00 to 23:30), so
 
 Styling: the new sections reuse the page's own tokens. Bebas Neue for headings and buttons, Radley for quotes and body,
 the ember accent, hairline dividers and the white-button hover from the nav. The existing layout is unchanged above the fold.
+
+## Polish pass
+
+Tools: Replica (`replica.mjs capture` and `compare`, level `structure`), plus the render-compare-refine and interaction
+checks from screenshot-to-html, and the token, breakpoint and hover checks from design-clone. Project rules applied: no
+source assets, no CDN, no image generation, sections added in section 8 excluded from the compare. Scratch and reports:
+`scratchpad/polish-restaurant/` (`ref/`, `cmp0`, `cmp1`, `cmp2`, `cmp3`, `cmp-final`).
+
+The compare runs on a measurement copy with the reviews, newsletter and floating button removed, because those have no
+counterpart in the source. The deliverable is unchanged; the copy lives only in scratch.
+
+| Axis | Baseline (clean) | Final | Gate (structure) |
+|---|---|---|---|
+| layout | 51.5 | 72.4 | >= 90 (not met) |
+| style | 82.4 | 89.0 | info |
+| pixels | 0.0 | 0.0 | info (photos and copy differ on purpose) |
+| motion | not captured | not captured | not gated at this level |
+
+Baseline with my added sections included was 25.0 layout, because the compare counted them as height.
+
+Changes, in fix order:
+1. Nav spacing: link padding moved from the `<a>` to a 35px flex gap, as in the source. Brings the links to
+   their source x positions within a few px. Tablet gap 24px, mobile stacked.
+2. Hero is now a CSS background (`role="img"` with a label), with the desktop photo and a mobile swap at 767px,
+   as the source does. Removed the top and bottom shade, which the source does not have.
+3. Header is `position: absolute` at the top and becomes fixed with a shadow once scrolled, as the source does.
+4. Logo: the wordmark is now a transparent PNG rendered from the placeholder brand's own text (`img/ember-oak-wordmark.png`),
+   so it has a counterpart box like the source's logo image. It is not a copy of the source logo.
+5. Mobile hamburger: inline SVG with three bars (was spans), animating to an X. Colour set to the paper token.
+6. Social icons: 25px font size, 25px line-height and 10% radius, matching the source icon boxes.
+7. Mobile footer: 20px gap above the icons and 10px bottom padding, as the source (icons were 10px low).
+8. Interaction: `cursor: pointer` on all links, buttons, toggles, social and floating controls. Press feedback (`:active`)
+   on nav links, sub-links, the toggle, social icons, the floating button and Subscribe. Keyboard focus ring checked
+   (2px ember outline). Reduced motion removes the hero fade and all transitions.
+9. Verified at 1440, 768 and 390: no overflow, no console errors, no broken paths, one h1, every image has alt, JSON-LD
+   parses, no source-brand names in code.
+
+Known differences still open (not fixable without source assets or markup changes that would game the score):
+- Layout: the header and footer boxes are not matched as containers. The source wraps logo and nav in one element, and
+  the footer is a `<footer>` element with a different box grouping. Accepted as semantic markup.
+- Style: the body background texture and the hero photos are source assets and are not reused; the hamburger glyph
+  typography is an SVG, not a font icon.
+- Pixels: zero by design. Photos, copy and the logo are placeholders.
+- Motion: not captured. The source homepage has no scroll or hover animation beyond the nav underline and fade;
+  the clone reproduces the underline, the header shadow and the hero fade.

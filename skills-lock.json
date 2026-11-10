@@ -37,6 +37,12 @@
       "skillPath": "skills/contact-research/SKILL.md",
       "computedHash": "5d796e84502e9efe52c6763e7e9d5baeb93866169aa03b77106f82d52c17b5be"
     },
+    "design-clone": {
+      "source": "bienhoang/design-clone",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "c5acf2b5fedf51a7671c53d84beca8e3f6ea918c60fecbff6e9b5312dd7e2113"
+    },
     "discovery-interview-prep": {
       "source": "deanpeters/Product-Manager-Skills",
       "sourceType": "github",
@@ -96,6 +102,18 @@
       "sourceType": "github",
       "skillPath": "examples/prospect-research/SKILL.md",
       "computedHash": "7ecdf365d2903a28757a28a889066ff8359ba236629ce36dc96ecb3fc1a2bf3e"
+    },
+    "replica": {
+      "source": "albertirgi/replica",
+      "sourceType": "github",
+      "skillPath": "skills/replica/SKILL.md",
+      "computedHash": "01c57d137b6ea874aba9fdf16a83b515560db9a67af607180a16b33fd8b11bf1"
+    },
+    "screenshot-to-html": {
+      "source": "sevzq/screenshot-to-html",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "6dbdd3fc2ac9c9f413be769ec70d02703b3842f995a005c0b8e86b2972edf541"
     },
     "signal-prospect": {
       "source": "lusha-oss/lusha-mcp-plugin",
