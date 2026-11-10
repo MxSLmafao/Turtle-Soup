@@ -79,3 +79,9 @@
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 })();
+
+// Newsletter placeholder: no backend, just stop the page from reloading.
+(function () {
+  var form = document.querySelector('.signup-form');
+  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+})();

@@ -85,6 +85,18 @@
     start();
   }
 
+  /* Newsletter (placeholder: no email is sent) */
+  var form = doc.querySelector('[data-newsletter]');
+  var note = doc.querySelector('[data-newsletter-note]');
+  if (form && note) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { note.textContent = 'Please enter a valid email address.'; return; }
+      note.textContent = 'Thanks. This demo form does not send email.';
+      form.reset();
+    });
+  }
+
   /* Scroll reveal */
   var revealTargets = doc.querySelectorAll('.products__grid .product, .testimonials__inner, .banner__copy, .site-footer__inner');
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });

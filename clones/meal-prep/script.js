@@ -43,14 +43,14 @@
   }
 
   // Each card gets a slightly different offset so repeated parts do not look copy-pasted.
-  function traySvg(parts, seed) {
+  function traySvg(parts, seed, label) {
     var dx = ((seed * 7) % 9) - 4;
     var dy = ((seed * 5) % 7) - 3;
     var uses = parts.map(function (p, i) {
       var x = ((i * 13 + seed * 3) % 11) - 5;
       return '<use href="#' + p + '" transform="translate(' + (x * 0.6) + ',' + ((i % 2) * 2) + ')"/>';
     }).join('');
-    return '<svg viewBox="0 0 200 140" role="img" aria-hidden="true"><g transform="translate(' + dx + ',' + dy + ')">' +
+    return '<svg viewBox="0 0 200 140" role="img" aria-label="' + escapeHtml(label) + ' (sample illustration)"><g transform="translate(' + dx + ',' + dy + ')">' +
       '<use href="#tray"/>' + uses + '<use href="#sauce"/></g></svg>';
   }
 
@@ -66,7 +66,7 @@
       : '';
     return '<article class="meal" style="--tint:' + meal.tint + ';animation-delay:' + (index * 70) + 'ms">' +
       '<div class="meal-media">' + ribbon + macros + kcal +
-      traySvg(meal.parts, index + 1) +
+      traySvg(meal.parts, index + 1, meal.title) +
       '<svg class="meal-tag" viewBox="0 0 24 24" aria-hidden="true"><use href="#' + meal.tag + '"/></svg>' +
       '</div>' +
       '<div class="meal-body"><h3>' + escapeHtml(meal.title) + '</h3><p>' + escapeHtml(meal.desc) + '</p></div>' +

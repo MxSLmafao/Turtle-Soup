@@ -108,3 +108,23 @@ Discrepancies left:
 - Hero subtitle copy wraps differently (new placeholder copy).
 - Kabel glyph widths differ from Jost (see Fonts).
 - Hero overlay opacity and vignette are approximations.
+
+## Gap fixes
+
+Checked against `.claude/skills/fnb-site-gaps/SKILL.md`. Placeholder business data only.
+
+| # | Gap | Before | After | Placeholders used |
+|---|---|---|---|---|
+| 1 | Image alt text | No raster images. Decorative SVG hidden with aria-hidden, one unlabelled SVG inside an aria-hidden wrapper | Same, plus aria-hidden on that SVG. Illustration SVGs keep role="img" and aria-label. 0 images, 0 missing alt | none |
+| 2 | Local business structured data | None | JSON-LD `@graph`: BarOrPub + LocalBusiness, WebSite, WebPage. Parses. No `image` (no img/ folder) | 1 Sample Street, Singapore 000000; +65 0000 0000; coords 1.2834, 103.8607; sample hours; example.com menu, reservation and social URLs |
+| 3 | Heading structure | One h1. Popup titles were h3 directly under h1/h2 (skipped a level) | One h1. Popup titles are h2. New sections use h2 | none |
+| 4 | Title tag | "Home \| Halden" | "Art Deco Lobby Bar and Cocktail Lounge in Singapore \| Halden" (60 chars) | brand is placeholder "Halden" |
+| 5 | Meta description | Placeholder design-study text | 149 chars, offer plus location plus CTA with phone | +65 0000 0000 |
+| 6 | Technical basics | lang="en", no canonical, no OG, no robots meta, no sitemap | lang="en-SG"; canonical; og:type, og:site_name, og:title, og:description, og:url, og:locale; twitter:card summary_large_image; robots "index, follow, max-image-preview:large"; robots.txt; sitemap.xml. No og:image, because there is no img/ folder | https://www.example.com/bar/ |
+| 7 | Reviews | None | "Guest notes": 3 sample quotes with first names and context. HTML comment marks them as sample content | first names only, no real guests |
+| 8 | Newsletter | None | Labelled email field, Subscribe button, one-line reason. Sample handler shows a message and sends nothing | none |
+| 9 | Chat button | None | Fixed bottom-right "Chat" button with aria-label. Shrinks to an icon under 768px so it does not cover content | placeholder link https://www.example.com/bar/contact/ |
+
+Footer social links now point to example.com placeholders and open in a new tab.
+
+Open items: og:image is omitted (no img/ folder, since photo generation is blocked by quota). Coordinates are placeholders and should be replaced with the real location. Reviews are sample content and must be replaced with real, attributable reviews before launch.

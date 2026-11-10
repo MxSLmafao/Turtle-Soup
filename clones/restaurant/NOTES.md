@@ -94,3 +94,24 @@ Round 2 comparison (after the round 1 fixes and the generated photos in 7b):
 - Mobile footer (390): height now 982 px, same as the source. Icons and copy sit within 2 px.
 - Remaining intentional differences: placeholder brand (logo, copy, names), and social icons drawn in SVG.
 - Full-page captures of the hero look dimmed at 1440. Viewport captures are correct. This is a capture artifact.
+
+## Gap fixes
+
+Source checklist: `.claude/skills/fnb-site-gaps/SKILL.md` (nine gaps). Placeholders only: domain
+`https://www.example.com/restaurant/`, address "1 Sample Street, Singapore 000000", phone "+65 0000 0000",
+sample hours (Mon to Thu and Sun 12:00 to 22:00, Fri and Sat 12:00 to 23:30), social links on example.com.
+
+| # | Gap | Before | After | Placeholders / notes |
+|---|---|---|---|---|
+| 1 | Image alt text | Hero images had alt. Inline social SVGs had no `aria-hidden`. | Both hero images have specific alt text. Decorative SVG icons are `aria-hidden`. No images below the fold. | Alt text describes the generated photos. |
+| 2 | Local business structured data | None. | One JSON-LD `@graph`: WebSite plus Restaurant/BarOrPub with address, geo, opening hours, hasMenu, reservation action and sameAs. Parses as valid JSON. | Phone "+65 0000 0000", 1 Sample Street, coordinates for central Singapore (placeholder), example.com sameAs and menu/reservation URLs. |
+| 3 | Heading structure | No h1 on the page. | Exactly one visually hidden h1. Sections use h2 (reviews, newsletter). | h1 reads "Ember & Oak: wood-fired bar and grill in Singapore". |
+| 4 | Title tag | "Ember & Oak | Bar & Grill" (brand only). | "Wood-Fired Bar and Grill in Singapore | Ember & Oak" (51 characters). | Placeholder brand. |
+| 5 | Meta description | Placeholder design-study note. | 141-character sentence with what, where and a call to action. | "Reserve your table online today." |
+| 6 | Technical basics | `lang="en"`, no canonical, no OG, no robots, no sitemap. | `lang="en-SG"`, canonical, robots meta, OG (type, site_name, title, description, url, locale, image, image:alt), Twitter summary_large_image, robots.txt and sitemap.xml. | og:image uses the existing `img/hero-roast-on-coals-desktop.jpg` on the placeholder domain. |
+| 7 | Reviews | None. | Three sample quotes (first names only), with an HTML comment marking them as sample content. | Names Priya, Daniel, Mei. Replace with real reviews before launch. |
+| 8 | Newsletter | None. | Labelled email field and Subscribe button, with a one-line reason to join. | Form action `https://www.example.com/restaurant/subscribe/`. |
+| 9 | Chat / WhatsApp button | None. | Floating ember circle, bottom right (32px desktop, 16px mobile), `aria-label`. Clear of footer content at 390px. | Link `https://www.example.com/restaurant/contact/`. |
+
+Styling: the new sections reuse the page's own tokens. Bebas Neue for headings and buttons, Radley for quotes and body,
+the ember accent, hairline dividers and the white-button hover from the nav. The existing layout is unchanged above the fold.

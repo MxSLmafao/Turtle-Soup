@@ -108,3 +108,21 @@ Still open (for the record):
 - Original footer bottom uses colour logo images; the clone uses neutral drawn badge shapes of the same size.
 - Mobile: the original hero has a photo background behind the centred text; the clone uses a lilac gradient.
 - Hover effects and scroll reveals are approximated, not copied from the original's exact transitions.
+
+## Gap fixes
+
+Checklist from the fnb-site-gaps skill, applied to this clone. Placeholder data only.
+
+| # | Gap | Before | After | Placeholders used |
+|---|---|---|---|---|
+| 1 | Image alt text | No `<img>` elements. Meal tray illustrations were `role="img" aria-hidden="true"`, so they had no name. | Four meal illustrations are `role="img"` with `aria-label` (sample illustration). Decorative art stays `aria-hidden`. No `<img>` tags exist, so there is nothing else to alt. | None. |
+| 2 | Local business structured data | None. | One JSON-LD `@graph` in `<head>`: Organization, WebSite and FoodEstablishment (priceRange, servesCuisine, address, geo, openingHours, hasMenu, acceptsReservations, OrderAction, sameAs). Parses as valid JSON. | Domain `www.example.com/meal-prep/`, "1 Sample Street, Singapore 000000", "+65 0000 0000", sample hours, example.com social URLs, Singapore centroid coordinates. `image` omitted (no file yet). |
+| 3 | Heading structure | Footer used `h4` directly under `h2` (skipped a level). | Exactly one `h1` (hero, now "Healthy Meal Prep, Made Simple."). Sections `h2`, cards and footer groups `h3`. Footer headings changed to `h3` with the same styling. | None. |
+| 4 | Title tag | "Home \| Quillmere Kitchen - Balanced meals delivered across the city" (brand led, starts with "Home"). | "Healthy Meal Prep in Singapore \| Quillmere Kitchen" (50 characters). | Brand name only. |
+| 5 | Meta description | "Quillmere Kitchen: chef-designed, nutrition-led meals, meal plans, catering and dine-in. Placeholder design study." | 143 characters: category, Singapore, one call to action ("Order online or book a table at Quillmere Kitchen this week."). | None. |
+| 6 | Technical basics | `lang="en"`; no canonical, robots, Open Graph or Twitter tags; no robots.txt or sitemap. | `lang="en-SG"`; viewport kept; canonical; `robots` meta; og:type, title, description, url, locale, site name; `twitter:card` summary_large_image; `robots.txt` with sitemap line; `sitemap.xml` with the one URL. `og:image` omitted because `img/` has no file (noted in head). | `https://www.example.com/meal-prep/`. |
+| 7 | Reviews | Three testimonials present. Attributions were "HR Manager, sample company", "Sample Customer", "Sample Member". | Same three quotes with first names and context: "Priya, HR manager (sample)", "Sarah, weekly member (sample)", "Daniel, office lunch regular (sample)". HTML comment says they are sample content. | First names only, invented. |
+| 8 | Newsletter sign-up | Absent. | New section before the enquiry band: heading, one-line reason, visible label "Email address" (associated with the input), email input and "Subscribe" button. Uses the clone's own input and `btn-plum` styling. Form posts to `#newsletter` and does not submit anywhere. | Placeholder email `you@example.com`. |
+| 9 | Chat / WhatsApp button | Present: floating pill bottom-right with `aria-label`, reduced to a 44px circle on phones. | Unchanged. Checked: does not cover the footer copyright (bottom padding reserved) or other controls. | Placeholder link `#chat`. |
+
+Checks: one `h1`; JSON-LD parses; no `<img>` tags; no horizontal overflow at 390 or 1440; no console errors.

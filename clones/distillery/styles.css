@@ -554,3 +554,36 @@ body { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; lin
   .gate__text { font-size: 14.94px; line-height: 25.398px; }
   .announce { font-size: 14.94px; line-height: 25.398px; }
 }
+
+/* ---------- gap fixes: sample reviews + floating contact button ---------- */
+.reviews { padding: 90px 20px 96px; text-align: center; background: var(--cream); }
+.reviews__grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 330px)); justify-content: center; gap: 40px; margin: 56px auto 0;
+}
+.review {
+  margin: 0; background: var(--card); padding: 34px 32px 30px; text-align: left;
+  border-top: 3px solid var(--amber); box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
+}
+.review blockquote { margin: 0; }
+.review p { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; color: var(--ink); }
+.review figcaption { font-family: var(--font-head); font-weight: 700; font-size: 15.936px; line-height: 23.1072px; color: var(--ink); }
+
+.chat-fab {
+  position: fixed; right: 20px; bottom: 20px; z-index: 500; width: 56px; height: 56px; border-radius: 50%;
+  background: var(--amber); color: var(--cream); display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .4s var(--ease), transform .4s var(--ease), background-color .3s;
+}
+.chat-fab.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.chat-fab:hover { background: var(--ink); }
+
+@media (max-width: 989px) {
+  .reviews__grid { grid-template-columns: 1fr; max-width: 420px; gap: 28px; }
+  .review p { font-size: 14.94px; line-height: 25.398px; }
+  .review figcaption { font-size: 14.94px; line-height: 21.663px; }
+}
+@media (max-width: 749px) {
+  .reviews { padding: 64px 16px 72px; }
+  .chat-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; }
+}

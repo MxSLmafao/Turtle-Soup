@@ -76,3 +76,21 @@ Still different (open):
 ## Generated photography
 
 Status: blocked. The image tool returned HTTP 429 (quota exhausted, reset after about 2h41m) on 5 of 6 calls. The one image it returned contained readable signage text despite the no-text instruction, so it was discarded. No files were saved to img/. All photo slots (2 hero slides, 4 pillar images, 8 social tiles) still use drawn art.
+
+## Gap fixes
+
+Source: `.claude/skills/fnb-site-gaps/SKILL.md` (nine gaps). Placeholders: domain `https://www.example.com/brewery/`, address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", sample hours, social URLs on example.com, geo at a central-Singapore placeholder point (1.3000, 103.8000).
+
+| # | Gap | Before | After | Placeholders / notes |
+|---|---|---|---|---|
+| 1 | Image alt text | No `<img>`. Drawn SVG art was `aria-hidden`, tile links had "Post N" labels. | No `<img>` elements. Meaningful drawn art uses `role="img"` with a specific `aria-label` (hero cans, four pillar images). Tile links carry their caption as the label. Badges stay `aria-hidden` as placeholders. | To add alt text on real photos when the image step lands. |
+| 2 | Local business structured data | None. | One JSON-LD block (`@graph`: Brewery, Organization, WebSite). Parses. Includes telephone, priceRange, address, geo, openingHoursSpecification, hasMenu, acceptsReservations, potentialAction, sameAs. | `image` and `logo` point to `img/hero.jpg` and `img/logo.png`, which do not exist yet. |
+| 3 | Heading structure | No `<h1>`. Pillars had no heading. | One visually hidden `<h1>` ("Driftwood Brewing Co., craft brewery and taproom in Singapore"). Pillars get a hidden `<h2>`. Sections use `<h2>`. | No visible headline in the design. |
+| 4 | Title | "Driftwood Brewing Co. \| Taproom and Brewery" (43 chars). | "Craft Brewery and Taproom in Singapore \| Driftwood" (51 chars). | Brand placeholder. |
+| 5 | Meta description | "Placeholder brewery and taproom design study." | 150-character sentence on the offer, location and a call to action. | Brand placeholder. |
+| 6 | Technical basics | `lang="en"`, viewport only. | `lang="en-SG"`; `robots` meta (`index, follow, max-image-preview:large`); canonical; OG `type/site_name/title/description/url/locale`; `twitter:card` summary_large_image; `robots.txt` and `sitemap.xml` added. | `og:image` omitted because `img/` does not exist yet. Add it once a photo is generated. |
+| 7 | Reviews | None. | Three sample quotes, first names only, styled as cards in the clone's surface, amber top border and display fonts. HTML comment marks them as invented. | Mei, Daniel, Priya (sample). |
+| 8 | Newsletter | Present; input labelled with `sr-only`. | Form gets `aria-label="Newsletter sign-up"`. Layout unchanged. | None. |
+| 9 | Chat / contact button | Round booking icon, desktop only. | Floating round contact button bottom-right (44px, `aria-label`) on all widths. Mobile hero badge moved to bottom-left to avoid overlap. | Link to `https://www.example.com/brewery/contact/`. |
+
+Verification: one `<h1>`; JSON-LD parses; no `<img>` without alt; 1440 and 390 show no horizontal overflow; no console errors or failed requests.

@@ -86,3 +86,23 @@ Left as-is (deliberate or minor):
 
 Generator quota was exhausted after three images; the reset was about 2h43m away, so the remaining five slots keep their drawn art.
 img/ total size: about 360 KB (three JPEGs, quality 80, 900–2000px wide).
+
+## Gap fixes
+
+Source checklist: the fnb-site-gaps skill in the repo (nine gaps). Placeholders: domain `https://www.example.com/juice-bar/`,
+address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", sample hours (Mon–Fri 09:00–21:00, Sat–Sun 10:00–22:00),
+placeholder social URLs on example.com, geo set to central Singapore as a stand-in.
+
+| # | Gap | Before | After |
+|---|---|---|---|
+| 1 | Image alt text | 3 photo `<img>` with `alt=""` inside `aria-hidden` wrappers | Specific alt on every img; photo wrappers no longer `aria-hidden`; decorative SVG stays `aria-hidden` |
+| 2 | Local business structured data | None | JSON-LD `@graph`: CafeOrCoffeeShop + LocalBusiness, PostalAddress, GeoCoordinates, openingHours, hasMenu, OrderAction, sameAs; plus WebSite. Parses cleanly |
+| 3 | Heading structure | Footer `h3` directly under h1; no sections headed | One h1 (hero); h2 per section (hidden h2 for the tile and social groups); footer headings are h2 with the same styling |
+| 4 | Title tag | "Bloom Berry Bar: Superfood Bowls" (brand-led) | "Acai Bowls & Smoothies in Singapore \| Bloom Berry Bar" (53 chars) |
+| 5 | Meta description | Generic one-liner | 143 chars: what is offered, where (Singapore, Harbour Road), CTA |
+| 6 | Technical basics | No lang region, canonical, OG or robots | `lang="en-SG"`, canonical, og:type/title/description/url/locale/image (existing img/hero-acai-bowls.jpg), twitter:card summary_large_image, robots meta. robots.txt and sitemap.xml added |
+| 7 | Reviews | None | 3 sample quotes with first names and context; HTML comment marks them as sample content |
+| 8 | Newsletter | None | Labelled email field and Subscribe button with one-line reason; local-only confirmation, no request sent |
+| 9 | Chat / contact button | None | Fixed bottom-right "Chat with us" pill linking to #contact (footer); icon-only on mobile; aria-label set |
+
+Verification: exactly one h1, every img has alt, JSON-LD parses, no console errors, no horizontal overflow at 1440 or 390.

@@ -242,7 +242,7 @@ h2 { margin: 0; }
   .pillar-card { height: 296px; }
     .pillar-card p { max-width: 100%; min-height: 0; }
   .btn { letter-spacing: 4px; }
-  .promo-bar, .promo-round { display: none; }
+  .promo-bar { display: none; }
   .social { padding: 56px var(--gutter) 64px; }
   .social h2 { font-size: 24px; line-height: 32px; letter-spacing: 3px; margin-bottom: 24px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
@@ -264,4 +264,35 @@ h2 { margin: 0; }
 @media (max-width: 860px) {
   .badges { gap: 36px; height: auto; flex-wrap: wrap; }
   .badge-1 { width: 56px; } .badge-2 { width: 96px; } .badge-3 { width: 170px; }
+}
+
+/* ---------- Gap fixes: reviews, floating contact button ---------- */
+.reviews { background: var(--bg); padding: 70px 16px 80px; text-align: center; }
+.reviews h2 {
+  font-family: var(--font-display-md); font-weight: 500; font-size: 40px; line-height: 45px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--heading); margin-bottom: 40px;
+}
+.review-grid { max-width: 1170px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review {
+  margin: 0; background: var(--surface); border-top: 3px solid var(--accent); padding: 32px 28px;
+  text-align: left; box-shadow: 0 6px 16px rgba(16,22,50,.06);
+}
+.review blockquote { margin: 0; }
+.review p { margin: 0; font-size: 18px; line-height: 24px; letter-spacing: 1px; }
+.review figcaption {
+  margin-top: 18px; font-family: var(--font-display); font-weight: 700; font-size: 14px; line-height: 14px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--nav);
+}
+.promo-round {
+  position: fixed; right: 20px; bottom: 24px; z-index: 41; width: 44px; height: 44px; border-radius: 50%;
+  background: #0f1733; color: #fff; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(16,22,50,.25); transition: transform .2s var(--ease);
+}
+.promo-round:hover { transform: translateY(-2px); }
+.promo-round:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .review-grid { grid-template-columns: 1fr; }
+  .reviews { padding: 56px var(--gutter) 64px; }
+  .reviews h2 { font-size: 24px; line-height: 32px; letter-spacing: 3px; margin-bottom: 24px; }
+  .hero-chip { right: auto; left: 16px; bottom: 16px; }
 }

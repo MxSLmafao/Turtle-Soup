@@ -306,7 +306,7 @@ hr { border: 0; }
 .metrics { background: var(--white); border-radius: var(--radius); padding: 36px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 40px; }
 .metric { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
 .metric svg { width: 40px; height: 40px; }
-.metric h4 { color: var(--accent-deep); font-family: var(--text); font-weight: 700; margin: 0 0 4px; }
+.metric h3 { color: var(--accent-deep); font-family: var(--text); font-weight: 700; margin: 0 0 4px; }
 .metric p { margin: 0; }
 .divider { height: 1px; background: var(--line); margin: 60px 0 56px; }
 .review-row { position: relative; display: flex; justify-content: center; }
@@ -314,9 +314,9 @@ hr { border: 0; }
 .review { background: transparent; border-radius: var(--radius); padding: 30px 28px; text-align: center; transition: background .3s, box-shadow .3s; }
 .review:nth-child(2) { background: var(--white); box-shadow: 0 6px 22px rgba(24,36,39,.08); }
 .review.faded { color: #8b9294; }
-.review.faded h4, .review.faded p { color: #8b9294; }
+.review.faded h3, .review.faded p { color: #8b9294; }
 .review-stars { color: var(--accent-deep); margin: 0 0 14px; }
-.review h4 { font-family: var(--text); font-weight: 700; margin: 0 0 14px; }
+.review h3 { font-family: var(--text); font-weight: 700; margin: 0 0 14px; }
 .review p { color: var(--body); margin-bottom: 18px; }
 .review a { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 .review-row .arrow { top: 50%; }
@@ -555,7 +555,7 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
 .sub, .about-lead, .partners .sub, .chefs-intro p, .intro-copy p, .step p, .step-cta p, .pillars p,
 .custom-card p, .review p, .destinations .sub { font-family: var(--text); font-size: 16px; line-height: 24px; font-weight: 400; }
 .intro-copy p { color: var(--body); }
-.step h3, .review h4, .review a, .custom-card .pill { font-family: var(--text); font-weight: 700; }
+.step h3, .review h3, .review a, .custom-card .pill { font-family: var(--text); font-weight: 700; }
 .step h3 { font-size: 16px; line-height: 24px; }
 .step-cta h3 { font-family: var(--head); font-weight: 400; font-size: 35.2px; line-height: 43.2px; }
 .custom-card h3 { font-family: var(--head); font-weight: 500; font-size: 30px; line-height: 36px; }
@@ -569,9 +569,9 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
 .rating-pill, .rating-new { font-family: var(--text); font-size: 12.8px; line-height: 19.2px; font-weight: 400; }
 @media (min-width: 992px) { .rating-pill, .rating-new { font-size: 13.92px; line-height: 20.88px; } }
 .review-stars { font-size: 12.8px; line-height: 19.2px; font-weight: 400; }
-.review h4 { font-size: 16px; line-height: 24px; }
+.review h3 { font-size: 16px; line-height: 24px; }
 .review a { font-size: 16px; line-height: 24px; }
-.metric h4 { font-family: var(--head); font-weight: 400; font-size: 15px; line-height: 18px; color: var(--accent-deep); }
+.metric h3 { font-family: var(--head); font-weight: 400; font-size: 15px; line-height: 18px; color: var(--accent-deep); }
 .metric p { font-size: 15px; line-height: 22.5px; font-weight: 400; }
 .score { font-family: var(--head); font-weight: 400; font-size: 50px; line-height: 60px; }
 @media (min-width: 992px) { .score { font-size: 80px; line-height: 109px; } }
@@ -585,8 +585,8 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
 .logo-row span { font-family: var(--head); font-size: 20px; line-height: 30px; }
 .dest-grid li { font-family: var(--text); font-size: 16px; line-height: 24px; font-weight: 400; }
 .dest-grid li strong, .dest-grid.services li strong { font-weight: 700; }
-.f-col .f-label, .f-col h4, .f-col p, .f-col ul a, .f-links a { font-family: var(--text); font-size: 16px; line-height: 32px; font-weight: 300; }
-.f-col .f-label, .f-col h4 { margin-bottom: 0; }
+.f-col .f-label, .f-col .f-title, .f-col p, .f-col ul a, .f-links a { font-family: var(--text); font-size: 16px; line-height: 32px; font-weight: 300; }
+.f-col .f-label, .f-col .f-title { margin-bottom: 0; }
 .footer-base p { font-family: var(--text); font-size: 12.8px; line-height: 19.2px; font-weight: 400; }
 .logo-foot { font-size: 26px; line-height: 36px; }
 @media (max-width: 575.98px) {
@@ -642,3 +642,31 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
   .about-grid .about-photo { grid-column: auto; }
 }
 .intro-head h2 { max-width: 340px; }
+
+/* ============ GAP FIXES: newsletter, floating chat button, helpers ============ */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.newsletter { padding: 80px 0; }
+.newsletter h2 { margin-bottom: 14px; }
+.newsletter .sub { margin-bottom: 28px; }
+.news-form { display: flex; gap: 10px; justify-content: center; max-width: 520px; margin: 0 auto; }
+.news-form input {
+  flex: 1 1 auto; min-width: 0; height: 46px; padding: 0 22px; border-radius: 800px;
+  border: 1px solid var(--line); background: var(--white); color: var(--ink);
+  font: inherit; font-size: 16px; line-height: 24px;
+}
+.news-form input:focus { outline: 3px solid #118dda55; outline-offset: 2px; border-color: #118dda; }
+.news-form .pill { height: 46px; }
+.chat-fab {
+  position: fixed; right: 24px; bottom: 24px; z-index: 60;
+  width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: var(--ink);
+  display: grid; place-items: center; box-shadow: 0 8px 22px rgba(24,36,39,.18);
+  transition: transform .2s var(--ease), background .2s;
+}
+.chat-fab:hover { background: var(--accent-hi); transform: translateY(-2px); }
+.chat-fab svg { width: 26px; height: 26px; }
+.chat-fab:focus-visible { outline: 3px solid #118dda55; outline-offset: 3px; }
+@media (max-width: 575.98px) {
+  .news-form { flex-direction: column; }
+  .news-form .pill { width: 100%; }
+  .chat-fab { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+}

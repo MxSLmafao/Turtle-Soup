@@ -270,6 +270,23 @@
     updateProgress();
   }
 
+  /* ---------- Floating contact button: shows after the hero, hides near the footer ---------- */
+  var chat = document.querySelector('.chat-fab');
+  if (chat) {
+    var chatTick = false;
+    var updateChat = function () {
+      var y = window.scrollY, vh = window.innerHeight, dh = document.documentElement.scrollHeight;
+      var show = y > 700 && (y + vh) < (dh - 260);
+      chat.classList.toggle('is-on', show);
+      chatTick = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!chatTick) { chatTick = true; requestAnimationFrame(updateChat); }
+    }, { passive: true });
+    window.addEventListener('resize', updateChat);
+    updateChat();
+  }
+
   /* ---------- Back to top ---------- */
   var toTop = document.querySelector('[data-to-top]');
   if (toTop) {

@@ -42,4 +42,14 @@
     });
   }
 
+  // Sample newsletter form: validates only, nothing is sent
+  var form = document.querySelector('.news-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.querySelector('.news-status');
+      if (status) status.textContent = 'Thank you. This is a sample form, so nothing was sent.';
+      form.reset();
+    });
+  }
 })();

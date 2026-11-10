@@ -6,12 +6,99 @@
   logos or font files taken from any live site). Layout, type scale, palette and section
   order are a design study of a specialty coffee roaster homepage.
 -->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tidewater Coffee Roasters - Specialty coffee, roastery and cafés</title>
-  <meta name="description" content="Sample homepage: specialty coffee roastery, cafés and barista academy (placeholder brand).">
+  <title>Specialty Coffee Roastery and Cafés in Singapore | Tidewater</title>
+  <meta name="description" content="Tidewater is a sample specialty coffee roastery and café in Singapore, with single origins, house blends, brunch and a barista academy. Visit or order online.">
+  <link rel="canonical" href="https://www.example.com/cafe/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tidewater Coffee Roasters">
+  <meta property="og:title" content="Specialty Coffee Roastery and Cafés in Singapore | Tidewater">
+  <meta property="og:description" content="Tidewater is a sample specialty coffee roastery and café in Singapore, with single origins, house blends, brunch and a barista academy. Visit or order online.">
+  <meta property="og:url" content="https://www.example.com/cafe/">
+  <meta property="og:image" content="https://www.example.com/cafe/img/hero-pour.jpg">
+  <meta property="og:image:alt" content="Illustrative photo of pour-over coffee being poured into a ceramic cup">
+  <meta property="og:locale" content="en_SG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Specialty Coffee Roastery and Cafés in Singapore | Tidewater">
+  <meta name="twitter:description" content="Tidewater is a sample specialty coffee roastery and café in Singapore, with single origins, house blends, brunch and a barista academy. Visit or order online.">
+  <meta name="twitter:image" content="https://www.example.com/cafe/img/hero-pour.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "CafeOrCoffeeShop",
+        "FoodEstablishment"
+      ],
+      "@id": "https://www.example.com/cafe/#business",
+      "name": "Tidewater Coffee Roasters",
+      "url": "https://www.example.com/cafe/",
+      "image": "https://www.example.com/cafe/img/hero-pour.jpg",
+      "description": "Tidewater is a sample specialty coffee roastery and café in Singapore, with single origins, house blends, brunch and a barista academy. Visit or order online.",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$",
+      "servesCuisine": "Coffee, brunch",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "hasMenu": "https://www.example.com/cafe/menu/",
+      "acceptsReservations": false,
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://www.example.com/cafe/shop/"
+      },
+      "sameAs": [
+        "https://www.example.com/tidewater-sample/instagram",
+        "https://www.example.com/tidewater-sample/facebook"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/cafe/#website",
+      "url": "https://www.example.com/cafe/",
+      "name": "Tidewater Coffee Roasters",
+      "inLanguage": "en-SG"
+    }
+  ]
+}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
@@ -90,8 +177,8 @@
   <section class="feature-carousel" aria-label="Featured origins">
     <div class="fc-media" data-carousel>
       <div class="slides">
-        <figure class="slide is-active art-cherries" aria-label="Illustration of ripe coffee cherries"></figure>
-        <figure class="slide art-beans" aria-label="Illustration of roasted beans"></figure>
+        <figure class="slide is-active art-cherries" role="img" aria-label="Hands cupping freshly picked ripe and unripe coffee cherries"></figure>
+        <figure class="slide art-beans" role="img" aria-label="Roasted coffee beans spilled across a dark slate surface"></figure>
       </div>
     </div>
     <div class="fc-panel">
@@ -170,32 +257,32 @@
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Our coffee</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Freshly roasted coffee for home and office, roasted with the care it deserves.</p>
-        <div class="product-art art-roastery"></div>
+        <div class="product-art art-roastery" role="img" aria-label="Coffee roaster drum with beans tumbling into a tray"></div>
       </a>
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Capsules</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Compostable capsules that bring convenience and café-level flavour to your kitchen.</p>
-        <div class="product-art art-capsules"></div>
+        <div class="product-art art-capsules" role="img" aria-label="Plain unlabelled coffee capsules on a golden surface"></div>
       </a>
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Special release</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Micro-lots and high-scoring harvests, selected for cupping and released in small numbers.</p>
-        <div class="product-art art-cherries-deep"></div>
+        <div class="product-art art-cherries-deep" role="img" aria-label="A heap of glossy ripe red coffee cherries"></div>
       </a>
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Brew gear and accessories</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>A tidy selection of kettles, scales, grinders and filters for every level of enthusiast.</p>
-        <div class="product-art art-pourover"></div>
+        <div class="product-art art-pourover" role="img" aria-label="Pour-over dripper set over a glass carafe on a counter"></div>
       </a>
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Cups and mugs</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Hand-glazed stoneware made by a small studio, shaped to hold a warm drink just right.</p>
-        <div class="product-art art-mug"></div>
+        <div class="product-art art-mug" role="img" aria-label="Glazed stoneware mug lit by a warm glow"></div>
       </a>
       <a class="product-card reveal" href="#shop">
         <div class="product-head"><h3>Herbal infusions</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Caffeine-free botanical blends from growers we visit each year, sourced with transparency.</p>
-        <div class="product-art art-herbs"></div>
+        <div class="product-art art-herbs" role="img" aria-label="Dried botanical infusion leaves scattered on marble"></div>
       </a>
     </div>
   </section>
@@ -364,27 +451,27 @@
       <a class="cafe-card" href="#cafes">
         <div class="cafe-head"><h3>Tidewater Express</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>A quick counter stop for commuters who want a great flat white on the way to the office.</p>
-        <div class="cafe-art art-counter"></div>
+        <div class="cafe-art art-counter" role="img" aria-label="Café counter with bar stools in dark green and wood"></div>
       </a>
       <a class="cafe-card" href="#cafes">
         <div class="cafe-head"><h3>Riverside flagship</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Our first café, opened in 2013, with long communal tables and a view of the water.</p>
-        <div class="cafe-art art-communal"></div>
+        <div class="cafe-art art-communal" role="img" aria-label="Long communal wooden tables in a café"></div>
       </a>
       <a class="cafe-card" href="#cafes">
         <div class="cafe-head"><h3>Old Town</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>A small, sun-filled room near the market, ideal for a slow morning brew and a pastry.</p>
-        <div class="cafe-art art-arches"></div>
+        <div class="cafe-art art-arches" role="img" aria-label="Arched café interior with warm stone walls"></div>
       </a>
       <a class="cafe-card" href="#cafes">
         <div class="cafe-head"><h3>Hillside</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>Where a bright, airy room meets a bar of brewers working through the seasonal filter menu.</p>
-        <div class="cafe-art art-brewbar"></div>
+        <div class="cafe-art art-brewbar" role="img" aria-label="Brew bar with pendant lights and a navy tiled wall"></div>
       </a>
       <a class="cafe-card" href="#cafes">
         <div class="cafe-head"><h3>Harbour walk</h3><span class="corner-arrow" aria-hidden="true"></span></div>
         <p>A coastal café with tiled counters, cool breezes and espresso poured straight from the machine.</p>
-        <div class="cafe-art art-tiles"></div>
+        <div class="cafe-art art-tiles" role="img" aria-label="Tiled counter with a cool neutral finish"></div>
       </a>
     </div>
   </section>
@@ -408,6 +495,32 @@
   </section>
 
 </main>
+
+  <!-- SAMPLE CONTENT: the three reviews below are invented for this layout study. They carry first names
+       only and are not real guest quotes. -->
+  <section class="reviews" aria-labelledby="reviewsTitle">
+    <header class="section-head section-head--narrow">
+      <h2 id="reviewsTitle" class="h2">What our guests say</h2>
+      <p class="section-sub">Sample reviews for layout study.</p>
+    </header>
+    <ul class="review-grid">
+      <li class="review">
+        <p class="review-stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote><p>Silky flat white and brunch plates that arrive hot. A calm spot for a slow weekend.</p></blockquote>
+        <p class="review-by">Mei, sample guest</p>
+      </li>
+      <li class="review">
+        <p class="review-stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote><p>The house blend is my daily brew. Staff remember my order and the beans are always fresh.</p></blockquote>
+        <p class="review-by">Daniel, sample guest</p>
+      </li>
+      <li class="review">
+        <p class="review-stars" role="img" aria-label="Rated 4 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        <blockquote><p>Good for a quick espresso before work. The pour-over class at the academy was worth the trip.</p></blockquote>
+        <p class="review-by">Aisha, sample guest</p>
+      </li>
+    </ul>
+  </section>
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -452,7 +565,7 @@
     <div class="footer-col footer-news">
       <h3>Newsletters</h3>
       <p>Subscribe to hear first about new releases and exclusive offers.</p>
-      <form class="signup signup--footer" action="#" onsubmit="return false;">
+      <form class="signup signup--footer" action="#" onsubmit="return false;" aria-label="Newsletter sign-up">
         <label class="visually-hidden" for="footerEmail">Email address</label>
         <input id="footerEmail" type="email" placeholder="Email" autocomplete="email">
         <button type="submit" aria-label="Subscribe"><span class="btn-arrow" aria-hidden="true"></span></button>
@@ -475,6 +588,11 @@
 <button class="side-tab" type="button" aria-label="Find your favourite coffee">
   <span>Find your favourite coffee</span>
 </button>
+
+<a class="float-chat" href="https://wa.me/6500000000" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <span>Chat with us</span>
+</a>
 
 <script src="script.js"></script>
 </body>

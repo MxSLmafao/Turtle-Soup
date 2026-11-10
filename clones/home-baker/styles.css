@@ -518,7 +518,7 @@ button { font: inherit; }
 }
 .footer-brand .logo { color: var(--sand); font-size: 26px; }
 .footer-brand .logo-light .logo-mark { width: 32px; height: 32px; }
-.footer-col h4 {
+.footer-col h2 {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.45px;
@@ -703,7 +703,7 @@ button { font: inherit; }
 .news-form input { font-family: Arial, Helvetica, sans-serif; font-size: 13.3333px; letter-spacing: normal; }
 .btn-sub { font-size: 16px; font-weight: 600; line-height: normal; letter-spacing: normal; }
 .footer-brand .logo { font-size: 24px; }
-.footer-col h4 { font-size: 18px; line-height: 18px; font-weight: 600; letter-spacing: -0.45px; text-transform: capitalize; }
+.footer-col h2 { font-size: 18px; line-height: 18px; font-weight: 600; letter-spacing: -0.45px; text-transform: capitalize; }
 .footer-col a { font-size: 14px; line-height: 21px; letter-spacing: -0.4px; }
 .footer-bottom { font-size: 11px; line-height: 16.5px; letter-spacing: -0.4px; }
 
@@ -791,4 +791,54 @@ button { font: inherit; }
 @media (max-width: 900px) {
   .footer-bottom { align-items: center; text-align: center; }
   .pay { justify-content: center; flex-wrap: wrap; }
+}
+
+/* ==========================================================
+   Gap fixes (reviews, floating contact button)
+   ========================================================== */
+.review-grid {
+  width: min(var(--container), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.reviews .section-title { margin-bottom: 40px; }
+.review-card {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.stars { color: var(--coral); font-size: 16px; letter-spacing: 2px; line-height: 1; }
+.review-card blockquote { margin: 14px 0 0; }
+.review-card blockquote p { font-size: 16px; line-height: 25.6px; letter-spacing: -0.4px; color: var(--black); }
+.review-card figcaption { margin-top: 16px; font-size: 14px; line-height: 21px; font-weight: 600; color: var(--black); letter-spacing: -0.4px; }
+.review-card figcaption span { font-weight: 400; color: var(--muted); }
+.float-contact {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+  transition: transform .3s var(--ease), background-color .2s;
+}
+.float-contact:hover { transform: translateY(-2px); background: var(--brand-ink); }
+.float-contact svg { width: 20px; height: 20px; flex: none; }
+@media (max-width: 900px) {
+  .review-grid { grid-template-columns: 1fr; gap: 16px; }
+  .float-contact { padding: 14px; }
+  .float-contact span { display: none; }
 }

@@ -4,12 +4,71 @@
   Design study of the category "Bakeries & patisseries" (homepage layout, type, palette and motion).
   All imagery is hand-drawn inline SVG or CSS. No original photos, logos, icons or fonts are used.
 -->
-<html lang="en" class="no-js">
+<html lang="en-SG" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lantern Row Bakehouse | Slow-Fermented Pastries</title>
-  <meta name="description" content="Lantern Row Bakehouse: slow-fermented croissants and pastries, baked in small batches. Sample design study.">
+  <title>Croissant Bakery in Singapore | Lantern Row Bakehouse</title>
+  <meta name="description" content="Slow-fermented croissants, pastries and sourdough baked in small batches at Lantern Row Bakehouse in Singapore. Order ahead for pickup today.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.example.com/bakery/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lantern Row Bakehouse">
+  <meta property="og:title" content="Croissant Bakery in Singapore | Lantern Row Bakehouse">
+  <meta property="og:description" content="Slow-fermented croissants, pastries and sourdough baked in small batches at Lantern Row Bakehouse in Singapore. Order ahead for pickup today.">
+  <meta property="og:url" content="https://www.example.com/bakery/">
+  <meta property="og:locale" content="en_SG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Croissant Bakery in Singapore | Lantern Row Bakehouse">
+  <meta name="twitter:description" content="Slow-fermented croissants, pastries and sourdough baked in small batches at Lantern Row Bakehouse in Singapore.">
+  <!-- og:image is omitted: the clone has no photo files in img/ yet. Add one (1200x630) when available. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.com/bakery/#website",
+        "url": "https://www.example.com/bakery/",
+        "name": "Lantern Row Bakehouse",
+        "inLanguage": "en-SG"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.example.com/bakery/#organization",
+        "name": "Lantern Row Bakehouse",
+        "url": "https://www.example.com/bakery/",
+        "sameAs": ["https://www.example.com/bakery/facebook", "https://www.example.com/bakery/instagram"]
+      },
+      {
+        "@type": "Bakery",
+        "@id": "https://www.example.com/bakery/#bakery",
+        "name": "Lantern Row Bakehouse",
+        "url": "https://www.example.com/bakery/",
+        "description": "Slow-fermented croissants, pastries and sourdough baked in small batches in Singapore.",
+        "telephone": "+65 0000 0000",
+        "priceRange": "$$",
+        "servesCuisine": ["French", "Pastry"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Sample Street",
+          "addressLocality": "Singapore",
+          "postalCode": "000000",
+          "addressCountry": "SG"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 1.3521, "longitude": 103.8198 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "09:00", "closes": "20:00" }
+        ],
+        "hasMenu": "https://www.example.com/bakery/menu/",
+        "potentialAction": { "@type": "OrderAction", "target": "https://www.example.com/bakery/order/" },
+        "sameAs": ["https://www.example.com/bakery/facebook", "https://www.example.com/bakery/instagram"],
+        "parentOrganization": { "@id": "https://www.example.com/bakery/#organization" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arimo:wght@400;700&family=Inter:wght@500;700&family=Tinos&display=swap" rel="stylesheet">
@@ -150,15 +209,15 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__stage">
       <div class="hero__copy">
-        <div class="stamp stamp--hero" id="hero-title">
+        <div class="stamp stamp--hero">
           <svg class="stamp__badge" viewBox="0 0 80 50" aria-hidden="true"><path d="M8 26 Q14 6 40 8 Q66 6 72 26 Q66 46 40 44 Q14 46 8 26Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M30 22 L36 30 L44 18 M52 22 L58 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p class="stamp__title">Slow dough.<br>Sharp shape.</p>
+          <h1 class="stamp__title" id="hero-title">Slow dough.<br>Sharp shape.<span class="visually-hidden"> Lantern Row Bakehouse: slow-fermented croissants in Singapore</span></h1>
           <p class="stamp__sub">Patience you can taste in every ring</p>
         </div>
       </div>
 
-      <div class="hero__figure" aria-hidden="true">
-        <svg class="hero__art" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice">
+      <div class="hero__figure">
+        <svg class="hero__art" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated golden croissant under a magnifying glass, with a honeycomb crumb callout">
           <!-- metal arms -->
           <path d="M-20 690 L560 730 Q640 738 672 782" fill="none" stroke="url(#gMetal)" stroke-width="10" stroke-linecap="round"/>
           <path d="M1470 520 L1240 460 Q1190 448 1158 420" fill="none" stroke="url(#gMetal)" stroke-width="9" stroke-linecap="round"/>
@@ -194,7 +253,7 @@
   <section class="section product" aria-labelledby="product-title">
     <div class="product__grid">
       <figure class="product__media reveal">
-        <svg viewBox="0 0 660 660" preserveAspectRatio="xMidYMid slice" aria-hidden="true" class="product__art">
+        <svg viewBox="0 0 660 660" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated giant croissant and espresso cup on a studio backdrop" class="product__art">
           <defs>
             <linearGradient id="studioBg" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#0b0907"/>
@@ -242,7 +301,7 @@
     <div class="rail-wrap">
       <div class="rail process__rail" data-rail>
         <article class="proc-card proc-card--side">
-          <div class="proc-card__art proc-card__art--dough">
+          <div class="proc-card__art proc-card__art--dough" role="img" aria-label="Close-up texture of slow-fermented dough layers">
             <div class="stamp stamp--card">
               <span class="stamp__label">Slow-fermented</span>
               <span class="stamp__big">Dough</span>
@@ -252,13 +311,13 @@
         </article>
         <article class="proc-card proc-card--centre">
           <div class="proc-card__art proc-card__art--swirl">
-            <svg viewBox="0 0 400 400" aria-hidden="true"><use href="#swirl" x="60" y="60" width="280" height="280"/></svg>
+            <svg viewBox="0 0 400 400" role="img" aria-label="Illustrated cross-section of a laminated pastry swirl"><use href="#swirl" x="60" y="60" width="280" height="280"/></svg>
           </div>
           <h3 class="proc-card__title">Baked Fresh in Small Batches</h3>
           <p class="proc-card__text">We bake through the day in small runs, so every pastry reaches you warm, crisp and at its best.</p>
         </article>
         <article class="proc-card proc-card--side">
-          <div class="proc-card__art proc-card__art--butter">
+          <div class="proc-card__art proc-card__art--butter" role="img" aria-label="Close-up texture of cultured butter">
             <div class="stamp stamp--card">
               <span class="stamp__label">Cultured</span>
               <span class="stamp__big">Butter</span>
@@ -267,7 +326,7 @@
           </div>
         </article>
         <article class="proc-card proc-card--side">
-          <div class="proc-card__art proc-card__art--layers" aria-hidden="true"></div>
+          <div class="proc-card__art proc-card__art--layers" role="img" aria-label="Stacked pastry layers"></div>
         </article>
       </div>
       <div class="arrows">
@@ -290,7 +349,7 @@
     <div class="pairing__grid">
       <div class="pairing__cut pairing__cut--left reveal">
         <span class="pairing__bg" aria-hidden="true"></span>
-        <svg viewBox="0 0 200 140" aria-hidden="true"><use href="#pain" x="0" y="0" width="200" height="140"/></svg>
+        <svg viewBox="0 0 200 140" role="img" aria-label="Illustrated pain au chocolat"><use href="#pain" x="0" y="0" width="200" height="140"/></svg>
       </div>
       <div class="pairing__copy reveal">
         <h2 class="h1" id="pairing-title">A Perfect <br>Pairing</h2>
@@ -298,7 +357,7 @@
       </div>
       <div class="pairing__cut pairing__cut--right reveal">
         <span class="pairing__bg" aria-hidden="true"></span>
-        <svg viewBox="0 0 240 180" aria-hidden="true"><use href="#cup" x="0" y="0" width="240" height="180"/></svg>
+        <svg viewBox="0 0 240 180" role="img" aria-label="Illustrated cup of latte with heart-shaped foam"><use href="#cup" x="0" y="0" width="240" height="180"/></svg>
       </div>
     </div>
   </section>
@@ -367,7 +426,7 @@
     <div class="rail-wrap rail-wrap--tall">
       <div class="rail gallery__rail" data-rail>
         <figure class="moment moment--mint">
-          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated iced pale-green drink in a tall glass">
             <rect width="325" height="577" fill="#EEF0D6"/>
             <path d="M0 470 H325 V577 H0Z" fill="#E1E6BF"/>
             <ellipse cx="165" cy="460" rx="110" ry="18" fill="#C8CFA0"/>
@@ -384,7 +443,7 @@
         </figure>
 
         <figure class="moment moment--cafe">
-          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated bakery café interior with a pastry counter and round tables">
             <defs>
               <linearGradient id="cafeWall" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="#7A2C2A"/>
@@ -415,7 +474,7 @@
         </figure>
 
         <figure class="moment moment--park">
-          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated picnic blanket on a green lawn">
             <defs>
               <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="#4E8B3A"/>
@@ -442,7 +501,7 @@
         </figure>
 
         <figure class="moment moment--tart">
-          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <svg viewBox="0 0 325 577" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated strawberry cream pastries on a tray">
             <defs>
               <linearGradient id="tartBg" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0" stop-color="#E8C7B8"/>
@@ -481,18 +540,35 @@
   <!-- 7. REVIEWS -->
   <section class="section reviews" aria-labelledby="reviews-title">
     <h2 class="h2 center reveal" id="reviews-title">Kind Words</h2>
+    <!-- Sample content: these reviews are placeholders, first names only, not real customers. -->
     <div class="reviews__card reveal">
       <p class="stars" aria-label="Rated 5 out of 5">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-      <blockquote class="reviews__quote">
-        <p>Lovely crumb, a warm aroma and a gentle caramel finish. The house blend pairs beautifully with the pastries.</p>
-      </blockquote>
-      <p class="reviews__by">&mdash; Sample Reviewer</p>
+      <div class="reviews__items" aria-live="polite">
+        <figure class="reviews__item" data-review>
+          <blockquote class="reviews__quote">
+            <p>Lovely crumb, a warm aroma and a gentle caramel finish. The house blend pairs beautifully with the pastries.</p>
+          </blockquote>
+          <figcaption class="reviews__by">&mdash; Mei, weekend regular</figcaption>
+        </figure>
+        <figure class="reviews__item" data-review hidden>
+          <blockquote class="reviews__quote">
+            <p>Ordered the giant croissant for a birthday and the dips were the hit of the table. Collection was quick and on time.</p>
+          </blockquote>
+          <figcaption class="reviews__by">&mdash; Daniel, office lunch order</figcaption>
+        </figure>
+        <figure class="reviews__item" data-review hidden>
+          <blockquote class="reviews__quote">
+            <p>Still warm when I picked it up after work. The butter flavour is rich without being heavy. I now come in every Friday.</p>
+          </blockquote>
+          <figcaption class="reviews__by">&mdash; Aisha, Friday pickup</figcaption>
+        </figure>
+      </div>
     </div>
     <div class="arrows arrows--teal arrows--end">
-      <button class="arrow arrow--teal" type="button" aria-label="Previous review">
+      <button class="arrow arrow--teal" type="button" data-review-dir="-1" aria-label="Previous review">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="arrow arrow--teal" type="button" aria-label="Next review">
+      <button class="arrow arrow--teal" type="button" data-review-dir="1" aria-label="Next review">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -524,8 +600,9 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
       </a>
     </div>
-    <form class="newsletter" action="#" method="post">
-      <h2 class="newsletter__title">Sign up and stay in the loop</h2>
+    <form class="newsletter" action="#" method="post" aria-labelledby="newsletter-title" aria-describedby="newsletter-reason">
+      <h2 class="newsletter__title" id="newsletter-title">Sign up and stay in the loop</h2>
+      <p class="newsletter__reason" id="newsletter-reason">Get new bake days and member offers, once a week.</p>
       <label class="visually-hidden" for="email">Email address</label>
       <input id="email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
       <button class="btn btn--cream btn--block" type="submit">Subscribe</button>
@@ -533,6 +610,11 @@
     <p class="site-footer__legal">&copy; 2026 Lantern Row Bakehouse.<br>A placeholder design study.</p>
   </div>
 </footer>
+
+<a class="chat-fab btn btn--teal" href="https://wa.me/6500000000" target="_blank" rel="noopener" aria-label="Chat with Lantern Row Bakehouse on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1-1.1-1.6-.8-.6.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.6-.8-1.6z" fill="currentColor"/></svg>
+  <span class="chat-fab__label">Chat with us</span>
+</a>
 
 <script src="script.js" defer></script>
 </body>

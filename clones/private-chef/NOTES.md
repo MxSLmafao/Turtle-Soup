@@ -94,3 +94,21 @@ Left as is:
 ## Generated photography status
 
 The Gemini image tool (`mcp__Geminimage__generate_image`) returned a quota-exhausted error (429, resets in about 2h40m). No photos were generated and `img/` was not created. All photo slots keep the drawn gradient and SVG art, at the same sizes and aspect ratios as the source. Regenerate once the quota resets.
+
+## Gap fixes
+
+Placeholders used: domain `https://www.example.com/private-chef/`, address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", hours 09:00-21:00 daily, sample social URLs on example.com, geo at a generic Singapore point. Brand "Hearthside Chefs" is a placeholder.
+
+| # | Gap | Before | After |
+|---|---|---|---|
+| 1 | Image alt text | No `<img>` on the page; photo-like art was drawn in CSS | Unchanged in substance: every visual is decorative and marked `aria-hidden`, so no alt is needed. Verified: 0 `<img>` elements, 0 without alt |
+| 2 | Local business structured data | None | JSON-LD `@graph` with `FoodEstablishment` (name, url, telephone, priceRange, servesCuisine, PostalAddress, GeoCoordinates, openingHours, hasMenu, acceptsReservations, ReserveAction, sameAs) and `WebSite`. Parses as valid JSON |
+| 3 | Heading structure | One h1; h4 used under h2 for metrics, reviews and footer labels (levels skipped) | One h1. Metrics and review names are h3; footer labels are h2 (styled as before) |
+| 4 | Title tag | "Hearthside Chefs \| Private chefs for your home" (brand-led) | "Private Chef Service in Singapore \| Hearthside Chefs" (52 characters) |
+| 5 | Meta description | Present, short | 160 characters, one sentence with a call to action |
+| 6 | Technical basics | `lang="en"`, viewport present, no canonical, no OG, no robots, no sitemap | `lang="en-SG"`, canonical, `robots` meta, og:type/title/description/url/locale, twitter:card; no og:image (no photo in img/ yet). robots.txt and sitemap.xml added |
+| 7 | Reviews | Carousel with full names and dates | First names only plus month and year; HTML comment marks them and the scores as sample content |
+| 8 | Newsletter | None | Band with labelled email input, native pill submit button, one-line reason. Uses site fonts, colours and pill styling |
+| 9 | Chat or WhatsApp button | None | Fixed bottom-right accent circle with aria-label, 56px desktop and 52px mobile, placed to avoid the content column |
+
+Still open: og:image (add once a photo exists in img/); the newsletter form has no backend, so `action="#"` is a placeholder.

@@ -1104,6 +1104,31 @@ body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-we
   .phone__screen { padding: 22px 16px 0; }
 }
 
+
+/* ============================================================
+   Gap-fix pass (fnb-site-gaps): native-looking additions only
+   ============================================================ */
+.stamp__title { font-weight: 400; }
+.newsletter__reason { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-weight: 500; color: var(--cream); margin-top: -0.25rem; }
+.reviews__item[hidden] { display: none; }
+.reviews__item { margin: 0; }
+.reviews__items { display: block; }
+.chat-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 80;
+  gap: 0.5rem;
+  padding: 0 1.25rem;
+  box-shadow: 0 12px 24px -12px rgba(82, 27, 4, 0.55);
+  text-decoration: none;
+}
+.chat-fab svg { width: 22px; height: 22px; flex: 0 0 auto; }
+@media (max-width: 640px) {
+  .chat-fab { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
+  .chat-fab__label { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -100,3 +100,21 @@ Round 1 discrepancies:
 Round 2: rebuilt the pairs after the fixes above. Heading wraps, stamp card geometry and footer rules now match. Remaining differences are the photo slots and the logo placeholder listed above.
 
 Photography: not generated in this pass. The image generator returned a quota error (quota resets after about 2h44m), so every photo slot keeps its drawn art.
+
+## Gap fixes
+
+Skill: fnb-site-gaps (nine gaps). Placeholder business data only: domain https://www.example.com/distillery/, "1 Sample Street, Singapore 000000", "+65 0000 0000", sample hours (Tue to Sat 15:00 to 22:00, Sun 12:00 to 18:00), social URLs on example.com. Geo coordinates are an approximate Singapore centre point, placeholder only.
+
+| # | Gap | Before | After | Placeholders / notes |
+|---|---|---|---|---|
+| 1 | Image alt text | No `<img>` tags. Meaningful drawn art was aria-hidden. Decorative SVGs had no explicit attribute. | Meaningful art has `role="img"` and an `aria-label`: both hero slides, the cocktail band, and the six social tiles. Every decorative SVG has `aria-hidden="true"`. Stamp cards keep their visible labels. | No `<img>` exists yet (no photos generated), so width, height and lazy loading do not apply. |
+| 2 | Local business structured data | None | JSON-LD `@graph` with WebSite and Distillery (name, url, description, telephone, priceRange, PostalAddress, GeoCoordinates, openingHoursSpecification, hasMenu, ReserveAction, sameAs). Parses with JSON.parse. | `image` omitted because there are no image files. |
+| 3 | Heading structure | Two `<h1>` (both hero slides) | One `<h1>` (slide 1 headline). Slide 2 headline is now `<h2>` with the same class, so styling is unchanged. | Gate and popup titles are `<h2>` and sit before the h1 in the DOM. Left as they are. |
+| 4 | Title tag | "Copper Heron Distilling Co. \| Small-Batch Gin" (brand plus generic category) | "Gin Distillery in Singapore \| Copper Heron Distilling Co." (57 characters) | Placeholder brand. |
+| 5 | Meta description | "Small-batch gins distilled with Southeast Asian botanicals. Tours, gin schools and tastings at the Copper Heron distillery." (about 120 characters) | One sentence with a call to action, 141 characters: "Small-batch gins distilled in Singapore with Southeast Asian botanicals. Book a distillery tour, gin school or tasting at Copper Heron today." | Placeholder brand. |
+| 6 | Technical basics | `lang="en"`, viewport present; no canonical, OG, Twitter or robots tags; no robots.txt or sitemap | `lang="en-SG"`; canonical; og:type, og:site_name, og:title, og:description, og:url, og:locale (en_SG); twitter:card summary_large_image; robots index, follow, max-image-preview:large; robots.txt and sitemap.xml added | `og:image` omitted: no files in img/ (photo generation was blocked by quota, see Visual diff). Add it once an image exists. |
+| 7 | Reviews | None | New "Guest notes" section after the cocktail band: three quotes with first names and visit types, in the clone's card, eyebrow and section-title styles. An HTML comment marks them as sample content. | Invented first names only: Mei, Daniel, Priya. Not real reviews. |
+| 8 | Newsletter sign-up | Present (footer form and popup), but the forms had no accessible name | Both forms have an aria-label. Visible labels are unchanged. | None. |
+| 9 | Chat or WhatsApp button | None | Floating amber circular button, bottom-right, with `aria-label`. Appears after 700px of scroll and hides near the footer. Generic speech-bubble icon, not a trademark logo. | Links to `#contact` (no real chat provider). |
+
+Verification: exactly one h1; JSON-LD parses; no `<img>` tags; every SVG has an aria attribute; no overflow at 1440 or 390; no console errors or failed requests.

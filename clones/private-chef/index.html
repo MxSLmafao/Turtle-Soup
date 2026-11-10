@@ -4,12 +4,65 @@
   Design study of the "Private & personal chefs" category (Singapore homepage pattern).
   All imagery is drawn with CSS gradients and inline SVG; no third-party assets are used.
 -->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hearthside Chefs | Private chefs for your home</title>
-  <meta name="description" content="Hearthside Chefs: book a private chef to cook a custom menu in your own home.">
+  <title>Private Chef Service in Singapore | Hearthside Chefs</title>
+  <meta name="description" content="Book a private chef in Singapore to cook a custom menu in your own home. Share your brief, review chef proposals and reserve your evening with Hearthside Chefs.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.example.com/private-chef/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hearthside Chefs">
+  <meta property="og:title" content="Private Chef Service in Singapore | Hearthside Chefs">
+  <meta property="og:description" content="Book a private chef in Singapore to cook a custom menu in your own home. Share your brief, review chef proposals and reserve your evening with Hearthside Chefs.">
+  <meta property="og:url" content="https://www.example.com/private-chef/">
+  <meta property="og:locale" content="en_SG">
+  <!-- og:image omitted: the clone folder has no img/ photo to point at yet. -->
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FoodEstablishment",
+        "@id": "https://www.example.com/private-chef/#business",
+        "name": "Hearthside Chefs",
+        "url": "https://www.example.com/private-chef/",
+        "description": "Private chef service in Singapore: custom menus cooked in your own home.",
+        "telephone": "+65 0000 0000",
+        "priceRange": "$$$",
+        "servesCuisine": ["Modern", "Vegetarian", "Family-style"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Sample Street",
+          "addressLocality": "Singapore",
+          "postalCode": "000000",
+          "addressCountry": "SG"
+        },
+        "geo": {"@type": "GeoCoordinates", "latitude": 1.3521, "longitude": 103.8198},
+        "openingHoursSpecification": [
+          {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}
+        ],
+        "hasMenu": "https://www.example.com/private-chef/#menus",
+        "acceptsReservations": true,
+        "potentialAction": {"@type": "ReserveAction", "target": "https://www.example.com/private-chef/#find"},
+        "sameAs": [
+          "https://www.example.com/hearthside-chefs/facebook",
+          "https://www.example.com/hearthside-chefs/instagram",
+          "https://www.example.com/hearthside-chefs/linkedin"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.com/private-chef/#website",
+        "url": "https://www.example.com/private-chef/",
+        "name": "Hearthside Chefs",
+        "inLanguage": "en-SG"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -196,6 +249,7 @@
 </section>
 
 <!-- ============ REVIEWS ============ -->
+<!-- Sample content: review names are first names only and the scores and counts are placeholders. -->
 <section class="band" id="reviews">
   <div class="reviews-card">
     <div class="reviews-top">
@@ -207,19 +261,19 @@
         </div>
       </div>
       <div class="metrics">
-        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 6c-3 0-6 2-6 6 0 2 1 3 2 4v16h18V16c1-1 2-2 2-4 0-4-3-6-6-6-1 2-3 3-7 3s-6-1-7-3z" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h4>4.19 Chef</h4><p>Hosts rate how well their chef reads the room and runs the evening.</p></div></div>
-        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4 3 5-1 2 5 5 2-1 5 3 4-3 4 1 5-5 2-2 5-5-1-4 3-4-3-5 1-2-5-5-2 1-5-3-4 3-4-1-5 5-2 2-5 5 1z" fill="none" stroke="#f4c858" stroke-width="2"/><path d="M14 20l4 4 8-8" fill="none" stroke="#f4c858" stroke-width="2.4"/></svg><div><h4>4.46 Food quality</h4><p>Hosts rate flavour, texture and how closely each dish matched the brief.</p></div></div>
-        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26h28M8 26a12 12 0 0 1 24 0" fill="none" stroke="#f4c858" stroke-width="2"/><circle cx="20" cy="12" r="3" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h4>4.48 Presentation</h4><p>Plating and table styling, judged by the guests who sat down to eat.</p></div></div>
-        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l2 6 6 2-6 2-2 6-2-6-6-2 6-2z M9 22l1.5 4 4 1.5-4 1.5L9 33l-1.5-4-4-1.5 4-1.5z" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h4>4.43 Cleanliness</h4><p>How the kitchen is left behind, from the stovetop to the dining room floor.</p></div></div>
+        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 6c-3 0-6 2-6 6 0 2 1 3 2 4v16h18V16c1-1 2-2 2-4 0-4-3-6-6-6-1 2-3 3-7 3s-6-1-7-3z" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h3>4.19 Chef</h3><p>Hosts rate how well their chef reads the room and runs the evening.</p></div></div>
+        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4 3 5-1 2 5 5 2-1 5 3 4-3 4 1 5-5 2-2 5-5-1-4 3-4-3-5 1-2-5-5-2 1-5-3-4 3-4-1-5 5-2 2-5 5 1z" fill="none" stroke="#f4c858" stroke-width="2"/><path d="M14 20l4 4 8-8" fill="none" stroke="#f4c858" stroke-width="2.4"/></svg><div><h3>4.46 Food quality</h3><p>Hosts rate flavour, texture and how closely each dish matched the brief.</p></div></div>
+        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26h28M8 26a12 12 0 0 1 24 0" fill="none" stroke="#f4c858" stroke-width="2"/><circle cx="20" cy="12" r="3" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h3>4.48 Presentation</h3><p>Plating and table styling, judged by the guests who sat down to eat.</p></div></div>
+        <div class="metric"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l2 6 6 2-6 2-2 6-2-6-6-2 6-2z M9 22l1.5 4 4 1.5-4 1.5L9 33l-1.5-4-4-1.5 4-1.5z" fill="none" stroke="#f4c858" stroke-width="2"/></svg><div><h3>4.43 Cleanliness</h3><p>How the kitchen is left behind, from the stovetop to the dining room floor.</p></div></div>
       </div>
     </div>
     <hr class="divider">
     <div class="review-row">
       <button class="arrow arrow-light arrow-prev" aria-label="Previous review" data-target="review-track" data-dir="-1">&#8249;</button>
       <div class="review-track" id="review-track">
-        <article class="review faded"><p class="review-stars"><span class="star">&#9733;</span> 4.5/5</p><h4>Sid Bale &middot; Nov 09 2026</h4><p>What an incredible experience. From the first enquiry we knew we were in good hands. The menu fitted my partner's dietary needs perfectly, which is more than we expected.</p><a href="#reviews">View full review</a></article>
-        <article class="review"><p class="review-stars"><span class="star">&#9733;</span> 5/5</p><h4>Adam Williamson &middot; Nov 10 2026</h4><p>I cannot say enough good things about our chef and our evening. This was our first time bringing a chef into our home and everything went perfectly. Communication was prompt right up to the date.</p><a href="#reviews">View full review</a></article>
-        <article class="review faded"><p class="review-stars"><span class="star">&#9733;</span> 5/5</p><h4>Tatianna &middot; Nov 10 2026</h4><p>An unforgettable private dining evening. We hired our chef to prepare a birthday dinner for our closest friends, and every course was a talking point all night.</p><a href="#reviews">View full review</a></article>
+        <article class="review faded"><p class="review-stars"><span class="star">&#9733;</span> 4.5/5</p><h3>Sid &middot; Nov 2026</h3><p>What an incredible experience. From the first enquiry we knew we were in good hands. The menu fitted my partner's dietary needs perfectly, which is more than we expected.</p><a href="#reviews">View full review</a></article>
+        <article class="review"><p class="review-stars"><span class="star">&#9733;</span> 5/5</p><h3>Adam &middot; Nov 2026</h3><p>I cannot say enough good things about our chef and our evening. This was our first time bringing a chef into our home and everything went perfectly. Communication was prompt right up to the date.</p><a href="#reviews">View full review</a></article>
+        <article class="review faded"><p class="review-stars"><span class="star">&#9733;</span> 5/5</p><h3>Tatianna &middot; Nov 2026</h3><p>An unforgettable private dining evening. We hired our chef to prepare a birthday dinner for our closest friends, and every course was a talking point all night.</p><a href="#reviews">View full review</a></article>
       </div>
       <button class="arrow arrow-light arrow-next" aria-label="Next review" data-target="review-track" data-dir="1">&#8250;</button>
     </div>
@@ -317,11 +371,24 @@
 
 </main>
 
+<!-- ============ NEWSLETTER ============ -->
+<section class="band band-grey newsletter" aria-labelledby="news-title">
+  <div class="container center">
+    <h2 id="news-title">Get new menus first</h2>
+    <p class="sub">Seasonal menus and chef openings, sent once a month. No spam.</p>
+    <form class="news-form" action="#" method="post">
+      <label class="visually-hidden" for="news-email">Email address</label>
+      <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <button class="pill pill-accent" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="f-col">
-      <h4>Follow us</h4>
+      <h2 class="f-title">Follow us</h2>
       <div class="socials">
         <a href="#top" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.8.4-1.2 1.2-1.2H17V2h-2.6C11.9 2 11 3.3 11 5.3V8H9v3h2v11h3V11h2.6l.4-3z" fill="currentColor"/></svg></a>
         <a href="#top" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
@@ -375,6 +442,10 @@
     <p>Copyright &copy; 2026 Hearthside Chefs (placeholder). All rights reserved.</p>
   </div>
 </footer>
+
+<a class="chat-fab" href="https://www.example.com/private-chef/chat" aria-label="Chat with Hearthside Chefs on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.6 3.4c-.5.4-1.2 0-1.2-.6V16a2.5 2.5 0 0 1-.2-1z" fill="currentColor"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>

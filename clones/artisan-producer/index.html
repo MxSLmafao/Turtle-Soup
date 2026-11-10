@@ -4,12 +4,90 @@
   Design study of the "Artisan food producers" category (homepage structure, type scale,
   palette, grid and interaction patterns). No images, logos, fonts or copy from any real site are used.
 -->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marrow &amp; Cacao | Small-batch bean to bar</title>
-  <meta name="description" content="Placeholder artisan chocolate maker, design study.">
+  <title>Artisan Chocolate Maker in Singapore | Marrow &amp; Cacao</title>
+  <meta name="description" content="Small-batch artisan chocolate bars, confections and gift sets from Marrow &amp; Cacao in Singapore. Order online or visit our tasting studio today.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.example.com/artisan-producer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artisan Chocolate Maker in Singapore | Marrow &amp; Cacao">
+  <meta property="og:description" content="Small-batch artisan chocolate bars, confections and gift sets from Marrow &amp; Cacao in Singapore. Order online or visit our tasting studio today.">
+  <meta property="og:url" content="https://www.example.com/artisan-producer/">
+  <meta property="og:site_name" content="Marrow &amp; Cacao">
+  <meta property="og:locale" content="en_SG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artisan Chocolate Maker in Singapore | Marrow &amp; Cacao">
+  <meta name="twitter:description" content="Small-batch artisan chocolate bars, confections and gift sets from Marrow &amp; Cacao in Singapore. Order online or visit our tasting studio today.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Store",
+      "@id": "https://www.example.com/artisan-producer/#store",
+      "name": "Marrow & Cacao",
+      "url": "https://www.example.com/artisan-producer/",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$",
+      "description": "Small-batch artisan chocolate bars, confections and gift sets from Marrow & Cacao in Singapore. Order online or visit our tasting studio today.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "11:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        }
+      ],
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.example.com/artisan-producer/shop/"
+        }
+      },
+      "sameAs": [
+        "https://www.example.com/marrow-cacao/instagram",
+        "https://www.example.com/marrow-cacao/facebook"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Marrow & Cacao",
+      "url": "https://www.example.com/artisan-producer/"
+    }
+  ]
+}
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -52,7 +130,7 @@
   <!-- 1. Hero: split full-bleed panels -->
   <section class="hero" aria-label="Introduction">
     <div class="hero-half hero-left">
-      <svg class="hero-art" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <svg class="hero-art" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Dark chocolate bar and a copper cup on a mossy stone bed">
         <defs>
           <radialGradient id="moss" cx="30%" cy="80%" r="80%">
             <stop offset="0" stop-color="#4f7a2c"/><stop offset="1" stop-color="#1d3412"/>
@@ -81,7 +159,7 @@
       </svg>
     </div>
     <div class="hero-half hero-right">
-      <svg class="hero-art" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <svg class="hero-art" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cream ceramic cup on a dark green backdrop">
         <defs>
           <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#e9dcc4"/><stop offset="1" stop-color="#b98f5e"/>
@@ -230,6 +308,28 @@
     </a>
   </section>
 
+  <!-- Sample reviews below: placeholder content with first names only, not real customers. -->
+  <section class="reviews" aria-labelledby="reviews-title">
+    <h2 id="reviews-title" class="section-title">What Customers Say</h2>
+    <ul class="review-grid">
+      <li class="review-card">
+        <blockquote><p>&ldquo;The 70% bar tastes of toasted cacao nibs. We now restock it every month.&rdquo;</p></blockquote>
+        <p class="review-by">Aisha, bean-to-bar class</p>
+      </li>
+      <li class="review-card">
+        <blockquote><p>&ldquo;Packed beautifully for a birthday gift. The tins arrived intact with a handwritten card.&rdquo;</p></blockquote>
+        <p class="review-by">Daniel, gift set customer</p>
+      </li>
+      <li class="review-card">
+        <blockquote><p>&ldquo;Our cafe now serves their drinking chocolate. Guests ask about it every week.&rdquo;</p></blockquote>
+        <p class="review-by">Mei, cafe owner</p>
+      </li>
+    </ul>
+    <p class="review-note">Sample testimonials for layout only.</p>
+  </section>
+
+  <!-- Floating contact button is placed after the footer. -->
+
 </main>
 
 <footer class="site-footer">
@@ -250,8 +350,9 @@
         <li><a href="#story">Sustainability</a></li>
       </ul>
     </div>
-    <form class="newsletter" action="#" onsubmit="return false">
+    <form class="newsletter" action="#" onsubmit="return false" aria-label="Newsletter sign-up">
       <label for="news-email" class="newsletter-title">Latest updates and exciting perks</label>
+      <p class="newsletter-reason">Join for tasting notes, class dates and early access.</p>
       <div class="newsletter-row">
         <input id="news-email" type="email" placeholder="Email Address" autocomplete="email">
         <button type="submit" class="btn btn-dark">Subscribe</button>
@@ -265,6 +366,11 @@
     </ul>
   </div>
 </footer>
+
+<a class="chat-fab" href="#contact" aria-label="Chat with us">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <span>Chat with us</span>
+</a>
 
 <script src="script.js"></script>
 </body>

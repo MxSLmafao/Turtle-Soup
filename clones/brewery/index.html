@@ -1,23 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-SG">
 <head>
 <!--
   Placeholder brand: "Driftwood Brewing Co." (not a real business).
-  Sample content only: all copy, prices, addresses and posts are invented.
+  Sample content only: all copy, prices, addresses, reviews and posts are invented.
   Design study of the category "Breweries & taprooms" (homepage layout, type, colour and motion).
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Driftwood Brewing Co. | Taproom and Brewery</title>
-<meta name="description" content="Placeholder brewery and taproom design study.">
+<title>Craft Brewery and Taproom in Singapore | Driftwood</title>
+<meta name="description" content="Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.example.com/brewery/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Driftwood Brewing Co.">
+<meta property="og:title" content="Craft Brewery and Taproom in Singapore | Driftwood">
+<meta property="og:description" content="Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.">
+<meta property="og:url" content="https://www.example.com/brewery/">
+<meta property="og:locale" content="en_SG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Craft Brewery and Taproom in Singapore | Driftwood">
+<meta name="twitter:description" content="Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Brewery",
+      "@id": "https://www.example.com/brewery/#brewery",
+      "name": "Driftwood Brewing Co.",
+      "url": "https://www.example.com/brewery/",
+      "image": "https://www.example.com/brewery/img/hero.jpg",
+      "description": "Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$",
+      "servesCuisine": ["Western", "Asian-inspired"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 1.3000, "longitude": 103.8000 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "16:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "01:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "12:00", "closes": "22:00" }
+      ],
+      "hasMenu": "https://www.example.com/brewery/menu/",
+      "acceptsReservations": "https://www.example.com/brewery/reserve/",
+      "potentialAction": { "@type": "ReserveAction", "target": "https://www.example.com/brewery/reserve/" },
+      "sameAs": [
+        "https://www.example.com/brewery/facebook",
+        "https://www.example.com/brewery/instagram",
+        "https://www.example.com/brewery/untappd"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.example.com/brewery/#organization",
+      "name": "Driftwood Brewing Co.",
+      "url": "https://www.example.com/brewery/",
+      "logo": "https://www.example.com/brewery/img/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/brewery/#website",
+      "url": "https://www.example.com/brewery/",
+      "name": "Driftwood Brewing Co.",
+      "inLanguage": "en-SG",
+      "publisher": { "@id": "https://www.example.com/brewery/#organization" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<a class="promo-round" href="#" aria-label="Reserve"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/></svg></a>
+<a class="promo-round" href="https://www.example.com/brewery/contact/" aria-label="Contact Driftwood Brewing Co."><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></a>
 <div class="promo-bar"><a href="#visit">Book a tasting flight at Driftwood</a></div>
+
+<h1 class="sr-only">Driftwood Brewing Co., craft brewery and taproom in Singapore</h1>
 
 <header class="site-header" id="top">
   <div class="header-top">
@@ -56,7 +123,7 @@
 <!-- HERO: illustrated cans on timber, drawn in SVG -->
 <section class="hero" aria-label="Featured beers">
   <div class="hero-bg" aria-hidden="true"></div>
-  <svg class="hero-cans" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <svg class="hero-cans" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of canned craft beers on a timber shelf">
     <defs>
       <linearGradient id="can1" x1="0" x2="1"><stop offset="0" stop-color="#1f8a8a"/><stop offset=".5" stop-color="#5fd0c8"/><stop offset="1" stop-color="#1f8a8a"/></linearGradient>
       <linearGradient id="can2" x1="0" x2="1"><stop offset="0" stop-color="#3d2c6b"/><stop offset=".5" stop-color="#8c6ad6"/><stop offset="1" stop-color="#3d2c6b"/></linearGradient>
@@ -89,11 +156,12 @@
 </section>
 
 <!-- FOUR PILLARS -->
-<section class="pillars" aria-label="Highlights">
+<section class="pillars" aria-labelledby="pillars-title">
+  <h2 id="pillars-title" class="sr-only">Highlights</h2>
   <div class="pillars-inner">
     <article class="pillar pillar-lead reveal">
       <div class="pillar-art">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Illustrated pint of golden craft ale">
           <path d="M70 30h60l-6 110a24 24 0 0 1-48 0z" fill="#fabb3b" opacity=".95"/>
           <path d="M76 60h48l-3 80a16 16 0 0 1-32 0z" fill="#ffd27a"/>
           <path d="M72 30h56" stroke="#e8a02a" stroke-width="6" stroke-linecap="round"/>
@@ -107,7 +175,7 @@
     </article>
     <article class="pillar reveal">
       <div class="pillar-art">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Illustrated burger with fries">
           <ellipse cx="100" cy="150" rx="66" ry="10" fill="#000" opacity=".12"/>
           <path d="M42 96c0-22 26-38 58-38s58 16 58 38z" fill="#c98a3d"/>
           <rect x="44" y="100" width="112" height="14" rx="6" fill="#4caf50"/>
@@ -123,7 +191,7 @@
     </article>
     <article class="pillar reveal">
       <div class="pillar-art">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Illustrated stainless steel brewing tanks">
           <rect x="30" y="60" width="60" height="110" rx="26" fill="#cfd6dd"/>
           <rect x="106" y="50" width="62" height="120" rx="26" fill="#b8c2cc"/>
           <rect x="36" y="82" width="48" height="6" fill="#8d99a6"/>
@@ -139,7 +207,7 @@
     </article>
     <article class="pillar reveal">
       <div class="pillar-art">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Illustrated festival stall with navy awning">
           <rect x="22" y="104" width="156" height="66" fill="#16213e"/>
           <rect x="34" y="82" width="132" height="26" fill="#1f2d55"/>
           <rect x="60" y="92" width="80" height="14" rx="3" fill="#fabb3b"/>
@@ -167,23 +235,42 @@
   </div>
   <h2 id="social-title">Follow us on social</h2>
   <div class="social-grid">
-    <a class="tile t1" href="#" aria-label="Post 1"><span>Golden hour</span></a>
-    <a class="tile t2" href="#" aria-label="Post 2"><i class="ico ico-multi"></i><span>From tank to tap</span></a>
-    <a class="tile t3" href="#" aria-label="Post 3"><span>Smoky ribs</span></a>
-    <a class="tile t4" href="#" aria-label="Post 4"><i class="ico ico-multi"></i><span>Pour of the week</span></a>
-    <a class="tile t5" href="#" aria-label="Post 5"><i class="ico ico-multi"></i><span>Grill night</span></a>
-    <a class="tile t6" href="#" aria-label="Post 6"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>New year pour</span></a>
-    <a class="tile t7" href="#" aria-label="Post 7"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>Festival stall</span></a>
-    <a class="tile t8" href="#" aria-label="Post 8"><span>Fresh cans</span></a>
+    <a class="tile t1" href="#" aria-label="Golden hour"><span>Golden hour</span></a>
+    <a class="tile t2" href="#" aria-label="From tank to tap"><i class="ico ico-multi"></i><span>From tank to tap</span></a>
+    <a class="tile t3" href="#" aria-label="Smoky ribs"><span>Smoky ribs</span></a>
+    <a class="tile t4" href="#" aria-label="Pour of the week"><i class="ico ico-multi"></i><span>Pour of the week</span></a>
+    <a class="tile t5" href="#" aria-label="Grill night"><i class="ico ico-multi"></i><span>Grill night</span></a>
+    <a class="tile t6" href="#" aria-label="New year pour"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>New year pour</span></a>
+    <a class="tile t7" href="#" aria-label="Festival stall"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>Festival stall</span></a>
+    <a class="tile t8" href="#" aria-label="Fresh cans"><span>Fresh cans</span></a>
   </div>
   <a class="follow-btn" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/></svg>Follow us on Instagram</a>
+</section>
+
+<!-- Sample content: first names only, invented for this design study. Not real reviews. -->
+<section class="reviews" aria-labelledby="reviews-title">
+  <h2 id="reviews-title">What guests say</h2>
+  <div class="review-grid">
+    <figure class="review">
+      <blockquote><p>Crisp, balanced pours and a kitchen that keeps pace with the beer. Our go-to after work.</p></blockquote>
+      <figcaption>Mei, sample review</figcaption>
+    </figure>
+    <figure class="review">
+      <blockquote><p>The flight is a great way to try the whole range. Staff were happy to explain each style.</p></blockquote>
+      <figcaption>Daniel, sample review</figcaption>
+    </figure>
+    <figure class="review">
+      <blockquote><p>Booked a group table for a birthday. Plenty of room, and the sharing platters disappeared fast.</p></blockquote>
+      <figcaption>Priya, sample review</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="newsletter" id="visit" aria-labelledby="nl-title">
   <h2 id="nl-title">Sign up to our newsletter</h2>
   <p>Be the first to hear about new releases, offers and events.</p>
-  <form class="nl-form" action="#" onsubmit="return false;">
+  <form class="nl-form" action="#" onsubmit="return false;" aria-label="Newsletter sign-up">
     <label class="sr-only" for="email">Email address</label>
     <input id="email" type="email" placeholder="Email address" required>
     <button type="submit" class="btn btn-solid">Subscribe</button>

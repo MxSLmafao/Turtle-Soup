@@ -68,3 +68,21 @@ Left as is (known differences):
 - Footer: original has no separate bordered copyright row; clone keeps one.
 - Announcement bar: original shows one at top; it was dismissed in captures for both sides, so it is not compared.
 - Original section heading "Shop Our Top Categories" is upright-ish with a heavier serif; clone is a lighter italic.
+
+## Gap fixes
+
+Placeholder data used: domain https://www.example.com/artisan-producer/, "1 Sample Street, Singapore 000000", "+65 0000 0000", sample hours (Mon-Fri 11:00-20:00, Sat-Sun 10:00-21:00), social URLs on example.com, geo at the Singapore city centre (placeholder, not a real outlet), sample reviews with first names only.
+
+| # | Gap | Before | After |
+|---|---|---|---|
+| 1 | Image alt text | No img elements; two meaningful hero scenes were aria-hidden SVG | Hero scenes are role="img" with aria-label; tile, split and footer art stays aria-hidden next to text labels. 0 img elements, so no alt gaps. |
+| 2 | Local business structured data | None | JSON-LD @graph: Store (name, url, telephone, priceRange, description, PostalAddress, GeoCoordinates, OpeningHoursSpecification, OrderAction, sameAs) plus WebSite. Parses. No image property: no img/ folder exists. |
+| 3 | Heading structure | One h1; sections h2, footer h3 | Unchanged: exactly one h1 (hero), h2 section titles, h3 footer headings. |
+| 4 | Title tag | "Marrow & Cacao \| Small-batch bean to bar" (brand plus tagline) | "Artisan Chocolate Maker in Singapore \| Marrow & Cacao" (53 characters). |
+| 5 | Meta description | "Placeholder artisan chocolate maker, design study." | 143-character sentence with category, city and call to action. |
+| 6 | Technical basics | lang="en", viewport only | lang="en-SG"; canonical; robots meta; og:type, og:title, og:description, og:url, og:site_name, og:locale en_SG; twitter:card summary_large_image. og:image omitted (no img/ folder). robots.txt and sitemap.xml added (sitemap XML validated). |
+| 7 | Reviews | None | "What Customers Say" section, three sample quotes with first names and context, plus visible note "Sample testimonials for layout only" and an HTML comment. Styled with the existing serif quote face, caps attributions and paper cards. |
+| 8 | Newsletter | Present, input labelled, no reason line | Form has aria-label "Newsletter sign-up"; one-line reason added: "Join for tasting notes, class dates and early access." |
+| 9 | Chat button | None | Fixed bottom-right pill "Chat with us" linking to #contact, aria-label; on mobile a 52px icon-only circle that sits clear of the footer buttons. |
+
+Verification (1440 and 390): one h1; 0 img elements; JSON-LD parses; no horizontal overflow; no console errors or failed requests.

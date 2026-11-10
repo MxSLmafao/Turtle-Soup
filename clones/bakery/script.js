@@ -55,6 +55,23 @@
     update();
   });
 
+
+  /* Reviews: cycle the three sample quotes with the existing arrow buttons */
+  var reviewItems = document.querySelectorAll('[data-review]');
+  var reviewBtns = document.querySelectorAll('[data-review-dir]');
+  var reviewIndex = 0;
+  if (reviewItems.length > 1) {
+    var showReview = function (i) {
+      reviewIndex = (i + reviewItems.length) % reviewItems.length;
+      reviewItems.forEach(function (el, n) { el.hidden = n !== reviewIndex; });
+    };
+    reviewBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        showReview(reviewIndex + parseInt(btn.getAttribute('data-review-dir'), 10));
+      });
+    });
+  }
+
   /* Scroll reveal */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion) {

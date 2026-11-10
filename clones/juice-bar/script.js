@@ -57,4 +57,21 @@
   } else {
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  // Newsletter placeholder: no backend, so just confirm locally without reloading the page.
+  var form = document.querySelector('.newsletter-form');
+  var note = document.querySelector('.form-note');
+  if (form && note) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input[type="email"]');
+      if (!input.value || input.validity.typeMismatch) {
+        note.textContent = 'Please enter a valid email address.';
+        input.focus();
+        return;
+      }
+      note.textContent = 'Thanks, you are on the list (sample form, no email is sent).';
+      form.reset();
+    });
+  }
 })();

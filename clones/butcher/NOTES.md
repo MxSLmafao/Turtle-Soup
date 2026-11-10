@@ -87,6 +87,26 @@ Left as-is or known differences:
 - Source's grey footer accreditation logos are replaced with neutral badge tiles (by design).
 - Source reveal animations (wow.js fadeIn) are approximated with an IntersectionObserver fade-up.
 
+## Gap fixes
+
+Gaps are from the fnb-site-gaps checklist. Before/after is measured on the clone.
+
+| # | Gap | Before | After | Placeholders used |
+|---|---|---|---|---|
+| 1 | Image alt text | No `<img>` elements. Drawn art was SVG or CSS. Logo and icon SVGs partly unmarked. | No `<img>` elements, so no alt needed yet. All decorative SVG and CSS art is `aria-hidden` or sits in labelled controls. Logo SVG marked decorative. Once 7b images are added, each needs specific alt text, width/height and `loading="lazy"` below the fold. | None |
+| 2 | Local business structured data | None. | JSON-LD `@graph` with `WebSite` and `Store` (name, url, description, telephone, priceRange, servesCuisine, PostalAddress, GeoCoordinates, OpeningHoursSpecification, hasMenu, OrderAction potentialAction, sameAs). Parses cleanly. `image` omitted (no `img/` file). | `https://www.example.com/butcher/`; 1 Sample Street, Singapore 000000; +65 0000 0000; sample hours 10:00-21:00 daily; geo set to approximate Singapore centre (1.3521, 103.8198); social links on example.com |
+| 3 | Heading structure | No `<h1>`. | One `<h1>`, visually hidden (the design has no visible headline): "Hollis & Crane Butchery: fresh cuts, charcuterie and deli in Singapore". Sections use `<h2>`, product titles `<h3>`. | Placeholder brand name |
+| 4 | Title tag | "Hollis & Crane Butchery \| Sample Homepage" (brand plus generic "Sample"). | "Butcher and Deli in Singapore \| Hollis & Crane Butchery" (55 characters). | Placeholder brand |
+| 5 | Meta description | "Sample butcher and deli homepage design study." (46 characters, no offer or CTA). | One sentence, 148 characters, with offer, location and CTA ("Order for pickup today."). Also used for og and twitter descriptions. | Placeholder brand, Singapore |
+| 6 | Technical basics | `lang="en"`, viewport present. No canonical, OG, Twitter card, robots meta, robots.txt or sitemap. | `lang="en-SG"`. Canonical. `robots` meta (index, follow, max-image-preview:large). OG: type, site_name, title, description, url, locale en_SG. Twitter summary_large_image. `robots.txt` (points to sitemap) and `sitemap.xml` (one URL, lastmod 2026-11-10). `og:image` omitted: no file in `img/` yet. | example.com domain |
+| 7 | Reviews | None. | "Kind words" section: three sample reviews with first name only, star rating, and an HTML comment marking them as sample content. | First names Ann, Marcus, Priya; invented wording |
+| 8 | Newsletter sign-up | None. | "Weekly cut sheet" section: labelled email input (`sr-only` label), one Subscribe button, reason line. Submit is handled client-side and sends nothing (shows a sample toast). | None |
+| 9 | Chat or WhatsApp button | None. | Floating red round button, bottom-right (18px inset; 12px inset and 46px on mobile), `aria-label`, link to a placeholder chat page. Styled with the clone's red and shadow tokens. | `https://www.example.com/butcher/chat/` |
+
+Verification: exactly one `<h1>`; JSON-LD parses; every `<img>` has alt (none present); no horizontal overflow at 1440 or 390; no console errors. Screenshots show the reviews and newsletter sections matching the site's type and spacing.
+
+Open: add `img/` photos (7b) and then `og:image` and an image in JSON-LD; add alt text to each photo.
+
 ## Known gaps
 - Scroll-reveal timing and the exact slider easing are approximated.
 - Original store section is taller and uses real product photography; the clone uses a 5-tile mosaic instead.

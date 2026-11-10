@@ -91,3 +91,21 @@ Left (not matched):
 - Testimonial author label renders lighter than the source, because the Barlow Condensed fallback is not the heavy Kapra face (see Fonts).
 - Footer logo is a neutral drawn mark; source uses a different logo shape (intentional placeholder).
 - Source's Christmas hero photo, the accreditation badges and the source's real copy are replaced with placeholders.
+
+## Gap fixes
+
+Placeholder data used (no real business): domain `https://www.example.com/caterer/`, address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", hours Mon to Sat 09:00 to 18:00, geo set to the Singapore city-centre coordinate (1.3521, 103.8198), menu and order URLs and social links on example.com, newsletter placeholder (no email is sent), sample reviews with first names and roles only.
+
+| # | Gap | Before | After |
+|---|---|---|---|
+| 1 | Image alt text | No `<img>` elements. Art is inline SVG and CSS, marked `aria-hidden` (decorative). | Unchanged; verified 0 `<img>` without alt. Hero, card and banner art stays decorative. |
+| 2 | Local business structured data | None. | One JSON-LD block: `FoodEstablishment` (name, url, description, telephone, priceRange, servesCuisine, PostalAddress, GeoCoordinates, OpeningHoursSpecification, hasMenu, OrderAction, sameAs) plus `WebSite`. `image` omitted (no img/ folder). Parses as valid JSON. |
+| 3 | Heading structure | One `h1` (hero), `h2` per section, `h3` in footer. | Unchanged; verified exactly one `h1`. New newsletter heading is an `h2`. |
+| 4 | Title tag | "Hearthline Kitchen \| Catering and daily boxes" (45 chars, brand plus generic words). | "Caterer in Singapore for Events \| Hearthline Kitchen" (52 chars: category, city, brand). |
+| 5 | Meta description | "Sample catering homepage: daily boxes, celebrations and catering for every size of gathering." (93 chars, reads as a sample label). | One sentence on the offer and area with a call to action, 145 chars. |
+| 6 | Technical basics | `lang="en"`, viewport present. No canonical, Open Graph, Twitter card, robots meta, robots.txt or sitemap. | `lang="en-SG"`, robots meta, canonical, og:type/site_name/title/description/url/locale, twitter:card summary_large_image and title/description. `robots.txt` and `sitemap.xml` added. `og:image` omitted (no img/ folder). |
+| 7 | Reviews or testimonials | Six quotes with first names and roles, present but not labelled. | Unchanged content; HTML comment marks them as sample content, not real customers. |
+| 8 | Newsletter sign-up | Missing. | Added after the banner: heading, one-line reason, labelled email input (visually hidden label), yellow Subscribe button, live status line. Demo handler prevents submission and shows a note. |
+| 9 | Chat or WhatsApp button | Present: floating button bottom-right with `aria-label`. | Unchanged. Footer social links now point to placeholder example.com URLs. |
+
+Verification: exactly one `h1`; 0 `<img>` elements; JSON-LD parses; title 52 chars, description 145 chars; no overflow at 1440 or 390; no console errors or warnings.

@@ -115,3 +115,21 @@ Generated (Gemini image tool, JPEG, no text or logos in the prompts):
 - `img/origin-beans.jpg` (1000 x 1000, about 133 KB): feature carousel slide 2.
 
 Total img/ size about 404 KB. Still drawn: product tiles, café banner, café cards, wholesale photo, and the isometric illustration (see Visual diff). Regenerate these once the image quota resets.
+
+## Gap fixes
+
+Placeholders used: domain `https://www.example.com/cafe/`, address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", hours Mon to Fri 08:00 to 18:00 and Sat to Sun 09:00 to 19:00 (sample), social links `https://www.example.com/tidewater-sample/instagram` and `/facebook`, WhatsApp link `https://wa.me/6500000000`, geo approximated to the centre of Singapore (1.3521, 103.8198). Reviews are sample content, first names only, and labelled in an HTML comment. `og:image` uses `img/hero-pour.jpg` on the placeholder domain.
+
+| # | Gap | Before | After |
+|---|---|---|---|
+| 1 | Image alt text | No `<img>` elements. Photo and art blocks were unlabelled divs. | Every photo and art block has `role="img"` and a specific `aria-label`. Decorative SVGs stay `aria-hidden`. Zero `<img>` tags, so zero missing alt. |
+| 2 | Local business structured data | None | One JSON-LD block (parsed OK): `CafeOrCoffeeShop` + `FoodEstablishment` with name, url, image, description, telephone, priceRange, address, geo, opening hours, hasMenu, OrderAction, sameAs, plus a `WebSite` entry. |
+| 3 | Heading structure | One h1 (hero), sections h2, cards h3 | Unchanged. Exactly one h1. New reviews section uses h2. |
+| 4 | Title tag | "Tidewater Coffee Roasters - Specialty coffee, roastery and cafés" (brand + generic) | "Specialty Coffee Roastery and Cafés in Singapore \| Tidewater" (60 characters, category + city + brand) |
+| 5 | Meta description | "Sample homepage: specialty coffee roastery, cafés and barista academy (placeholder brand)." | One sentence, 158 characters, category, Singapore, call to action. |
+| 6 | Technical basics | `lang="en"`, viewport present, no canonical, no OG or Twitter, no robots | `lang="en-SG"`, canonical, robots (index, follow, max-image-preview:large), OG (type, site_name, title, description, url, image, image:alt, locale en_SG), Twitter summary_large_image, `robots.txt` with sitemap line, `sitemap.xml` with the home URL. |
+| 7 | Reviews | None | Three sample reviews section (before footer), styled with cream cards, the site's green stars and Hanken type. |
+| 8 | Newsletter sign-up | Present in footer, input labelled, no form name | Same form with `aria-label="Newsletter sign-up"`. One field, one button, one-line reason. |
+| 9 | Chat or WhatsApp button | None | Fixed bottom-right green button, `aria-label`, placeholder WhatsApp link. Icon only on phones (52 px) so it covers less content. |
+
+Still open: no real address, phone, hours or reviews. The `og:image` and social URLs are placeholders on the example domain and will 404 until replaced.

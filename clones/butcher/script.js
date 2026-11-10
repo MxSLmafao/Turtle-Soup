@@ -129,6 +129,18 @@
     });
   }
 
+  // ---- Newsletter (sample: nothing is sent) ----
+  var newsForm = document.getElementById('newsForm');
+  if (newsForm) {
+    newsForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = document.getElementById('newsEmail');
+      if (input && !input.checkValidity()) { input.reportValidity(); return; }
+      showToast('Thanks, you are on the list (sample form)');
+      newsForm.reset();
+    });
+  }
+
   // ---- Add to cart ----
   var countEl = document.getElementById('cartCount');
   var toastEl = document.getElementById('toast');

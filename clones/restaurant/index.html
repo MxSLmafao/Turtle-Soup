@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-SG">
 <head>
 <!--
   Design study clone. Category: Independent full-service restaurants (homepage only).
@@ -10,13 +10,106 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ember &amp; Oak | Bar &amp; Grill</title>
-<meta name="description" content="Ember &amp; Oak: a placeholder bar and grill design study.">
+<title>Wood-Fired Bar and Grill in Singapore | Ember &amp; Oak</title>
+<meta name="description" content="Ember &amp; Oak is a wood-fired bar and grill in Singapore serving sharing plates, cocktails and private dining. Reserve your table online today.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.example.com/restaurant/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ember &amp; Oak">
+<meta property="og:title" content="Wood-Fired Bar and Grill in Singapore | Ember &amp; Oak">
+<meta property="og:description" content="Ember &amp; Oak is a wood-fired bar and grill in Singapore serving sharing plates, cocktails and private dining. Reserve your table online today.">
+<meta property="og:url" content="https://www.example.com/restaurant/">
+<meta property="og:locale" content="en_SG">
+<meta property="og:image" content="https://www.example.com/restaurant/img/hero-roast-on-coals-desktop.jpg">
+<meta property="og:image:alt" content="Roast bird on glowing charcoal with wisps of smoke">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wood-Fired Bar and Grill in Singapore | Ember &amp; Oak">
+<meta name="twitter:description" content="Ember &amp; Oak is a wood-fired bar and grill in Singapore serving sharing plates, cocktails and private dining. Reserve your table online today.">
+<meta name="twitter:image" content="https://www.example.com/restaurant/img/hero-roast-on-coals-desktop.jpg">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Radley:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/restaurant/#website",
+      "url": "https://www.example.com/restaurant/",
+      "name": "Ember & Oak",
+      "inLanguage": "en-SG"
+    },
+    {
+      "@type": [
+        "Restaurant",
+        "BarOrPub"
+      ],
+      "@id": "https://www.example.com/restaurant/#restaurant",
+      "name": "Ember & Oak Bar & Grill",
+      "url": "https://www.example.com/restaurant/",
+      "image": [
+        "https://www.example.com/restaurant/img/hero-roast-on-coals-desktop.jpg",
+        "https://www.example.com/restaurant/img/hero-short-rib-plate-mobile.jpg"
+      ],
+      "description": "Wood-fired bar and grill in Singapore serving sharing plates, cocktails and private dining.",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$$",
+      "servesCuisine": [
+        "Grill",
+        "Wood-fired"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Sunday"
+          ],
+          "opens": "12:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "12:00",
+          "closes": "23:30"
+        }
+      ],
+      "hasMenu": "https://www.example.com/restaurant/menu/",
+      "acceptsReservations": "https://www.example.com/restaurant/reservations/",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": "https://www.example.com/restaurant/reservations/"
+      },
+      "sameAs": [
+        "https://www.example.com/ember-oak-sg/instagram",
+        "https://www.example.com/ember-oak-sg/facebook"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
@@ -60,10 +153,41 @@
 </header>
 
 <main id="content">
+  <h1 class="visually-hidden">Ember &amp; Oak: wood-fired bar and grill in Singapore</h1>
   <section class="hero" aria-label="Featured hero image">
     <img class="art art--desk" src="img/hero-roast-on-coals-desktop.jpg" width="1024" height="1024" alt="Roast bird on glowing charcoal with wisps of smoke" fetchpriority="high" decoding="async">
     <img class="art art--mob" src="img/hero-short-rib-plate-mobile.jpg" width="848" height="1264" alt="Braised short rib on a white plate with an oven glow behind" fetchpriority="high" decoding="async">
     <span class="hero__shade" aria-hidden="true"></span>
+  </section>
+  <section class="reviews" aria-labelledby="reviews-title">
+    <!-- Sample content only: these quotes are invented placeholders with first names. Replace with real, attributable reviews before launch. -->
+    <h2 id="reviews-title" class="section-title">What guests say</h2>
+    <div class="quotes">
+      <figure class="quote">
+        <blockquote><p>The short rib came off the bone with a smoky crust. Easily the best table we had in town this year.</p></blockquote>
+        <figcaption>Sample guest, Priya</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>Friendly staff, a lively bar and a private room that worked well for our team dinner.</p></blockquote>
+        <figcaption>Sample guest, Daniel</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>Simple menu, cooked properly over the fire. We are already planning our next visit.</p></blockquote>
+        <figcaption>Sample guest, Mei</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="signup" aria-labelledby="signup-title">
+    <div class="signup__copy">
+      <h2 id="signup-title" class="section-title">Join the Ember Letter</h2>
+      <p>Get seasonal menu news and early access to private dining dates. One email a month, no spam.</p>
+    </div>
+    <form class="signup__form" action="https://www.example.com/restaurant/subscribe/" method="post">
+      <label class="visually-hidden" for="signup-email">Email address</label>
+      <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 </main>
 
@@ -82,6 +206,10 @@
     </li>
   </ul>
 </footer>
+
+<a class="fab" href="https://www.example.com/restaurant/contact/" aria-label="Chat with Ember &amp; Oak (placeholder link)">
+  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.6 3.3c-.5.4-1.2 0-1.2-.6V16.6A2.5 2.5 0 0 1 4 14.5z" fill="currentColor"/></svg>
+</a>
 
 <script src="script.js" defer></script>
 </body>

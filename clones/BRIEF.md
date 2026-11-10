@@ -104,3 +104,22 @@ The illustrated SVG/gradient stand-ins make the clone look flatter than the orig
 ### Report
 Discrepancies found and fixed, discrepancies left, number of images generated and total img/ size,
 any slots still using drawn art. Same rules: only your clones/<slug>/ folder, no git, no subagents.
+
+## 8. Gap-fix pass (follow-up)
+Read `/home/user/Turtle-Soup/.claude/skills/fnb-site-gaps/SKILL.md` and apply all nine gaps to your
+clone. Rules specific to the clones:
+- Placeholder business data only: domain `https://www.example.com/<slug>/`, address
+  "1 Sample Street, Singapore 000000", phone "+65 0000 0000", sample opening hours, placeholder social
+  URLs on example.com. Use your clone's placeholder brand name. Never the source brand.
+- Title and description must be about the placeholder brand and its category in Singapore.
+- Create `robots.txt` and `sitemap.xml` inside your clone folder.
+- `og:image`: use an existing file in your `img/` folder if you have one; otherwise omit `og:image`
+  and note it.
+- Conversion elements (reviews, newsletter, floating contact button): add only the ones your clone
+  does not already have, styled with your clone's existing fonts, colours, spacing and buttons so they
+  look native. Reviews are sample content with first names only; add an HTML comment saying so.
+- Do not change the existing layout otherwise. Use a private scratch folder `<scratchpad>/gap-<slug>/`.
+- Verify: exactly one h1; valid JSON-LD (parse it); every img has alt; screenshots at 1440 and 390
+  show no overflow and the new sections look right; no console errors.
+- Add a "## Gap fixes" table to NOTES.md (nine gaps, before/after, placeholders used).
+Report briefly. Same rules: only your clones/<slug>/ folder, no git, no subagents, no image generation.

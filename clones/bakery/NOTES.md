@@ -115,3 +115,26 @@ Still open after round 2: photos in every photo slot (addressed in the generated
 - Status: not done. The image tool (mcp__Geminimage__generate_image) returned HTTP 502 with a 429 quota error on two attempts ("quota will reset after 2h43m"). No images were generated, no img/ folder was created, and every photo slot still uses drawn SVG or CSS art.
 - Slots still drawn: hero croissant and mobile hero; product studio image; making centre card and both side cards; pairing cutouts (pastry and coffee); gallery cards (4); phone screen illustration (kept as drawn art in both versions).
 - Prompts planned, to run once quota returns: hero (upright golden croissant on lavender backdrop); product (two croissants with espresso cup on dark-to-cream studio gradient); making (laminated dough close-up, hands holding a cut croissant on white, golden butter close-up); pairing (pain au chocolat and latte on cream); gallery (iced drink in tall glass, café interior, picnic lawn, strawberry pastries). Each prompt ends with "no text, no logos, no brand names, no watermarks, no packaging labels".
+
+## Gap fixes
+
+Applied the nine fnb-site-gaps fixes to the clone (`.claude/skills/fnb-site-gaps/SKILL.md`). Placeholder business data only. No source-brand text.
+
+| # | Gap | Before | After | Placeholders used |
+|---|---|---|---|---|
+| 1 | Image alt text | No `<img>` on the page. Meaningful SVG art was `aria-hidden`, so nothing was announced. | Every meaningful SVG has `role="img"` and a specific `aria-label` (hero, product, process cards, pairing cutouts, four gallery cards). Decorative SVGs stay `aria-hidden`. Verified: 0 `<img>` without alt, 0 labelled-role SVGs missing a label. | none |
+| 2 | Local business structured data | None. | JSON-LD `@graph` in `<head>`: WebSite, Organization, Bakery (address, geo, opening hours, priceRange, servesCuisine, hasMenu, OrderAction potentialAction, sameAs). Parses as valid JSON. | `https://www.example.com/bakery/`, "1 Sample Street, Singapore 000000", "+65 0000 0000", sample hours (Mon-Fri 08:00-19:00, Sat-Sun 09:00-20:00), geo at the Singapore centre (1.3521, 103.8198), sameAs on example.com |
+| 3 | Heading structure | Hero headline was a `<p>`, so the page had no h1. | Exactly one `<h1>` (the hero headline, plus visually hidden text naming the business and the category). Sections use h2, cards use h3. Visible headline unchanged. Verified: 1 h1. | hidden text "Lantern Row Bakehouse: slow-fermented croissants in Singapore" |
+| 4 | Title tag | "Lantern Row Bakehouse \| Slow-Fermented Pastries" (brand plus generic words, no place). | "Croissant Bakery in Singapore \| Lantern Row Bakehouse" (53 characters). | placeholder brand |
+| 5 | Meta description | Slogan-like "...Sample design study." (no place, no call to action). | 141 characters: what is offered, where, and a call to action ("Order ahead for pickup today."). Also used for og and twitter descriptions. | placeholder brand |
+| 6 | Technical basics | `lang="en"`, no canonical, no OG or Twitter tags, no robots meta, no robots.txt or sitemap. Viewport meta already present. | `lang="en-SG"`; canonical `https://www.example.com/bakery/`; `robots` meta with `max-image-preview:large`; og:type, og:site_name, og:title, og:description, og:url, og:locale (en_SG); twitter:card summary_large_image; `robots.txt` pointing to the sitemap; `sitemap.xml` with the homepage. | `https://www.example.com/bakery/` for all URLs. **og:image omitted**: the clone has no files in img/ yet (no generated photos, see 7b). Add a 1200x630 image and its og:image tag when one exists. |
+| 7 | Reviews | One review attributed to "Sample Reviewer". | Three sample quotes with first names and context, shown one at a time with the existing arrow buttons (same card, same styling). HTML comment above the block says the reviews are placeholders. | first names only: Mei, Daniel, Aisha |
+| 8 | Newsletter | Form present, input labelled. Form had no accessible name and no reason to join. | Form is named by its heading (`aria-labelledby`), and a one-line reason is linked by `aria-describedby`: "Get new bake days and member offers, once a week." Styled with existing tokens. | none |
+| 9 | Chat or WhatsApp button | None. | Floating teal pill "Chat with us" bottom-right (uses the site's `.btn--teal`). On mobile it shrinks to a 52px round icon button, so it covers little content. Has `aria-label` and opens in a new tab. | `https://wa.me/6500000000` (placeholder number) |
+
+Verification at 1440 and 390: one h1; JSON-LD parses; no console errors or failed requests; no horizontal overflow (scrollWidth equals viewport); fixed chat button at 1237,836 (desktop) and 322,832 (mobile), inside the viewport.
+
+Open after the gap-fix pass:
+- og:image (see gap 6).
+- The JSON-LD `image` property is omitted for the same reason.
+- Geo coordinates are the Singapore centre, not a real address. Replace with the real address when known.

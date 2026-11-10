@@ -107,3 +107,25 @@ Discrepancies left:
 - Awards: source shows logos (not reproduced); clone shows neutral placeholder badges.
 - Desktop nav logo is a smaller placeholder wordmark (source uses a larger arc mark).
 - Footer link size at 390 is still an estimate (see Fonts).
+
+## Gap fixes
+
+Placeholders used: domain https://www.example.com/ice-cream/ (canonical, sitemap, JSON-LD);
+address "1 Sample Street, Singapore 000000"; phone "+65 0000 0000"; chat link https://wa.me/6500000000;
+geo 1.3521, 103.8198 (central Singapore, placeholder); hours 11:00-22:00 daily; sample social URLs on
+example.com; sample reviews with first names only (HTML comment marks them as sample content).
+
+| # | Gap | Before | After |
+|---|-----|--------|-------|
+| 1 | Image alt text | 3 hero h1s and SVG art without labels | Decorative SVG and icons aria-hidden; drawn product, approach and gallery art has role="img" and aria-label; no <img> elements present |
+| 2 | Local business structured data | none | JSON-LD (@graph): IceCreamShop with address, geo, opening hours, menu, order action, sameAs; Organization; WebSite. Parses as valid JSON |
+| 3 | Heading structure | three h1 (one per slide) | exactly one visually hidden h1; hero slide titles are h2; footer headings are h3 |
+| 4 | Title tag | "Fernhollow Gelato Co. | Botanical gelato, small batch" (brand-led) | "Botanical Gelato in Singapore | Fernhollow Gelato Co." (53 chars) |
+| 5 | Meta description | 98-char tagline | 145-char sentence on offer and place, with a call to action |
+| 6 | Technical basics | lang="en", no canonical/OG/Twitter/robots | lang="en-SG"; canonical; robots meta; og:type/site_name/title/description/url/locale; twitter:card summary_large_image; robots.txt and sitemap.xml added. og:image omitted (no img/ folder; no generated images) |
+| 7 | Reviews | none | "What guests say" section: three sample quotes (first name plus context), styled with the page's palette and type |
+| 8 | Newsletter | present, unnamed form | form has aria-label "Newsletter sign-up"; input already labelled; reason line present |
+| 9 | Chat button | bottom-left, href="#chat" | bottom-right (16px inset), links to https://wa.me/6500000000 in a new tab, aria-label "Chat with us on WhatsApp" |
+
+Verification: one h1; JSON-LD parses (IceCreamShop, Organization, WebSite); zero images without alt;
+no horizontal overflow at 1440 or 390; no console errors or failed requests.

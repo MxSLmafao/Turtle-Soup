@@ -5,12 +5,110 @@
   Photos in img/ are generated, not copied from the source. Tiles and some cards are CSS/SVG stand-ins.
   No logos, badges or copy from any original site are used.
 -->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lantern Lane Hawker Co. | Sample Street Food Homepage</title>
-  <meta name="description" content="Placeholder hawker kitchen homepage, design study.">
+
+  <title>Hawker Street Food in Singapore | Lantern Lane Hawker Co.</title>
+  <meta name="description" content="Sample hawker stall in Singapore serving soy-glazed chicken rice, roast pork and noodles. Order online or visit our Sample Street outlet today.">
+  <link rel="canonical" href="https://www.example.com/street-food/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hawker Street Food in Singapore | Lantern Lane Hawker Co.">
+  <meta property="og:description" content="Sample hawker stall in Singapore serving soy-glazed chicken rice, roast pork and noodles. Order online or visit our Sample Street outlet today.">
+  <meta property="og:url" content="https://www.example.com/street-food/">
+  <meta property="og:image" content="https://www.example.com/street-food/img/hero-kitchen-steam.jpg">
+  <meta property="og:locale" content="en_SG">
+  <meta property="og:site_name" content="Lantern Lane Hawker Co.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Restaurant",
+        "FoodEstablishment"
+      ],
+      "@id": "https://www.example.com/street-food/#restaurant",
+      "name": "Lantern Lane Hawker Co.",
+      "url": "https://www.example.com/street-food/",
+      "image": "https://www.example.com/street-food/img/hero-kitchen-steam.jpg",
+      "description": "Sample hawker stall in Singapore serving soy-glazed chicken rice, roast pork and noodles. Order online or visit our Sample Street outlet today.",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$",
+      "servesCuisine": [
+        "Singaporean",
+        "Hawker",
+        "Cantonese"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3,
+        "longitude": 103.8
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ],
+      "hasMenu": "https://www.example.com/street-food/menu",
+      "acceptsReservations": false,
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://www.example.com/street-food/order"
+      },
+      "sameAs": [
+        "https://www.facebook.com/example-lantern-lane",
+        "https://www.instagram.com/example-lantern-lane"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.example.com/street-food/#org",
+      "name": "Lantern Lane Hawker Co.",
+      "url": "https://www.example.com/street-food/",
+      "logo": "https://www.example.com/street-food/img/hero-kitchen-steam.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/street-food/#website",
+      "url": "https://www.example.com/street-food/",
+      "name": "Lantern Lane Hawker Co.",
+      "inLanguage": "en-SG",
+      "publisher": {
+        "@id": "https://www.example.com/street-food/#org"
+      }
+    }
+  ]
+}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap" rel="stylesheet">
@@ -81,9 +179,10 @@
 </div>
 
 <main>
+  <h1 class="sr-only">Lantern Lane Hawker Co. - hawker street food in Singapore</h1>
   <!-- HERO: single full-bleed photo -->
   <section class="hero" aria-label="Featured">
-    <img class="hero-img" src="img/hero-kitchen-steam.jpg" width="1264" height="848" alt="Chef stirring a steaming stockpot in a busy kitchen">
+    <img class="hero-img" src="img/hero-kitchen-steam.jpg" width="1264" height="848" alt="Cook ladling red bean dessert from a steaming stockpot in a busy hawker kitchen">
     <div class="scroll-cue" aria-hidden="true">
       <span class="mouse"><span class="wheel"></span></span>
     </div>
@@ -91,7 +190,7 @@
 
   <!-- INTRO: photo with copy panel -->
   <section class="intro" id="content">
-    <img class="intro-img" src="img/intro-chicken-rice.jpg" width="1024" height="1024" alt="Glazed chicken rice on a white plate">
+    <img class="intro-img" src="img/intro-chicken-rice.jpg" width="1024" height="1024" alt="Sliced soy-glazed chicken with steamed rice and roasted peanuts on a white plate" loading="lazy">
     <div class="intro-copy animation-element">
       <div class="award" aria-hidden="true">
         <svg viewBox="0 0 60 60" width="60" height="60">
@@ -99,7 +198,7 @@
           <path d="M30 14l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3L30 37.6l-9.3 4.9 1.8-10.3-7.5-7.3 10.4-1.5z" fill="#c4161c"/>
         </svg>
       </div>
-      <h3>First Street Stall to Earn a Gold Star</h3>
+      <h2 class="award-title">First Street Stall to Earn a Gold Star</h2>
       <p class="address">Placeholder Road #02-126, Sample City 050335</p>
       <p class="address">Sample Guide Bib Gourmand @ 78 Example Lane</p>
       <h2>WELCOME</h2>
@@ -116,7 +215,7 @@
     </div>
     <div class="reco-grid">
       <article class="reco animation-element">
-        <div class="reco-img"><img src="img/reco-chicken-rice-plate.jpg" width="900" height="900" alt="Soy glazed chicken rice with greens" loading="lazy"></div>
+        <div class="reco-img"><img src="img/reco-chicken-rice-plate.jpg" width="900" height="900" alt="Soy glazed chicken rice with greens and braised mushrooms" loading="lazy"></div>
       </article>
       <article class="reco animation-element">
         <div class="reco-img reco-2" aria-hidden="true"><span class="plate-s"></span></div>
@@ -131,39 +230,72 @@
   </section>
 
   <!-- LINK TILES (drawn stand-ins) -->
+  <!-- Sample content: the quotes below are placeholder reviews with first names only, not real guests. -->
+  <section class="reviews" aria-labelledby="reviews-title">
+    <h2 id="reviews-title">WHAT GUESTS SAY</h2>
+    <div class="review-grid">
+      <figure class="review">
+        <blockquote><p>Crispy skin, tender meat and a queue that moves fast. Worth the wait.</p></blockquote>
+        <figcaption>Mei</figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote><p>The rice is fragrant and the sauce is balanced. Our regular lunch stop.</p></blockquote>
+        <figcaption>Daniel</figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote><p>Friendly staff, clean counter and a generous portion. Ordered again for the office.</p></blockquote>
+        <figcaption>Priya</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="tiles" aria-label="Explore">
     <div class="tile-grid">
       <a href="#" class="tile-link animation-element">
         <div class="tile-art tl-locations" aria-hidden="true">
           <span class="awning"></span><span class="sign">Lantern Lane</span><span class="lanterns"></span>
         </div>
-        <h4>Our Locations</h4>
+        <h3>Our Locations</h3>
       </a>
       <a href="#" class="tile-link animation-element">
         <div class="tile-art tl-career" aria-hidden="true">
           <span class="rotisserie"></span><span class="rotisserie r2"></span>
         </div>
-        <h4>Career</h4>
+        <h3>Career</h3>
       </a>
       <a href="#" class="tile-link animation-element">
         <div class="tile-art tl-news" aria-hidden="true">
           <span class="clip c1"></span><span class="clip c2"></span><span class="clip c3"></span>
         </div>
-        <h4>News</h4>
+        <h3>News</h3>
       </a>
       <a href="#" class="tile-link animation-element">
         <div class="tile-art tl-contact" aria-hidden="true">
           <span class="chef-s"><span class="hd"></span><span class="bd"></span></span>
         </div>
-        <h4>Contact Us</h4>
+        <h3>Contact Us</h3>
       </a>
     </div>
   </section>
 </main>
 
+<a class="chat-btn" href="#" aria-label="Chat with us">
+  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+</a>
+
 <a class="order-badge" href="#" aria-label="Order online">
   <span>Order<br>Online</span>
 </a>
+
+<section class="signup" aria-labelledby="signup-title">
+  <h2 id="signup-title">JOIN THE LANE LIST</h2>
+  <p>New menu drops and weekend specials, one email a month.</p>
+  <form class="signup-form" action="#" method="post">
+    <label for="signup-email" class="sr-only">Email address</label>
+    <input id="signup-email" type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
 
 <footer class="site-footer">
   <div class="foot-left">&copy; Lantern Lane Hawker Co.</div>

@@ -84,3 +84,23 @@ Remaining differences (by design, see 7b):
 - Recommendation cards 2 to 4 and all four link tiles are still drawn art (generation quota exhausted).
 - Hero and intro photos are generated and are a different chef and dishes from the original.
 - Footer, dropdown and menu behaviour are approximations.
+
+## Gap fixes
+Applied from `.claude/skills/fnb-site-gaps`. Placeholder data only: domain `https://www.example.com/street-food/`,
+address "1 Sample Street, Singapore 000000", phone "+65 0000 0000", sample hours (Mon-Fri 10:00-21:00, Sat-Sun 10:00-22:00),
+placeholder social URLs on example.com, placeholder coordinates 1.3 / 103.8 (approximate, Singapore).
+
+| # | Gap | Before | After | Placeholders / notes |
+|---|-----|--------|-------|----------------------|
+| 1 | Image alt text | 3 `<img>` with alt; decorative SVGs already hidden | every `<img>` has a specific alt; intro and recommendation images lazy-loaded below the fold; decorative art `aria-hidden` | none |
+| 2 | Local business structured data | none | JSON-LD `@graph`: Restaurant (+FoodEstablishment), Organization, WebSite; parses without error | placeholder address, phone, hours, sameAs |
+| 3 | Heading structure | h3 used before any h2; tile captions h4 with no h3 parent; no h1 | one visually hidden h1; h2 sections (award title, WELCOME, RECOMMENDATIONS, WHAT GUESTS SAY, JOIN THE LANE LIST); h3 for tile captions | none |
+| 4 | Title tag | "Lantern Lane Hawker Co. \| Sample Street Food Homepage" (generic) | "Hawker Street Food in Singapore \| Lantern Lane Hawker Co." (57 chars) | placeholder brand |
+| 5 | Meta description | "Placeholder hawker kitchen homepage, design study." | 143-char sentence on dishes, Singapore, and a CTA | placeholder brand |
+| 6 | Technical basics | `lang="en"`; viewport present; no canonical, OG, twitter or robots | `lang="en-SG"`; canonical; robots `index, follow, max-image-preview:large`; og:type/title/description/url/image/locale/site_name; twitter:card summary_large_image; `robots.txt` and `sitemap.xml` added | og:image = existing `img/hero-kitchen-steam.jpg` |
+| 7 | Reviews | none | "WHAT GUESTS SAY" with 3 sample quotes, first names only (Mei, Daniel, Priya); HTML comment marks them as sample content; styled with the site's Lato, red top rule and card shadow | sample content, first names only |
+| 8 | Newsletter sign-up | none | "JOIN THE LANE LIST": one labelled email input and a Subscribe button; submit prevented in script.js (no backend) | placeholder form, no service |
+| 9 | Chat / contact button | none | round accent chat button (aria-label "Chat with us"), fixed bottom-right above the order badge; moves up on mobile so it does not cover content | generic icon, no third-party brand |
+
+Left open: the Subscribe form and chat button are not wired to any service. The sample review copy and
+placeholder coordinates should be replaced before launch.

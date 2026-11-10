@@ -4,12 +4,66 @@
   Design study of the "Juice, smoothie & acai bars" category (homepage layout, palette, type, motion).
   All imagery is drawn with CSS gradients and inline SVG; no third-party assets, logos or copy are used.
 -->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bloom Berry Bar: Superfood Bowls</title>
-  <meta name="description" content="Bloom Berry Bar is a placeholder neighbourhood bowl bar serving blended acai bowls and smoothies.">
+  <title>Acai Bowls &amp; Smoothies in Singapore | Bloom Berry Bar</title>
+  <meta name="description" content="Bloom Berry Bar is a neighbourhood acai bowl and smoothie bar in Singapore. Order fresh blended bowls online or visit us on Harbour Road today.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.example.com/juice-bar/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bloom Berry Bar">
+  <meta property="og:title" content="Acai Bowls &amp; Smoothies in Singapore | Bloom Berry Bar">
+  <meta property="og:description" content="Bloom Berry Bar is a neighbourhood acai bowl and smoothie bar in Singapore. Order fresh blended bowls online or visit us on Harbour Road today.">
+  <meta property="og:url" content="https://www.example.com/juice-bar/">
+  <meta property="og:locale" content="en_SG">
+  <meta property="og:image" content="https://www.example.com/juice-bar/img/hero-acai-bowls.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["CafeOrCoffeeShop", "LocalBusiness"],
+        "@id": "https://www.example.com/juice-bar/#business",
+        "name": "Bloom Berry Bar",
+        "url": "https://www.example.com/juice-bar/",
+        "image": "https://www.example.com/juice-bar/img/hero-acai-bowls.jpg",
+        "description": "Neighbourhood acai bowl and smoothie bar in Singapore.",
+        "telephone": "+65 0000 0000",
+        "priceRange": "$$",
+        "servesCuisine": ["Acai", "Smoothies", "Juices"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Sample Street",
+          "addressLocality": "Singapore",
+          "postalCode": "000000",
+          "addressCountry": "SG"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 1.3521, "longitude": 103.8198 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "22:00" }
+        ],
+        "hasMenu": "https://www.example.com/juice-bar/menu/",
+        "potentialAction": { "@type": "OrderAction", "target": "https://www.example.com/juice-bar/order/" },
+        "sameAs": [
+          "https://www.example.com/juice-bar/instagram",
+          "https://www.example.com/juice-bar/tiktok",
+          "https://www.example.com/juice-bar/facebook"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.com/juice-bar/#website",
+        "url": "https://www.example.com/juice-bar/",
+        "name": "Bloom Berry Bar",
+        "inLanguage": "en-SG"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Lato:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -62,16 +116,19 @@
 
 <main id="main">
 
+
   <!-- 1. Hero -->
   <section class="hero" aria-label="Introduction">
-    <div class="hero-art" aria-hidden="true">
-      <img class="hero-photo" src="img/hero-acai-bowls.jpg" width="1264" height="848" alt="">
+    <div class="hero-art">
+      <img class="hero-photo" src="img/hero-acai-bowls.jpg" width="1264" height="848" alt="Three acai bowls in clear cups topped with fresh fruit, granola and nut butter on a grey table">
     </div>
     <h1 class="hero-title">
       <span class="hero-line">Every Little</span>
       <span class="hero-line hero-line--alt">Thing You Crave</span>
     </h1>
   </section>
+
+  <h2 class="sr-only">Explore Bloom Berry Bar</h2>
 
   <!-- 2. Intro band -->
   <section class="intro reveal" aria-labelledby="intro-h">
@@ -101,14 +158,14 @@
   <!-- 3. Three tiles -->
   <section class="tiles reveal" aria-label="Explore">
     <a class="tile tile--people" href="#join">
-      <div class="tile-art" aria-hidden="true">
-        <img src="img/tile-cafe-team.jpg" width="900" height="900" alt="" loading="lazy">
+      <div class="tile-art">
+        <img src="img/tile-cafe-team.jpg" width="900" height="900" alt="Two smiling cafe staff in brown aprons assembling a bowl behind the counter" loading="lazy">
       </div>
       <span class="tile-label">Join Us</span>
     </a>
     <a class="tile tile--menu" href="#menu">
-      <div class="tile-art" aria-hidden="true">
-        <img src="img/tile-smoothies.jpg" width="900" height="900" alt="" loading="lazy">
+      <div class="tile-art">
+        <img src="img/tile-smoothies.jpg" width="900" height="900" alt="Three cups of smoothie, banana, berry and matcha, on a round table" loading="lazy">
       </div>
       <span class="tile-label">Our Menu</span>
     </a>
@@ -141,7 +198,8 @@
   </section>
 
   <!-- 5. Social grid -->
-  <section class="social reveal" aria-label="Social posts">
+  <section class="social reveal" aria-labelledby="social-h">
+    <h2 id="social-h" class="sr-only">Latest from our social posts</h2>
     <span class="social-handle">@yourbrand</span>
     <div class="social-grid">
       <a class="social-tile" href="#social" style="--g1:#b9a68f;--g2:#6b5b4c">
@@ -186,19 +244,57 @@
     </div>
   </section>
 
+
+  <!-- Sample content: reviews below are placeholders with first names only, not real customer quotes. -->
+  <section class="reviews reveal" aria-labelledby="reviews-h">
+    <h2 id="reviews-h" class="section-title">What regulars say</h2>
+    <div class="review-grid">
+      <figure class="review-card">
+        <blockquote>&ldquo;The acai is thick and not too sweet, and the team remembers my order.&rdquo;</blockquote>
+        <figcaption>Mei <span>&middot; weekday regular</span></figcaption>
+      </figure>
+      <figure class="review-card">
+        <blockquote>&ldquo;We brought the whole team in for a morning event and every bowl was ready in minutes.&rdquo;</blockquote>
+        <figcaption>Daniel <span>&middot; event organiser</span></figcaption>
+      </figure>
+      <figure class="review-card">
+        <blockquote>&ldquo;The granola is made in-house and it shows. Best post-workout treat near the office.&rdquo;</blockquote>
+        <figcaption>Priya <span>&middot; gym regular</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="newsletter reveal" aria-labelledby="news-h">
+    <div class="newsletter-inner">
+      <h2 id="news-h" class="section-title">Get the seasonal menu first</h2>
+      <p class="newsletter-copy">Be first to hear about new flavours, bowl drops and members-only tastings.</p>
+      <form class="newsletter-form" action="#" method="post" novalidate>
+        <label for="news-email" class="sr-only">Email address</label>
+        <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="btn btn-olive" type="submit">Subscribe</button>
+      </form>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
 </main>
 
-<footer class="site-footer">
+<a class="chat-fab" href="#contact" aria-label="Chat with us">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<footer class="site-footer" id="contact">
   <div class="footer-cols">
     <div class="footer-col">
-      <h3>About Bloom Berry Bar</h3>
+      <h2>About Bloom Berry Bar</h2>
       <ul>
         <li><a href="#about">About Us</a></li>
         <li><a href="#join">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Social Media</h3>
+      <h2>Social Media</h2>
       <ul>
         <li><a href="#social">Instagram</a></li>
         <li><a href="#social">TikTok</a></li>
@@ -206,14 +302,14 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Support</h3>
+      <h2>Support</h2>
       <ul>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#rewards">Rewards &amp; FAQs</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Terms &amp; Conditions</h3>
+      <h2>Terms &amp; Conditions</h2>
       <ul>
         <li><a href="#terms">Terms &amp; Conditions</a></li>
         <li><a href="#privacy">Privacy Policy</a></li>

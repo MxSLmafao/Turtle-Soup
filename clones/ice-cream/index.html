@@ -1,15 +1,102 @@
-<!doctype html>
-<!--
-  Placeholder brand: "Fernhollow Gelato Co." - all names, copy, prices, handles and addresses are invented.
-  Sample content only. Design study of the "Ice cream & dessert shops" category (homepage layout, type, palette,
-  carousels and footer). No photos, logos or fonts files copied from any source; imagery is drawn with CSS/SVG.
--->
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fernhollow Gelato Co. | Botanical gelato, small batch</title>
-  <meta name="description" content="Sample homepage: small-batch botanical gelato, seasonal flavours and boutique scoop bars.">
+  <title>Botanical Gelato in Singapore | Fernhollow Gelato Co.</title>
+  <meta name="description" content="Fernhollow Gelato Co. churns small-batch botanical gelato and sorbet in Singapore. Order online for delivery or visit a scoop bar near you today.">
+  <link rel="canonical" href="https://www.example.com/ice-cream/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fernhollow Gelato Co.">
+  <meta property="og:title" content="Botanical Gelato in Singapore | Fernhollow Gelato Co.">
+  <meta property="og:description" content="Fernhollow Gelato Co. churns small-batch botanical gelato and sorbet in Singapore. Order online for delivery or visit a scoop bar near you today.">
+  <meta property="og:url" content="https://www.example.com/ice-cream/">
+  <meta property="og:locale" content="en_SG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Botanical Gelato in Singapore | Fernhollow Gelato Co.">
+  <meta name="twitter:description" content="Fernhollow Gelato Co. churns small-batch botanical gelato and sorbet in Singapore. Order online for delivery or visit a scoop bar near you today.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "IceCreamShop",
+      "@id": "https://www.example.com/ice-cream/#business",
+      "name": "Fernhollow Gelato Co.",
+      "url": "https://www.example.com/ice-cream/",
+      "description": "Fernhollow Gelato Co. churns small-batch botanical gelato and sorbet in Singapore. Order online for delivery or visit a scoop bar near you today.",
+      "telephone": "+65 0000 0000",
+      "priceRange": "$$",
+      "servesCuisine": [
+        "Gelato",
+        "Sorbet"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Sample Street",
+        "addressLocality": "Singapore",
+        "postalCode": "000000",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "22:00"
+        }
+      ],
+      "hasMenu": "https://www.example.com/ice-cream/menu/",
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://www.example.com/ice-cream/order/"
+      },
+      "sameAs": [
+        "https://www.example.com/ice-cream/facebook",
+        "https://www.example.com/ice-cream/instagram",
+        "https://www.example.com/ice-cream/linkedin"
+      ],
+      "parentOrganization": {
+        "@id": "https://www.example.com/ice-cream/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.example.com/ice-cream/#organization",
+      "name": "Fernhollow Gelato Co.",
+      "url": "https://www.example.com/ice-cream/",
+      "sameAs": [
+        "https://www.example.com/ice-cream/facebook",
+        "https://www.example.com/ice-cream/instagram",
+        "https://www.example.com/ice-cream/linkedin"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/ice-cream/#website",
+      "name": "Fernhollow Gelato Co.",
+      "url": "https://www.example.com/ice-cream/",
+      "inLanguage": "en-SG",
+      "publisher": {
+        "@id": "https://www.example.com/ice-cream/#organization"
+      }
+    }
+  ]
+}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -111,9 +198,9 @@
       <span class="brand-sub">Gelato Co.</span>
     </a>
     <div class="nav-right">
-      <a href="#account" class="icon-btn" aria-label="Account"><svg><use href="#i-user"/></svg></a>
-      <button class="icon-btn hide-m" type="button" aria-label="Search"><svg><use href="#i-search"/></svg></button>
-      <a href="#cart" class="icon-btn" aria-label="Cart"><svg><use href="#i-bag"/></svg></a>
+      <a href="#account" class="icon-btn" aria-label="Account"><svg aria-hidden="true"><use href="#i-user"/></svg></a>
+      <button class="icon-btn hide-m" type="button" aria-label="Search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
+      <a href="#cart" class="icon-btn" aria-label="Cart"><svg aria-hidden="true"><use href="#i-bag"/></svg></a>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu" hidden>
@@ -130,38 +217,40 @@
 
 <main id="top">
 
+  <h1 class="sr">Fernhollow Gelato Co., small-batch botanical gelato in Singapore</h1>
+
   <!-- Hero slideshow -->
   <section class="hero" aria-roledescription="carousel" aria-label="Featured">
     <div class="slide is-active s1" data-index="0">
       <div class="hero-art" aria-hidden="true">
-        <svg class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
-        <svg class="hero-scoop sc-a" viewBox="0 0 160 140"><use href="#scoop"/></svg>
-        <svg class="hero-scoop sc-b" viewBox="0 0 160 140"><use href="#scoop"/></svg>
+        <svg aria-hidden="true" class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
+        <svg aria-hidden="true" class="hero-scoop sc-a" viewBox="0 0 160 140"><use href="#scoop"/></svg>
+        <svg aria-hidden="true" class="hero-scoop sc-b" viewBox="0 0 160 140"><use href="#scoop"/></svg>
       </div>
       <div class="hero-copy">
-        <h1>Spring Garden Batch</h1>
+        <h2 class="hero-title">Spring Garden Batch</h2>
         <p>Cold-pressed botanicals, churned in tiny rounds every morning.</p>
         <a class="btn-ghost" href="#shop">Shop now</a>
       </div>
     </div>
     <div class="slide s2" data-index="1">
       <div class="hero-art" aria-hidden="true">
-        <svg class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
-        <svg class="hero-sprig" viewBox="0 0 120 160"><use href="#sprig"/></svg>
+        <svg aria-hidden="true" class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
+        <svg aria-hidden="true" class="hero-sprig" viewBox="0 0 120 160"><use href="#sprig"/></svg>
       </div>
       <div class="hero-copy">
-        <h1>Seasonal Sorbets</h1>
+        <h2 class="hero-title">Seasonal Sorbets</h2>
         <p>Bright fruit, pressed fresh, nothing added but sugar and time.</p>
         <a class="btn-ghost" href="#shop">Shop now</a>
       </div>
     </div>
     <div class="slide s3" data-index="2">
       <div class="hero-art" aria-hidden="true">
-        <svg class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
-        <svg class="hero-scoop sc-a" viewBox="0 0 160 140"><use href="#scoop"/></svg>
+        <svg aria-hidden="true" class="hero-tub" viewBox="0 0 240 170"><use href="#tub"/></svg>
+        <svg aria-hidden="true" class="hero-scoop sc-a" viewBox="0 0 160 140"><use href="#scoop"/></svg>
       </div>
       <div class="hero-copy">
-        <h1>Recognised for Craft</h1>
+        <h2 class="hero-title">Recognised for Craft</h2>
         <p>Three years running, our single-origin flavours have won a place on the list.</p>
         <a class="btn-ghost" href="#shop">Shop now</a>
       </div>
@@ -177,14 +266,14 @@
   <section class="block shop" id="shop">
     <div class="chip-wrap"><span class="chip">Best sellers</span></div>
     <div class="carousel-controls">
-      <button class="arrow" type="button" aria-label="Previous" data-dir="-1" data-target="products"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-      <button class="arrow" type="button" aria-label="Next" data-dir="1" data-target="products"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button class="arrow" type="button" aria-label="Previous" data-dir="-1" data-target="products"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <button class="arrow" type="button" aria-label="Next" data-dir="1" data-target="products"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
     </div>
     <div class="row product-row reveal" id="products">
       <article class="product-card">
         <a href="#shop" class="product-media" data-tone="cream">
           <span class="tag">Best seller</span>
-          <svg viewBox="0 0 200 180" class="product-art"><use href="#scoop"/></svg>
+          <svg viewBox="0 0 200 180" class="product-art" role="img" aria-label="Sample pale jasmine gelato scoop"><use href="#scoop"/></svg>
         </a>
         <div class="product-info">
           <h3>Pale Jasmine Cloud</h3>
@@ -196,7 +285,7 @@
       <article class="product-card">
         <a href="#shop" class="product-media" data-tone="cocoa">
           <span class="tag">Best seller</span>
-          <svg viewBox="0 0 200 180" class="product-art"><use href="#scoop"/></svg>
+          <svg viewBox="0 0 200 180" class="product-art" role="img" aria-label="Sample dark cocoa gelato scoop"><use href="#scoop"/></svg>
         </a>
         <div class="product-info">
           <h3>Midnight Hazel Cocoa</h3>
@@ -208,7 +297,7 @@
       <article class="product-card">
         <a href="#shop" class="product-media" data-tone="rose">
           <span class="tag">Best seller</span>
-          <svg viewBox="0 0 200 180" class="product-art"><use href="#scoop"/></svg>
+          <svg viewBox="0 0 200 180" class="product-art" role="img" aria-label="Sample raspberry gelato scoop"><use href="#scoop"/></svg>
         </a>
         <div class="product-info">
           <h3>Lychee Rose Ripple</h3>
@@ -220,7 +309,7 @@
       <article class="product-card">
         <a href="#shop" class="product-media" data-tone="pistachio">
           <span class="tag">Best seller</span>
-          <svg viewBox="0 0 200 180" class="product-art"><use href="#scoop"/></svg>
+          <svg viewBox="0 0 200 180" class="product-art" role="img" aria-label="Sample pistachio gelato scoop"><use href="#scoop"/></svg>
         </a>
         <div class="product-info">
           <h3>Sicilian Pistachio</h3>
@@ -249,7 +338,7 @@
         <div class="stamp-word">Made<br>locally<br><em>with care</em></div>
       </div>
       <div class="award award-seal" aria-label="Sample gold seal 2025">
-        <svg viewBox="0 0 120 120"><use href="#seal"/></svg>
+        <svg aria-hidden="true" viewBox="0 0 120 120"><use href="#seal"/></svg>
       </div>
     </div>
     <blockquote class="quote reveal">
@@ -263,25 +352,25 @@
     <h2 class="eyebrow">Our approach</h2>
     <span class="rule" aria-hidden="true"></span>
     <div class="approach-row reveal" id="approach">
-      <figure class="approach-card c1"><div class="art art-taupe"><svg viewBox="0 0 240 170"><use href="#tub"/></svg></div><figcaption class="approach-cap">We begin with a list of places we want to visit. Each flavour starts as a small trip.</figcaption></figure>
-      <figure class="approach-card c2"><div class="art art-sand"><svg viewBox="0 0 120 160"><use href="#sprig"/></svg></div><figcaption class="approach-cap">Fruit, flowers, pods and herbs are sourced from growers we know by name.</figcaption></figure>
-      <figure class="approach-card c3"><div class="art art-blush"><span class="petals" aria-hidden="true"></span></div><figcaption class="approach-cap">Herbs and spices are steeped slowly, then strained, so each base carries its own character.</figcaption></figure>
-      <figure class="approach-card c4"><div class="art art-cream"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div><figcaption class="approach-cap">Our kitchen draws on the regional markets around us for every seasonal idea.</figcaption></figure>
+      <figure class="approach-card c1"><div class="art art-taupe" role="img" aria-label="Sample tub of gelato on taupe backdrop"><svg aria-hidden="true" viewBox="0 0 240 170"><use href="#tub"/></svg></div><figcaption class="approach-cap">We begin with a list of places we want to visit. Each flavour starts as a small trip.</figcaption></figure>
+      <figure class="approach-card c2"><div class="art art-sand" role="img" aria-label="Sample sprig illustration on sand backdrop"><svg aria-hidden="true" viewBox="0 0 120 160"><use href="#sprig"/></svg></div><figcaption class="approach-cap">Fruit, flowers, pods and herbs are sourced from growers we know by name.</figcaption></figure>
+      <figure class="approach-card c3"><div class="art art-blush" role="img" aria-label="Sample petal scatter on blush backdrop"><span class="petals" aria-hidden="true"></span></div><figcaption class="approach-cap">Herbs and spices are steeped slowly, then strained, so each base carries its own character.</figcaption></figure>
+      <figure class="approach-card c4"><div class="art art-cream" role="img" aria-label="Sample scoop on cream backdrop"><svg aria-hidden="true" viewBox="0 0 160 140"><use href="#scoop"/></svg></div><figcaption class="approach-cap">Our kitchen draws on the regional markets around us for every seasonal idea.</figcaption></figure>
     </div>
   </section>
 
   <!-- Feature band -->
   <section class="features">
     <div class="feature reveal">
-      <svg class="feature-icon"><use href="#i-badge"/></svg>
+      <svg aria-hidden="true" class="feature-icon"><use href="#i-badge"/></svg>
       <p>Selected by local critics<br>since 2018</p>
     </div>
     <div class="feature reveal">
-      <svg class="feature-icon"><use href="#i-leaf"/></svg>
+      <svg aria-hidden="true" class="feature-icon"><use href="#i-leaf"/></svg>
       <p>Finest ingredients,<br>carefully sourced</p>
     </div>
     <div class="feature reveal">
-      <svg class="feature-icon"><use href="#i-tub"/></svg>
+      <svg aria-hidden="true" class="feature-icon"><use href="#i-tub"/></svg>
       <p>Small batches,<br>churned by hand</p>
     </div>
   </section>
@@ -313,12 +402,35 @@
     <h2 class="eyebrow">Our community</h2>
     <p class="community-sub">Follow us on Instagram <a href="#ig">@sample.fernhollow</a></p>
     <div class="social-row reveal" id="social">
-      <a href="#social" class="social-card"><div class="art g1"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div><span class="handle">@sample.guest01</span></a>
-      <a href="#social" class="social-card"><div class="art g2"><svg viewBox="0 0 240 170"><use href="#tub"/></svg></div><span class="handle">@sample.guest02</span></a>
-      <a href="#social" class="social-card"><div class="art g3"><svg viewBox="0 0 120 160"><use href="#sprig"/></svg></div><span class="handle">@sample.guest03</span></a>
-      <a href="#social" class="social-card"><div class="art g4"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div><span class="handle">@sample.guest04</span></a>
+      <a href="#social" class="social-card"><div class="art g1" role="img" aria-label="Sample guest photo, cone and bowl"><svg aria-hidden="true" viewBox="0 0 160 140"><use href="#scoop"/></svg></div><span class="handle">@sample.guest01</span></a>
+      <a href="#social" class="social-card"><div class="art g2" role="img" aria-label="Sample guest photo, tubs"><svg aria-hidden="true" viewBox="0 0 240 170"><use href="#tub"/></svg></div><span class="handle">@sample.guest02</span></a>
+      <a href="#social" class="social-card"><div class="art g3" role="img" aria-label="Sample guest photo, bowl in garden"><svg aria-hidden="true" viewBox="0 0 120 160"><use href="#sprig"/></svg></div><span class="handle">@sample.guest03</span></a>
+      <a href="#social" class="social-card"><div class="art g4" role="img" aria-label="Sample guest photo, bowl held up"><svg aria-hidden="true" viewBox="0 0 160 140"><use href="#scoop"/></svg></div><span class="handle">@sample.guest04</span></a>
     </div>
     <div class="social-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+  </section>
+
+  <!-- Sample reviews: placeholder content with first names only. Not real guests or publications. -->
+  <section class="block reviews" aria-labelledby="reviews-title">
+    <h2 class="eyebrow" id="reviews-title">What guests say</h2>
+    <span class="rule" aria-hidden="true"></span>
+    <div class="review-row reveal">
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote><p>The yuzu sorbet is bright without being sharp. We come back every week.</p></blockquote>
+        <figcaption>Mei, regular</figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote><p>Ordered tubs for an office afternoon and they arrived perfectly chilled.</p></blockquote>
+        <figcaption>Daniel, catering order</figcaption>
+      </figure>
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote><p>The jasmine scoop tastes like a summer garden. Calm, lovely, worth the walk.</p></blockquote>
+        <figcaption>Priya, first visit</figcaption>
+      </figure>
+    </div>
   </section>
 
 </main>
@@ -328,7 +440,7 @@
   <div class="footer-main">
     <div class="footer-links">
       <div class="fcol">
-        <h4>About us</h4>
+        <h3>About us</h3>
         <a href="#story">About us</a>
         <a href="#boutiques">Scoop bars</a>
         <a href="#rewards" id="rewards">Fernhollow Rewards</a>
@@ -337,7 +449,7 @@
         <a href="#press">Press</a>
       </div>
       <div class="fcol">
-        <h4>Need help?</h4>
+        <h3>Need help?</h3>
         <a href="#faq">FAQ</a>
         <a href="#shipping">Shipping policy</a>
         <a href="#privacy">Privacy policy</a>
@@ -346,25 +458,25 @@
         <a href="#allergens">Allergen guide</a>
       </div>
       <div class="fcol" id="events">
-        <h4>Catering</h4>
+        <h3>Catering</h3>
         <a href="#events">Events</a>
       </div>
       <div class="fcol">
-        <h4>Careers</h4>
+        <h3>Careers</h3>
         <a href="#careers">Join our team</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="socials">
-        <a href="#fb" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
-        <a href="#ig" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
-        <a href="#li" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        <a href="#fb" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+        <a href="#ig" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="#li" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
       </div>
     </div>
   </div>
   <div class="footer-news" id="account">
     <p class="news-copy">Join Fernhollow Rewards for 10% off your first online order, plus early access to new batches.</p>
-    <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks';">
+    <form class="news-form" aria-label="Newsletter sign-up" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks';">
       <label class="sr" for="email">Email</label>
       <input id="email" type="email" placeholder="your-email@example.com" autocomplete="email">
       <button type="submit" class="btn-join">Join</button>
@@ -376,8 +488,8 @@
 </footer>
 
 <!-- Floating chat button -->
-<a class="float-chat" href="#chat" aria-label="Chat with us">
-  <svg viewBox="0 0 24 24" width="28" height="28"><use href="#i-wa"/></svg>
+<a class="float-chat" href="https://wa.me/6500000000" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="28" height="28"><use href="#i-wa"/></svg>
 </a>
 
 <script src="script.js"></script>

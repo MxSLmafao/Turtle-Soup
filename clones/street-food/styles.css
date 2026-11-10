@@ -134,7 +134,7 @@ main { display: block; }
   background: linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,.92) 22%, #fff 100%);
 }
 .award { display: inline-flex; margin-bottom: 10px; }
-.intro-copy h3 { color: var(--navy); font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: 1px; }
+.intro-copy h2.award-title { margin: 0; color: var(--navy); font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: 1px; }
 .address { color: var(--navy); font-size: 16px; line-height: 24px; letter-spacing: 1px; }
 .intro-copy h2 { margin: 2em auto 1em; font-size: 32px; line-height: 38.4px; letter-spacing: 2px; font-weight: 500; }
 .lede { font-size: 16px; line-height: 24px; letter-spacing: 1px; max-width: 340px; margin: 0 auto; }
@@ -176,8 +176,8 @@ main { display: block; }
 .tile-link { display: block; text-align: center; }
 .tile-art { position: relative; overflow: hidden; height: 412px; transition: transform .8s var(--ease); }
 .tile-link:hover .tile-art { transform: scale(1.03); }
-.tile-link h4 { margin: 12px 0 24px; font-size: 24px; line-height: 28.8px; letter-spacing: 2px; font-weight: 500; }
-.tile-link:hover h4 { color: var(--accent); }
+.tile-link h3 { margin: 12px 0 24px; font-size: 24px; line-height: 28.8px; letter-spacing: 2px; font-weight: 500; }
+.tile-link:hover h3 { color: var(--accent); }
 
 .tl-locations { background: linear-gradient(180deg, #8fc7e6 0%, #bfe0ef 40%, #e8d8c1 41%, #d9b98e 100%); }
 .tl-locations .awning {
@@ -229,7 +229,7 @@ main { display: block; }
 .site-footer {
   position: relative; background: var(--footer-red); color: #fff;
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  padding: 10px 72px; min-height: 52px; font-size: 16px; line-height: 32px; letter-spacing: 1px;
+  padding: 10px 150px 10px 72px; min-height: 52px; font-size: 16px; line-height: 32px; letter-spacing: 1px;
 }
 .foot-right { display: flex; gap: 14px; flex-wrap: wrap; }
 .foot-right span { opacity: .8; }
@@ -240,6 +240,46 @@ main { display: block; }
 .animation-element.in-view { opacity: 1; transform: none; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- Gap-fix additions (native to the design) ---------- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.reviews { max-width: var(--container); margin: 0 auto; padding: 0 0 64px; text-align: center; }
+.reviews h2 { font-size: 32px; line-height: 38.4px; letter-spacing: 2px; margin-bottom: 36px; }
+.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.review {
+  margin: 0; padding: 32px 28px; background: #fff; box-shadow: var(--shadow-card);
+  border-top: 4px solid var(--accent); text-align: left;
+}
+.review blockquote { margin: 0; }
+.review p { font-size: 16px; line-height: 24px; letter-spacing: 1px; }
+.review figcaption { margin-top: 14px; color: var(--navy); font-weight: 500; font-size: 16px; line-height: 24px; letter-spacing: 1px; }
+.review figcaption::before { content: "\2014\00a0"; color: var(--accent); }
+
+.signup { max-width: 760px; margin: 0 auto; padding: 16px 16px 64px; text-align: center; }
+.signup h2 { font-size: 32px; line-height: 38.4px; letter-spacing: 2px; }
+.signup p { margin: 8px 0 24px; }
+.signup-form { display: flex; gap: 0; justify-content: center; }
+.signup-form input {
+  flex: 1; max-width: 420px; height: 48px; padding: 0 16px; border: 1px solid #c9ccd0;
+  font: inherit; font-size: 16px; letter-spacing: 1px; color: var(--ink); background: #fff; border-radius: 0;
+}
+.signup-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.signup-form button {
+  height: 48px; padding: 0 28px; background: var(--navy); color: #fff; font: inherit;
+  font-size: 16px; font-weight: 500; letter-spacing: 1px; border-radius: 0;
+}
+.signup-form button:hover { background: var(--accent); }
+
+.chat-btn {
+  position: fixed; right: 34px; bottom: 140px; z-index: 40;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--accent); color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.chat-btn:hover { background: var(--navy); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1300px) {
@@ -273,7 +313,7 @@ main { display: block; }
     background: linear-gradient(180deg, rgba(255,255,255,.2) 0, rgba(255,255,255,.9) 30%, rgba(255,255,255,.9) 70%, rgba(255,255,255,.2) 100%);
   }
   body { font-size: 12.8px; line-height: 19.2px; }
-  .intro-copy h3 { font-size: 17.6px; line-height: 21.12px; }
+  .intro-copy h2.award-title { font-size: 17.6px; line-height: 21.12px; }
   .address, .lede { font-size: 12.8px; line-height: 19.2px; }
   .intro-copy h2 { font-size: 20.8px; line-height: 24.96px; margin: 1.4em auto .6em; }
   .more a, .see-menu { font-size: 12.8px; line-height: 25.6px; }
@@ -287,8 +327,18 @@ main { display: block; }
   .tiles { padding: 0 16px 32px; }
   .tile-grid { grid-template-columns: 1fr; gap: 32px; }
   .tile-art { height: 240px; }
-  .tile-link h4 { font-size: 17.6px; line-height: 21.12px; letter-spacing: 2px; }
+  .tile-link h3 { font-size: 17.6px; line-height: 21.12px; letter-spacing: 2px; }
   .order-badge { width: 64px; height: 64px; right: 12px; bottom: 12px; font-size: 10px; line-height: 12px; }
+  .chat-btn { right: 12px; bottom: 88px; width: 48px; height: 48px; }
+  .reviews { padding: 0 16px 40px; }
+  .reviews h2, .signup h2 { font-size: 20.8px; line-height: 24.96px; }
+  .review-grid { grid-template-columns: 1fr; gap: 18px; }
+  .review { padding: 22px 20px; }
+  .review p, .review figcaption { font-size: 12.8px; line-height: 19.2px; }
+  .signup { padding: 8px 16px 40px; }
+  .signup-form { flex-direction: column; align-items: stretch; }
+  .signup-form input { max-width: none; flex: none; height: 48px; width: 100%; }
+  .signup-form button { width: 100%; }
   .site-footer { padding: 14px 16px; flex-direction: column; align-items: flex-start; font-size: 12.8px; line-height: 25.6px; }
   .foot-right { gap: 8px; }
 }
