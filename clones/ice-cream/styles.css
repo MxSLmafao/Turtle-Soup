@@ -526,7 +526,7 @@ ul { list-style: none; }
 }
 .approach-card { overflow: hidden; }
 .approach-card .art { height: 340px; }
-.approach-card .art { width: 100%; height: 100%; position: relative; }
+.approach-card .art { width: 100%; position: relative; }
 .art-taupe { background: linear-gradient(160deg, #a89a92, #6f625c); }
 .art-taupe svg { position: absolute; width: 52%; left: 24%; bottom: 22%; }
 .art-sand { background: linear-gradient(160deg, #f0e3cf, #d8bd9b); }
