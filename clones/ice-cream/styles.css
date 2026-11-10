@@ -555,7 +555,6 @@ ul { list-style: none; }
 }
 .feature-icon { width: 46px; height: 46px; margin: 0 auto; }
 .feature-icon use { fill: none; }
-.feature-icon[href="#i-badge"], .feature-icon use[href="#i-badge"] { width: 40px; }
 
 /* boutiques */
 .boutiques { padding-top: 100px; }

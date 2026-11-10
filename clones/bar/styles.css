@@ -97,7 +97,7 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   line-height: 0;
 }
 .brand svg { display: block; }
-.menu { width: 100%; text-align: center; padding: 45px 0 30px; }
+.menu { width: 100%; text-align: center; padding: 45px 110px 30px; }
 .menu ul {
   list-style: none;
   margin: 0;
