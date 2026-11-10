@@ -76,4 +76,42 @@ Licence status:
 
 Known differences:
 - Desktop footer secondary links: the source's computed transform is none, but the text is visibly uppercase. The clone uppercases them in CSS at desktop and sets none at mobile, to match the visible result at each width.
+- Mobile footer links are uppercase on mobile as well (visual diff round 0), overriding the measured text-transform none.
 - Mobile body: the source fallback at 390px is Arial/Liberation, not MetaAccanthis, because MetaAccanthis never loads here. The clone's Arimo fallback renders the same glyphs.
+
+## Visual diff
+
+Round 0 compared the original and clone at 1440px and 390px, section by section (captured 2026-11-10 with Playwright; cookie banners: none).
+
+Discrepancies found at 1440px:
+1. Hero: stamp headline wraps to four lines (source: two-line headline block). Hero photo is a large croissant (about 380x600) on the right; clone uses a small drawn croissant. Source hero uses a full photo, not a drawn illustration.
+2. Product: title wraps to three lines (source: two). Image is a studio photo (drawn stand-in in clone). Copy wording differs (allowed).
+3. Making: source rail has side cards bleeding off both edges with 94px gaps (354 | 94 | 544 | 94 | 354). Clone used 40px gaps and inset edges. Source has a small pastry swirl decoration top-left. Centre card and side cards are photos in source (drawn in clone).
+4. Pairing: source cutouts are photos, about 380px wide, with a dog line drawing above the heading. Clone cutouts were 320px. The dog line drawing is not reproduced; a neutral squiggle stands in.
+5. App: layout and perk box positions match. Phone screen is an illustration in source (kept as drawn art).
+6. Gallery: source has a 224px block above the heading with two store badges and the line "Available on Google Play and App Store". Clone had that line in the app section and no badges. Badges are third-party trademark logos, so they are replaced with neutral black pills. Source cards are 325px wide with 40px gaps, matching the clone. Source photos are not reproduced yet.
+7. Reviews: matches in size and placement. Source review copy is shorter and set in a lilac card, as in the clone.
+8. Footer: source column 2 starts at x=274 and column 1 is narrower than the clone's. Copyright is two lines in source. Clone copyright is now two lines. Socials and newsletter position match.
+
+Discrepancies found at 390px:
+1. Hero: source hero is a full-bleed photo (390x585) with the stamp overlaid at the top. Clone stacks the stamp above a small art block. Needs a full-bleed hero image (addressed with the photo work).
+2. Product: title and copy wrap similarly. Source has a small decorative croissant doodle overlapping the copy (not reproduced).
+3. Making: source centre card is about 210x210 with side cards about 180x170. Clone cards were 78vw wide, too large. Source rail bleeds on both sides.
+4. App: source feature perks are one horizontal scrolling rail (arrows below), placed under the phone. Clone stacked all six boxes vertically.
+5. Gallery: source cards are large (about 300+ wide and 580+ tall), and the store badge line sits above the heading. Clone matches the card size better now.
+6. Footer: source footer links are uppercase on mobile too; column 2 starts at x=215. Clone now uppercases links and uses a 30px gap.
+
+Round 1 fixes applied: process rail gaps and bleed; footer column widths; copyright lines; product title and copy; store line and neutral badges moved to the gallery head; hero stamp to two lines; pairing cutouts to 380px; mobile making card sizes; mobile app perks rail; mobile footer uppercase and column gap; mobile gallery card width.
+
+Round 2 comparison (after round 1 fixes) and fixes:
+- 1440 making: source rail bleeds to both viewport edges (354 | 94 | 544 | 94 | 354 fills 1440). Clone rail was inset by the section padding. Fixed by removing the section side padding at desktop. Remaining gap: source photos are not yet in the clone.
+- 1440 gallery: card size, gap and arrow position match. Store badges are neutral pills, which is a deliberate change (third-party logos are not reproduced).
+- 390 making: side-card stamp labels wrapped awkwardly. Fixed with smaller label type on mobile.
+- 390 app: source phone is about 230px wide; clone phone was 360px. Fixed to 280px wide. Source perks form a single horizontal rail below the phone; clone now matches.
+- 1440 footer and 390 hero: checked; positions match except for the hero photo (see Round 0).
+Still open after round 2: photos in every photo slot (addressed in the generated-photography step), the source's dog line drawing above the pairing heading, and the source's small croissant doodle on mobile.
+
+## Generated photography (7b)
+- Status: not done. The image tool (mcp__Geminimage__generate_image) returned HTTP 502 with a 429 quota error on two attempts ("quota will reset after 2h43m"). No images were generated, no img/ folder was created, and every photo slot still uses drawn SVG or CSS art.
+- Slots still drawn: hero croissant and mobile hero; product studio image; making centre card and both side cards; pairing cutouts (pastry and coffee); gallery cards (4); phone screen illustration (kept as drawn art in both versions).
+- Prompts planned, to run once quota returns: hero (upright golden croissant on lavender backdrop); product (two croissants with espresso cup on dark-to-cream studio gradient); making (laminated dough close-up, hands holding a cut croissant on white, golden butter close-up); pairing (pain au chocolat and latte on cream); gallery (iced drink in tall glass, café interior, picnic lawn, strawberry pastries). Each prompt ends with "no text, no logos, no brand names, no watermarks, no packaging labels".

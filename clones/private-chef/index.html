@@ -94,12 +94,15 @@
         <p>Let your kitchen become the city's most exclusive table, with a dinner that exists only for your guests.</p>
       </div>
     </div>
-    <div class="collage" aria-hidden="true">
-      <div class="tile t-plate" style="--h:280px"></div>
-      <div class="tile t-kitchen" style="--h:280px"></div>
-      <div class="tile t-citrus" style="--h:270px"></div>
-      <div class="tile t-chef2" style="--h:280px"></div>
-      <div class="tile t-garden" style="--h:280px"></div>
+    <div class="collage-wrap">
+      <div class="collage" aria-hidden="true">
+        <div class="tile t-plate" style="left:0;top:80px;height:280px"></div>
+        <div class="tile t-garden" style="left:0;top:378px;height:278px"></div>
+        <div class="tile t-kitchen" style="left:298px;top:170px;height:400px"></div>
+        <div class="tile t-citrus" style="left:596px;top:110px;height:390px"></div>
+        <div class="tile t-chef2" style="left:894px;top:0;height:394px"></div>
+        <div class="tile t-portrait" style="left:894px;top:416px;height:274px"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -239,16 +242,16 @@
       <button class="arrow arrow-next" aria-label="Next menu" data-target="menu-track" data-dir="1">&#8250;</button>
     </div>
 
-    <div class="mosaic" aria-hidden="true">
-      <div class="mo mo-a"></div>
-      <div class="mo mo-b"></div>
-      <div class="mo mo-c"></div>
-      <div class="mo mo-d"></div>
-    </div>
-    <div class="custom-card">
-      <h3>Build a custom menu</h3>
-      <p>An anniversary for two, a long table of old friends, or a relaxed family Sunday. Tell us the mood and we will shape the courses around it.</p>
-      <a class="pill pill-white" href="#find">Continue</a>
+    <div class="mosaic-wrap">
+      <div class="tile t-plate" style="left:0;top:180px;height:364px" aria-hidden="true"></div>
+      <div class="tile t-garden" style="left:298px;top:0;height:392px" aria-hidden="true"></div>
+      <div class="tile t-chef2" style="left:596px;top:72px;height:320px" aria-hidden="true"></div>
+      <div class="tile t-citrus" style="left:894px;top:164px;height:398px" aria-hidden="true"></div>
+      <div class="custom-card">
+        <h3>Build a custom menu</h3>
+        <p>An anniversary for two, a long table of old friends, or a relaxed family Sunday. Tell us the mood and we will shape the courses around it.</p>
+        <a class="pill pill-white" href="#find">Continue</a>
+      </div>
     </div>
   </div>
 </section>
@@ -258,11 +261,12 @@
   <div class="card about-card">
     <h2 class="center">Our story</h2>
     <p class="about-lead center">Hearthside started from one idea: great cooks should be able to share their craft beyond the restaurant pass. We bring them to the dining room where the best memories are made, yours.</p>
-    <div class="stats">
-      <div class="stat stat-solid"><p class="stat-num">+10</p><p>years since our launch</p></div>
-      <div class="stat"><p class="stat-num">+40k</p><p>chefs have joined us</p></div>
-      <div class="stat"><p class="stat-num">2.3M</p><p>guests enjoyed our experience</p></div>
-      <div class="stat"><p class="stat-num">+100</p><p>countries available</p></div>
+    <div class="about-grid">
+      <div class="stat stat-solid" style="left:0;top:40px;height:234px"><p class="stat-num">+10</p><p>years since our launch</p></div>
+      <div class="stat" style="left:298px;top:80px;height:228px"><p class="stat-num">+40k</p><p>chefs have joined us</p></div>
+      <div class="stat" style="left:0;top:294px;height:236px"><p class="stat-num">2.3M</p><p>guests enjoyed our experience</p></div>
+      <div class="stat" style="left:298px;top:330px;height:228px"><p class="stat-num">+100</p><p>countries available</p></div>
+      <div class="tile t-kitchen about-photo" style="left:596px;top:0;height:646px;width:556px" aria-hidden="true"></div>
     </div>
     <div class="pillars">
       <div><h3>Technology</h3><p>Booking tools that make it simple for chefs and hosts to plan together.</p></div>
@@ -278,12 +282,16 @@
     <h2>Backed by partners we respect</h2>
     <p class="sub">Technology, culinary depth and a love of hosting come together to deliver private dining wherever our guests are.</p>
     <ul class="logo-row" aria-label="Partner placeholders">
-      <li><span>NORTHWIND</span></li>
-      <li><span>Lantern&amp;Co</span></li>
+      <li><span>Northwind</span></li>
+      <li><span>Lantern &amp; Co</span></li>
       <li><span>Acre Hotels</span></li>
-      <li><span>BLUEPEAK</span></li>
+      <li><span>Blue Peak</span></li>
       <li><span>Mosaic Group</span></li>
       <li><span>Field Kitchen</span></li>
+      <li><span>Harbor Lane</span></li>
+      <li><span>Greenfield</span></li>
+      <li><span>Oakline</span></li>
+      <li><span>Summit &amp; Pine</span></li>
     </ul>
   </div>
 </section>
@@ -328,6 +336,7 @@
       </div>
       <div class="f-block">
         <p class="f-label">Secure payment</p>
+        <div class="pay-row" aria-hidden="true"><span class="pay"></span><span class="pay"></span><span class="pay"></span><span class="pay"></span><span class="pay"></span></div>
       </div>
     </div>
     <div class="f-col f-links">

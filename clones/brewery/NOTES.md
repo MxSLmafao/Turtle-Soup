@@ -53,3 +53,26 @@ Tuning method: the source page was rendered with its own Futura PT, and the same
 Not matched:
 - "Veneer Two" is declared in the source CSS but no sampled role uses it.
 - "Open Sans" appears in the source's computed font list for one element, not visible in any sampled role. The clone does not use it.
+
+## Visual diff
+
+Method: fresh section screenshots of the original and the clone at 1440px and 390px (scratchpad vd-brewery/). Pairs were read side by side. Round 1 fixes were applied, then pillars were re-checked in round 2.
+
+Fixed in round 1 (and re-checked):
+- Header: wider 135px side gutters; icon gap 15px; logo as a navy block with amber border (was white); nav item padding 16px; mobile logo centred with search icon visible.
+- Hero: 315px tall on mobile (was 400); right-hand booking badge repositioned (right 30px, 76x84); two slider arrows added; round booking button added beside the floating pill (hidden on mobile).
+- Pillars: visible card 324x296 (was 400 tall column); amber top tab and bottom arc now match the original curve; cloud-like white shape behind each image; Explore button 30px from card bottom; section padding 50px top / 90px bottom. Verified: layout and rhythm now match at both widths.
+- Pillar copy: the first card's h1 was 500 weight in computed style, but renders visually like the others, so all copy is weight 400.
+- Social: award badge row added as neutral placeholders (shield, seal, wordmark); grid widened to 1170px with square tiles; play and multi-photo icons added on the matching tiles; heading-to-grid gap 22px; blue follow button (#0068a0) with Instagram glyph, 14px, 1px tracking.
+- Newsletter: input 376px wide with #5d6486 border, 11px gap; title-to-copy 40px.
+
+Still different (open):
+- Imagery: every photo slot still uses drawn SVG/gradient art (see Generated photography below).
+- Hero slider arrows are visual only; there is no slide logic.
+- Mobile social captions are hidden; the original shows no captions.
+- Footer: the original's two-line reCAPTCHA notice is replaced by a placeholder disclaimer line.
+- Mobile nav is behind a hamburger; the source's mobile nav was not captured.
+
+## Generated photography
+
+Status: blocked. The image tool returned HTTP 429 (quota exhausted, reset after about 2h41m) on 5 of 6 calls. The one image it returned contained readable signage text despite the no-text instruction, so it was discarded. No files were saved to img/. All photo slots (2 hero slides, 4 pillar images, 8 social tiles) still use drawn art.

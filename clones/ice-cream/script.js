@@ -96,4 +96,18 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('is-in'); });
   }
+  /* Mobile footer accordions */
+  var fcols = Array.prototype.slice.call(document.querySelectorAll('.fcol'));
+  fcols.forEach(function (col) {
+    var h = col.querySelector('h4');
+    if (!h) return;
+    h.setAttribute('role', 'button');
+    h.setAttribute('tabindex', '0');
+    function flip() {
+      if (!window.matchMedia('(max-width: 860px)').matches) return;
+      col.classList.toggle('is-open');
+    }
+    h.addEventListener('click', flip);
+    h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+  });
 })();

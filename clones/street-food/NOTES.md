@@ -50,3 +50,37 @@ No source font files were downloaded or copied.
 Licence: Lato is OFL-licensed, free to use. No commercial licence needed.
 Unmatched: the source's other families (Century Gothic, Avenir Next, Geralia, Messenger Pigeons
 Personal Use) are declared in style.css but not used on the homepage, so they are not reproduced.
+
+## Visual diff
+Compared against fresh original screenshots (1440px and 390px, full page plus viewport slices).
+
+Round 1 discrepancies found and fixed:
+- Header: logo too small (now 52px mark, 36px wordmark); nav padding right edge; toolbar icon spacing;
+  active nav item showed an underline the original does not have (removed).
+- Hero: original is one full-bleed photo with no slider dots; clone had two slides and dots (removed).
+  Scroll cue kept.
+- Intro: original photo is full-bleed behind a white fade on the right; clone used a 2/3 + 1/3 grid
+  (now a full-bleed image with a right copy panel). Link text wrapped badly (copy shortened).
+- Recommendations: original cards are 294px with 30px gaps in a 1266px container; clone used 1296px.
+  Original has no captions under the cards (removed). "See Our Menu" moved to 16px inset.
+- Link tiles: original 618px columns with 30px gap (clone had 48px gap and a wider container).
+- Delivery badge: original has a fixed green round badge bottom-right; replaced with a neutral navy
+  "Order Online" circle at the same size and position (no partner logo imitated).
+- Intro award emblem: original uses a red flower-like star-rating mark; replaced with a neutral
+  red ring and star placeholder of the same size.
+- Mobile header: original is a white logo row (84px) above a full-width navy MENU bar (50px), total
+  134px. Clone had a single 58px bar (now matched).
+- Mobile hero: original is 180px tall; clone was 52vh (now 180px).
+- Mobile intro: original has the photo full-bleed behind the copy, 492px tall; clone stacked them
+  (now overlaid).
+- Mobile recommendations: original stacks 4 cards in one column, 321px wide; clone used 2 columns
+  (now one column).
+
+Round 2 re-check after the fixes: header, hero, intro panel, card row, tiles and mobile header/hero/
+intro now line up with the original at both widths. No horizontal overflow, no page errors, no broken
+image paths.
+
+Remaining differences (by design, see 7b):
+- Recommendation cards 2 to 4 and all four link tiles are still drawn art (generation quota exhausted).
+- Hero and intro photos are generated and are a different chef and dishes from the original.
+- Footer, dropdown and menu behaviour are approximations.

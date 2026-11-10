@@ -70,3 +70,24 @@ Notes:
 - Google Fonts loaded by the clone: Barlow Condensed (400, 700, 800), Figtree (300, 400, 500, 700) and Ultra. These are fallbacks only and are not the source families.
 - Known gap: Kapra-Neue-Black is a single black face, so the source's declared weight of 400 on the testimonial author still renders heavy. The Barlow Condensed fallback at 400 looks lighter. The declared value matches; the visual weight does not.
 - Where a licence can be bought: Adobe Fonts (for families in the Typekit kit) or the original foundry. Licence terms were not verified in this pass.
+
+## Visual diff
+
+Two compare-fix rounds, screenshots from `<scratchpad>/vd-caterer/` (original and clone at 1440 and 390, paired crops per section).
+
+Fixed:
+- Section positions at 1440 now align within 6px of the original (products 865, testimonials 1361, banner 1679, footer 2079). Testimonial block set to 318px tall and six slides (six dots), as in the source.
+- Hero headline is one line at 1440 (source is one line). Hero copy moved to the source's vertical position. A soft dark radial scrim sits behind the hero copy so the subline reads over the artwork.
+- Mobile: announcement bar 78px, hero 400px, products start at y=494 and testimonials at y=2060, matching the source.
+- Banner stays split at 390 (was hidden). Mobile banner 240px. Banner title shortened to "Let's plan it" so it fits on one line at mobile size.
+- Footer desktop: brand column 188px so columns start at x=344, as in the source. The legal divider is full-bleed, with Terms and Privacy and social icons left-aligned inline.
+- Footer mobile: single centred column (logo, three link groups, badges, legal row, social), as in the source. Logo overlap bug fixed.
+
+Left (not matched):
+- Hero, cards, banner photos: drawn SVG/gradient art. The image generator returned a quota error on every attempt (quota reset in roughly 2h40m), so no photos were generated.
+- Hero copy and CTA wording differ, as intended (placeholder copy).
+- Hover zoom on cards is implemented; the source's card photos are not.
+- Mobile footer about 80px shorter than the source (993px vs 1071px).
+- Testimonial author label renders lighter than the source, because the Barlow Condensed fallback is not the heavy Kapra face (see Fonts).
+- Footer logo is a neutral drawn mark; source uses a different logo shape (intentional placeholder).
+- Source's Christmas hero photo, the accreditation badges and the source's real copy are replaced with placeholders.

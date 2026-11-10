@@ -77,3 +77,34 @@ which is Jost from Google Fonts, loaded in `index.html` under the SIL Open Font 
 Limits: Jost is not metric-identical to Kabel. No `size-adjust` tuning was applied because the Kabel
 metrics could not be measured here. All sizes, line-heights and tracking are set to the source's
 computed values, so only glyph widths differ on machines without Kabel installed.
+
+## Visual diff
+
+Captures: `scratchpad/vd-bar/` (orig and clone at 1440 and 390: popup, hero, footer viewport, full page).
+Only the hero, popup and footer render on the source, so these are the only sections compared.
+
+Round 1 (fixed):
+- Hero logo was 40x60; source logo block is 100x132 and pushes the H1 to y 493. Now 100x132 monogram plus wordmark.
+- Header mark was 26x40 at y 40; now 25x52 at y 30 (accounting for the 10px top border).
+- H2 used `<br>` breaks; source uses three `<p>` lines at 19.25px / 0.1em tracking / 34.65px line-height with 10px margins (16.8px on mobile).
+- Nav padding centred the menu at 720; source centres the item run at about 740 (padding-left 40px). Item padding 13px.
+- Mobile hero box had a 14vh top margin; source starts it directly under the header with 5vh padding.
+- Mobile hamburger was an outline; source is a filled dark tile.
+- Footer columns were fractional; source uses 157 / 233 / 235 / 78 / 235px with a 940px container.
+- Copyright container was 1170px; source is 940px.
+- Footer group links had 14px top padding; source starts at the footer padding edge.
+- Footer link underline removed (source has none).
+- Scroll-reveal on footer blocks removed (source has none).
+- Popup logo was a cocktail glass that resembled the source mark; replaced with the deco-frame glyph.
+- Popup caption was a gradient 30px heading; source caption is 16px white text.
+- Popup image-to-caption gap 50px and caption-to-paragraph gap were too large; now 20px and 10px.
+- Popup paragraph wrapped to three lines; shortened copy to two lines like the source.
+- Mobile footer blocks were tight and social icons sat in a row; now 56px gaps, 40px icon spacing and stacked social icons.
+
+Round 2 (checked, within a few px): hero H1 y, header mark, nav line positions, footer column centres, reserve button position, copyright baseline.
+
+Discrepancies left:
+- Hero, popup and footer images are drawn SVG and gradient art, not photographs (see 7b status).
+- Hero subtitle copy wraps differently (new placeholder copy).
+- Kabel glyph widths differ from Jost (see Fonts).
+- Hero overlay opacity and vignette are approximations.

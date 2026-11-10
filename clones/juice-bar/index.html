@@ -65,64 +65,7 @@
   <!-- 1. Hero -->
   <section class="hero" aria-label="Introduction">
     <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" class="hero-svg">
-        <defs>
-          <radialGradient id="heroLight" cx="50%" cy="30%" r="70%">
-            <stop offset="0" stop-color="#a39c95"/>
-            <stop offset="1" stop-color="#5c5550"/>
-          </radialGradient>
-          <linearGradient id="bowlBase" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#8c2f4b"/>
-            <stop offset="1" stop-color="#4e1a2c"/>
-          </linearGradient>
-          <linearGradient id="bowlTop" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#eef4f6" stop-opacity=".85"/>
-            <stop offset="1" stop-color="#cfd9dd" stop-opacity=".55"/>
-          </linearGradient>
-        </defs>
-        <rect width="1440" height="560" fill="url(#heroLight)"/>
-        <!-- bowl 1 -->
-        <g transform="translate(330 300)">
-          <ellipse cx="0" cy="98" rx="150" ry="16" fill="#000" opacity=".22"/>
-          <path d="M-150 0 Q-150 150 0 150 Q150 150 150 0Z" fill="url(#bowlBase)"/>
-          <ellipse cx="0" cy="0" rx="150" ry="34" fill="url(#bowlTop)"/>
-          <circle cx="-60" cy="-6" r="22" fill="#f9d86b"/>
-          <circle cx="-20" cy="-14" r="20" fill="#e5484d"/>
-          <circle cx="30" cy="-8" r="22" fill="#f6efe2"/>
-          <circle cx="78" cy="-10" r="18" fill="#6d9a3a"/>
-          <circle cx="-95" cy="-10" r="16" fill="#f2b8b5"/>
-        </g>
-        <!-- bowl 2 (centre, tallest) -->
-        <g transform="translate(720 280)">
-          <ellipse cx="0" cy="110" rx="180" ry="18" fill="#000" opacity=".25"/>
-          <path d="M-180 0 Q-180 170 0 170 Q180 170 180 0Z" fill="url(#bowlBase)"/>
-          <ellipse cx="0" cy="0" rx="180" ry="40" fill="url(#bowlTop)"/>
-          <ellipse cx="0" cy="-6" rx="150" ry="28" fill="#fdf2c8"/>
-          <circle cx="-110" cy="-14" r="20" fill="#e5484d"/>
-          <circle cx="-60" cy="-26" r="18" fill="#e5484d"/>
-          <circle cx="-10" cy="-18" r="20" fill="#e5484d"/>
-          <circle cx="50" cy="-22" r="18" fill="#e5484d"/>
-          <circle cx="110" cy="-12" r="18" fill="#e5484d"/>
-          <circle cx="-80" cy="-4" r="13" fill="#5f9a2f"/>
-          <circle cx="20" cy="-2" r="13" fill="#5f9a2f"/>
-          <circle cx="80" cy="0" r="12" fill="#5f9a2f"/>
-          <circle cx="-36" cy="4" r="10" fill="#2d2440"/>
-          <circle cx="60" cy="6" r="9" fill="#2d2440"/>
-        </g>
-        <!-- bowl 3 -->
-        <g transform="translate(1110 300)">
-          <ellipse cx="0" cy="98" rx="150" ry="16" fill="#000" opacity=".22"/>
-          <path d="M-150 0 Q-150 150 0 150 Q150 150 150 0Z" fill="url(#bowlBase)"/>
-          <ellipse cx="0" cy="0" rx="150" ry="34" fill="url(#bowlTop)"/>
-          <ellipse cx="0" cy="-4" rx="120" ry="24" fill="#c98a4b"/>
-          <path d="M-110 -6 q20 -14 40 0 t40 0 t40 0 t40 0" stroke="#8a4a1f" stroke-width="5" fill="none" opacity=".7"/>
-          <circle cx="-60" cy="-12" r="8" fill="#fff4d6"/>
-          <circle cx="0" cy="-14" r="8" fill="#fff4d6"/>
-          <circle cx="60" cy="-12" r="8" fill="#fff4d6"/>
-          <circle cx="-30" cy="6" r="6" fill="#2d2440"/>
-          <circle cx="40" cy="8" r="6" fill="#2d2440"/>
-        </g>
-      </svg>
+      <img class="hero-photo" src="img/hero-acai-bowls.jpg" width="1264" height="848" alt="">
     </div>
     <h1 class="hero-title">
       <span class="hero-line">Every Little</span>
@@ -159,43 +102,13 @@
   <section class="tiles reveal" aria-label="Explore">
     <a class="tile tile--people" href="#join">
       <div class="tile-art" aria-hidden="true">
-        <svg viewBox="0 0 400 470" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="t1bg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#c8b8a4"/><stop offset="1" stop-color="#8a7662"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="470" fill="url(#t1bg)"/>
-          <rect y="300" width="400" height="170" fill="#d9cdbd"/>
-          <!-- two figures -->
-          <g>
-            <circle cx="130" cy="150" r="46" fill="#b9826a"/>
-            <path d="M80 230 Q130 190 180 230 L190 320 H70Z" fill="#e8dfd0"/>
-            <path d="M70 320 H190 V380 H70Z" fill="#6b5744"/>
-            <circle cx="270" cy="140" r="46" fill="#a86f58"/>
-            <path d="M220 225 Q270 185 320 225 L330 320 H210Z" fill="#2f3a46"/>
-            <path d="M210 320 H330 V380 H210Z" fill="#6b5744"/>
-          </g>
-        </svg>
+        <img src="img/tile-cafe-team.jpg" width="900" height="900" alt="" loading="lazy">
       </div>
       <span class="tile-label">Join Us</span>
     </a>
     <a class="tile tile--menu" href="#menu">
       <div class="tile-art" aria-hidden="true">
-        <svg viewBox="0 0 400 470" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="470" fill="#8b8792"/>
-          <ellipse cx="200" cy="360" rx="180" ry="50" fill="#5d5963"/>
-          <g>
-            <path d="M80 200 H130 L124 320 H86Z" fill="#e6d8c4"/>
-            <path d="M82 220 H128 L125 260 H85Z" fill="#fbd14a" opacity=".9"/>
-            <path d="M160 130 H220 L212 330 H168Z" fill="#7b2d54"/>
-            <path d="M166 150 H214 L213 180 H167Z" fill="#fff5e2"/>
-            <path d="M250 180 H310 L302 330 H258Z" fill="#dbc7a0"/>
-            <circle cx="186" cy="110" r="18" fill="#e5484d"/>
-            <circle cx="210" cy="104" r="14" fill="#5f9a2f"/>
-            <circle cx="280" cy="160" r="16" fill="#e5484d"/>
-          </g>
-        </svg>
+        <img src="img/tile-smoothies.jpg" width="900" height="900" alt="" loading="lazy">
       </div>
       <span class="tile-label">Our Menu</span>
     </a>

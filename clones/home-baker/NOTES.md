@@ -84,3 +84,23 @@ Source family: Poppins for every text role (computed on the live site at 1440 an
 Licence status: Poppins is free (SIL Open Font License 1.1) and is loaded from Google Fonts (weights 400, 500, 600, 700, 800). Because it is free, the clone uses the exact family with no name-first licence fallback. No font files were downloaded or copied from the source. Material Symbols (Apache 2.0) is not used in the clone.
 
 Source-values capture: Playwright computed styles on the live homepage (text nodes, visible elements), then compared to the clone with the same script.
+
+## Visual diff
+
+Method: fresh Playwright captures of the original (1440 and 390, full page plus per-section element shots, text-matched where needed) and the clone, paired side by side in a private scratch folder. Two compare-fix rounds, then a mobile round.
+
+Fixed:
+- Hero (desktop): height 496 -> 441px, copy vertically centred as in the original.
+- Bestseller and ingredient buttons: uppercase labels, as in the original.
+- Story: headline wraps to two lines at desktop (copy shortened); on mobile the eyebrow and headline sit above the image, as in the original.
+- Ingredients: "Shop now" left-aligned under the grid on desktop (full width on mobile).
+- Locations: desktop 5-card row spanning the viewport (257px cards, 31px gaps, 216x200 image window); mobile stacks five full-width cards with 2:1 images (was a horizontal snap row).
+- Social band: horizontal row of 176px tiles starting at 122px (116px tiles on mobile), as in the original.
+- Newsletter: section height 380px (was 435); subscribe button cyan gradient with a 2px black border; mobile keeps input and button in one row.
+- Footer: height 446 -> 430px; mobile copyright and payment badges centred.
+- Header: cart count badge removed (the original shows none).
+
+Left as is:
+- All photo slots (hero, four bestseller cards, story portrait, four ingredient tiles, five location storefronts, six Instagram tiles) remain drawn SVG/gradient art. Image generation is blocked: the Gemini image tool returned a 429 quota error on every attempt ("exhausted your capacity", reset in about 2h41m).
+- Copy wording, the placeholder wordmark and monogram, and the payment badges (text chips, where the source uses logo images).
+- Source headings look slightly lighter in weight than the clone's; the typography pass (section 6) already matched computed values, so this is judged to be rendering rather than a measured mismatch.

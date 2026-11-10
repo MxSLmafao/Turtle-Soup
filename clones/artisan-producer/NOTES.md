@@ -50,3 +50,21 @@ Notes:
 - Font files are never copied from the source. Fallback faces use Google Fonts CDN URLs for free families only.
 - size-adjust values come from the measured width of sample strings in the source render ("Malt Dinosaur", "Christmas 2026", "We ship internationally.") against the same strings in the fallback at the same size.
 - Sackers Gothic requests weight 850. Funnel Sans tops out at 700, so the fallback uses 700.
+
+## Visual diff
+
+Compared at 1440 and 390 against fresh original captures (popup dismissed). Two compare-fix rounds.
+
+Fixed in round 1 and round 2:
+- Hero: original is two full-bleed photo halves about 654px tall with copy on the right half. Clone was 580px with a centred cream card. Now 654px, no card, copy white on the right half with an italic serif eyebrow and an outlined arrow button.
+- Header: original nav sits left-aligned next to the logo, with login and cart on the right. Clone centred the nav. Now left-aligned, header 52px plus 32px announcement.
+- Category tiles: original tiles about 430 x 511px (5:6) with about 11px gutters and a rule above and below. Clone had square tiles with 24px gutters. Now 5:6, 11px gutters, 1324px container, bottom rule added.
+- Split panels: original about 766px tall, with italic serif headlines. Clone was 535px with upright headlines. Now 766px and italic.
+- Mobile: split section rule gutters aligned to the 16px side gutter.
+
+Left as is (known differences):
+- Hero, tile and split imagery: drawn SVG/gradient stand-ins, not photography. Generated photography (7b) was blocked by a Gemini image quota error (resets in about 2h43m), so the drawn art stays.
+- Press band: original shows six real press logos at larger weights. Clone shows placeholder names.
+- Footer: original has no separate bordered copyright row; clone keeps one.
+- Announcement bar: original shows one at top; it was dismissed in captures for both sides, so it is not compared.
+- Original section heading "Shop Our Top Categories" is upright-ish with a heavier serif; clone is a lighter italic.

@@ -59,3 +59,48 @@ Goal: the clone must use the SAME typography as the source site.
 5. Re-screenshot at 1440 and 390, check nothing overflows or wraps badly, fix, then report briefly:
    which families are now identical, which are name-first with fallback, and any role you could not match.
 Same rules as before: only touch your own clones/<slug>/ folder, no git, no subagents.
+
+## 7. Visual-diff pass + generated photography (follow-up)
+Use a PRIVATE scratch folder `<scratchpad>/vd-<slug>/` for every script and screenshot (other agents
+share the scratchpad; never write to its top level).
+
+### 7a. Screenshot the original and compare
+1. With Playwright, take fresh screenshots of the ORIGINAL site at 1440px and 390px: full page, plus one
+   viewport-sized shot per section (scroll through; dismiss cookie banners/popups/age gates first).
+2. Take the same set from your clone (`file://`).
+3. Read the paired screenshots side by side, section by section, and write a discrepancy list in
+   NOTES.md under "## Visual diff": layout/grid, section heights, spacing, alignment, colours, borders,
+   radii, shadows, image crops/aspect ratios, overlays, text sizes/wrapping, header/footer, missing
+   sections or components (sliders, popups, badges), hover/scroll behaviour.
+4. Fix every discrepancy you can, re-screenshot, and repeat until the pairs look the same apart from
+   brand name, copy wording and the specific photos. At least two compare-fix rounds.
+
+### 7b. Replace drawn placeholder art with generated photography
+The illustrated SVG/gradient stand-ins make the clone look flatter than the original. Replace them.
+1. For every image slot that is a photo in the original (hero, tiles, cards, galleries, backgrounds),
+   look at the original screenshot and write a prompt describing a SIMILAR-LOOKING but new photo: same
+   kind of subject, composition, camera angle, lighting, colour mood, background and crop, so it fills
+   the slot the same way. Always add: "no text, no logos, no brand names, no watermarks, no packaging
+   labels". Never ask for a real brand, real person, or a copy of a specific image.
+2. Generate with the `mcp__Geminimage__generate_image` tool (load it with ToolSearch
+   "select:mcp__Geminimage__generate_image"). Use output_format "jpeg" and a size near the slot's aspect
+   ratio. The result shows a line like `[Image: source: /root/.claude/projects/.../tool-results/mcp-Geminimage-blob-....jpg]`
+   — that is the saved file. Copy it into `clones/<slug>/img/` with a descriptive name.
+3. Optimise each file with Python PIL (`python3 -I`): resize to at most 2x the slot's displayed size
+   (max 2000px wide for heroes, ~900px for cards), save JPEG quality ~80. Keep each file under ~300 KB
+   and the whole img/ folder under ~4 MB.
+4. Use them in the clone with <img> (width/height, alt text, loading="lazy" below the fold) or CSS
+   background-image, with the same object-fit/crop, overlays and gradients as the original. Look at each
+   generated image (Read tool) before using it; regenerate if it contains text/logos, looks wrong, or
+   does not match the slot. Aim for every photo slot filled; if the tool fails repeatedly, keep the
+   drawn art for remaining slots and say so.
+5. Things that are logos/trademarks in the original (brand logo, press logos, award badges, payment
+   marks, certification marks) must NOT be generated or imitated. Design a neutral placeholder of the
+   same size, weight and visual presence (a well-drawn monogram/wordmark for the placeholder brand,
+   generic badge shapes) so the layout keeps the same richness.
+6. Final check: screenshots at 1440 and 390, no overflow, no console errors, no broken image paths
+   (relative paths only), no source-brand names in code.
+
+### Report
+Discrepancies found and fixed, discrepancies left, number of images generated and total img/ size,
+any slots still using drawn art. Same rules: only your clones/<slug>/ folder, no git, no subagents.

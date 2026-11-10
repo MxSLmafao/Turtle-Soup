@@ -85,3 +85,33 @@ Fallback: Hanken Grotesk (SIL OFL, Google Fonts), loaded through the Google Font
 Verified at 1440 and 390 px: family, size (within 0.3 px), weight, uppercase and line-height match the source values for every role above. Two rows were not directly comparable because the locator matched a different element (for example a card anchor instead of its heading).
 
 Not matched: glyph shapes and metrics (cap height, x-height, ascent and descent) still differ from Founders, so line breaks can fall in different places. Source copyright line measured 15 px at 1440 and 14.06 px at 390, weight 400, line-height 1.176; the clone's small role matches these values. The mobile side tab overlaps body text at 390 px.
+
+## Visual diff
+
+Method: section-by-section screenshots of the original and the clone at 1440 and 390 px (scratch folder vd-cafe), side by side. Two compare-fix rounds.
+
+Fixed:
+- Hero, carousel: photo stand-ins replaced with generated photos (see Images below).
+- Café banner height 410 to 380 px, to match the source crop.
+- "At a glance" min-height 740 to 710 px, to match the source section height.
+- Journal band padding 96 to 80 px (source band about 320 px tall, clone was 367).
+- Side "Find your favourite coffee" tab: hidden at 900 px and below, because it covered hero copy at 390 px.
+- Type sizes, weights and line-heights from the Fonts pass (no discrepancy remains at the token level).
+
+Left:
+- Product tiles (6), café cards (5), café banner and wholesale photo: still drawn CSS art. The generation tool hit a quota limit (resets in about 2h40m), so these slots keep the drawn art.
+- "At a glance" illustration: the source is a coloured 3D render; the clone is an original line-style isometric drawing with numbered pins.
+- Step and bag icons: source uses line illustrations; the clone draws simple line icons.
+- Header wordmark and footer logo: placeholder wordmark (Big Shoulders Display). Payment badges are generic text pills.
+- Source footer has more links; the clone has fewer link rows.
+- Hover and scroll: reveal, image lift and carousel autoplay are present; the source's exact easing and the mega-menu contents are approximations.
+- Font metrics differ from the source face, so some line breaks differ.
+
+## Images
+
+Generated (Gemini image tool, JPEG, no text or logos in the prompts):
+- `img/hero-pour.jpg` (1264 x 848, about 108 KB): hero background.
+- `img/origin-cherries.jpg` (1200 x 805, about 162 KB): feature carousel slide 1.
+- `img/origin-beans.jpg` (1000 x 1000, about 133 KB): feature carousel slide 2.
+
+Total img/ size about 404 KB. Still drawn: product tiles, café banner, café cards, wholesale photo, and the isometric illustration (see Visual diff). Regenerate these once the image quota resets.

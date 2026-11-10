@@ -64,6 +64,29 @@ Measured values (computed, desktop 1440 / mobile 390):
 
 Font-size, line-height, tracking and transform match the source at both widths. Weights match the face the source renders, with the nav using 600 to approximate its synthetic bold.
 
+## Visual diff
+
+Paired screenshots (source vs clone) are section by section at 1440px and 390px, plus full page. Two compare-and-fix rounds done.
+
+Round 1 found and fixed:
+- Hero: source is a full-bleed carousel with neighbouring slides peeking in on both sides, about 350px tall, copy overlaid on the photo. Clone was a single boxed slide. Now a track with a centred 750px slide and peeking neighbours (640px at 992px, 82vw at mobile), text overlaid on art.
+- Product cards: source puts the red NEW tag under the title (not over the image), shows the price centred under it, and has labelled options ("Number of Units", "Approx. Unit Size") with bordered selects. Clone used an overlay badge and short labels. Fixed.
+- Store: source is a 2:1 / 1:2 / 1:1 photo mosaic with white uppercase labels centred on the image and no label box. Clone had a different grid and white caption boxes. Now the same grid (6 tiles, last row two tiles) and centred labels.
+- Videos: source is a carousel with red circular arrows at the edges and centred captions. Clone was a static 4-up row. Now a scrolling carousel with arrows and centred captions.
+- Mobile trending: source keeps two product columns at 390px. Clone stacked one column. Now two columns.
+- Mobile header: source uses a compact sticky bar (menu left, logo centre, search and cart icons right) with no utility strip. Clone showed the full utility bar plus the large logo. Now a compact bar on mobile; the utility strip and large logo are desktop only.
+- Mobile store: source tiles are short (about 83px) with a 2-column pattern. Clone tiles were 140px. Now 96px rows with a 14px gap.
+
+Round 2: header, store and hero at 390px now match the source's structure. Trending at 1440px matches on card layout, typography and spacing.
+
+Left as-is or known differences:
+- Source NEW tag is a red burst icon; clone uses a clip-path star (close, not identical).
+- Source hero copy is baked into the photos; clone uses live text overlaid on the art.
+- Source mobile store labels have short decorative dashes above and below; clone omits them.
+- Source's stacked utility links and the source's exact mobile nav are not reproduced (mobile nav is the same collapsed list).
+- Source's grey footer accreditation logos are replaced with neutral badge tiles (by design).
+- Source reveal animations (wow.js fadeIn) are approximated with an IntersectionObserver fade-up.
+
 ## Known gaps
 - Scroll-reveal timing and the exact slider easing are approximated.
 - Original store section is taller and uses real product photography; the clone uses a 5-tile mosaic instead.

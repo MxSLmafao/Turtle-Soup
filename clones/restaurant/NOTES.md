@@ -65,3 +65,32 @@ Fallback tuning: width of a 100px sample string was 4986.9px in DinNext (source)
 Gaps: the source mobile menu is an Elementor popup that did not expose its text to the render, so its nav typography
 was not measured. The clone keeps 26px / 30px in the mobile drawer. The source logo is an image and the clone wordmark
 is typeset; neither is a text role.
+
+## Visual diff
+
+Round 1 comparison, original vs clone (1440 and 390, full page and hero, footer cropped separately).
+
+Discrepancies found:
+- Hero photo (1440 and 390): original is a bright, warm photo with sharp detail. Clone is a dark drawn stand-in, which
+  reads flatter. Expected; addressed in 7b with generated photos.
+- Hero shade (1440): clone's top and bottom gradient dims the whole hero. Original has no overlay. Fix: remove the shade.
+- Nav (1440): clone shows dropdown carets after "About" and "Our Brands & Venues". The source render shows none on
+  desktop, which pushes the clone nav about 20px wider. Fix: hide carets at 768px and up.
+- Mobile hamburger (390): original is a heavier three-bar glyph. Clone bars are thinner. Fix: 22px wide, 3px bars.
+- Mobile footer (390): clone footer is 152px tall against 138px in the source, and its copy starts 9px lower.
+  Fix: reduce top padding, gap and bottom padding.
+- Logo (both): original is an outlined stacked wordmark. Clone is a filled Bebas wordmark. Intended placeholder; kept.
+- Footer copy and social icons (both): size and position match within a few pixels. Copy wording differs (intended).
+- Header height, nav baseline, footer height at 1440 (70px): match.
+
+Round 2 comparison (after the round 1 fixes and the generated photos in 7b):
+- Hero photo, 1440: subject differs (whole roast bird on coals, source shows a duck piece on coals, left of centre).
+  Intended, same slot, same crop logic. Generated photo is 1024 px square and is cover-cropped to 16:10, so it is
+  slightly soft at 1440 wide.
+- Hero photo, 390: now the same kind of subject (short rib on a plate, oven glow above). The source plate sits
+  lower-left and fills the width. Clone plate is slightly smaller and centred. Acceptable.
+- Nav (1440): carets are gone at desktop width. Nav spans now match the source within about 8 px.
+- Hamburger (390): heavier three-bar glyph now matches the source's visual weight.
+- Mobile footer (390): height now 982 px, same as the source. Icons and copy sit within 2 px.
+- Remaining intentional differences: placeholder brand (logo, copy, names), and social icons drawn in SVG.
+- Full-page captures of the hero look dimmed at 1440. Viewport captures are correct. This is a capture artifact.

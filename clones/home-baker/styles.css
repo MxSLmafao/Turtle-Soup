@@ -731,3 +731,64 @@ button { font: inherit; }
   .footer-bottom { font-size: 11px; letter-spacing: -0.375px; }
   .footer-brand .logo { font-size: 24px; }
 }
+
+/* ==========================================================
+   Visual-diff round 1 (matched to source screenshots)
+   ========================================================== */
+.hero { min-height: 441px; }
+.hero-copy { padding: 0; }
+.hero-art { height: 441px; min-height: 441px; }
+.hero-svg { min-height: 441px; }
+.btn-dark { text-transform: uppercase; }
+.ingredients .center { text-align: left; }
+.locations { width: calc(100% - 30px); }
+.loc-row { grid-template-columns: repeat(5, 1fr); gap: 31px; }
+.loc-img { aspect-ratio: 216 / 200; }
+.newsletter { padding: 84px 0 82px; }
+.newsletter > p { max-width: 440px; }
+.news-form { max-width: 400px; }
+.btn-sub {
+  background: linear-gradient(90deg, #008ccc 5%, #00afff);
+  border: 2px solid #000;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-sub:hover { box-shadow: 0 6px 14px rgba(0, 140, 204, .3); }
+.site-footer { padding-top: 52px; }
+.footer-top { padding-bottom: 40px; }
+.footer-bottom { padding-top: 18px; }
+.cart-count { display: none; }
+.social { width: 100%; max-width: none; padding: 18px 0; }
+.social-title { margin-bottom: 14px; }
+.social-grid { display: flex; gap: 9px; width: 100%; padding-left: calc(50% - 598px); overflow-x: auto; scrollbar-width: none; }
+.social-grid::-webkit-scrollbar { display: none; }
+.social-grid > div { flex: 0 0 176px; }
+
+@media (max-width: 900px) {
+  .locations { width: calc(100% - 30px); }
+  .loc-row { display: grid; grid-template-columns: 1fr; gap: 20px; overflow: visible; margin: 0; padding: 0; scroll-snap-type: none; }
+  .loc-card { flex: none; padding: 20px; }
+  .loc-img { aspect-ratio: 2 / 1; }
+  .social { width: 100%; }
+  .social-grid { padding-left: 15px; gap: 9px; }
+  .social-grid > div { flex: 0 0 116px; }
+}
+.locations { padding: 28px 0 40px; }
+
+/* Visual-diff round 2 (mobile) */
+@media (max-width: 900px) {
+  .story { display: flex; flex-direction: column; }
+  .story-copy { display: contents; }
+  .story-copy .eyebrow { order: 1; }
+  .story-copy h2 { order: 2; }
+  .story-media { order: 3; }
+  .story-copy p { order: 4; }
+  .story-copy .btn { order: 5; }
+  .news-form { flex-direction: row; }
+  .news-form input { flex: 1; min-width: 0; }
+  .btn-sub { width: auto; }
+}
+@media (max-width: 900px) {
+  .footer-bottom { align-items: center; text-align: center; }
+  .pay { justify-content: center; flex-wrap: wrap; }
+}

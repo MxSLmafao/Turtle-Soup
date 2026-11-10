@@ -16,6 +16,7 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<a class="promo-round" href="#" aria-label="Reserve"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/></svg></a>
 <div class="promo-bar"><a href="#visit">Book a tasting flight at Driftwood</a></div>
 
 <header class="site-header" id="top">
@@ -82,6 +83,8 @@
       <rect x="1350" y="205" width="150" height="145" rx="10" fill="url(#can3)"/>
     </g>
   </svg>
+  <button class="hero-arrow prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
+  <button class="hero-arrow next" aria-label="Next slide"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
   <div class="hero-chip" aria-hidden="true"><span>Book<br>now</span></div>
 </section>
 
@@ -157,18 +160,23 @@
 
 <!-- INSTAGRAM GRID (drawn tiles, no photos) -->
 <section class="social" aria-labelledby="social-title">
+  <div class="badges" aria-hidden="true">
+    <svg class="badge-1" viewBox="0 0 80 110"><path d="M4 4h72v70L40 104 4 74z" fill="#c8302a"/><path d="M9 9h62v62L40 97 9 71z" fill="#ffffff"/><text x="40" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#c8302a">WORKPLACE</text><text x="40" y="50" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#333">Certified</text><rect x="26" y="62" width="28" height="10" fill="#c8302a"/></svg>
+    <svg class="badge-2" viewBox="0 0 140 140"><circle cx="70" cy="66" r="52" fill="#ffffff" stroke="#2a6fb7" stroke-width="5"/><path d="M28 92 q42 -28 84 -6" fill="none" stroke="#2a6fb7" stroke-width="7" stroke-linecap="round"/><text x="70" y="50" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#2a6fb7">AWARD</text><text x="70" y="128" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="12" fill="#333">Seal Edition</text></svg>
+    <svg class="badge-3" viewBox="0 0 230 60"><rect x="2" y="2" width="226" height="56" fill="#ffffff" stroke="#b58a3c" stroke-width="2"/><text x="14" y="30" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#b58a3c">IMPACT</text><text x="106" y="30" font-family="Arial,sans-serif" font-size="11" fill="#333">GRANT</text><rect x="14" y="38" width="190" height="14" fill="#0f1733"/><text x="109" y="49" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#ffffff">PARTNER PROGRAMME</text></svg>
+  </div>
   <h2 id="social-title">Follow us on social</h2>
   <div class="social-grid">
     <a class="tile t1" href="#" aria-label="Post 1"><span>Golden hour</span></a>
-    <a class="tile t2" href="#" aria-label="Post 2"><span>From tank to tap</span></a>
+    <a class="tile t2" href="#" aria-label="Post 2"><i class="ico ico-multi"></i><span>From tank to tap</span></a>
     <a class="tile t3" href="#" aria-label="Post 3"><span>Smoky ribs</span></a>
-    <a class="tile t4" href="#" aria-label="Post 4"><span>Pour of the week</span></a>
-    <a class="tile t5" href="#" aria-label="Post 5"><span>Grill night</span></a>
-    <a class="tile t6" href="#" aria-label="Post 6"><span>New year pour</span></a>
-    <a class="tile t7" href="#" aria-label="Post 7"><span>Festival stall</span></a>
+    <a class="tile t4" href="#" aria-label="Post 4"><i class="ico ico-multi"></i><span>Pour of the week</span></a>
+    <a class="tile t5" href="#" aria-label="Post 5"><i class="ico ico-multi"></i><span>Grill night</span></a>
+    <a class="tile t6" href="#" aria-label="Post 6"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>New year pour</span></a>
+    <a class="tile t7" href="#" aria-label="Post 7"><i class="ico ico-play"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="rgba(0,0,0,.35)"/><path d="M24 18l18 12-18 12z" fill="#fff"/></svg></i><span>Festival stall</span></a>
     <a class="tile t8" href="#" aria-label="Post 8"><span>Fresh cans</span></a>
   </div>
-  <a class="follow-btn" href="#">Follow us on Instagram</a>
+  <a class="follow-btn" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/></svg>Follow us on Instagram</a>
 </section>
 
 <!-- NEWSLETTER -->

@@ -81,3 +81,30 @@ stack, because both are free. No font files were downloaded or copied from the s
 
 Roles without a source text equivalent: the announcement kicker and the calorie roundel label. These
 use the clone's own design values and are not part of the source's type scale.
+
+## Visual diff
+
+Compared fresh full-page and per-section shots of the original (1440 and 390) with the clone. Round 1 and
+round 2 fixes are applied. Items still open are listed last.
+
+Fixed:
+- Announcement strip: original is a tall app-launch banner (about 128px desktop, about 33px phone). The clone now matches heights with a display headline and store badges (desktop), and a thin strip on phone.
+- Container: original content width is 1184px (128px side inset at 1440). Clone --max changed from 1280 to 1184. Hero text now sits at a 40px left inset, as in the original.
+- Hero: H1 now two lines at 60px. Hero height 900px (matches original). Phone hero text is centred and CTAs are centred, auto-width, as in the original. Added a neutral circular badge at bottom-left, as in the original's certification badge slot. Added the original's five-label layout.
+- Option cards: four equal columns with 16px gaps, 284px wide, as in the original. Header height 192px. Featured card lifted 50px with its "most popular" tag inside the top of the card. CTA radius reduced to 6px.
+- Intro-to-options spacing reduced to match the original section (1102px combined in original, 1064px in clone).
+- Popular: grid 1248px wide (4 columns of about 300px), 8px card radius, 4px chip radius. Calorie roundel changed to a double-ring stamp. Phone grid is two columns.
+- Why: items no longer forced to 300px min-height. Description colour lightened to match the original's pale grey.
+- Dine banner: card radius 6px and height closer to 270px (original section height).
+- Reviews: 340px heading column plus three cards, 14px stars, 8px radius, as in the original.
+- Enquiry band: padding 48px to match the original band height (160px).
+- Footer: 120px side inset and 300px logo column, as in the original's column positions.
+- Sign-in button radius 4px.
+
+Still open (for the record):
+- Photography: photo slots (hero bowls, four popular meal photos, dine-in background) still use drawn SVG and gradient stand-ins. Generation blocked by a model quota error (see report).
+- Option card headers in the original are full-bleed cartoon illustrations; the clone keeps simple drawn trays. These are illustrations, not photos, so they are not in scope for 7b.
+- Original hero collage fills the full right half edge to edge with food photos. The clone keeps an airier composition with drawn trays.
+- Original footer bottom uses colour logo images; the clone uses neutral drawn badge shapes of the same size.
+- Mobile: the original hero has a photo background behind the centred text; the clone uses a lilac gradient.
+- Hover effects and scroll reveals are approximated, not copied from the original's exact transitions.

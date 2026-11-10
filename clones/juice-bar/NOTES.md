@@ -53,3 +53,36 @@ Computed values matched to the source (desktop 1440 / mobile 390):
 
 Known gaps: the source footer link colour (olive on cocoa) is low-contrast; the clone uses a lighter tan for legibility.
 Mobile nav sizes are not measured because the source collapses its nav behind a menu at 390px.
+
+## Visual diff
+
+Pairs compared per section at 1440 and 390 (scratch composites, not in repo). Two compare-fix rounds.
+
+Round 1 discrepancies, now fixed:
+- Nav: source links are 16px Lato in plum with 24px line-height; clone was 20px black. Fixed.
+- Hero headline: source is one running line that bleeds off both edges; clone stacked two lines over the bowls. Now one centred cropped line at 1440 and 390, as on the source.
+- Tiles: source gutter is 12px with 56px page margins, tiles are 4:5 with ~20px italic labels; clone had 30px gutter, 400/470 tiles and 26px labels. Fixed.
+- Social: source tiles are 2:3 with a 20px gap, handle "@" overlaid on the first tile, and a bare white play triangle. Clone was 9:16 with a circle play button and handle above the grid. Fixed.
+- Mobile hero: headline stacked over the photo; now single cropped line as on the source.
+
+Round 2 checked: pairs match in section order and height apart from copy and photos.
+
+Left as-is (deliberate or minor):
+- Hero bowls and tile art use generated photos for three slots; the other five photo slots still use drawn art (see Generated photography).
+- Marquee text is a straight rotated band, not the source's wavy baseline.
+- Mobile nav collapses behind a menu (source does too); its size is not compared.
+- Footer link colour is lighter than the source's olive for legibility.
+
+## Generated photography
+
+| Slot | Status |
+|---|---|
+| Hero (acai bowls) | Generated: img/hero-acai-bowls.jpg |
+| Join Us tile (two cafe workers) | Generated: img/tile-cafe-team.jpg |
+| Our Menu tile (smoothies) | Generated: img/tile-smoothies.jpg |
+| Our Acai tile (sorbet close-up) | Drawn art (generator quota exhausted) |
+| Our Base tile | Drawn art (no source photo; decorative) |
+| Social tiles 1–4 | Drawn art (generator quota exhausted) |
+
+Generator quota was exhausted after three images; the reset was about 2h43m away, so the remaining five slots keep their drawn art.
+img/ total size: about 360 KB (three JPEGs, quality 80, 900–2000px wide).

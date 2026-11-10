@@ -67,3 +67,30 @@ Weights loaded: Alata 400 (Google only ships regular, so the source's 500 headin
 
 Not verified against the source at 1440px: the trust strip caption (14.88/22.32 is an estimate; 390px measured 14/21).
 Placeholder logo wordmark uses Alata, so the source's logo is not reproduced.
+
+## Visual diff
+
+Compared against fresh captures of the source and the clone at 1440px and 390px (after scrolling to trigger lazy images). Two compare-fix rounds were run.
+
+Fixed in round 1:
+- Intro: collage staggered in four columns and overflowing the card bottom, as in the source. Heading narrowed to wrap onto two lines.
+- Chef carousel: cards top-aligned at 350x400 (were alternating offsets).
+- Reviews: side review cards now have the light grey box (#f8f9fa); centre card white.
+- Menus: tiles 374px wide with 20px gap. Mosaic moved to absolutely positioned tiles with the custom-menu card overlapping, as in the source.
+- About: stat tiles in the source's two-column staggered grid, with a photo tile at the right. Stacked on mobile.
+- Partners: plain placeholder wordmarks in a five-column grid, no boxes.
+- Destinations: no top rules above items.
+- Footer: neutral payment-badge placeholders in place of payment marks.
+
+Left as is:
+- Hero mosaic column heights and offsets are approximate.
+- Photo slots still use drawn art (see 7b status below).
+- Menu section heading is shorter (copy), so the mosaic sits higher than in the source.
+- Mobile About: the source stacks the photo below the stats; the clone's photo tile is a tall drawn panel.
+- Mobile intro: the source uses a single-column collage with uneven heights; the clone uses a two-column grid.
+- Trust strip uses a placeholder review badge instead of the source's logo.
+- Header logo is a placeholder monogram wordmark.
+
+## Generated photography status
+
+The Gemini image tool (`mcp__Geminimage__generate_image`) returned a quota-exhausted error (429, resets in about 2h40m). No photos were generated and `img/` was not created. All photo slots keep the drawn gradient and SVG art, at the same sizes and aspect ratios as the source. Regenerate once the quota resets.

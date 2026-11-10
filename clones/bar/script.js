@@ -42,21 +42,4 @@
     });
   }
 
-  // Light reveal for footer blocks, only when supported
-  var blocks = document.querySelectorAll('.footer-main .contact-block, .footer-main .social-col, .footer-main .group-links');
-  if ('IntersectionObserver' in window && blocks.length) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          en.target.classList.add('in');
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    blocks.forEach(function (el, i) {
-      el.classList.add('reveal');
-      el.style.transitionDelay = (i * 80) + 'ms';
-      io.observe(el);
-    });
-  }
 })();

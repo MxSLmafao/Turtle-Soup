@@ -91,6 +91,9 @@
 <!-- Header -->
 <header class="site-header" id="siteHeader">
   <nav class="site-nav" aria-label="Primary">
+    <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
     <ul class="nav-left">
       <li><a href="#shop">Shop</a></li>
       <li><a href="#story">About</a></li>
@@ -109,11 +112,8 @@
     </a>
     <div class="nav-right">
       <a href="#account" class="icon-btn" aria-label="Account"><svg><use href="#i-user"/></svg></a>
-      <button class="icon-btn" type="button" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+      <button class="icon-btn hide-m" type="button" aria-label="Search"><svg><use href="#i-search"/></svg></button>
       <a href="#cart" class="icon-btn" aria-label="Cart"><svg><use href="#i-bag"/></svg></a>
-      <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span>
-      </button>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu" hidden>
@@ -190,6 +190,7 @@
           <h3>Pale Jasmine Cloud</h3>
           <p>Green tea and jasmine blossom, lightly whipped.</p>
           <span class="price">$18.50</span>
+          <button class="atc" type="button">Add to cart</button>
         </div>
       </article>
       <article class="product-card">
@@ -201,6 +202,7 @@
           <h3>Midnight Hazel Cocoa</h3>
           <p>Toasted hazelnuts folded into dark cocoa couverture.</p>
           <span class="price">$21.50</span>
+          <button class="atc" type="button">Add to cart</button>
         </div>
       </article>
       <article class="product-card">
@@ -212,6 +214,7 @@
           <h3>Lychee Rose Ripple</h3>
           <p>Ripe lychee with a clean rose finish and raspberry notes.</p>
           <span class="price">$18.50</span>
+          <button class="atc" type="button">Add to cart</button>
         </div>
       </article>
       <article class="product-card">
@@ -223,9 +226,11 @@
           <h3>Sicilian Pistachio</h3>
           <p>Roasted pistachio paste from a single estate grove.</p>
           <span class="price">$21.50</span>
+          <button class="atc" type="button">Add to cart</button>
         </div>
       </article>
     </div>
+    <div class="scroll-bar" aria-hidden="true"><span></span></div>
   </section>
 
   <!-- Awards -->
@@ -247,6 +252,10 @@
         <svg viewBox="0 0 120 120"><use href="#seal"/></svg>
       </div>
     </div>
+    <blockquote class="quote reveal">
+      <p>&ldquo;A bright, inventive range of botanical scoops, with a clean finish and generous texture.&rdquo;</p>
+      <cite>&ndash; Sample Review Panel</cite>
+    </blockquote>
   </section>
 
   <!-- Our approach -->
@@ -254,16 +263,10 @@
     <h2 class="eyebrow">Our approach</h2>
     <span class="rule" aria-hidden="true"></span>
     <div class="approach-row reveal" id="approach">
-      <figure class="approach-card c1"><div class="art art-taupe"><svg viewBox="0 0 240 170"><use href="#tub"/></svg></div></figure>
-      <figure class="approach-card c2"><div class="art art-sand"><svg viewBox="0 0 120 160"><use href="#sprig"/></svg></div></figure>
-      <figure class="approach-card c3"><div class="art art-blush"><span class="petals" aria-hidden="true"></span></div></figure>
-      <figure class="approach-card c4"><div class="art art-cream"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div></figure>
-    </div>
-    <div class="pillars reveal">
-      <p>We begin with a list of places we want to visit. Each flavour starts as a small trip.</p>
-      <p>Fruit, flowers, pods and herbs are sourced from growers we know by name.</p>
-      <p>Herbs and spices are steeped slowly, then strained, so each base carries its own character.</p>
-      <p>Our kitchen draws on the regional markets around us for every seasonal idea.</p>
+      <figure class="approach-card c1"><div class="art art-taupe"><svg viewBox="0 0 240 170"><use href="#tub"/></svg></div><figcaption class="approach-cap">We begin with a list of places we want to visit. Each flavour starts as a small trip.</figcaption></figure>
+      <figure class="approach-card c2"><div class="art art-sand"><svg viewBox="0 0 120 160"><use href="#sprig"/></svg></div><figcaption class="approach-cap">Fruit, flowers, pods and herbs are sourced from growers we know by name.</figcaption></figure>
+      <figure class="approach-card c3"><div class="art art-blush"><span class="petals" aria-hidden="true"></span></div><figcaption class="approach-cap">Herbs and spices are steeped slowly, then strained, so each base carries its own character.</figcaption></figure>
+      <figure class="approach-card c4"><div class="art art-cream"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div><figcaption class="approach-cap">Our kitchen draws on the regional markets around us for every seasonal idea.</figcaption></figure>
     </div>
   </section>
 
@@ -307,6 +310,8 @@
 
   <!-- Social gallery -->
   <section class="block social" aria-label="Community">
+    <h2 class="eyebrow">Our community</h2>
+    <p class="community-sub">Follow us on Instagram <a href="#ig">@sample.fernhollow</a></p>
     <div class="social-row reveal" id="social">
       <a href="#social" class="social-card"><div class="art g1"><svg viewBox="0 0 160 140"><use href="#scoop"/></svg></div><span class="handle">@sample.guest01</span></a>
       <a href="#social" class="social-card"><div class="art g2"><svg viewBox="0 0 240 170"><use href="#tub"/></svg></div><span class="handle">@sample.guest02</span></a>
@@ -366,7 +371,7 @@
     </form>
   </div>
   <div class="subfooter">
-    <p>&copy; 2026 Fernhollow Gelato Co. Sample design study.</p>
+    <p>&copy; 2026 Fernhollow Gelato Co.</p>
   </div>
 </footer>
 

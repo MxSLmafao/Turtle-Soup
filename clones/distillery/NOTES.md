@@ -79,3 +79,24 @@ Clone loads: `Bricolage+Grotesque:wght@700` and `Montserrat:wght@400;500;700` (e
 Not a text role: the source logo is an image, so the clone's wordmark is a placeholder. It uses the loaded weights only (Bricolage 700 for the name, Montserrat 500 for the sub-line). It does not reproduce the source logo.
 
 Name-first font stacks: not needed. Both families are free, so each stack is the exact family name followed by `sans-serif`.
+
+## Visual diff
+
+Compared fresh captures of the original and clone at 1440px and 390px (full page and per section).
+
+Round 1 discrepancies:
+- Hero: source uses photography of bottles on a bar; clone uses drawn bottles and a drawn still. Text block and pagination positions match. (Photo slot, see below.)
+- Hero badge: source badge is a photo-free award roundel at the left edge; clone has a neutral gold roundel of the same size and position. Kept as a placeholder badge, not a copy of the award mark.
+- About: source headline wraps to three lines at desktop width; clone wrapped to two because the copy is shorter. Heading max-width raised to 750px to match the source column.
+- Experiences: source section lead sits on one line at desktop; clone wrapped to two. Lead max-width raised to 780px.
+- Stamp cards: source image is 268px wide with about 31px side padding and a 282px tall image; clone had 14px padding and a 262px image. Fixed to 31px padding and 282px image.
+- Stamp labels: source labels sit tight under the image; clone had extra space. Fixed.
+- Footer: source has an amber rule above the footer and an amber divider line above the copyright; clone's divider was cream at 20% opacity. Divider now amber.
+- Footer logo: source is an emblem image, clone is a placeholder monogram. Kept as placeholder (logo, not a photo).
+- Band (cocktail photo): source is a photograph; clone is drawn glasses. Photo slot, see below.
+- Social tiles: source are six photographs; clone are drawn tiles at the same size and gap. Photo slots, see below.
+- Gins slider, marquees, about sprigs, announcement bar, header: matched in size, position and colour.
+
+Round 2: rebuilt the pairs after the fixes above. Heading wraps, stamp card geometry and footer rules now match. Remaining differences are the photo slots and the logo placeholder listed above.
+
+Photography: not generated in this pass. The image generator returned a quota error (quota resets after about 2h44m), so every photo slot keeps its drawn art.

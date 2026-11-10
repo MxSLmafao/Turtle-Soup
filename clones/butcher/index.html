@@ -7,7 +7,7 @@
   Placeholder brand: "Hollis & Crane Butchery" (fictional).
   Sample content only: all products, prices, copy, and images are invented.
   Design study of the "Butchers & delis" category (homepage layout, type, colour, motion).
-  No original imagery, logos, fonts files, or copy are used.
+  No original imagery, logos, font files, or copy are used.
 -->
 <title>Hollis &amp; Crane Butchery | Sample Homepage</title>
 <meta name="description" content="Sample butcher and deli homepage design study.">
@@ -44,6 +44,25 @@
 
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
+    <!-- Compact mobile bar (hidden on desktop) -->
+    <div class="m-bar">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="m-logo" href="#" aria-label="Hollis &amp; Crane Butchery home">
+        <svg viewBox="0 0 60 60" aria-hidden="true">
+          <path d="M8 46 L20 14 L26 14 L14 46 Z" fill="#ed1b24"/>
+          <path d="M30 46 L42 14 L48 14 L36 46 Z" fill="#ed1b24"/>
+          <rect x="12" y="30" width="38" height="5" fill="#111"/>
+        </svg>
+        <span>Hollis &amp; Crane</span>
+      </a>
+      <div class="m-icons">
+        <button class="m-icon" type="button" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <a class="m-icon m-cart" href="#" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 10.2a1.5 1.5 0 001.5 1.2h8.6a1.5 1.5 0 001.5-1.1L21 8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg><span class="cart-count" id="cartCountM">0</span></a>
+      </div>
+    </div>
+
     <a class="logo" href="#" aria-label="Hollis &amp; Crane Butchery home">
       <svg class="logo-mark" viewBox="0 0 60 60" aria-hidden="true">
         <path d="M8 46 L20 14 L26 14 L14 46 Z" fill="#ed1b24"/>
@@ -53,9 +72,6 @@
       <span class="logo-text"><strong>Hollis &amp; Crane</strong><em>Butchery</em></span>
       <span class="logo-tag">Cut fresh, every day</span>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
     <nav class="main-nav" id="mainNav" aria-label="Primary">
       <ul>
         <li><a href="#">Shop</a></li>
@@ -72,10 +88,10 @@
 
 <main id="main">
 
-  <!-- Hero slider -->
+  <!-- Hero slider: centred slide with neighbours peeking in -->
   <section class="hero" aria-label="Featured">
     <div class="slider" id="slider">
-      <div class="slides">
+      <div class="slides" id="slides">
 
         <article class="slide slide-a is-active">
           <div class="slide-art" aria-hidden="true">
@@ -163,13 +179,13 @@
               <circle cx="150" cy="95" r="34" fill="#f8e6c9" stroke="#c28d55" stroke-width="3"/>
               <path d="M130 95h40M150 78v34" stroke="#c28d55" stroke-width="4" stroke-linecap="round"/>
             </svg>
-            <span class="badge-new"><i></i>New</span>
           </div>
           <h3 class="product-title">Hearth Smoked Pancetta Roll</h3>
+          <p class="new-tag"><i aria-hidden="true"></i>New</p>
           <p class="price">$24.50</p>
           <div class="product-opts">
-            <label>Units <select><option>1</option><option>2</option><option>3</option></select></label>
-            <label>Size <select><option>200g</option><option>400g</option></select></label>
+            <label>Number of Units <select><option>1</option><option>2</option><option>3</option></select></label>
+            <label>Approx. Unit Size <select><option>200g</option><option>400g</option></select></label>
           </div>
           <button class="btn-cart" data-add>Add to cart</button>
         </li>
@@ -183,13 +199,13 @@
               <rect x="136" y="50" width="28" height="12" fill="#2b2b2b"/>
               <rect x="128" y="150" width="44" height="54" fill="#f7f4ee"/>
             </svg>
-            <span class="badge-new"><i></i>New</span>
           </div>
           <h3 class="product-title">Grange Reserve Red, Single Vineyard</h3>
+          <p class="new-tag"><i aria-hidden="true"></i>New</p>
           <p class="price">$33.00</p>
           <div class="product-opts">
-            <label>Units <select><option>1</option><option>2</option><option>6</option></select></label>
-            <label>Size <select><option>750ml</option><option>1.5L</option></select></label>
+            <label>Number of Units <select><option>1</option><option>2</option><option>6</option></select></label>
+            <label>Approx. Unit Size <select><option>750ml</option><option>1.5L</option></select></label>
           </div>
           <button class="btn-cart" data-add>Add to cart</button>
         </li>
@@ -203,13 +219,13 @@
               <g fill="#f5d6b8" opacity=".9"><circle cx="105" cy="150" r="5"/><circle cx="150" cy="170" r="5"/><circle cx="190" cy="140" r="5"/><circle cx="220" cy="180" r="5"/></g>
               <circle cx="230" cy="60" r="20" fill="#e8e8e8" opacity=".5"/>
             </svg>
-            <span class="badge-new"><i></i>New</span>
           </div>
           <h3 class="product-title">Cured Ham, Hand-Sliced</h3>
-          <p class="price">$7.80<span>/100g</span></p>
+          <p class="new-tag"><i aria-hidden="true"></i>New</p>
+          <p class="price">$7.80<span>/100G</span></p>
           <div class="product-opts">
-            <label>Units <select><option>1</option><option>2</option></select></label>
-            <label>Size <select><option>100g</option><option>200g</option></select></label>
+            <label>Number of Units <select><option>1</option><option>2</option></select></label>
+            <label>Approx. Unit Size <select><option>100g</option><option>200g</option></select></label>
           </div>
           <button class="btn-cart" data-add>Add to cart</button>
         </li>
@@ -218,57 +234,65 @@
     </div>
   </section>
 
-  <!-- Store / counter tiles -->
+  <!-- Store / counter mosaic -->
   <section class="section store reveal" aria-labelledby="storeHead">
     <div class="wrap">
       <h2 class="section-head" id="storeHead">The counter</h2>
       <div class="tiles">
-        <a class="tile t-lg" href="#">
+        <a class="tile tile-wide" href="#">
           <div class="tile-art ta-1"></div>
-          <div class="tile-cap"><span>Fresh cuts</span></div>
+          <span class="tile-label">Fresh cuts</span>
         </a>
         <a class="tile" href="#">
           <div class="tile-art ta-2"></div>
-          <div class="tile-cap"><span>Charcuterie</span></div>
+          <span class="tile-label">Charcuterie</span>
         </a>
         <a class="tile" href="#">
           <div class="tile-art ta-3"></div>
-          <div class="tile-cap"><span>Cheese</span></div>
+          <span class="tile-label">Cheese</span>
         </a>
-        <a class="tile" href="#">
+        <a class="tile tile-wide" href="#">
           <div class="tile-art ta-4"></div>
-          <div class="tile-cap"><span>Ready meals</span></div>
+          <span class="tile-label">Ready meals</span>
         </a>
         <a class="tile" href="#">
           <div class="tile-art ta-5"></div>
-          <div class="tile-cap"><span>Bakery</span></div>
+          <span class="tile-label">Bakery</span>
+        </a>
+        <a class="tile" href="#">
+          <div class="tile-art ta-6"></div>
+          <span class="tile-label">Sausages</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Video strip -->
+  <!-- Video carousel -->
   <section class="section videos reveal" aria-labelledby="vidHead">
     <div class="wrap">
       <h2 class="section-head" id="vidHead">From the block</h2>
-      <ul class="video-row">
-        <li><a href="#" class="video-card">
-          <span class="thumb v1"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-          <span class="v-title">How we break down a whole lamb</span>
-        </a></li>
-        <li><a href="#" class="video-card">
-          <span class="thumb v2"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-          <span class="v-title">Building a board for six people</span>
-        </a></li>
-        <li><a href="#" class="video-card">
-          <span class="thumb v3"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-          <span class="v-title">Dry-aging, explained in three minutes</span>
-        </a></li>
-        <li><a href="#" class="video-card">
-          <span class="thumb v4"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-          <span class="v-title">Sunday roast, the butcher's way</span>
-        </a></li>
-      </ul>
+      <div class="video-wrap">
+        <button class="v-arrow v-prev" id="vPrev" aria-label="Previous video"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        <ul class="video-row" id="videoRow">
+          <li><a href="#" class="video-card">
+            <span class="thumb v1"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+            <span class="v-title">How we break down a whole lamb</span>
+          </a></li>
+          <li><a href="#" class="video-card">
+            <span class="thumb v2"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+            <span class="v-title">Building a board for six people</span>
+          </a></li>
+          <li><a href="#" class="video-card">
+            <span class="thumb v3"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+            <span class="v-title">Dry-aging, explained in three minutes</span>
+          </a></li>
+          <li><a href="#" class="video-card">
+            <span class="thumb v4"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+            <span class="v-title">Sunday roast, the butcher's way</span>
+          </a></li>
+        </ul>
+        <button class="v-arrow v-next" id="vNext" aria-label="Next video"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      </div>
     </div>
   </section>
 

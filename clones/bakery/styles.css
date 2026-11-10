@@ -794,7 +794,8 @@ a:focus-visible {
 
 /* ---------- Responsive: <= 1200px ---------- */
 @media (max-width: 1200px) {
-  .product__grid { grid-template-columns: 1fr; }
+  .product__grid { grid-template-columns: minmax(0, 1fr); }
+  .product__media { min-width: 0; }
   .product__media { width: 100%; height: auto; aspect-ratio: 1 / 1; }
   .product__copy { max-width: 620px; }
   .app__stage { grid-template-columns: 1fr; justify-items: center; gap: 2.5rem; min-height: 0; }
@@ -1017,6 +1018,91 @@ body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-we
 /* letter-spacing: source uses normal everywhere */
 .announce__track, .nav__list, .cart-link, .btn, .h2, .h1, .display, .footer-nav,
 .proc-card__title, .newsletter__title, .section__sub, .perk, .reviews__quote p, .app__stores { letter-spacing: normal; }
+
+
+/* ============================================================
+   Visual-diff round 1 (against the source at 1440 and 390)
+   ============================================================ */
+.stores { text-align: center; margin-bottom: 3rem; }
+.stores .app__stores { margin-top: 0; }
+.store-pills { display: flex; justify-content: center; gap: 12px; margin-top: 1rem; }
+.store-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 44px; padding: 0 18px;
+  border-radius: 8px; background: #000; color: #fff;
+  font-family: var(--f-body); font-size: 13px; font-weight: 500; line-height: 1;
+}
+.store-pill .ico { display: inline-block; width: 14px; height: 14px; background: #fff; }
+.store-pill .ico-tri { clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.store-pill .ico-dot { border-radius: 50%; }
+
+/* hero stamp: two lines, closer to the source headline block */
+.stamp--hero { width: 100%; }
+.hero__copy { width: 44%; }
+.stamp__title { font-size: clamp(2rem, 3.7vw, 3.6rem); }
+
+/* process rail: 354 | 94 | 544 | 94 | 354 fills 1440, edges bleed as in source */
+.process__rail { padding: 0; scroll-padding: 0; gap: 94px; }
+
+/* footer columns offsets as in source */
+@media (min-width: 990px) {
+  .site-footer__inner { grid-template-columns: 194px 200px 60px 1fr; }
+}
+
+/* pairing cutouts a little larger */
+.pairing__cut svg { width: 380px; }
+.pairing__cut--right svg { width: 380px; }
+
+@media (max-width: 989px) {
+  .process__rail { gap: 1.25rem; }
+  .stores { margin-bottom: 2rem; }
+}
+
+@media (max-width: 640px) {
+  /* making: small cards with 210px centre photo, as in source */
+  .process__rail { gap: 42px; }
+  .proc-card--side, .proc-card--side .proc-card__art { width: 180px; }
+  .proc-card--side .proc-card__art { height: 170px; max-height: none; }
+  .proc-card--centre, .proc-card--centre .proc-card__art { width: 210px; max-width: none; }
+  .proc-card--centre .proc-card__art { height: 210px; max-height: none; }
+  .proc-card__title { font-size: 1.1rem; }
+  .proc-card__text { font-size: 16px; }
+
+  /* app: phone first, then one perks rail */
+  .app__stage { display: flex; flex-direction: column; gap: 2rem; }
+  .phone { order: 0; }
+  .app__perks--left { order: 1; }
+  .app__perks--right { order: 2; }
+  .app__perks { display: flex; flex-direction: row; gap: 16px; width: 100%; max-width: none; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 4px; scrollbar-width: none; }
+  .app__perks::-webkit-scrollbar { display: none; }
+  .app__perks .perk { flex: 0 0 260px; scroll-snap-align: start; }
+
+  .nowrap { white-space: normal; }
+
+  /* gallery cards on mobile */
+  .moment { width: 300px; }
+
+  /* footer: uppercase links as shown in source, wider gap between columns */
+  .footer-nav { text-transform: uppercase; }
+  .site-footer__inner { gap: 2rem 30px; }
+}
+
+
+/* ============================================================
+   Visual-diff round 2
+   ============================================================ */
+@media (min-width: 990px) {
+  .process { padding-left: 0; padding-right: 0; max-width: none; }
+}
+@media (max-width: 640px) {
+  .stamp--card { min-width: 0; padding: 0.9rem 1rem; }
+  .stamp--card::before { inset: 6px; }
+  .stamp__label { font-size: 0.7rem; letter-spacing: 0.08em; }
+  .stamp__big { font-size: 1.8rem; }
+  .stamp__small { font-size: 0.75rem; }
+  .phone { max-width: 280px; height: 430px; }
+  .phone__screen { padding: 22px 16px 0; }
+}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

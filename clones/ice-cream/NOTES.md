@@ -81,3 +81,29 @@ Clone sets `font-optical-sizing: none` so the variable DM Sans renders at its de
 same glyph cut as the source's static file.
 
 Licence status: DM Sans is free under the SIL Open Font License; no purchase needed.
+
+## Visual diff
+
+Two compare-fix rounds at 1440px and 390px (original vs clone, section by section, screenshots in
+the private vd-ice-cream scratch folder).
+
+Fixed in the rounds:
+- Hero: headline/CTA moved down to the source's vertical position (~y 200-320 at 1440); scrim moved under the text.
+- Approach: four-up row now bleeds to the page edges (cards 336px wide, 30px gap) with captions aligned to the card edge.
+- Boutiques: row bleeds to the source's 16px inset so labels align at x=34.
+- Awards: added the press quote block that the source has under the badges.
+- Community: added "Our community" heading and the Instagram sub-line above the gallery.
+- Products: uniform neutral #e8e8e8 product backdrop (source studio shots); mobile add-to-cart buttons and a progress bar under the row.
+- Newsletter panel colour #8a8989 and join button #9a837b, as sampled from the source.
+- Press band height 82px.
+- Mobile header: menu on the left, no search icon, logo centred, bag at right.
+- Mobile approach: 2x2 grid with captions under each card; boutiques show two per row.
+- Mobile footer: newsletter panel first, then accordion groups (ABOUT US, NEED HELP?, CATERING, CAREERS).
+
+Discrepancies left:
+- Photography: every photo slot still uses drawn art (hero, product, approach, boutique and gallery images). Generation via the image tool was blocked (quota exhausted, reset in about 2h40m), so these are open.
+- Hero slides: source shows a photographic hero; the clone shows a gradient with a drawn tub.
+- Press band: source shows press logos; clone uses typeset names (placeholder by design).
+- Awards: source shows logos (not reproduced); clone shows neutral placeholder badges.
+- Desktop nav logo is a smaller placeholder wordmark (source uses a larger arc mark).
+- Footer link size at 390 is still an estimate (see Fonts).
