@@ -1,0 +1,495 @@
+<!doctype html>
+<!--
+  PLACEHOLDER DESIGN STUDY - category: Cafés & coffee shops
+  Brand "Tidewater Coffee Roasters" is an invented placeholder. All copy, product names,
+  addresses, prices and people are sample content. Imagery is drawn in CSS/SVG (no photos,
+  logos or font files taken from any live site). Layout, type scale, palette and section
+  order are a design study of a specialty coffee roaster homepage.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidewater Coffee Roasters - Specialty coffee, roastery and cafés</title>
+  <meta name="description" content="Sample homepage: specialty coffee roastery, cafés and barista academy (placeholder brand).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <p>Fresh coffee, on repeat. Save 10% with a subscription.</p>
+</div>
+
+<!-- Header -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <nav class="header-nav header-nav--left" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#cafes">Cafés</a>
+      <a href="#academy">Academy</a>
+      <a href="#wholesale">Wholesale</a>
+    </nav>
+
+    <a class="logo" href="#top" aria-label="Tidewater Coffee Roasters home">
+      <span class="logo-mark">Tidewater</span>
+      <span class="logo-sub">Coffee Roasters</span>
+    </a>
+
+    <div class="header-tools">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      </button>
+      <button class="icon-btn" type="button" aria-label="Account">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+      </button>
+      <button class="icon-btn" type="button" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16l-1 13H5L4 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+      </button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu" id="menuBtn">
+        <span class="menu-label">Menu</span>
+        <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mega" id="mobileMenu" hidden>
+    <nav aria-label="Full menu">
+      <a href="#shop">Shop</a>
+      <a href="#cafes">Cafés</a>
+      <a href="#academy">Academy</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#journal">Journal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. Hero banner (video-style, art-directed gradient) -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="hero-art" aria-hidden="true">
+      <span class="hero-pour"></span>
+      <span class="hero-cup"></span>
+      <span class="hero-haze"></span>
+    </div>
+    <div class="hero-inner">
+      <p class="eyebrow eyebrow--light"><span class="arrow-glyph" aria-hidden="true"></span>Championing specialty coffee since 2013</p>
+      <h1 class="hero-title">Good coffee, grown with care and served with warmth</h1>
+    </div>
+    <p class="hero-lede">Our cafés, barista academy, roastery and wholesale teams share one goal: to make excellent coffee feel easy, friendly and worth lingering over.</p>
+  </section>
+
+  <div class="spacer spacer--sm" aria-hidden="true"></div>
+
+  <!-- 2. Feature carousel: image + panel -->
+  <section class="feature-carousel" aria-label="Featured origins">
+    <div class="fc-media" data-carousel>
+      <div class="slides">
+        <figure class="slide is-active art-cherries" aria-label="Illustration of ripe coffee cherries"></figure>
+        <figure class="slide art-beans" aria-label="Illustration of roasted beans"></figure>
+      </div>
+    </div>
+    <div class="fc-panel">
+      <div class="slides-text">
+        <div class="slide-text is-active">
+          <p class="eyebrow"><span class="arrow-glyph" aria-hidden="true"></span>Seasonal origins</p>
+          <h2 class="panel-title">A rotating line-up of single origins from partner farms</h2>
+          <p class="panel-body">Each season we pick a handful of lots that taste of their place. Our single origin programme tracks processing, altitude and the farmers behind every harvest.</p>
+          <a class="btn btn--outline" href="#shop">Shop origins <span class="btn-arrow" aria-hidden="true"></span></a>
+        </div>
+        <div class="slide-text">
+          <p class="eyebrow"><span class="arrow-glyph" aria-hidden="true"></span>Blends for every day</p>
+          <h2 class="panel-title">House blends built for milk, black and everything between</h2>
+          <p class="panel-body">Balanced, sweet and full-bodied. Our house blends are roasted weekly in small batches so every bag arrives tasting bright.</p>
+          <a class="btn btn--outline" href="#shop">Explore blends <span class="btn-arrow" aria-hidden="true"></span></a>
+        </div>
+      </div>
+      <div class="dots" role="tablist" aria-label="Slides">
+        <button type="button" class="dot is-active" aria-label="Slide 1" data-index="0"></button>
+        <button type="button" class="dot" aria-label="Slide 2" data-index="1"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer" aria-hidden="true"></div>
+
+  <!-- 3. Two-up service panels -->
+  <section class="duo" aria-label="Subscriptions and guidance">
+    <div class="duo-col">
+      <h2 class="duo-title">Brews on repeat</h2>
+      <p class="duo-sub">Let us handle the restocking so your favourite coffee is always fresh on the shelf.</p>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-head"><span class="step-no">Step 01</span><span class="step-text">Choose a blend or single origin</span></div>
+          <div class="step-art">
+            <svg viewBox="0 0 120 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="36" cy="30" rx="9" ry="12" transform="rotate(-25 36 30)"/><ellipse cx="62" cy="26" rx="9" ry="12" transform="rotate(20 62 26)"/><ellipse cx="50" cy="52" rx="9" ry="12" transform="rotate(-10 50 52)"/><ellipse cx="28" cy="66" rx="9" ry="12" transform="rotate(30 28 66)"/><ellipse cx="74" cy="64" rx="9" ry="12" transform="rotate(-35 74 64)"/></g></svg>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-head"><span class="step-no">Step 02</span><span class="step-text">Pick your grind and preferences</span></div>
+          <div class="step-art">
+            <svg viewBox="0 0 120 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M38 22h44l-2 66H40z"/><path d="M38 22q-6 0-6 8v0q0 8 6 8"/><rect x="48" y="44" width="24" height="20" rx="2"/><path d="M52 14h16"/></g></svg>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step-head"><span class="step-no">Step 03</span><span class="step-text">Set the delivery rhythm</span></div>
+          <div class="step-art">
+            <svg viewBox="0 0 120 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M30 30l30-12 30 12v40l-30 12-30-12z"/><path d="M30 30l30 12 30-12M60 42v40"/><path d="M50 56h20"/></g></svg>
+          </div>
+        </li>
+      </ol>
+      <div class="center-cta"><a class="btn btn--outline" href="#subscribe">Start a subscription <span class="btn-arrow" aria-hidden="true"></span></a></div>
+    </div>
+
+    <div class="duo-col">
+      <h2 class="duo-title">Need a guide?</h2>
+      <p class="duo-sub">Tell us what you enjoy and we will suggest a coffee that suits your taste and brewing kit.</p>
+      <div class="bag-row">
+        <div class="bag-card"><div class="bag-art"><svg viewBox="0 0 100 140" aria-hidden="true"><g fill="none" stroke="#2b2b28" stroke-width="1.3"><path d="M22 20h56l-4 110H26z"/><path d="M24 26h52"/><circle cx="50" cy="48" r="3"/></g></svg></div></div>
+        <div class="bag-card"><div class="bag-art"><svg viewBox="0 0 100 140" aria-hidden="true"><g fill="none" stroke="#2b2b28" stroke-width="1.3"><path d="M26 22h48l4 108H22z"/><path d="M28 30h44"/><rect x="38" y="60" width="24" height="34" rx="2"/></g></svg></div></div>
+        <div class="bag-card"><div class="bag-art"><svg viewBox="0 0 100 140" aria-hidden="true"><g fill="none" stroke="#2b2b28" stroke-width="1.3"><path d="M30 46h40l-6 58H36z"/><path d="M28 46h44"/><path d="M34 30v16M66 30v16"/><path d="M40 34h20v12H40z"/><path d="M36 104h28"/></g></svg></div></div>
+      </div>
+      <div class="center-cta"><a class="btn btn--outline" href="#guide">Get a recommendation <span class="btn-arrow" aria-hidden="true"></span></a></div>
+    </div>
+  </section>
+
+  <!-- 4. Shop grid -->
+  <section class="shop" id="shop" aria-labelledby="shopTitle">
+    <header class="section-head">
+      <h2 id="shopTitle" class="h2">Discover our products</h2>
+      <p class="section-sub">A wide selection of freshly roasted beans, brewing gear and a few things in between.</p>
+      <a class="btn btn--outline" href="#shop">Shop all products <span class="btn-arrow" aria-hidden="true"></span></a>
+    </header>
+
+    <div class="product-grid">
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Our coffee</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Freshly roasted coffee for home and office, roasted with the care it deserves.</p>
+        <div class="product-art art-roastery"></div>
+      </a>
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Capsules</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Compostable capsules that bring convenience and café-level flavour to your kitchen.</p>
+        <div class="product-art art-capsules"></div>
+      </a>
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Special release</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Micro-lots and high-scoring harvests, selected for cupping and released in small numbers.</p>
+        <div class="product-art art-cherries-deep"></div>
+      </a>
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Brew gear and accessories</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>A tidy selection of kettles, scales, grinders and filters for every level of enthusiast.</p>
+        <div class="product-art art-pourover"></div>
+      </a>
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Cups and mugs</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Hand-glazed stoneware made by a small studio, shaped to hold a warm drink just right.</p>
+        <div class="product-art art-mug"></div>
+      </a>
+      <a class="product-card reveal" href="#shop">
+        <div class="product-head"><h3>Herbal infusions</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Caffeine-free botanical blends from growers we visit each year, sourced with transparency.</p>
+        <div class="product-art art-herbs"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. At a glance: story + plan illustration + index -->
+  <section class="glance" aria-labelledby="glanceTitle">
+    <div class="glance-left">
+      <div>
+        <p class="eyebrow"><span class="arrow-glyph" aria-hidden="true"></span>Our story at a glance</p>
+        <h2 id="glanceTitle" class="h3">Every cup has a journey</h2>
+        <p class="body-muted">Good coffee does not need to be complicated. We keep things honest: sound sourcing, careful roasting and warm service, for everyone who walks through the door.</p>
+        <a class="btn btn--outline" href="#about">About us <span class="btn-arrow" aria-hidden="true"></span></a>
+      </div>
+      <ul class="index-list">
+        <li><a href="#farms"><span class="num">1</span>Farmers<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#mill"><span class="num">2</span>Millers<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#roastery"><span class="num">3</span>Roasters<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#wholesale"><span class="num">4</span>Wholesale<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#academy"><span class="num">5</span>Academy<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#cafes"><span class="num">6</span>Cafés<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#shop"><span class="num">7</span>Shop<span class="go" aria-hidden="true"></span></a></li>
+        <li><a href="#journal"><span class="num">8</span>Journal<span class="go" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <div class="glance-right">
+      <svg class="iso-art" viewBox="0 0 940 720" role="img" aria-label="Illustrated isometric plan of the roastery, barista room and cafe">
+  <defs>
+    <radialGradient id="domeG" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f6fbf3"/><stop offset="0.6" stop-color="#b9d3bb"/><stop offset="1" stop-color="#7fa484"/></radialGradient>
+  </defs>
+  <g>
+    <polygon points="898.7,381.0 470.0,628.5 470.0,643.4 898.7,395.9" fill="#b59d74" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="41.3,381.0 470.0,628.5 470.0,643.4 41.3,395.9" fill="#c9b48f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="470.0,133.5 898.7,381.0 470.0,628.5 41.3,381.0" fill="#ecdfc4" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="550.0,229.2 538.6,235.8 538.6,255.6 550.0,249.0" fill="#8c6026" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="527.2,229.2 538.6,235.8 538.6,255.6 527.2,249.0" fill="#9d6d2c" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="538.6,222.6 550.0,229.2 538.6,235.8 527.2,229.2" fill="#c58b3e" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="594.3,182.2 587.2,186.3 587.2,245.7 594.3,241.6" fill="#333331" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="580.0,182.2 587.2,186.3 587.2,245.7 580.0,241.6" fill="#2a2a29" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="587.2,178.0 594.3,182.2 587.2,186.3 580.0,182.2" fill="#3b3b39" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="681.5,202.8 590.0,255.6 590.0,334.8 681.5,282.0" fill="#c7c2b3" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="584.3,252.3 590.0,255.6 590.0,334.8 584.3,331.5" fill="#d3cfc2" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="675.8,199.5 681.5,202.8 590.0,255.6 584.3,252.3" fill="#e7e3d8" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="595.7,245.7 550.0,272.1 550.0,288.6 595.7,262.2" fill="#6e6e6a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="504.3,245.7 550.0,272.1 550.0,288.6 504.3,262.2" fill="#5d5d5a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="687.2,268.8 664.3,282.0 664.3,311.7 687.2,298.5" fill="#d4d4d4" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="641.5,268.8 664.3,282.0 664.3,311.7 641.5,298.5" fill="#e8e8e8" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="550.0,219.3 595.7,245.7 550.0,272.1 504.3,245.7" fill="#8c8c88" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="664.3,255.6 687.2,268.8 664.3,282.0 641.5,268.8" fill="#ffffff" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="795.8,268.8 790.1,272.1 790.1,351.3 795.8,348.0" fill="#c7c2b3" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="670.0,202.8 790.1,272.1 790.1,351.3 670.0,282.0" fill="#d3cfc2" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="675.8,199.5 795.8,268.8 790.1,272.1 670.0,202.8" fill="#e7e3d8" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="0.9"/>
+    <polygon points="615.7,263.8 547.2,303.4 547.2,356.2 615.7,316.6" fill="#383836" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="472.9,260.6 547.2,303.4 547.2,356.2 472.9,313.4" fill="#2c2c2b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="541.4,220.9 615.7,263.8 547.2,303.4 472.9,260.6" fill="#4a4a48" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="732.9,295.2 710.1,308.4 710.1,338.1 732.9,324.9" fill="#cdc8b9" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="687.2,295.2 710.1,308.4 710.1,338.1 687.2,324.9" fill="#ddd9cd" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="710.1,282.0 732.9,295.2 710.1,308.4 687.2,295.2" fill="#f5f2ea" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="315.7,337.4 252.8,373.7 252.8,377.0 315.7,340.7" fill="#7d2a24" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="189.9,337.4 252.8,373.7 252.8,377.0 189.9,340.7" fill="#8e3129" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="252.8,301.1 315.7,337.4 252.8,373.7 189.9,337.4" fill="#b9443a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="812.9,364.5 807.2,367.8 807.2,374.4 812.9,371.1" fill="#7d2a24" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="755.8,338.1 807.2,367.8 807.2,374.4 755.8,344.7" fill="#8e3129" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="812.9,341.4 807.2,344.7 807.2,351.3 812.9,348.0" fill="#344c35" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="755.8,315.0 807.2,344.7 807.2,351.3 755.8,321.6" fill="#3e5a3f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="761.5,334.8 812.9,364.5 807.2,367.8 755.8,338.1" fill="#b9443a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="761.5,311.7 812.9,341.4 807.2,344.7 755.8,315.0" fill="#517252" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="761.5,328.2 687.2,371.1 687.2,400.8 761.5,357.9" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="584.3,311.7 687.2,371.1 687.2,400.8 584.3,341.4" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="658.6,268.8 761.5,328.2 687.2,371.1 584.3,311.7" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="824.4,321.6 795.8,338.1 795.8,404.1 824.4,387.6" fill="#aea27e" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="732.9,301.8 795.8,338.1 795.8,404.1 732.9,367.8" fill="#c3b592" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="761.5,285.3 824.4,321.6 795.8,338.1 732.9,301.8" fill="#e4d9c2" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="355.7,374.4 330.0,389.2 330.0,412.4 355.7,397.5" fill="#9a7c4c" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="304.2,374.4 330.0,389.2 330.0,412.4 304.2,397.5" fill="#b0905a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="330.0,359.5 355.7,374.4 330.0,389.2 304.2,374.4" fill="#d8b77e" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="227.1,376.1 201.4,390.9 201.4,414.0 227.1,399.2" fill="#9a7c4c" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="175.6,376.1 201.4,390.9 201.4,414.0 175.6,399.2" fill="#b0905a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="201.4,361.2 227.1,376.1 201.4,390.9 175.6,376.1" fill="#d8b77e" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="355.7,344.0 212.8,426.5 212.8,430.5 355.7,348.0" fill="#4d5f2d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="98.5,360.5 212.8,426.5 212.8,430.5 98.5,364.5" fill="#5d7237" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="241.4,278.0 355.7,344.0 212.8,426.5 98.5,360.5" fill="#7f9a4f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="428.8,409.0 424.3,411.7 424.3,439.7 428.8,437.1" fill="#33241a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="419.7,409.0 424.3,411.7 424.3,439.7 419.7,437.1" fill="#3b2a1b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="424.3,406.4 428.8,409.0 424.3,411.7 419.7,409.0" fill="#4b3523" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="561.4,407.4 535.7,422.2 535.7,442.0 561.4,427.2" fill="#1b2b38" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="490.0,395.8 535.7,422.2 535.7,442.0 490.0,415.6" fill="#213442" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="515.7,381.0 561.4,407.4 535.7,422.2 490.0,395.8" fill="#2c4353" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="441.4,418.9 424.3,428.9 424.3,447.0 441.4,437.1" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="407.1,418.9 424.3,428.9 424.3,447.0 407.1,437.1" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="424.3,409.0 441.4,418.9 424.3,428.9 407.1,418.9" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="324.3,412.3 298.5,427.2 298.5,450.3 324.3,435.4" fill="#9a7c4c" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="272.8,412.3 298.5,427.2 298.5,450.3 272.8,435.4" fill="#b0905a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="298.5,397.5 324.3,412.3 298.5,427.2 272.8,412.3" fill="#d8b77e" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="486.0,442.0 481.4,444.7 481.4,472.7 486.0,470.1" fill="#33241a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="476.9,442.0 481.4,444.7 481.4,472.7 476.9,470.1" fill="#3b2a1b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="481.4,439.4 486.0,442.0 481.4,444.7 476.9,442.0" fill="#4b3523" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="641.5,420.6 610.0,438.7 610.0,475.0 641.5,456.9" fill="#c0b493" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="490.0,369.4 610.0,438.7 610.0,475.0 490.0,405.8" fill="#d3c8ae" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="641.5,416.6 610.0,434.8 610.0,438.7 641.5,420.6" fill="#5d3f23" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="490.0,365.5 610.0,434.8 610.0,438.7 490.0,369.4" fill="#6d4a2a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="644.3,451.9 627.2,461.8 627.2,478.3 644.3,468.4" fill="#5f4430" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="610.0,451.9 627.2,461.8 627.2,478.3 610.0,468.4" fill="#6d4f36" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="521.4,351.3 641.5,420.6 610.0,438.7 490.0,369.4" fill="#f1ead9" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="521.4,347.3 641.5,416.6 610.0,434.8 490.0,365.5" fill="#8b5e35" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="627.2,442.1 644.3,451.9 627.2,461.8 610.0,451.9" fill="#8c6a4b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="417.4,448.6 412.8,451.3 412.8,479.3 417.4,476.7" fill="#33241a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="408.3,448.6 412.8,451.3 412.8,479.3 408.3,476.7" fill="#3b2a1b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="412.8,446.0 417.4,448.6 412.8,451.3 408.3,448.6" fill="#4b3523" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="498.6,451.9 481.4,461.9 481.4,480.0 498.6,470.1" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="464.3,451.9 481.4,461.9 481.4,480.0 464.3,470.1" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="327.1,453.6 310.0,463.5 310.0,480.0 327.1,470.1" fill="#5f4430" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="292.8,453.6 310.0,463.5 310.0,480.0 292.8,470.1" fill="#6d4f36" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="481.4,442.0 498.6,451.9 481.4,461.9 464.3,451.9" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="310.0,443.7 327.1,453.6 310.0,463.5 292.8,453.6" fill="#8c6a4b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="650.0,428.8 627.2,442.1 627.2,465.2 650.0,451.9" fill="#466a31" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="604.3,428.8 627.2,442.1 627.2,465.2 604.3,451.9" fill="#4f7638" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="627.2,415.6 650.0,428.8 627.2,442.1 604.3,428.8" fill="#6b9a4f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="332.8,430.5 310.0,443.7 310.0,466.8 332.8,453.6" fill="#466a31" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="287.1,430.5 310.0,443.7 310.0,466.8 287.1,453.6" fill="#4f7638" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="310.0,417.3 332.8,430.5 310.0,443.7 287.1,430.5" fill="#6b9a4f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="430.0,458.5 412.8,468.4 412.8,486.6 430.0,476.7" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="395.7,458.5 412.8,468.4 412.8,486.6 395.7,476.7" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="412.8,448.7 430.0,458.5 412.8,468.4 395.7,458.5" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="543.2,475.0 538.6,477.7 538.6,505.7 543.2,503.1" fill="#33241a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="534.0,475.0 538.6,477.7 538.6,505.7 534.0,503.1" fill="#3b2a1b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="538.6,472.4 543.2,475.0 538.6,477.7 534.0,475.0" fill="#4b3523" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="555.7,484.9 538.6,494.9 538.6,513.0 555.7,503.1" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="521.4,484.9 538.6,494.9 538.6,513.0 521.4,503.1" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="538.6,475.0 555.7,484.9 538.6,494.9 521.4,484.9" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="480.3,484.9 475.7,487.6 475.7,515.6 480.3,513.0" fill="#33241a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="471.1,484.9 475.7,487.6 475.7,515.6 471.1,513.0" fill="#3b2a1b" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="475.7,482.3 480.3,484.9 475.7,487.6 471.1,484.9" fill="#4b3523" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="492.9,494.9 475.7,504.8 475.7,522.9 492.9,513.0" fill="#8f6a3d" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="458.6,494.9 475.7,504.8 475.7,522.9 458.6,513.0" fill="#a77c4a" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="475.7,484.9 492.9,494.9 475.7,504.8 458.6,494.9" fill="#c79b63" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="675.8,470.1 515.7,562.5 515.7,565.8 675.8,473.4" fill="#856537" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="338.5,460.2 515.7,562.5 515.7,565.8 338.5,463.5" fill="#94713f" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <polygon points="498.6,367.8 675.8,470.1 515.7,562.5 338.5,460.2" fill="#b58e5c" stroke="#3b2e22" stroke-width="1" stroke-linejoin="round" opacity="1"/>
+    <circle cx="510.0" cy="496.5" r="54" fill="url(#domeG)" stroke="#3b2e22" stroke-width="1"/>
+  </g>
+  <g class="pins">
+        <g class="pin"><circle cx="255.7" cy="303.4" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="255.7" y="308.4" text-anchor="middle" font-size="15" font-weight="600" fill="#222">1</text></g>
+    <g class="pin"><circle cx="512.9" cy="217.6" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="512.9" y="222.6" text-anchor="middle" font-size="15" font-weight="600" fill="#222">2</text></g>
+    <g class="pin"><circle cx="498.6" cy="311.7" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="498.6" y="316.7" text-anchor="middle" font-size="15" font-weight="600" fill="#222">3</text></g>
+    <g class="pin"><circle cx="470.0" cy="417.3" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="470.0" y="422.3" text-anchor="middle" font-size="15" font-weight="600" fill="#222">4</text></g>
+    <g class="pin"><circle cx="647.2" cy="268.8" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="647.2" y="273.8" text-anchor="middle" font-size="15" font-weight="600" fill="#222">5</text></g>
+    <g class="pin"><circle cx="527.2" cy="414.0" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="527.2" y="419.0" text-anchor="middle" font-size="15" font-weight="600" fill="#222">6</text></g>
+    <g class="pin"><circle cx="761.5" cy="272.1" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="761.5" y="277.1" text-anchor="middle" font-size="15" font-weight="600" fill="#222">7</text></g>
+    <g class="pin"><circle cx="527.2" cy="466.8" r="14" fill="#fefcf6" stroke="#222" stroke-width="1.2"/><text x="527.2" y="471.8" text-anchor="middle" font-size="15" font-weight="600" fill="#222">8</text></g>
+  </g>
+</svg>
+    </div>
+  </section>
+
+  <!-- 6. Cafés -->
+  <section class="cafes" id="cafes" aria-labelledby="cafesTitle">
+    <header class="section-head section-head--narrow">
+      <h2 id="cafesTitle" class="h2">Our cafés</h2>
+      <p class="section-sub">Our cafés share one menu philosophy: neighbourhood service, uncommon brews and an elevated, seasonal kitchen. Card and mobile wallet payments welcome.</p>
+      <a class="btn btn--outline" href="#cafes">Find a café <span class="btn-arrow" aria-hidden="true"></span></a>
+    </header>
+
+    <div class="cafe-hero art-brunch" role="img" aria-label="Illustration of brunch plates on a wooden table"></div>
+
+    <div class="cafe-row" tabindex="0" aria-label="Café locations">
+      <a class="cafe-card" href="#cafes">
+        <div class="cafe-head"><h3>Tidewater Express</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>A quick counter stop for commuters who want a great flat white on the way to the office.</p>
+        <div class="cafe-art art-counter"></div>
+      </a>
+      <a class="cafe-card" href="#cafes">
+        <div class="cafe-head"><h3>Riverside flagship</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Our first café, opened in 2013, with long communal tables and a view of the water.</p>
+        <div class="cafe-art art-communal"></div>
+      </a>
+      <a class="cafe-card" href="#cafes">
+        <div class="cafe-head"><h3>Old Town</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>A small, sun-filled room near the market, ideal for a slow morning brew and a pastry.</p>
+        <div class="cafe-art art-arches"></div>
+      </a>
+      <a class="cafe-card" href="#cafes">
+        <div class="cafe-head"><h3>Hillside</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>Where a bright, airy room meets a bar of brewers working through the seasonal filter menu.</p>
+        <div class="cafe-art art-brewbar"></div>
+      </a>
+      <a class="cafe-card" href="#cafes">
+        <div class="cafe-head"><h3>Harbour walk</h3><span class="corner-arrow" aria-hidden="true"></span></div>
+        <p>A coastal café with tiled counters, cool breezes and espresso poured straight from the machine.</p>
+        <div class="cafe-art art-tiles"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 7. Wholesale split -->
+  <section class="split" id="wholesale" aria-label="Wholesale">
+    <div class="split-media art-roastery-dark" role="img" aria-label="Illustration of a roaster and grinder"></div>
+    <div class="split-panel">
+      <p class="eyebrow eyebrow--light"><span class="arrow-glyph" aria-hidden="true"></span>Supporting your coffee programme</p>
+      <h2 class="h3 h3--light">Wholesale supply and equipment</h2>
+      <p class="body-light">We supply specialty roasted coffee to cafés, offices and restaurants, and help our accounts deliver a consistent cup to every customer.</p>
+      <a class="btn btn--light" href="#contact">Wholesale enquiry <span class="btn-arrow" aria-hidden="true"></span></a>
+    </div>
+  </section>
+
+  <!-- 8. Journal band -->
+  <section class="journal" id="journal" aria-labelledby="journalTitle">
+    <h2 id="journalTitle" class="h2">Coffee notes</h2>
+    <p class="section-sub">Quick tips for the home brewer. A short video and article series from our academy trainers covering the questions we hear most often, from grind size to water temperature.</p>
+    <a class="btn btn--outline" href="#journal">Read all articles <span class="btn-arrow" aria-hidden="true"></span></a>
+  </section>
+
+  <!-- 9. Newsletter teaser -->
+  <section class="subscribe" id="subscribe">
+    <p class="section-sub">Join the mailing list for early access to new releases and seasonal menus.</p>
+    <form class="signup" action="#" onsubmit="return false;">
+      <label class="visually-hidden" for="signupEmail">Email address</label>
+      <input id="signupEmail" type="email" placeholder="Email address" autocomplete="email" required>
+      <button type="submit" aria-label="Subscribe">
+        <span class="btn-arrow" aria-hidden="true"></span>
+      </button>
+    </form>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-mark logo-mark--footer">Tidewater<br>Coffee<br>Roasters</span>
+    </div>
+    <nav class="footer-col" aria-label="Information">
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#cafes">Our cafés</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#sitemap">Sitemap</a></li>
+      </ul>
+      <h3 class="footer-h-gap">Brew guides</h3>
+      <ul>
+        <li><a href="#guides">Espresso</a></li>
+        <li><a href="#guides">Pour-over</a></li>
+        <li><a href="#guides">French press</a></li>
+        <li><a href="#guides">Cold brew</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Enquiries">
+      <h3>Enquiries</h3>
+      <ul>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#wholesale">Wholesale supply</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Terms">
+      <h3>Terms</h3>
+      <ul>
+        <li><a href="#privacy">Privacy policy</a></li>
+        <li><a href="#shipping">Shipping policy</a></li>
+        <li><a href="#refund">Refund policy</a></li>
+        <li><a href="#terms">Terms and conditions</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col footer-news">
+      <h3>Newsletters</h3>
+      <p>Subscribe to hear first about new releases and exclusive offers.</p>
+      <form class="signup signup--footer" action="#" onsubmit="return false;">
+        <label class="visually-hidden" for="footerEmail">Email address</label>
+        <input id="footerEmail" type="email" placeholder="Email" autocomplete="email">
+        <button type="submit" aria-label="Subscribe"><span class="btn-arrow" aria-hidden="true"></span></button>
+      </form>
+      <ul class="social" aria-label="Social media">
+        <li><a href="#social" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M13.2 19v-6h2l.3-2.4h-2.3V9.2c0-.7.2-1.2 1.2-1.2h1.2V5.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.4V13h2.1v6z" fill="#517252"/></svg></a></li>
+        <li><a href="#social" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><rect x="7" y="7" width="10" height="10" rx="3" fill="none" stroke="#517252" stroke-width="1.6"/><circle cx="12" cy="12" r="2.4" fill="none" stroke="#517252" stroke-width="1.6"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-base">
+    <p>&copy; 2026 Tidewater Coffee Roasters (sample). Placeholder content.</p>
+    <ul class="pay" aria-label="Accepted payment methods">
+      <li>Wallet</li><li>Card</li><li>Bank</li><li>QR</li><li>Wallet</li><li>Card</li>
+    </ul>
+  </div>
+</footer>
+
+<button class="side-tab" type="button" aria-label="Find your favourite coffee">
+  <span>Find your favourite coffee</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

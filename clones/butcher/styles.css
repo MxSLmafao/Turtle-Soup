@@ -115,9 +115,9 @@ svg { display: block; }
 /* ---------- Hero slider ---------- */
 .hero { position: relative; }
 .slider { position: relative; overflow: hidden; margin: 0 auto; height: 270px; width: 100%; }
-.slides { position: relative; height: 100%; }
+.slides { display: grid; height: 100%; }
 .slide {
-  position: absolute; inset: 0; margin: 0 auto; width: min(var(--wrap), 100%);
+  grid-area: 1 / 1; height: 100%; margin: 0 auto; width: min(var(--wrap), 100%);
   display: grid; grid-template-columns: 1.15fr 1fr; align-items: stretch;
   opacity: 0; transform: translateX(40px) scale(.985); transition: opacity .7s var(--ease), transform .8s var(--ease); pointer-events: none;
 }
@@ -293,9 +293,7 @@ svg { display: block; }
   .main-nav a { font-size: 14px; display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
   .main-nav a::after { display: none; }
   .slider { height: auto; }
-  .slides { position: relative; }
-  .slide { position: absolute; grid-template-columns: 1fr; height: auto; }
-  .slider { min-height: 0; }
+  .slide { grid-template-columns: 1fr; height: auto; }
   .slide:not(.is-active) { display: none; }
   .slide.is-active { display: grid; animation: fadeUp .6s var(--ease); }
   .slide-art { height: 200px; }
