@@ -39,5 +39,41 @@ Source studied: https://tiongbahrubakery.com/ (Shopify storefront, Singapore bak
 ## Clone choices
 - Brand: placeholder "Lantern Row Bakehouse". Copy written from scratch at the same length and role.
 - All imagery replaced with inline SVG or CSS gradients drawn for this clone. No photos, logos, fonts or other files copied.
-- Fonts: Inter (same family as the original body). The stamp and logo face uses Alfa Slab One, the closest free Google Font to the original hand-drawn display face.
+- Fonts: see the Fonts section below. The stamp and logo face uses Alfa Slab One, a decorative choice. The source draws its stamps as images, so they are not a typography role.
 - App-store line uses generic text, not store trademarks.
+
+## Fonts
+
+Measured with Playwright from the live source at 1440px and 390px. Web-font status checked with `document.fonts`: only Inter loads. F37Analog and MetaAccanthis_regular are declared but never load in this render, so visitors see the fallback sans or serif.
+
+| Role | Source family (computed) | 1440px: size / weight / line-height / transform | 390px: size / weight / line-height / transform | Clone stack | Clone loads |
+|---|---|---|---|---|---|
+| Announcement marquee | F37Analog (fallback) / MetaAccanthis at 390 | 14.2544px / 500 / 19.9561px / none | same | F37Analog, Arimo | Arimo |
+| Nav links, cart | Inter | 16px / 500 / 22.4px / uppercase | MetaAccanthis, 16px / 500 / 22.4px / uppercase | Inter (desktop), MetaAccanthis_regular then Arimo (mobile) | Inter 500 |
+| Headings h2 (section) | system_ui stack (desktop) / MetaAccanthis (mobile) | 42.7149px / 400 / 38.4434px | 32px / 400 / 28.8px | system_ui stack (desktop) / MetaAccanthis_regular, Arimo (mobile) | none (platform sans) / Arimo |
+| Display h2 (product) | system_ui stack / MetaAccanthis | 79.9458px / 400 / 71.9512px | 47.9458px / 400 / 43.1512px | same as headings | none / Arimo |
+| Pairing h1 | system_ui stack / MetaAccanthis | 57.0175px / 400 / 51.3158px | 42.7149px / 400 / 38.4434px | same as headings | none / Arimo |
+| App heading (bold) | system_ui stack / MetaAccanthis | 42.7149px / 700 / 38.4434px | 32px / 700 / 28.8px | same as headings | none / Arimo |
+| Card and footer h3 | system_ui stack / MetaAccanthis | 23.9729px / 400 / 21.5756px | same | same as headings | none / Arimo |
+| Body text | F37Analog (fallback) / MetaAccanthis | 16px / 500 / 22.4px, bold 700 | same | F37Analog, Arimo, Arial (desktop) / MetaAccanthis_regular, Arimo (mobile) | Arimo |
+| Buttons | system_ui stack / MetaAccanthis | 16px / 400 / 22.4px / uppercase | same | same as headings | none / Arimo |
+| Footer links (main) | Inter | 16px / 500 / 22.4px / uppercase | MetaAccanthis, 16px / 500 / 22.4px / none | Inter (desktop) / MetaAccanthis_regular, Arimo (mobile) | Inter 500 |
+| Footer links (secondary) | F37Analog (fallback) | 16px / 500 / 22.4px (visibly uppercase) | MetaAccanthis, 16px / 500 / 22.4px | F37Analog, Arimo (desktop, uppercase) / mobile as above | Arimo |
+| Copyright | F37Analog (fallback) | 14.2544px / 500 / 19.9561px | MetaAccanthis, same size | as body | Arimo |
+| Store line | F37Analog, serif (fallback) | 28px / 500 / 36.4px | 20px / 500 / 26px | F37Analog, Tinos, Times New Roman, serif (desktop) / sans at mobile | Tinos |
+| Review quote | F37Analog (fallback) | 32px / 500 / 28.8px | 16px / 500 / 22.4px | as body | Arimo |
+| Letter-spacing (all roles) | normal | normal | normal | normal | n/a |
+| Font style (all roles) | normal | normal | normal | normal | n/a |
+
+Licence status:
+- F37Analog: commercial, F37 Foundry. Not downloaded or hot-linked. The clone names it first in the stack, so it renders on machines where it is installed or licensed. Licence: https://www.f37foundry.com/
+- MetaAccanthis_regular: commercial, served to the source site by a third-party font-licensing app from the store's Shopify CDN. Not downloaded or hot-linked. The clone names it first in the mobile stack. Licence must be bought from its licensor or from the app's vendor.
+- Inter: SIL Open Font License, loaded from Google Fonts.
+- Arimo: SIL Open Font License, loaded from Google Fonts. Metric- and outline-compatible with Arial and Liberation Sans, so it matches the source's rendered fallback here.
+- Tinos: SIL Open Font License, loaded from Google Fonts. Metric-compatible with Times New Roman; used as the serif fallback.
+- Alfa Slab One: SIL Open Font License, loaded from Google Fonts. Decorative only (stamps and logo).
+- system_ui stack: platform fonts, nothing loaded. Identical to the source's heading stack.
+
+Known differences:
+- Desktop footer secondary links: the source's computed transform is none, but the text is visibly uppercase. The clone uppercases them in CSS at desktop and sets none at mobile, to match the visible result at each width.
+- Mobile body: the source fallback at 390px is Arial/Liberation, not MetaAccanthis, because MetaAccanthis never loads here. The clone's Arimo fallback renders the same glyphs.

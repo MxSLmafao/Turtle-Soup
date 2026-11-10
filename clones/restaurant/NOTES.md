@@ -43,3 +43,25 @@ at 1440x900 and 390x844. Raw HTML and screenshots live in the scratchpad (src-re
 ## Responsive
 - Breakpoint 767px (Elementor mobile). Hero background swaps image at max-width 767px.
 - Nav collapses to hamburger at mobile width.
+
+## Fonts
+
+Measured from the live source at 1440px and 390px (computed styles; hidden dropdowns forced visible).
+Source families: Bebas Neue, Radley, DinNext (self-hosted commercial file; `@font-face` points at the source's own
+`/fonts/DINNextW01-*` files, which are not used here).
+
+| Role | Source family | Source values (1440 / 390) | Clone loads | Licence status |
+|---|---|---|---|---|
+| Nav links | Bebas Neue | 18px / lh 20px / ls 1px / 400 / uppercase | Bebas Neue (Google Fonts) | Free (OFL). Identical family. |
+| Dropdown items | Bebas Neue | 16px / lh 20px / ls 1px / 400 | Bebas Neue (Google Fonts) | Free (OFL). Identical family. |
+| Body and page copy | Radley | 16px / lh 24px / ls normal / 400 | Radley (Google Fonts) | Free (OFL). Identical family. |
+| Footer copyright | DinNext | 14px / lh 24px / ls normal / 400 / normal | `"DinNext"` name first, then `"Barlow Fallback"` (Barlow 400, Google Fonts host, `size-adjust: 101.8%`) | DinNext is commercial (Linotype / Monotype family). Buy a licence from the foundry or a Linotype/Monotype reseller. Barlow is free (OFL). |
+| Mobile nav links | Bebas Neue (presumed) | not measured, popup did not expose its text | Bebas Neue 26px / lh 30px / ls 1px | Unmatched. See gaps. |
+| Headings h1 to h3, buttons, captions | none on this page | none in the homepage DOM | n/a | n/a |
+
+Fallback tuning: width of a 100px sample string was 4986.9px in DinNext (source) and 4897.8px in Barlow.
+`size-adjust: 101.8%` brings it to 4985.8px (within 0.02%). Line-height and letter-spacing match the source values.
+
+Gaps: the source mobile menu is an Elementor popup that did not expose its text to the render, so its nav typography
+was not measured. The clone keeps 26px / 30px in the mobile drawer. The source logo is an image and the clone wordmark
+is typeset; neither is a text role.

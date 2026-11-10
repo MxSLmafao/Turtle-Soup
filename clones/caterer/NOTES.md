@@ -41,3 +41,32 @@ Placeholder brand used in the clone: "Hearthline Kitchen".
 - Photography (hero, cards, banner) is replaced with CSS gradients and inline SVG.
 - Third-party analytics, chat widget and Typekit kits are not included.
 - Logos, accreditation badges and real copy are replaced with placeholders.
+
+## Fonts
+
+All families on the source homepage are commercial (served through an Adobe Fonts / Typekit kit or self-hosted). None is free, so none was downloaded, copied or hot-linked. Each role keeps the exact original family name first in the stack, followed by a free fallback. Declared sizes, weights, line-heights, letter-spacing and transforms match the source at both widths.
+
+| Role | Source family (name) | Source size / weight / line-height (1440 / 390) | Clone stack | Clone loads | Licence status |
+|---|---|---|---|---|---|
+| Announcement bar | EmberBody | 14px / 400 / 14px (both) | "EmberBody", Figtree | Figtree 400 | Commercial/licensed, self-hosted. Check the foundry for a licence. |
+| Header nav links | FunkisA | 14px / 700 / 60px (desktop) | "FunkisA", Figtree | Figtree 700 | Commercial (Typekit). Buy via Adobe Fonts or the foundry. |
+| Mobile menu links | Kapra-Neue-Black | 28px / 700 / 36px uppercase (390) | "Kapra-Neue-Black", Barlow Condensed | Barlow Condensed 700 | Commercial. Buy from the foundry or Adobe Fonts. |
+| Hero h1 | Kapra-Neue-Black | 40px / 700 / 54px uppercase (1440); 28px / 36px (390) | "Kapra-Neue-Black", Barlow Condensed | Barlow Condensed 700 | Commercial. |
+| Hero sub | FunkisA | 24px / 700 / 28px (1440); 16px / 24px (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Hero / card buttons | FunkisA | 16px / 700 / 24px (1440); 14px / 20px on cards (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Product card title | Kapra-Neue-Black | 40px / 700 / 54px uppercase (1440); 28px / 36px (390) | "Kapra-Neue-Black", Barlow Condensed | Barlow Condensed 700 | Commercial. |
+| Product card byline | FunkisA | 18px / 700 / 24px (1440); 16px / 24px (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Testimonial heading | FunkisA | 40px / 700 / 54px (1440); 18px / 28px (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Testimonial quote | FunkisA | 18px / 300 / 28px (1440); 16px / 24px (390) | "FunkisA", Figtree | Figtree 300 | Commercial. |
+| Testimonial author | Kapra-Neue-Black | 14px / 400 / 20px uppercase (both) | "Kapra-Neue-Black", Barlow Condensed | Barlow Condensed 400 | Commercial. |
+| Banner title | Windsor | 54px / 700 / 60px uppercase (1440); 28px / 36px (390) | "Windsor", Ultra | Ultra 400 | Commercial. |
+| Banner link | FunkisA | 18px / 700 / 28px (1440); 14px / 20px (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Footer headings | FunkisA | 16px / 700 / 28px uppercase (1440); 14px / 28px (390) | "FunkisA", Figtree | Figtree 700 | Commercial. |
+| Footer links | FunkisA | 14px / 400 / 20px (both), colour #eae6e1 | "FunkisA", Figtree | Figtree 400 | Commercial. |
+| Legal row | FunkisA | 12px / 400 / 16px (both) | "FunkisA", Figtree | Figtree 400 | Commercial. |
+
+Notes:
+- Montserrat and Open Sans are registered on the source page, but no homepage text role uses them.
+- Google Fonts loaded by the clone: Barlow Condensed (400, 700, 800), Figtree (300, 400, 500, 700) and Ultra. These are fallbacks only and are not the source families.
+- Known gap: Kapra-Neue-Black is a single black face, so the source's declared weight of 400 on the testimonial author still renders heavy. The Barlow Condensed fallback at 400 looks lighter. The declared value matches; the visual weight does not.
+- Where a licence can be bought: Adobe Fonts (for families in the Typekit kit) or the original foundry. Licence terms were not verified in this pass.

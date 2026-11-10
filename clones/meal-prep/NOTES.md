@@ -43,7 +43,41 @@ Downloaded HTML/CSS/screenshots live in the scratchpad, not in the repo.
 - Four cards to two columns at 768px, to four columns at 1024px.
 
 ## Clone decisions
-- Placeholder brand: "Fernhollow Kitchen" (not the source brand). Monogram logo drawn in SVG.
+- Placeholder brand: "Quillmere Kitchen" (not the source brand). Monogram logo drawn in SVG.
 - Imagery replaced with inline SVG meal-tray illustrations and CSS gradients at the same aspect ratios.
 - All copy rewritten from scratch. Address, phone and reviews are invented placeholders.
 - Certification and sustainability badges replaced by generic drawn shapes with neutral labels.
+
+## Fonts
+
+Source families (both measured at 1440 and 390 px): only two, Inter and Bebas Neue. The source's own
+@font-face rules serve self-hosted copies of both, and both are free open-licence families.
+
+| Role (source sample) | Source family | Source values 1440 / 390 | What the clone loads | Licence status |
+|---|---|---|---|---|
+| Nav links | Inter | 14px / 400 / 20px, no transform | Inter 400 (Google Fonts) | SIL OFL 1.1, free |
+| Sign-in button | Inter | 12px / 600 / 16px, no transform | Inter 600 | SIL OFL 1.1, free |
+| Hero eyebrow | Inter | 16px / 700 / 24px, +0.4px, uppercase / 12px / 700 / 19.5px, +0.3px | Inter 700 | SIL OFL 1.1, free |
+| H1 hero | Inter | 60px / 800 / 60px, +1.5px / 40px / 800 / 50px, +1px | Inter 800 | SIL OFL 1.1, free |
+| H2 section | Inter | 48px / 700 / 66px (why: 48px / 48px) / 30px / 700 / 41.25px (why: 36px) | Inter 700 | SIL OFL 1.1, free |
+| Intro, sub-heads | Inter | 18px / 400 / 28px (both widths) | Inter 400 | SIL OFL 1.1, free |
+| Card title | Inter | 22px / 600 / 33px | Inter 600 | SIL OFL 1.1, free |
+| Card list, body | Inter | 16px / 400 / 24px | Inter 400 | SIL OFL 1.1, free |
+| Buttons (CTA, chips) | Inter | 14px / 600 / 14px, no transform (hero CTA uppercase) | Inter 600 | SIL OFL 1.1, free |
+| Badges | Inter | 16px / 600 / 24px, uppercase | Inter 600 | SIL OFL 1.1, free |
+| Meal name / description | Inter | 20px / 700 / 28px and 12px / 400 / 16px | Inter 700, 400 | SIL OFL 1.1, free |
+| Why heading / body | Inter | 18px / 700 / 28px and 14px / 400 / 20px | Inter 700, 400 | SIL OFL 1.1, free |
+| Dine-in eyebrow, heading, body | Inter | 12px / 600 / 16px uppercase; 20px / 700 / 28px; 16px / 400 / 24px | Inter 600, 700, 400 | SIL OFL 1.1, free |
+| Reviews heading | Inter | 24px / 700 / 32px / 36px / 700 / 40px | Inter 700 | SIL OFL 1.1, free |
+| Review quote and name | Inter | 12px / 400 / 16px; 12px / 600 / 16px | Inter 400, 600 | SIL OFL 1.1, free |
+| Enquiry heading, body | Inter | 20px / 700 / 28px; 14px / 400 / 20px | Inter 700, 400 | SIL OFL 1.1, free |
+| Footer headings | Inter | 14px / 800 / 20px, uppercase | Inter 800 | SIL OFL 1.1, free |
+| Footer links, copyright | Inter | 14px / 400 / 20px | Inter 400 | SIL OFL 1.1, free |
+| Footer tagline, help line | Bebas Neue | 26px / 400 / 20px and 26px / 400 / 26px | Bebas Neue 400 | SIL OFL 1.1, free |
+
+Loading: a single Google Fonts css2 request for Inter 400 to 800 and Bebas Neue 400 (see index.html).
+Stacks are the exact family first, then a generic fallback. Neither family needs a name-first commercial
+stack, because both are free. No font files were downloaded or copied from the source.
+
+Roles without a source text equivalent: the announcement kicker and the calorie roundel label. These
+use the clone's own design values and are not part of the source's type scale.

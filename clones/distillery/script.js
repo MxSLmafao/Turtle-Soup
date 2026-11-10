@@ -97,6 +97,14 @@
     footForm.querySelector('input').placeholder = 'Thanks for joining';
   });
 
+  /* ---------- Announcement height drives header offset (bar can wrap on mobile) ---------- */
+  var announce = document.querySelector('.announce');
+  function syncAnnounce() {
+    if (announce) document.documentElement.style.setProperty('--announce-h', announce.offsetHeight + 'px');
+  }
+  syncAnnounce();
+  window.addEventListener('resize', syncAnnounce);
+
   /* ---------- Header: sticky + hide on scroll-up ---------- */
   var header = document.getElementById('siteHeader');
   var lastY = window.scrollY;
@@ -163,13 +171,13 @@
 
   /* ---------- Product slider (gins) ---------- */
   var GINS = [
-    { name: 'Harbour Dry Gin', tag: 'Crisp, zesty and clean.', liquid: '#E3EEE8', label: '#2D4A4F', cap: '#C99A5B' },
-    { name: 'Blue Pea Reserve', tag: 'Aromatic, floral and delicate.', liquid: '#2A3F73', label: '#1E2D52', cap: '#C99A5B' },
-    { name: 'Ember Pink Gin', tag: 'Warm, bold and spiced.', liquid: '#D9826B', label: '#7A2B2B', cap: '#D4AE6F' },
-    { name: 'Midnight Proof', tag: 'Crisp, dynamic and balanced.', liquid: '#2A2446', label: '#14182E', cap: '#C99A5B' },
-    { name: 'Jasmine Dusk', tag: 'Bright, fragrant and floral.', liquid: '#E9D89A', label: '#3B6E57', cap: '#D4AE6F' },
-    { name: 'Hawthorn Berry', tag: 'Fruity, tart and tangy.', liquid: '#B33A3A', label: '#5A1F2A', cap: '#C99A5B' },
-    { name: 'Oak Rested Gin', tag: 'Smooth, elegant and sophisticated.', liquid: '#C48A3C', label: '#2F2418', cap: '#D4AE6F' }
+    { name: 'HARBOUR DRY GIN', tag: 'Crisp, zesty and clean.', liquid: '#E3EEE8', label: '#2D4A4F', cap: '#C99A5B' },
+    { name: 'BLUE PEA RESERVE', tag: 'Aromatic, floral and delicate.', liquid: '#2A3F73', label: '#1E2D52', cap: '#C99A5B' },
+    { name: 'EMBER PINK GIN', tag: 'Warm, bold and spiced.', liquid: '#D9826B', label: '#7A2B2B', cap: '#D4AE6F' },
+    { name: 'MIDNIGHT PROOF', tag: 'Crisp, dynamic and balanced.', liquid: '#2A2446', label: '#14182E', cap: '#C99A5B' },
+    { name: 'JASMINE DUSK', tag: 'Bright, fragrant and floral.', liquid: '#E9D89A', label: '#3B6E57', cap: '#D4AE6F' },
+    { name: 'HAWTHORN BERRY', tag: 'Fruity, tart and tangy.', liquid: '#B33A3A', label: '#5A1F2A', cap: '#C99A5B' },
+    { name: 'OAK RESTED GIN', tag: 'Smooth, elegant and sophisticated.', liquid: '#C48A3C', label: '#2F2418', cap: '#D4AE6F' }
   ];
   var NS = 'http://www.w3.org/2000/svg';
   var NSXLINK = 'http://www.w3.org/1999/xlink';

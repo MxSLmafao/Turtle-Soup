@@ -44,3 +44,40 @@ read directly, live render via Playwright (1440px full-page screenshot, measured
 - Logos (brand mark, award badges, press wordmarks) replaced with placeholder typography and drawn shapes.
 - Brand name, copy, prices, addresses and handles are invented placeholders.
 - Shopify app widgets (reviews, pickup, cart drawer) omitted.
+
+## Fonts
+
+Source family: DM Sans (open licence, SIL OFL). The source serves it from the Shopify CDN as a static
+woff2; the clone loads the same family from Google Fonts (weights 400 and 500). Name-first stack is
+"DM Sans", sans-serif. No licence purchase is needed.
+
+Source values are fluid (vw-based). The clone interpolates each role linearly between its 390px and
+1440px values with clamp(), so intermediate widths track the source.
+
+| Role | 1440px (size / weight / lh / tracking / case) | 390px | Clone |
+|---|---|---|---|
+| Announcement bar | 11.7 / 400 / 1.5 / .09em / upper | 10.8 | matched |
+| Nav links | 10.35 / 400 / 1.5 / .09em / upper | 10.35 | matched (desktop) |
+| Hero H1 | 33.6 / 400 / 1.25 / normal | 29.4 | matched |
+| Hero subtitle | 20.9 / 400 / 1.375 | 16.15 | matched |
+| Hero button | 11.7 / 500 / 1 / .09em / upper | 10.8 | matched |
+| Section kicker | 13.05 / 500 / 1.25 / .09em / upper | 11.7 | matched |
+| Chip (Best sellers) | 10.35 / 400 / 1.5 / .09em / upper | 10.8 / 500 | matched |
+| Product badge | 10.35 / 500 / 1.625 / .09em / upper | 10 | matched |
+| Product title | 13.775 / 500 / 1.5 | 12.35 | matched |
+| Product description | 12 / 400 / 1.5 / .08px | 10.5 | matched |
+| Price | 12.35 / 400 / 1.5 | 11.4 | matched |
+| Body (approach text) | 13.775 / 400 / 1.5 | 12.35 | matched (role measured from a source body paragraph) |
+| Rewards copy | 16.625 / 400 / 1.375 | 14 | matched |
+| Feature caption | 13.05 / 500 / 1.5 / .09em / upper | 11.7 | matched |
+| Boutique label | 13.05 / 500 / 1.5 / .09em / upper | 11.7 | matched |
+| Footer heading | 11.7 / 500 / 1.5 / .09em / upper | 14 | matched |
+| Footer link | 13.775 / 400 / 1.5 | 12.35 (estimate) | 390 value estimated; source footer links are collapsed accordions at 390 |
+| Copyright / sub-footer | 11.7 / 400 / 1.5 / .09em / upper | 10.8 | matched |
+| Join button | 11.7 / 500 / 1 / .09em / upper | 10.8 | matched |
+
+Logo wordmark (Fernhollow) is a placeholder logo, not a source role, and is not matched.
+Clone sets `font-optical-sizing: none` so the variable DM Sans renders at its default optical size, the
+same glyph cut as the source's static file.
+
+Licence status: DM Sans is free under the SIL Open Font License; no purchase needed.

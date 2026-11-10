@@ -16,8 +16,8 @@
   --line: rgb(var(--c-amber));
 
   /* type */
-  --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-head: "Bricolage Grotesque", "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-head: "Bricolage Grotesque", sans-serif;
   --size-body: 16px;
   --size-small: 14px;
   --size-tiny: 12px;
@@ -103,12 +103,12 @@ ul { padding: 0; list-style: none; }
 
 /* ---------- announcement + header ---------- */
 .announce {
-  position: relative; z-index: 60; height: var(--announce-h);
+  position: relative; z-index: 60; min-height: var(--announce-h); padding-top: 5px; padding-bottom: 5px;
   background: var(--cream); color: var(--ink);
   display: flex; align-items: center; justify-content: center;
-  font-size: var(--size-small); padding: 0 16px; overflow: hidden;
+  font-size: 15.936px; line-height: 27.0912px; padding-left: 16px; padding-right: 16px; text-align: center;
 }
-.announce__link { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.announce__link { display: inline-flex; align-items: center; gap: 10px; }
 .announce__link:hover span { text-decoration: underline; text-underline-offset: 3px; }
 
 .header {
@@ -135,13 +135,13 @@ ul { padding: 0; list-style: none; }
 .logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; }
 .logo__mark { display: none; }
 .logo__text { display: inline-flex; flex-direction: column; align-items: center; line-height: 1; font-family: var(--font-head); text-align: center; }
-.logo__text b { font-weight: 800; font-size: 26px; letter-spacing: .02em; }
-.logo__text small { font-family: var(--font-body); font-weight: 600; font-size: 11px; letter-spacing: .42em; margin-top: 4px; }
+.logo__text b { font-weight: 700; font-size: 26px; letter-spacing: .02em; }
+.logo__text small { font-family: var(--font-body); font-weight: 500; font-size: 11px; letter-spacing: .42em; margin-top: 4px; }
 
 .cart { position: relative; }
 .cart__count {
   position: absolute; top: 4px; right: 2px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px;
-  background: var(--cream); color: var(--ink); font-size: 11px; line-height: 18px; text-align: center; font-weight: 600;
+  background: var(--cream); color: var(--ink); font-size: 11px; line-height: 18px; text-align: center; font-weight: 500;
 }
 
 .header.is-sticky .logo__text b { font-size: 22px; }
@@ -186,7 +186,7 @@ ul { padding: 0; list-style: none; }
 }
 .slide.is-active .slide__copy { opacity: 1; transform: none; }
 .hero__title {
-  font-family: var(--font-head); font-weight: 800; font-size: var(--size-hxl); line-height: 1.02;
+  font-family: var(--font-head); font-weight: 700; font-size: var(--size-hxl); line-height: 1.02;
   text-transform: uppercase; letter-spacing: -.005em; color: var(--cream);
   text-shadow: 0 2px 24px rgb(0 0 0 / .25);
 }
@@ -208,7 +208,7 @@ ul { padding: 0; list-style: none; }
 /* ---------- marquee ---------- */
 .marquee {
   height: 47px; background: var(--amber); color: var(--cream); overflow: hidden; display: flex; align-items: center;
-  font-weight: 600; font-size: 14px; letter-spacing: .05em; text-transform: uppercase;
+  font-weight: 500; font-size: 14px; letter-spacing: .05em; text-transform: uppercase;
 }
 .marquee__track { display: flex; width: max-content; animation: marquee 34s linear infinite; }
 .marquee__track span { white-space: nowrap; padding-right: 60px; }
@@ -236,7 +236,7 @@ ul { padding: 0; list-style: none; }
   position: absolute; left: 0; right: 0; top: 590px; text-align: center; padding: 0 20px;
 }
 .gins__name {
-  font-family: var(--font-head); font-weight: 800; font-size: 34px; line-height: 1.1; text-transform: uppercase; color: var(--cream);
+  font-family: var(--font-head); font-weight: 700; font-size: 34px; line-height: 1.1; text-transform: uppercase; color: var(--cream);
 }
 .gins__tag { margin-top: 8px; font-size: 15px; color: var(--cream); opacity: .9; }
 .gins__info .btn { margin-top: 26px; }
@@ -285,7 +285,7 @@ ul { padding: 0; list-style: none; }
 .stamp__img svg { width: 100%; height: 100%; transition: transform 1.2s var(--ease); }
 .stamp:hover .stamp__img svg { transform: scale(1.05); }
 .stamp__label {
-  display: block; margin-top: 16px; padding: 0 6px 4px; font-family: var(--font-head); font-weight: 800; font-size: 26px;
+  display: block; margin-top: 16px; padding: 0 6px 4px; font-family: var(--font-head); font-weight: 700; font-size: 26px;
   line-height: 1.02; text-transform: uppercase; color: var(--ink);
 }
 .progress { width: 156px; height: 2px; margin: 56px auto 0; background: rgb(var(--c-ink) / .18); position: relative; }
@@ -300,7 +300,7 @@ ul { padding: 0; list-style: none; }
 .social {
   background: var(--amber); color: var(--cream); text-align: center; padding: 64px 20px 66px;
 }
-.social__handle { font-family: var(--font-head); font-weight: 800; font-size: 28px; text-transform: uppercase; letter-spacing: .01em; }
+.social__handle { font-family: var(--font-head); font-weight: 700; font-size: 28px; text-transform: uppercase; letter-spacing: .01em; }
 .social .btn { margin-top: 18px; min-width: 176px; }
 .social__grid {
   display: grid; grid-template-columns: repeat(6, 216px); justify-content: center; gap: 10px; margin-top: 44px;
@@ -332,8 +332,8 @@ ul { padding: 0; list-style: none; }
 .footer__col ul a:hover { color: var(--amber); }
 .footer__col--logo { display: flex; justify-content: flex-end; align-items: flex-start; }
 .footer__logo { display: flex; flex-direction: column; align-items: center; text-align: center; color: var(--cream); padding-top: 4px; }
-.footer__logo b { font-family: var(--font-head); font-weight: 800; font-size: 24px; letter-spacing: .02em; margin-top: 10px; }
-.footer__logo small { font-size: 11px; letter-spacing: .42em; font-weight: 600; }
+.footer__logo b { font-family: var(--font-head); font-weight: 700; font-size: 24px; letter-spacing: .02em; margin-top: 10px; }
+.footer__logo small { font-size: 11px; letter-spacing: .42em; font-weight: 500; }
 .footer__bottom {
   margin-top: 64px; padding-top: 22px; border-top: 1px solid rgb(var(--c-cream) / .2);
   display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: var(--cream);
@@ -353,10 +353,10 @@ ul { padding: 0; list-style: none; }
 }
 .gate.is-closing { opacity: 0; visibility: hidden; }
 .gate__inner { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 520px; text-align: center; min-height: 100%; justify-content: space-between; padding: 64px 0 40px; }
-.gate__logo { display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 800; color: var(--amber); }
+.gate__logo { display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 700; color: var(--amber); }
 .gate__logo span { font-size: 22px; letter-spacing: .14em; }
 .gate__panel { display: flex; flex-direction: column; align-items: center; animation: fadeUp .6s var(--ease); }
-.gate__title { font-family: var(--font-head); font-weight: 800; font-size: 40px; line-height: 1.15; color: var(--ink); }
+.gate__title { font-family: var(--font-head); font-weight: 700; font-size: 40px; line-height: 1.15; color: var(--ink); }
 .gate__text { margin-top: 12px; font-size: 16px; }
 .gate__actions { display: flex; gap: 12px; margin-top: 34px; }
 .gate__actions .btn { min-width: 150px; }
@@ -381,7 +381,7 @@ ul { padding: 0; list-style: none; }
 .news__art { height: 200px; overflow: hidden; }
 .news__art svg { width: 100%; height: 100%; }
 .news__body { padding: 26px 32px 30px; text-align: center; }
-.news__title { font-family: var(--font-head); font-weight: 800; font-size: 25px; line-height: 1.2; color: var(--amber); }
+.news__title { font-family: var(--font-head); font-weight: 700; font-size: 25px; line-height: 1.2; color: var(--amber); }
 .news__form { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
 .news__form input {
   height: 48px; padding: 0 16px; border-radius: var(--radius); border: 1px solid var(--ink); background: #FFF4D8; color: var(--ink); font-size: 15px;
@@ -490,4 +490,67 @@ ul { padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+/* =====================================================================
+   TYPOGRAPHY PASS: every text role matched to the source site's computed
+   values. Desktop = min-width 990px, mobile = below 990px (source breakpoint).
+   Both families are free Google Fonts (Bricolage Grotesque, Montserrat).
+   Full table: NOTES.md "## Fonts".
+   ===================================================================== */
+body { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; letter-spacing: normal; text-transform: none; font-style: normal; }
+.btn, .round-btn, .btn--outline, .btn--light { font-family: var(--font-body); font-weight: 500; font-size: 15.6173px; line-height: 23.5853px; letter-spacing: normal; text-transform: none; }
+.hero__title { font-family: var(--font-head); font-weight: 700; font-size: 47.808px; line-height: 62.1504px; letter-spacing: normal; text-transform: none; }
+.hero__title--alt { font-size: 39.84px; line-height: 51.792px; }
+.hero__text { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; letter-spacing: normal; text-transform: none; max-width: 420px; }
+.hero__text--sm { font-size: 13.944px; line-height: 23.7048px; }
+.hero__text--md { font-size: 15.936px; line-height: 27.0912px; }
+.slide-nav__count, .gins__nav .slide-nav__count { font-family: var(--font-body); font-weight: 400; font-size: 13.944px; line-height: 23.7048px; letter-spacing: normal; }
+.marquee { font-family: var(--font-head); font-weight: 700; font-size: 15.936px; line-height: 23.1072px; letter-spacing: normal; text-transform: none; }
+.eyebrow { font-family: var(--font-body); font-weight: 500; font-size: 11.952px; line-height: 20.3184px; letter-spacing: 2px; text-transform: uppercase; }
+.about__title, .section-title { font-family: var(--font-head); font-weight: 700; font-size: 31.872px; line-height: 41.4336px; letter-spacing: normal; text-transform: none; }
+.section-lead { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; letter-spacing: normal; text-transform: none; }
+.gins__name { font-family: var(--font-head); font-weight: 700; font-size: 27.888px; line-height: 36.2544px; letter-spacing: normal; text-transform: none; }
+.gins__tag { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; letter-spacing: normal; }
+.social__handle { font-family: var(--font-head); font-weight: 700; font-size: 27.888px; line-height: 36.2544px; letter-spacing: normal; text-transform: none; }
+.stamp__label { font-family: var(--font-head); font-weight: 700; font-size: 27.888px; line-height: 36.2544px; letter-spacing: normal; text-transform: none; }
+.drawer a { font-family: var(--font-body); font-weight: 500; font-size: 23.904px; line-height: 31.0752px; letter-spacing: normal; text-transform: none; }
+.footer__head { font-family: var(--font-head); font-weight: 700; font-size: 15.936px; line-height: 23.1072px; letter-spacing: normal; text-transform: none; }
+.footer__col ul a { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; }
+.footer__legal { font-family: var(--font-body); font-weight: 400; font-size: 12.7488px; line-height: 21.673px; letter-spacing: normal; }
+.footer__bottom { font-family: var(--font-body); font-weight: 400; font-size: 13.944px; line-height: 23.7048px; }
+.news__title { font-family: var(--font-head); font-weight: 700; font-size: 21.912px; line-height: 28.4856px; letter-spacing: normal; text-transform: none; }
+.news__note { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; }
+.gate__title { font-family: var(--font-head); font-weight: 700; font-size: 31.872px; line-height: 41.4336px; letter-spacing: normal; text-transform: none; }
+.gate__text { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; }
+.announce { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; line-height: 27.0912px; }
+.logo__text small { font-weight: 500; }
+
+@media (max-width: 989px) {
+  body { font-size: 14.94px; line-height: 25.398px; }
+  .btn, .round-btn, .btn--outline, .btn--light { font-size: 15.6173px; line-height: 23.5853px; }
+  .hero__title { font-size: 35.856px; line-height: 46.6128px; }
+  .hero__title--alt { font-size: 31.872px; line-height: 41.4336px; }
+  .hero__text { font-size: 14.94px; line-height: 25.398px; }
+  .hero__text--sm { font-size: 12.948px; line-height: 22.0116px; }
+  .hero__text--md { font-size: 14.94px; line-height: 25.398px; }
+  .slide-nav__count, .gins__nav .slide-nav__count { font-size: 12.948px; line-height: 22.0116px; }
+  .marquee { font-size: 14.94px; line-height: 21.663px; }
+  .eyebrow { font-size: 11.952px; line-height: 20.3184px; }
+  .about__title, .section-title { font-size: 27.888px; line-height: 36.2544px; }
+  .section-lead { font-size: 14.94px; line-height: 25.398px; }
+  .gins__name { font-size: 21.912px; line-height: 28.4856px; }
+  .gins__tag { font-size: 14.94px; line-height: 25.398px; }
+  .social__handle { font-size: 21.912px; line-height: 28.4856px; }
+  .stamp__label { font-size: 21.912px; line-height: 28.4856px; }
+  .drawer a { font-size: 22.41px; line-height: 29.133px; }
+  .footer__head { font-size: 14.94px; line-height: 21.663px; }
+  .footer__col ul a { font-size: 14.94px; line-height: 25.398px; }
+  .footer__legal { font-size: 11.952px; line-height: 20.3184px; }
+  .footer__bottom { font-size: 12.948px; line-height: 22.0116px; }
+  .news__title { font-size: 17.928px; line-height: 23.3064px; }
+  .news__note { font-size: 14.94px; line-height: 25.398px; }
+  .gate__title { font-size: 27.888px; line-height: 36.2544px; }
+  .gate__text { font-size: 14.94px; line-height: 25.398px; }
+  .announce { font-size: 14.94px; line-height: 25.398px; }
 }

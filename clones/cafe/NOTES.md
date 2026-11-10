@@ -62,3 +62,26 @@ Source studied: https://commonmancoffeeroasters.com/ (Shopify theme). Output is 
 - Mega-menu contents and the second hero carousel slide are simplified.
 - Video hero is a static gradient with a CSS pour animation.
 - Mobile header omits the sub-wordmark to fit the width.
+
+## Fonts
+
+Source family: **Founders Grotesk**, self-hosted by the source site as WOFF/WOFF2 (Regular 400 and Medium 500 only). Licence: commercial, from the foundry (Klim Type Foundry); buy or licence at klim.co.nz or through a licensed web-font reseller. Its files were not downloaded, copied or hot-linked.
+
+Clone stack: `"Founders Grotesk", "Tidewater Fallback", "Hanken Grotesk", system-ui, ...`. The exact name comes first, so it renders wherever the family is licensed or installed. Nothing in the clone loads it.
+
+Fallback: Hanken Grotesk (SIL OFL, Google Fonts), loaded through the Google Fonts stylesheet (400 and 500) and aliased as "Tidewater Fallback" with `size-adjust` 88.5% (400) and 91% (500). Ratios were measured in the browser against the source face (lowercase copy about 0.88 and 0.91, caps about 0.94 and 0.96). Caps therefore sit slightly wide; no letter-spacing compensation was added.
+
+| Role | Source family | Source size 390 to 1440 | Weight | Line-height | Letter-spacing / transform | Clone |
+|---|---|---|---|---|---|---|
+| Announcement, body, lede, section copy, card copy | Founders Grotesk | 15.94 to 17 px | 400 | 1.294 (22 px at 17) | none | same family stack, `--fs-base` fluid, `--lh-body` |
+| Nav, buttons, card titles, footer headings | Founders Grotesk | 15.94 to 17 px | 500 | 1.294 (buttons, nav) / 1.176 (titles) | nav and titles uppercase; footer headings 0.05em | `--fs-base`, weight 500 |
+| Eyebrow | Founders Grotesk | 14.06 to 15 px | 500 | 1.176 | uppercase | `--fs-small`, weight 500 |
+| Hero H1 | Founders Grotesk | 31.88 to 50 px | 400 | 1.12 | none | `--fs-h1`, lh 1.12 |
+| Section H2 | Founders Grotesk | 31.88 to 34 px | 400 | 1.176 | none | `--fs-h2`, lh 1.176 |
+| H3 / panel titles | Founders Grotesk | 25.31 to 27 px | 400 | 1.176 | none | `--fs-h3`, lh 1.176 |
+| Small (copyright, captions) | Founders Grotesk | 14.06 to 15 px | 400 | 1.176 | none | `--fs-small` |
+| Logo wordmark | image in source | n/a | n/a | n/a | n/a | Big Shoulders Display (Google, OFL), placeholder graphic only |
+
+Verified at 1440 and 390 px: family, size (within 0.3 px), weight, uppercase and line-height match the source values for every role above. Two rows were not directly comparable because the locator matched a different element (for example a card anchor instead of its heading).
+
+Not matched: glyph shapes and metrics (cap height, x-height, ascent and descent) still differ from Founders, so line breaks can fall in different places. Source copyright line measured 15 px at 1440 and 14.06 px at 390, weight 400, line-height 1.176; the clone's small role matches these values. The mobile side tab overlaps body text at 390 px.

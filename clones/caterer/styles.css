@@ -12,9 +12,10 @@
   --footer-line: #4d4d4d;
   --whatsapp: #25d366;
 
-  --font-body: "Figtree", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
-  --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
-  --font-banner: "Ultra", Georgia, serif;
+  --font-body: "FunkisA", "Figtree", Avenir, Helvetica, Arial, sans-serif;
+  --font-display: "Kapra-Neue-Black", "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --font-banner: "Windsor", "Ultra", Georgia, serif;
+  --font-announce: "EmberBody", "Figtree", Helvetica, Arial, sans-serif;
 
   --gutter: 16px;
   --container: 1128px;
@@ -55,8 +56,9 @@ button { font: inherit; }
   padding: 10px 48px;
   background: var(--announce);
   color: #fff;
+  font-family: var(--font-announce);
   font-size: 14px;
-  line-height: 20px;
+  line-height: 14px;
   text-align: center;
 }
 .announce p { max-width: 900px; }
@@ -119,7 +121,7 @@ button { font: inherit; }
 .primary-nav a,
 .header-cta {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   line-height: 60px;
@@ -181,14 +183,14 @@ button { font: inherit; }
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 24px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color .2s var(--ease), transform .2s var(--ease);
 }
 .btn--yellow { background: var(--yellow); color: var(--ink); }
 .btn--yellow:hover { background: var(--yellow-hover); transform: translateY(-1px); }
-.btn--lg { min-width: 168px; height: 52px; font-size: 18px; margin-top: 4px; }
+.btn--lg { min-width: 168px; height: 42px; font-size: 16px; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -224,16 +226,16 @@ button { font: inherit; }
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 52px;
-  line-height: 1.02;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
   text-transform: uppercase;
-  letter-spacing: .005em;
+  letter-spacing: normal;
 }
 .hero__sub {
-  font-size: 23px;
-  font-weight: 500;
-  line-height: 1.35;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
   max-width: 880px;
 }
 
@@ -284,17 +286,17 @@ button { font: inherit; }
 }
 .product__title {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 40px;
-  line-height: 1.05;
+  line-height: 54px;
   text-transform: uppercase;
-  letter-spacing: .005em;
+  letter-spacing: normal;
 }
 .product__byline {
   max-width: 320px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 24px;
 }
 
 /* ---------- Testimonials ---------- */
@@ -304,13 +306,13 @@ button { font: inherit; }
 }
 .testimonials__inner { max-width: 760px; margin: 0 auto; text-align: center; }
 .testimonials__title {
-  font-family: var(--font-display);
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 40px;
-  line-height: 1.1;
+  line-height: 54px;
   margin-bottom: 16px;
   text-transform: none;
-  letter-spacing: .01em;
+  letter-spacing: normal;
 }
 .carousel { position: relative; }
 .carousel__track { display: grid; }
@@ -336,9 +338,10 @@ button { font: inherit; }
 }
 .testimonial figcaption {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: .04em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: normal;
   text-transform: uppercase;
 }
 .carousel__dots {
@@ -397,6 +400,7 @@ button { font: inherit; }
 }
 .banner h2 {
   font-family: var(--font-banner);
+  font-weight: 700;
   font-size: 54px;
   line-height: 60px;
   color: var(--cream);
@@ -407,7 +411,8 @@ button { font: inherit; }
 .banner__copy a {
   color: #fff;
   font-size: 18px;
-  font-weight: 500;
+  line-height: 28px;
+  font-weight: 700;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
@@ -437,19 +442,19 @@ button { font: inherit; }
 }
 .site-footer h3 {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 28px;
   text-transform: uppercase;
   margin-bottom: 12px;
-  letter-spacing: .01em;
+  letter-spacing: normal;
 }
-.site-footer li + li { margin-top: 13px; }
+.site-footer li + li { margin-top: 16px; }
 .site-footer li a {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 20px;
   text-decoration: none;
-  color: #fff;
-  opacity: .92;
-  transition: opacity .2s;
+  color: var(--cream);
 }
 .site-footer li a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
 .site-footer__badges { display: flex; gap: 16px; align-items: flex-start; padding-top: 4px; }
@@ -487,7 +492,8 @@ button { font: inherit; }
   gap: 16px;
   padding: 18px 0 20px;
   border-top: 1px solid var(--footer-line);
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 16px;
 }
 .legal-links { display: flex; gap: 16px; padding-left: 0; }
 .legal-links a,
@@ -535,11 +541,7 @@ button { font: inherit; }
 
 @media (max-width: 960px) {
   .primary-nav { gap: 18px; }
-  .primary-nav a, .header-cta { font-size: 15px; }
-  .hero h1 { font-size: 44px; }
   .product { height: 420px; }
-  .product__title { font-size: 34px; }
-  .banner h2 { font-size: 44px; line-height: 50px; }
 }
 
 @media (max-width: 800px) {
@@ -561,8 +563,11 @@ button { font: inherit; }
     box-shadow: 0 12px 24px rgba(0, 0, 0, .2);
   }
   .site-header.is-open .primary-nav a {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
     line-height: 48px;
-    font-size: 18px;
+    font-size: 28px;
     border-top: 1px solid rgba(255, 255, 255, .18);
   }
   .site-header.is-open .primary-nav a::after { display: none; }
@@ -577,34 +582,35 @@ button { font: inherit; }
 
 @media (max-width: 640px) {
   :root { --gutter: 16px; }
-  .announce { font-size: 13px; line-height: 18px; padding: 10px 44px; min-height: 0; }
+  .announce { padding: 10px 44px; min-height: 0; }
   .announce__close { right: 6px; }
   .site-header { position: relative; top: auto; }
   .site-header.is-scrolled { position: fixed; }
   .hero { height: 480px; margin-top: -60px; padding-top: 60px; }
-  .hero h1 { font-size: 30px; line-height: 1.05; }
-  .hero__sub { font-size: 17px; }
+  .hero h1 { font-size: 28px; line-height: 36px; }
+  .hero__sub { font-size: 16px; line-height: 24px; }
   .hero__copy { gap: 12px; }
-  .btn--lg { min-width: 152px; height: 46px; font-size: 16px; }
 
   .products { margin: 16px 0 0; }
   .products__grid { grid-template-columns: 1fr; padding: 0 16px; }
   .product { height: 506px; }
   .product__copy { padding: 0 16px 40px; }
   .product__title { font-size: 28px; line-height: 36px; }
-  .product__byline { font-size: 16px; max-width: 300px; }
+  .product__byline { font-size: 16px; line-height: 24px; max-width: 300px; }
+  .product .btn { font-size: 14px; line-height: 20px; }
 
   .testimonials { padding: 40px 16px 24px; }
-  .testimonials__title { font-size: 28px; }
+  .testimonials__title { font-size: 18px; line-height: 28px; }
   .testimonial blockquote p { font-size: 16px; line-height: 24px; }
 
   .banner { height: 260px; }
   .banner__split { grid-template-columns: 1fr; }
   .banner__right { display: none; }
-  .banner h2 { font-size: 26px; line-height: 32px; }
-  .banner__copy a { font-size: 15px; }
+  .banner h2 { font-size: 28px; line-height: 36px; }
+  .banner__copy a { font-size: 14px; line-height: 20px; }
 
   .site-footer { padding-top: 40px; }
+  .site-footer h3 { font-size: 14px; }
   .site-footer__legal { flex-direction: column; align-items: flex-start; }
   .legal-links { flex-wrap: wrap; }
 }

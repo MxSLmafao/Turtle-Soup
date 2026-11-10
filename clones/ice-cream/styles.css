@@ -228,13 +228,13 @@ ul { list-style: none; }
     linear-gradient(165deg, #b89a8c 0%, #8b6f63 60%, #6f5a50 100%);
 }
 /* soft overlay so white type stays readable */
-.hero::after {
+.slide::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(40,28,20,.18), rgba(40,28,20,.32));
+  background: linear-gradient(180deg, rgba(30,20,14,.42), rgba(30,20,14,.52));
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
 }
 
 .hero-art {
@@ -278,13 +278,13 @@ ul { list-style: none; }
   line-height: 1.15;
   font-weight: 400;
   letter-spacing: -.01em;
-  text-shadow: 0 1px 14px rgba(0,0,0,.18);
+  text-shadow: 0 1px 2px rgba(0,0,0,.25), 0 2px 18px rgba(0,0,0,.28);
 }
 .hero-copy p {
   margin-top: 12px;
   font-size: 20px;
   line-height: 1.4;
-  opacity: .95;
+  opacity: 1;
 }
 .btn-ghost {
   display: inline-flex;
@@ -852,7 +852,6 @@ ul { list-style: none; }
   .features { padding: 48px var(--gutter); }
   .boutique .bl { padding-left: 4px; }
   .footer-links { grid-template-columns: repeat(2, 1fr); }
-  .footer-news .news-copy { font-size: 16px; }
   .site-header.is-solid { height: 64px; }
   .float-chat { width: 50px; height: 50px; }
 }
@@ -875,6 +874,32 @@ ul { list-style: none; }
   .handle { left: 14px; bottom: 16px; font-size: 14px; }
   .subfooter { font-size: 10px; }
 }
+
+/* ---------- Typography roles (authoritative) ----------
+   Fluid sizes interpolate between the source values at 390px and 1440px
+   (source uses vw-based fluid type). Overrides earlier size/weight declarations. */
+:root { --vw-min: 390px; --vw-max: 1440px; }
+body { font-optical-sizing: none; }
+.announcement { font-size: clamp(10.8px, calc(10.8px + (100vw - 390px) * 0.000857), 11.7px); font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.nav-left a { font-size: clamp(10.35px, calc(10.35px + (100vw - 390px) * 0.000000), 10.35px); font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.hero-copy h1 { font-size: clamp(29.4px, calc(29.4px + (100vw - 390px) * 0.004000), 33.6px); font-weight: 400; line-height: 1.25; letter-spacing: normal; text-transform: none; }
+.hero-copy p { font-size: clamp(16.15px, calc(16.15px + (100vw - 390px) * 0.004524), 20.9px); font-weight: 400; line-height: 1.375; letter-spacing: normal; text-transform: none; }
+.btn-ghost { font-size: clamp(10.8px, calc(10.8px + (100vw - 390px) * 0.000857), 11.7px); font-weight: 500; line-height: 1; letter-spacing: .09em; text-transform: uppercase; }
+.eyebrow { font-size: clamp(11.7px, calc(11.7px + (100vw - 390px) * 0.001286), 13.05px); font-weight: 500; line-height: 1.25; letter-spacing: .09em; text-transform: uppercase; }
+.chip { font-size: clamp(10.35px, calc(10.8px + (100vw - 390px) * -0.000429), 10.8px); font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.tag { font-size: clamp(10px, calc(10px + (100vw - 390px) * 0.000333), 10.35px); font-weight: 500; line-height: 1.625; letter-spacing: .09em; text-transform: uppercase; }
+.product-info h3 { font-size: clamp(12.35px, calc(12.35px + (100vw - 390px) * 0.001357), 13.775px); font-weight: 500; line-height: 1.5; letter-spacing: normal; text-transform: none; }
+.product-info p { font-size: clamp(10.5px, calc(10.5px + (100vw - 390px) * 0.001429), 12px); font-weight: 400; line-height: 1.5; letter-spacing: .08px; text-transform: none; }
+.price { font-size: clamp(11.4px, calc(11.4px + (100vw - 390px) * 0.000905), 12.35px); font-weight: 400; line-height: 1.5; letter-spacing: normal; text-transform: none; }
+.pillars { font-size: clamp(12.35px, calc(12.35px + (100vw - 390px) * 0.001357), 13.775px); font-weight: 400; line-height: 1.5; letter-spacing: normal; text-transform: none; }
+.news-copy { font-size: clamp(14px, calc(14px + (100vw - 390px) * 0.002500), 16.625px); font-weight: 400; line-height: 1.375; letter-spacing: normal; text-transform: none; }
+.fcol h4 { font-size: clamp(11.7px, calc(14px + (100vw - 390px) * -0.002190), 14px); font-weight: 500; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.fcol a { font-size: clamp(12.35px, calc(12.35px + (100vw - 390px) * 0.001357), 13.775px); font-weight: 400; line-height: 1.5; letter-spacing: normal; text-transform: none; }
+.subfooter { font-size: clamp(10.8px, calc(10.8px + (100vw - 390px) * 0.000857), 11.7px); font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.btn-join { font-size: clamp(10.8px, calc(10.8px + (100vw - 390px) * 0.000857), 11.7px); font-weight: 500; line-height: 1; letter-spacing: .09em; text-transform: uppercase; }
+.feature p { font-size: clamp(11.7px, calc(11.7px + (100vw - 390px) * 0.001286), 13.05px); font-weight: 500; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.boutique .bl { font-size: clamp(11.7px, calc(11.7px + (100vw - 390px) * 0.001286), 13.05px); font-weight: 500; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+@media (max-width: 749px) { .chip { font-weight: 500; } }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

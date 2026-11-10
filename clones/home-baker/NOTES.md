@@ -51,3 +51,36 @@ Category: Home / cottage food sellers (design study, placeholder brand "Cocoa La
 - Container 1108px max (166px side gutters at 1440). Mobile gutter 16px.
 - Desktop grid: 4 columns, 30px gap.
 - Mobile: 2-column grids, stacked story and footer.
+
+## Fonts
+
+Source family: Poppins for every text role (computed on the live site at 1440 and 390). The source's only other font is "Material Symbols Outlined" for its icons (the clone uses inline SVG instead), and the newsletter input falls back to system Arial 13.33px (the clone matches that).
+
+| Role | Source (1440 / 390) | Clone (1440 / 390) |
+|------|---------------------|--------------------|
+| Announcement | 14/700, lh 18.2, ls 1px / 12/700, lh 15.6, ls 1px | same |
+| Nav links | 14/400, lh 18.2, ls -0.4 | same |
+| Logo wordmark (text) | 24/700, lh 36, ls -0.4 | same |
+| Hero H1 | 48/700, lh 57.6, ls normal / 32/700, lh 38.4 | same |
+| Hero sub | 30/500, lh 36, ls normal / 32/500, lh 38.4 | same |
+| Hero note | 16/400, lh 24, ls -0.4 / 15/400, lh 22.5 | same |
+| CTA buttons | 16/600 uppercase, ls 1px / 14/600 | same |
+| Section H2 (incl. story H2) | 48/500, lh 57.6, ls -1.2, capitalize / 32/500, lh 38.4, ls -0.8 | same |
+| Locations H2 | 36/700, lh 36, ls -0.9 / 25.2/700, ls -0.63 | same |
+| Card H3 | 22/600, lh 28.6, ls -0.55 / 18/600, lh 23.4, ls -0.45 | same |
+| Card body | 16/400, lh 25.6, ls -0.4 / 14/400, lh 22.4, ls -0.375 | same |
+| Card button | 14/600, lh 21, ls -0.4 / 14/600 | same |
+| Story eyebrow | 21/700, lh 31.5 | same |
+| Location name | 20/600, lh 20, ls -0.5 | same |
+| Address and hours | 14/400, lh 21, ls -0.4 | same |
+| Instagram title | 17/400, lh 17, ls -0.425 | same |
+| Newsletter H2 | 48/600, lh 57.6 / 32/600, lh 38.4 | same |
+| Newsletter body | 16/400, lh 24 / 14/400, lh 21 | same |
+| Subscribe button | 16/600 / 14/600 | same |
+| Footer heading | 18/600, lh 18, ls -0.45, capitalize | same |
+| Footer links | 14/400, lh 21, ls -0.4 | same |
+| Copyright | 11/400, lh 16.5, ls -0.4 | same |
+
+Licence status: Poppins is free (SIL Open Font License 1.1) and is loaded from Google Fonts (weights 400, 500, 600, 700, 800). Because it is free, the clone uses the exact family with no name-first licence fallback. No font files were downloaded or copied from the source. Material Symbols (Apache 2.0) is not used in the clone.
+
+Source-values capture: Playwright computed styles on the live homepage (text nodes, visible elements), then compared to the clone with the same script.

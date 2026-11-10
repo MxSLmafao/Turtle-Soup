@@ -729,7 +729,7 @@ a:focus-visible {
 .footer-nav { display: flex; flex-direction: column; gap: 0.9rem; font-size: 1rem; text-transform: uppercase; }
 .footer-nav--main { grid-area: main; }
 .footer-nav:not(.footer-nav--main) { grid-area: sec; }
-.footer-nav a { text-decoration: none; line-height: 1.3; }
+.footer-nav a { text-decoration: none; line-height: 22.4px; }
 .footer-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .footer-nav--main a { display: inline-block; }
 .footer-social { grid-area: social; display: flex; gap: 1rem; padding-top: 0; }
@@ -955,6 +955,68 @@ a:focus-visible {
   .site-header__actions .cart-link { display: none; }
   .brand__word { font-size: 0.72rem; }
 }
+
+
+/* ============================================================
+   Typography pass: role-by-role match to the source site.
+   Desktop values measured at 1440px; mobile values at 390px.
+   F37Analog and MetaAccanthis_regular are commercial and are
+   named first in each stack (not loaded). Arimo is the free
+   fallback: it has Arial/Liberation metrics, which is what the
+   source renders today.
+   ============================================================ */
+:root {
+  --f-head: system_ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --f-head-m: "MetaAccanthis_regular", "Arimo", Arial, sans-serif;
+  --f-body: "F37Analog", "Arimo", Arial, sans-serif;
+  --f-body-m: "MetaAccanthis_regular", "Arimo", Arial, sans-serif;
+  --f-nav: "Inter", sans-serif;
+  --f-serif: "F37Analog", "Tinos", "Times New Roman", serif;
+}
+body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-weight: 500; letter-spacing: normal; font-style: normal; }
+.announce__track { font-family: var(--f-body); font-size: 14.2544px; line-height: 19.9561px; font-weight: 500; }
+.nav__list, .cart-link { font-family: var(--f-nav); font-size: 16px; line-height: 22.4px; font-weight: 500; text-transform: uppercase; }
+.btn, .btn--sm { font-family: var(--f-head); font-size: 16px; line-height: 22.4px; font-weight: 400; text-transform: uppercase; letter-spacing: normal; }
+.h2 { font-family: var(--f-head); font-size: 42.7149px; line-height: 38.4434px; font-weight: 400; }
+.h1 { font-family: var(--f-head); font-size: 42.7149px; line-height: 38.4434px; font-weight: 400; }
+.h1.app__title { font-weight: 700; }
+.pairing__copy .h1 { font-size: 57.0175px; line-height: 51.3158px; font-weight: 400; }
+.display { font-family: var(--f-head); font-size: 79.9458px; line-height: 71.9512px; font-weight: 400; letter-spacing: normal; }
+.proc-card__title, .newsletter__title { font-family: var(--f-head); font-size: 23.9729px; line-height: 21.5756px; font-weight: 400; }
+.section__sub, .lede, .product__detail, .product__note, .product__price, .proc-card__text, .perk,
+.reviews__by, .site-footer__legal, .newsletter__input { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-weight: 500; }
+.site-footer__legal { font-size: 14.2544px; line-height: 19.9561px; }
+.perk strong, .product__detail strong { font-weight: 700; }
+.reviews__quote p { font-family: var(--f-body); font-size: 32px; line-height: 28.8px; font-weight: 500; }
+.app__stores { font-family: var(--f-serif); font-size: 28px; line-height: 36.4px; font-weight: 500; }
+.footer-nav { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-weight: 500; text-transform: uppercase; }
+.footer-nav--main { font-family: var(--f-nav); }
+.footer-nav a { line-height: 22.4px; }
+
+@media (max-width: 989px) {
+  body { font-family: var(--f-body-m); }
+  .announce__track { font-family: var(--f-body-m); }
+  .nav__list, .cart-link { font-family: var(--f-body-m); }
+  .btn, .btn--sm { font-family: var(--f-body-m); }
+  .h2, .h1, .display, .proc-card__title, .newsletter__title { font-family: var(--f-head-m); }
+  .h2 { font-size: 32px; line-height: 28.8px; }
+  .h1 { font-size: 32px; line-height: 28.8px; }
+  .h1.app__title { font-weight: 700; }
+  .pairing__copy .h1 { font-size: 42.7149px; line-height: 38.4434px; }
+  .display { font-size: 47.9458px; line-height: 43.1512px; }
+  .proc-card__title, .newsletter__title { font-size: 23.9729px; line-height: 21.5756px; }
+  .section__sub, .lede, .product__detail, .product__note, .product__price, .proc-card__text, .perk,
+  .reviews__by, .newsletter__input { font-family: var(--f-body-m); font-size: 16px; line-height: 22.4px; }
+  .site-footer__legal { font-family: var(--f-body-m); font-size: 14.2544px; line-height: 19.9561px; }
+  .reviews__quote p { font-family: var(--f-body-m); font-size: 16px; line-height: 22.4px; }
+  .app__stores { font-family: var(--f-body-m); font-size: 20px; line-height: 26px; }
+  .footer-nav { font-family: var(--f-body-m); text-transform: none; }
+  .footer-nav--main { font-family: var(--f-body-m); }
+}
+
+/* letter-spacing: source uses normal everywhere */
+.announce__track, .nav__list, .cart-link, .btn, .h2, .h1, .display, .footer-nav,
+.proc-card__title, .newsletter__title, .section__sub, .perk, .reviews__quote p, .app__stores { letter-spacing: normal; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

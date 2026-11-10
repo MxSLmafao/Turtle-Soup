@@ -38,3 +38,24 @@ the priority: do not ship a generic template.
 
 ## 5. Report (final message, short)
 What you could/could not extract (render vs CSS-only), main design features reproduced, known gaps.
+
+## 6. Typography pass (follow-up)
+Goal: the clone must use the SAME typography as the source site.
+1. From your source render/CSS, list every font family the source uses and for each text role (nav,
+   h1, h2, h3, body, buttons, captions, footer) its computed font-family, size, weight, line-height,
+   letter-spacing, text-transform and font-style, at 1440px and 390px. Re-render the source if needed.
+2. Font families:
+   - If the source family is free (Google Fonts, Fontshare, or another open-licence font), load that exact
+     family from its official free host and use it.
+   - If it is a commercial/licensed family (Adobe Fonts/Typekit, foundry-hosted, self-hosted paid font):
+     do NOT download, copy, base64 or hot-link the source's font files or its Typekit kit. Put the exact
+     original family name FIRST in the font-family stack (so it renders wherever that font is installed
+     or licensed), followed by the closest free fallback, and tune the fallback (size-adjust /
+     letter-spacing) so metrics match as closely as possible.
+3. Make every text role in the clone match the source values from step 1 exactly (size, weight,
+   line-height, letter-spacing, transform, style) at both widths. Fix any mismatch.
+4. Add a "## Fonts" section to NOTES.md: table of role -> source family -> what the clone loads ->
+   licence status and where a licence can be bought if commercial.
+5. Re-screenshot at 1440 and 390, check nothing overflows or wraps badly, fix, then report briefly:
+   which families are now identical, which are name-first with fallback, and any role you could not match.
+Same rules as before: only touch your own clones/<slug>/ folder, no git, no subagents.

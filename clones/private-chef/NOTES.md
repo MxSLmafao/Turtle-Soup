@@ -42,3 +42,28 @@ Extraction: full render succeeded (cookie banner dismissed via DOM for captures)
 - Photography replaced by drawn gradient and SVG "art" tiles at the same aspect ratios.
 - Brand, chef names, reviews, stats, copy are all invented placeholders.
 - Cookie banner, chat widget and third-party scripts omitted.
+
+## Fonts
+
+Source families (computed styles on the live homepage): **Alata** (headings) and **Nunito Sans** (body, nav, buttons, captions, footer). Both are free Google Fonts under the SIL Open Font License. No commercial or licensed family is used, so no name-first stack or metric tuning is needed.
+
+| Role | Source family | Clone loads | Licence |
+|---|---|---|---|
+| Nav links | Nunito Sans 700, 16/24 | Nunito Sans (Google Fonts) | OFL, free |
+| Section H1 and H2 | Alata 500, 45/54 desktop (>=992px), 30/36 below | Alata 500 (Google Fonts) | OFL, free |
+| Card and CTA titles | Alata 400: menu tiles 30/36, CTA 35.2/43.2, score H2 30/36 | Alata | OFL, free |
+| H3 (chef name, step title) | Nunito Sans 400 20/30 (chef), 700 16/24 (step) | Nunito Sans | OFL, free |
+| Hero lead | Nunito Sans 400, 18/27 | Nunito Sans | OFL, free |
+| Body | Nunito Sans 400, 16/24 | Nunito Sans | OFL, free |
+| Pills and buttons | Nunito Sans 700, 14.88/22.32 desktop, 16/24 mobile | Nunito Sans | OFL, free |
+| Captions and ratings | Nunito Sans 400, 12.8/19.2 (ratings: 13.92/20.88 desktop) | Nunito Sans | OFL, free |
+| Stat numbers | Alata 400, 80/109 desktop, 64/76.8 mobile | Alata | OFL, free |
+| Stat labels, score label | Nunito Sans 400, 22/33 desktop, 18/27 mobile | Nunito Sans | OFL, free |
+| Metric titles | Alata 400, 15/18 | Alata | OFL, free |
+| Footer links and labels | Nunito Sans 300, 16/32 | Nunito Sans 300 | OFL, free |
+| Copyright | Nunito Sans 400, 12.8/19.2 | Nunito Sans | OFL, free |
+
+Weights loaded: Alata 400 (Google only ships regular, so the source's 500 headings render from the same face). Nunito Sans 300, 400, 600, 700 plus italic 400 (the Google link requests exactly these).
+
+Not verified against the source at 1440px: the trust strip caption (14.88/22.32 is an estimate; 390px measured 14/21).
+Placeholder logo wordmark uses Alata, so the source's logo is not reproduced.

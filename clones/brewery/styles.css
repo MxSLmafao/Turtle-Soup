@@ -1,3 +1,11 @@
+/* Name-first stacks: the source families are commercial (Typekit), so they are named first and a
+   metric-tuned fallback (Jost, open licence, Google Fonts) takes over when they are not installed. */
+/* Metric-tuned fallbacks (Jost, SIL OFL, Google Fonts). size-adjust values were measured against the
+   source's real Futura PT renders for the same strings at 400, 500 and 700 weights. */
+@font-face { font-family: "Driftwood Futura Regular"; src: url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format("woff2"); font-weight: 100 449; font-display: swap; size-adjust: 91.74%; }
+@font-face { font-family: "Driftwood Futura Medium"; src: url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format("woff2"); font-weight: 450 550; font-display: swap; size-adjust: 87.97%; }
+@font-face { font-family: "Driftwood Futura Display Medium"; src: url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format("woff2"); font-weight: 450 550; font-display: swap; size-adjust: 100.76%; }
+@font-face { font-family: "Driftwood Futura Bold"; src: url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format("woff2"); font-weight: 600 900; font-display: swap; size-adjust: 89.21%; }
 /* Driftwood placeholder design study. Tokens taken from the source design, brand-neutral. */
 :root {
   --bg: #f1f1f1;
@@ -9,8 +17,10 @@
   --accent-ink: #ffffff;
   --accent-dark: #e89a1c;
   --line: #e4e4e4;
-  --font-display: "Jost", "Futura", sans-serif;
-  --font-body: "Jost", "Open Sans", Helvetica, Arial, sans-serif;
+  --font-display: "futura-pt-bold", "Driftwood Futura Bold", sans-serif;
+  --font-body: "futura-pt", "Driftwood Futura Regular", sans-serif;
+  --font-body-md: "futura-pt", "Driftwood Futura Medium", sans-serif;
+  --font-display-md: "futura-pt-bold", "Driftwood Futura Display Medium", sans-serif;
   --gutter: 16px;
   --ease: cubic-bezier(.2,.7,.2,1);
 }
@@ -125,7 +135,8 @@ h2 { margin: 0; }
   content: ""; position: absolute; left: 50%; bottom: -12px; width: 80%; height: 24px; transform: translateX(-50%);
   border-bottom: 2px solid var(--accent); border-radius: 0 0 50% 50% / 0 0 100% 100%; pointer-events: none;
 }
-.pillar-card p { max-width: 300px; min-height: 108px; }
+.pillar-card p { max-width: 300px; min-height: 96px; font-size: 18px; line-height: 24px; letter-spacing: 1px; font-weight: 400; }
+.pillar-lead .pillar-card p { font-weight: 500; font-family: var(--font-body-md); }
 .btn {
   display: inline-block; padding: 12px 24px; border-radius: 3px; background: var(--accent); color: var(--accent-ink);
   font-family: var(--font-display); font-weight: 700; font-size: 14px; line-height: 14px; letter-spacing: 6px;
@@ -137,7 +148,7 @@ h2 { margin: 0; }
 /* ---------- Social grid ---------- */
 .social { padding: 80px 16px 90px; background: var(--bg); text-align: center; }
 .social h2 {
-  font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 45px;
+  font-family: var(--font-display-md); font-weight: 500; font-size: 40px; line-height: 45px;
   letter-spacing: 3px; text-transform: uppercase; color: var(--heading); margin-bottom: 40px;
 }
 .social-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
@@ -166,10 +177,10 @@ h2 { margin: 0; }
 /* ---------- Newsletter / footer ---------- */
 .newsletter { background: var(--surface); text-align: center; padding: 60px 16px 56px; }
 .newsletter h2 {
-  font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 26px;
+  font-family: var(--font-display); font-weight: 700; font-size: 18px; line-height: 18px;
   letter-spacing: 3px; text-transform: uppercase; color: var(--nav); margin-bottom: 10px;
 }
-.newsletter > p { margin-bottom: 24px; }
+.newsletter > p { margin-bottom: 24px; font-size: 18px; line-height: 25.2px; letter-spacing: 1px; }
 .nl-form { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
 .nl-form input {
   width: 340px; max-width: 100%; height: 45px; padding: 0 16px; border: 1px solid #9aa0b8; border-radius: 0;
@@ -178,9 +189,9 @@ h2 { margin: 0; }
 }
 .nl-form input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(250,187,59,.3); }
 .btn-solid { margin: 0; height: 45px; padding: 0 28px; line-height: 45px; }
-.site-footer { background: var(--surface); text-align: center; padding: 0 16px 40px; font-size: 16px; line-height: 26px; }
+.site-footer { background: var(--surface); text-align: center; padding: 0 16px 40px; font-size: 18px; line-height: 27px; letter-spacing: 1px; }
 .site-footer p { margin: 0; }
-.site-footer .legal { font-size: 14px; opacity: .8; margin-top: 6px; }
+.site-footer .legal { font-size: 18px; line-height: 27px; opacity: .8; margin-top: 6px; }
 
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
@@ -195,7 +206,6 @@ h2 { margin: 0; }
 @media (max-width: 1200px) {
   .pillars-inner { grid-template-columns: repeat(2, 360px); row-gap: 90px; }
   .header-top { padding: 0 24px; }
-  .primary-nav a { font-size: 14px; letter-spacing: 2px; }
 }
 
 /* ---------- Mobile (390px) ---------- */
@@ -215,15 +225,14 @@ h2 { margin: 0; }
   .hero-chip { right: 16px; bottom: 16px; }
   .pillars-inner { grid-template-columns: 1fr; padding: 0 var(--gutter); row-gap: 70px; }
   .pillar-card { height: auto; min-height: 340px; padding-bottom: 0; }
-  .pillar-card p { max-width: 100%; min-height: 0; }
+    .pillar-card p { max-width: 100%; min-height: 0; }
   .btn { letter-spacing: 4px; }
   .promo-bar { display: none; }
   .social { padding: 56px var(--gutter) 64px; }
-  .social h2 { font-size: 26px; line-height: 32px; letter-spacing: 2px; margin-bottom: 24px; }
+  .social h2 { font-size: 24px; line-height: 32px; letter-spacing: 3px; margin-bottom: 24px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .tile span { opacity: 1; transform: none; }
   .newsletter { padding: 48px var(--gutter); }
-  .newsletter h2 { font-size: 17px; letter-spacing: 2px; }
   .nl-form input { width: 100%; }
   .nl-form .btn-solid { width: 100%; }
 }

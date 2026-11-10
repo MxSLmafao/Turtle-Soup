@@ -47,3 +47,33 @@ Source: https://atlasbar.sg/ (category: Bars & pubs). Scratch copies live in
 - Brand name, logo, copy, addresses, phone, emails and group names are invented ("Halden").
 - All photos and icons are replaced by inline SVG and CSS gradients drawn for this clone.
 - Commented-out source sections are not reproduced, because they never render.
+
+## Fonts
+
+Source families (both self-hosted OTF files on the source site, not copied here):
+`itckabelstd-book` (regular) and `itckabelstd-medium`. Both are ITC Kabel Std, a commercial face.
+The clone never downloads or embeds the source files. Each stack puts the exact source name first,
+then a free fallback.
+
+| Role (1440 / 390) | Source family | Size | Weight | Line-height | Letter-spacing | Transform | Clone stack and status |
+|---|---|---|---|---|---|---|---|
+| Body | itckabelstd-book | 16px | 400 | 22.857px | normal | none | `--font-book` (name first, then Jost). Name-first with fallback |
+| Nav links | itckabelstd-book | 12px | 400 | 17.143px | 3.2px | uppercase | `--font-book`. Name-first with fallback |
+| H1 hero | itckabelstd-medium | 25px | 500 | 27.5px | 6.4px | uppercase | `--font-medium` (name first, then Jost 500). Name-first with fallback |
+| H2 hero | itckabelstd-book | 22px / 19.2px at 390 | 500 (computed) | 35.2px / 30.72px (1.6em) | 6.4px | uppercase | `--font-book`, computed weight kept at 500 so the Jost fallback matches. Name-first with fallback |
+| Popup body | itckabelstd-book | 14px | 400 | 25.2px | 1.4px | none | `--font-book`. Name-first with fallback |
+| Popup close | itckabelstd-book | 14px | 400 | 20px | 1.4px | none | `--font-book`, gradient text. Name-first with fallback |
+| Popup title | itckabelstd-book | 30px | 400 | 42.857px | 4.5px | uppercase | `--font-book`. Name-first with fallback |
+| Footer text | itckabelstd-book | 11px | 400 | 19.8px | 1.65px | none | `--font-book`. Name-first with fallback |
+| Footer group links | itckabelstd-book | 14px | 400 | 20px | 2.1px | uppercase | `--font-book`. Name-first with fallback |
+| Copyright / privacy | itckabelstd-book | 9.6px | 400 | 17.28px / 23.04px | 1.44px / 1.92px | none | `--font-book`. Name-first with fallback |
+| Reserve button | itckabelstd-book | 12px | 700 (synthetic bold) | 20px | normal | none | `--font-book`. Name-first with fallback |
+| Button label (default) | itckabelstd-medium | 16px (inherited) | 500 | 22.857px | 3.2px | uppercase | `--font-medium`. Name-first with fallback |
+
+Licence status: ITC Kabel is commercial. To use it legitimately, buy a web or desktop licence from its
+foundry (Monotype owns ITC) or license it through a font service. Without a licence the fallback renders,
+which is Jost from Google Fonts, loaded in `index.html` under the SIL Open Font License.
+
+Limits: Jost is not metric-identical to Kabel. No `size-adjust` tuning was applied because the Kabel
+metrics could not be measured here. All sizes, line-heights and tracking are set to the source's
+computed values, so only glyph widths differ on machines without Kabel installed.

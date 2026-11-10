@@ -28,4 +28,28 @@ Source studied: https://brewerkz.com/ (WordPress + Elementor Pro, child theme). 
 ## Known gaps
 - Hero, pillar art and social tiles are abstract drawings, not photography.
 - No carousels or live Instagram feed; the original footer and cookie/recaptcha widgets are omitted.
-- Futura PT is approximated with Jost, so glyph widths differ slightly.
+- Futura PT is replaced by a metric-tuned Jost fallback (see Fonts). Widths match within 0.1% for the measured strings.
+
+## Fonts
+
+Source families were read from the rendered page and its Typekit kit (use.typekit.net). Sizes are identical at 1440px and 390px except where marked.
+
+| Role | Source family, weight | Size / line-height, letter-spacing, transform, colour | Clone stack and what it loads | Licence status |
+|---|---|---|---|---|
+| Header nav | futura-pt-bold, 700 | 16px / 20px, 3px, uppercase, #5d6486 | "futura-pt-bold", "Driftwood Futura Bold" (Jost variable woff2, size-adjust 89.21%) | Commercial (Futura PT). Buy via Adobe Fonts or the foundry licence. |
+| Card and body copy | futura-pt, 400 | 18px / 24px, 1px, none, #666 | "futura-pt", "Driftwood Futura Regular" (size-adjust 91.74%) | Commercial, as above |
+| First card lead line | futura-pt, 500 | 18px / 24px, 1px, none, #666 | "futura-pt", "Driftwood Futura Medium" (size-adjust 87.97%) | Commercial, as above |
+| Section heading (H3) | futura-pt-bold, 500 | 40px / 45px desktop; 24px / 32px at 390px; 3px; uppercase; #101632 | "futura-pt-bold", "Driftwood Futura Display Medium" (size-adjust 100.76%) | Commercial, as above |
+| Newsletter heading | futura-pt-bold, 700 | 18px / 18px, 3px, uppercase, #5d6486 | Bold fallback | Commercial, as above |
+| Buttons | futura-pt-bold, 700 | 14px / 14px, 6px, uppercase, #fff | Bold fallback | Commercial, as above |
+| Newsletter line and footer | futura-pt, 400 | 18px / 25.2px (newsletter); 18px / 27px (copyright), 1px, #666 | Regular fallback | Commercial, as above |
+| Promo chip, Instagram follow button | Arial (system) | not measured, approximated at 14px and 13px | Arial, unchanged | Not a licensed font |
+| Input placeholder | not measured | - | Inherits body stack | - |
+
+Name-first rule: each stack starts with the exact source family name, so the true font is used wherever it is installed or licensed. The fallback loads Jost (SIL Open Font License, Google Fonts). No Typekit kit, no source font files are downloaded, copied or base64-embedded.
+
+Tuning method: the source page was rendered with its own Futura PT, and the same strings were measured there and in the clone. Each size-adjust was solved with letter-spacing counted separately, so the width ratio is 1.000 +/- 0.001 for the measured strings.
+
+Not matched:
+- "Veneer Two" is declared in the source CSS but no sampled role uses it.
+- "Open Sans" appears in the source's computed font list for one element, not visible in any sampled role. The clone does not use it.

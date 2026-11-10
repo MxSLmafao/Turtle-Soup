@@ -11,7 +11,11 @@
   --overlay: rgba(0, 0, 0, 0.7);
   --gold: linear-gradient(to right, #93574d 0%, #e69d80 49%, #daa089 65%, #d88e6c 86%, #e59d7f 100%);
   --gold-edge: linear-gradient(to right, #a36457 0%, #e5a082 52%, #da9474 100%);
-  --font: "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+  /* Source faces are commercial (ITC Kabel). Exact names come first so they render wherever licensed;
+     Jost (Google Fonts) is the free fallback. */
+  --font-book: "itckabelstd-book", "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+  --font-medium: "itckabelstd-medium", "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+  --font: var(--font-book);
   --page-gutter: 16px;
 }
 
@@ -35,10 +39,11 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font);
+  font-family: var(--font-book);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.42857143;
+  letter-spacing: normal;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -107,12 +112,12 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .menu li {
   display: inline-block;
   padding: 0 15px;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 12px;
+  line-height: 17.1429px;
 }
-.menu a { color: var(--ink-soft); }
+.menu a { color: var(--ink); font-family: var(--font-book); font-size: 12px; }
 .menu a:hover, .menu a:focus-visible { color: var(--accent); }
 
 .menu-toggle {
@@ -148,9 +153,11 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .home-heading {
   display: block;
   margin: 0;
+  font-family: var(--font-medium);
   font-size: 25px;
   font-weight: 500;
-  letter-spacing: 0.4em;
+  line-height: 27.5px;
+  letter-spacing: 6.4px;
   text-transform: uppercase;
   background: var(--gold);
   -webkit-background-clip: text;
@@ -161,10 +168,11 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .home-sub {
   display: inline-block;
   margin-top: 50px;
-  font-size: 1.2em;
-  font-weight: 400;
+  font-family: var(--font-book);
+  font-size: 22px;
+  font-weight: 500;
   line-height: 1.6em;
-  letter-spacing: 0.4em;
+  letter-spacing: 6.4px;
   text-transform: uppercase;
   background: var(--gold);
   -webkit-background-clip: text;
@@ -210,9 +218,10 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .social-col,
 .group-links {
   text-align: center;
+  font-family: var(--font-book);
   font-size: 11px;
-  letter-spacing: 0.15em;
-  line-height: 1.9;
+  letter-spacing: 1.65px;
+  line-height: 19.8px;
   padding: 0;
   margin: 0;
 }
@@ -223,7 +232,7 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   margin: 0 auto 40px;
 }
 .contact-block p { font-size: 11px; letter-spacing: 0.15em; margin: 0; }
-.contact-block p a { font-size: 11px; color: var(--ink-soft); display: block; }
+.contact-block p a { font-size: 11px; color: var(--ink); display: block; }
 .contact-block p a:hover { color: var(--accent); }
 .dress { margin-top: 12px !important; }
 .dress a { display: inline; text-decoration: underline; text-underline-offset: 3px; }
@@ -239,10 +248,11 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .group-links a {
   display: block;
   font-size: 14px;
-  letter-spacing: 0.15em;
+  line-height: 20px;
+  letter-spacing: 2.1px;
   text-transform: uppercase;
   padding: 10px 0;
-  color: var(--ink-soft);
+  color: var(--ink);
 }
 
 .footer-copyright {
@@ -260,10 +270,10 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   flex-wrap: wrap;
   gap: 8px 24px;
 }
-.footer-copyright p { margin: 0; letter-spacing: 0.15em; font-size: 10px; }
+.footer-copyright p { margin: 0; letter-spacing: 1.44px; font-size: 9.6px; line-height: 17.28px; }
 .copyright-info { color: var(--ink-muted); }
-.privacy-terms { color: var(--ink-muted); }
-.privacy-terms a { color: var(--ink-muted); }
+.privacy-terms { color: var(--ink-muted); line-height: 23.04px; letter-spacing: 1.92px; }
+.privacy-terms a { color: var(--ink-muted); line-height: 23.04px; letter-spacing: 1.92px; }
 .privacy-terms a:hover { color: var(--accent); }
 .privacy-terms span { margin: 0 4px; }
 
@@ -284,14 +294,27 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
     var(--gold) border-box;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-family: var(--font);
+  letter-spacing: 3.2px;
+  font-family: var(--font-medium);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 22.857px;
   text-decoration: none;
   transition: background .35s ease, color .35s ease;
 }
 .default-btn span { padding-top: 3px; }
+/* Footer reserve button: mirrors the source's booking-widget label (12px, bold, mixed case, 172px wide) */
+.reserve-btn {
+  width: 172px;
+  color: #fff;
+  font-family: var(--font-book);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.reserve-btn span { padding-top: 0; }
 .default-btn:hover,
 .default-btn:focus-visible {
   background: var(--gold);
@@ -334,7 +357,13 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.4px;
+  line-height: 20px;
+  font-family: var(--font-book);
+  background: var(--gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: var(--accent);
   z-index: 2;
 }
@@ -345,8 +374,11 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .pop-img svg { display: block; width: 100%; height: auto; border: 1px solid #a36457; }
 .pop-title { margin: 0 0 16px; text-align: center; }
 .pop-title h3 {
-  font-size: 22px;
-  letter-spacing: 0.15em;
+  font-family: var(--font-book);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42.857px;
+  letter-spacing: 4.5px;
   text-transform: uppercase;
   background: var(--gold);
   -webkit-background-clip: text;
@@ -357,8 +389,10 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .pop-title-2 { margin-top: 0; }
 .pop-para {
   text-align: center;
-  letter-spacing: 0.1em;
-  line-height: 24px;
+  font-family: var(--font-book);
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 25.2px;
   padding: 0 30px;
   margin-bottom: 40px;
 }
@@ -413,10 +447,9 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   .menu li { display: block; padding: 10px 0; font-size: 14px; }
   .header-bar { min-height: 96px; }
   .site-header { position: relative; }
-  .hero-titles { width: calc(100% - 40px); margin: 14vh auto 0; padding: 6vh 20px; letter-spacing: 0.2em; }
+  .hero-titles { width: calc(100% - 40px); margin: 14vh auto 0; padding: 6vh 20px; }
   .home-logo { margin-bottom: 36px; }
-  .home-heading { font-size: 20px; letter-spacing: 0.2em; line-height: 1.5; }
-  .home-sub { font-size: 1em; letter-spacing: 0.15em; margin-top: 32px; }
+  .home-sub { font-size: 19.2px; }
   .home-sub br { display: none; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 36px; padding: 0 var(--page-gutter); }
@@ -440,7 +473,6 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   }
   .popup-outside { }
   .main-pop { padding: 0 20px; }
-  .pop-para { padding: 0 12px; }
   .pop-img { width: 250px; }
 }
 

@@ -1,4 +1,16 @@
 /* Ember & Oak: design study clone (placeholder brand). Tokens first, then components. */
+
+/* Fallback for the source's DinNext: free Barlow 400 (latin subset, Google Fonts host),
+   width-matched to DinNext on a sample string (ratio 1.0182, measured at 14px). */
+@font-face {
+  font-family: "Barlow Fallback";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlow/v13/7cHpv4kjgoGqM7E_DMs5.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 101.8%;
+}
 :root {
   --ink: #000000;
   --paper: #ffffff;
@@ -9,7 +21,8 @@
 
   --font-display: "Bebas Neue", "Oswald", Impact, sans-serif;
   --font-serif: "Radley", Georgia, "Times New Roman", serif;
-  --font-sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  /* Source footer face is "DinNext" (commercial, self-hosted). Name first, then the tuned free fallback. */
+  --font-din: "DinNext", "Barlow Fallback", "Barlow", "Helvetica Neue", Arial, sans-serif;
 
   --header-h: 116px;
   --header-h-m: 92px;
@@ -154,9 +167,10 @@ p { margin: 0; }
 .sub li a {
   display: block;
   padding: 10px 22px;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
+  letter-spacing: 1px;
   color: var(--paper);
   text-decoration: none;
   white-space: nowrap;
@@ -219,7 +233,7 @@ p { margin: 0; }
   color: var(--mist);
 }
 .copyright {
-  font-family: var(--font-sans);
+  font-family: var(--font-din);
   font-size: 14px;
   line-height: 24px;
   color: var(--mist);
@@ -302,7 +316,7 @@ p { margin: 0; }
     box-shadow: none;
   }
   .has-sub.open > .sub { display: block; }
-  .sub li a { padding: 10px var(--gutter-x) 10px calc(var(--gutter-x) + 16px); font-size: 17px; }
+  .sub li a { padding: 10px var(--gutter-x) 10px calc(var(--gutter-x) + 16px); }
   .sub li a:hover, .sub li a:focus-visible { padding-left: calc(var(--gutter-x) + 22px); }
 
   .hero { min-height: 0; }
@@ -315,7 +329,7 @@ p { margin: 0; }
     gap: 14px;
     padding: 18px var(--gutter-x) 22px;
   }
-  .copyright { font-size: 13px; line-height: 22px; max-width: 360px; }
+  .copyright { max-width: 360px; }
   .socials { margin-left: -12px; }
 }
 

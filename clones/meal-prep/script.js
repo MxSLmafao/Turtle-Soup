@@ -1,4 +1,4 @@
-/* Fernhollow Kitchen - placeholder design study. Plain JS, no dependencies. */
+/* Quillmere Kitchen - placeholder design study. Plain JS, no dependencies. */
 (function () {
   'use strict';
 

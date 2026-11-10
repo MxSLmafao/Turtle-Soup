@@ -35,6 +35,35 @@ Render: yes (Playwright worked through the proxy). Source HTML and CSS downloade
 - Footer accreditation logos replaced with neutral "Badge A-E" tiles.
 - No original images, logos, font files or copy used. Original brand not named in index.html, styles.css or script.js.
 
+## Fonts
+
+Source: one family, Montserrat, self-hosted by the source as custom faces (`montserratlight`, `montserratregular`, `montserratsemi_bold`, `montserratbold`). All four faces declare `font-weight: normal`, so the rendered weight comes from the face name.
+
+Licence status: Montserrat is free and open (SIL Open Font License), available from Google Fonts. The clone loads the same family from Google Fonts (weights 300-800) and does not copy or reference any source font file. Commercial licence not needed.
+
+| Role | Source family (face) | Clone loads | Licence |
+|---|---|---|---|
+| Nav (desktop) | Montserrat regular, synthetic bold | Montserrat 600 | OFL, free |
+| Section headings | Montserrat semibold | Montserrat 600 | OFL, free |
+| Product titles | Montserrat semibold | Montserrat 600 | OFL, free |
+| Price | Montserrat regular | Montserrat 400 | OFL, free |
+| Buttons | Montserrat semibold | Montserrat 600 | OFL, free |
+| Utility bar | Montserrat regular (desktop) / semibold (mobile) | Montserrat 400 / 600 | OFL, free |
+| Footer | Montserrat light | Montserrat 300 | OFL, free |
+| Body | Montserrat regular, 12px / 18px | Montserrat 400 | OFL, free |
+| Hero text | No source text (copy is baked into slide images) | Montserrat 600 / 400 (invented) | OFL, free |
+
+Measured values (computed, desktop 1440 / mobile 390):
+- Nav: 12px, lh 21.6px, tracking 1px, uppercase. Mobile nav is hidden behind the hamburger in the source, so it could not be measured and the clone keeps the desktop values.
+- Section heading: 22px / 24.2px (16px / 17.6px at mobile), normal tracking, uppercase.
+- Product title: 10.8px / 11.88px, normal tracking, uppercase.
+- Price: 11px / 12.1px (9px / 9.9px at mobile), uppercase.
+- Button: 10px / 14.29px, 1px tracking, uppercase.
+- Utility: 10px / 15px desktop; 12px / 18px, 1px tracking at mobile.
+- Footer: 8.67px / 13px desktop; 10.2px / 18px at mobile, uppercase.
+
+Font-size, line-height, tracking and transform match the source at both widths. Weights match the face the source renders, with the nav using 600 to approximate its synthetic bold.
+
 ## Known gaps
 - Scroll-reveal timing and the exact slider easing are approximated.
 - Original store section is taller and uses real product photography; the clone uses a 5-tile mosaic instead.

@@ -31,3 +31,22 @@ Extraction: render works (Playwright, chromium). Computed styles probed at 1440p
 ## Gaps
 - Real photography and logo are not reproduced; replaced with CSS/SVG art at same sizes.
 - Hero slider is a simple auto-advancing single slide with placeholder art.
+
+## Fonts
+Source loads self-hosted Lato files via @font-face (LatoRegular, LatoMedium, LatoLight; main.css).
+Clone loads the same family, free and open licence (SIL OFL), from Google Fonts (Lato 400 and 500).
+No source font files were downloaded or copied.
+
+| Role (source measured)          | 1440px source                 | 390px source                    | Clone |
+|---------------------------------|-------------------------------|---------------------------------|-------|
+| Nav links                       | LatoMedium 16px/normal ls1px  | not shown (menu collapses)      | Lato 500, 16px/normal, ls1px |
+| H2 (WELCOME, RECOMMENDATIONS)   | LatoMedium 32px/38.4px ls2px  | LatoMedium 20.8px/24.96px ls2px | Lato 500, same values |
+| H4 (tile captions)              | LatoMedium 24px/28.8px ls2px  | LatoMedium 17.6px/21.12px ls2px | Lato 500, same values |
+| Body / lede                     | LatoRegular 16px/24px ls1px   | LatoRegular 12.8px/19.2px ls1px | Lato 400, same values |
+| Links ("> See Our Menu")        | LatoRegular 16px/32px ls1px   | LatoRegular 12.8px/25.6px       | Lato 400, same values |
+| Footer                          | LatoRegular 16px/32px ls1px   | LatoRegular 12.8px/25.6px       | Lato 400, same values |
+| Buttons / menu toggle           | LatoRegular 16px              | LatoRegular 16px/48px           | Lato 400/500, 16px |
+
+Licence: Lato is OFL-licensed, free to use. No commercial licence needed.
+Unmatched: the source's other families (Century Gothic, Avenir Next, Geralia, Messenger Pigeons
+Personal Use) are declared in style.css but not used on the homepage, so they are not reproduced.

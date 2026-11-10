@@ -73,13 +73,13 @@ p { margin: 0; }
 .brand-mark { width: 40px; height: 40px; }
 .brand-text { font-size: 30px; font-weight: 500; letter-spacing: .5px; line-height: 1; }
 .brand-text .b1 { color: var(--navy); }
-.brand-text .b2 { color: var(--accent); font-weight: 700; margin-left: 4px; }
+.brand-text .b2 { color: var(--accent); font-weight: 500; margin-left: 4px; }
 
 .main-nav { display: flex; align-items: center; gap: 30px; }
 .main-nav > a, .has-dropdown > button {
   position: relative;
   padding: 26px 0;
-  font-size: 16px; font-weight: 500; letter-spacing: 1px;
+  font-size: 16px; font-weight: 500; letter-spacing: 1px; line-height: normal;
 }
 .main-nav > a::after, .has-dropdown > button::after {
   content: ""; position: absolute; left: 0; bottom: 18px; height: 2px; width: 100%;
@@ -105,7 +105,7 @@ p { margin: 0; }
 .lang-btn {
   background: var(--navy) !important; color: #fff !important;
   padding: 4px 18px !important; border-radius: 3px; line-height: 24px;
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 .lang-btn:hover { background: var(--accent) !important; }
 .lang-btn::after { display: none !important; }
@@ -277,13 +277,13 @@ main { display: block; }
   padding: 3em; line-height: 1.5em;
 }
 .badge { display: inline-flex; margin: 0 auto 10px; }
-.kicker { color: var(--navy); font-weight: 700; font-size: 17px; letter-spacing: .5px; }
-.intro-copy h3 { color: var(--accent); font-size: 22px; line-height: 30px; font-weight: 700; margin-top: 6px; }
-.address { color: var(--navy); font-size: 15px; line-height: 24px; letter-spacing: .3px; }
+.kicker { color: var(--navy); font-weight: 500; font-size: 16px; line-height: 24px; letter-spacing: 1px; }
+.intro-copy h3 { color: var(--accent); font-size: 24px; line-height: 28.8px; font-weight: 500; letter-spacing: 2px; margin-top: 6px; }
+.address { color: var(--navy); font-size: 16px; line-height: 24px; letter-spacing: 1px; }
 .intro-copy h2 { margin: 2em auto 1em; font-size: 32px; line-height: 38.4px; letter-spacing: 2px; font-weight: 500; }
-.lede { font-size: 16px; line-height: 27px; color: var(--ink); opacity: .9; max-width: 340px; margin: 0 auto; }
+.lede { font-size: 16px; line-height: 24px; letter-spacing: 1px; color: var(--ink); opacity: .9; max-width: 340px; margin: 0 auto; }
 .more { margin-top: 26px; }
-.more a { color: var(--accent); font-size: 16px; line-height: 24px; }
+.more a { color: var(--accent); font-size: 16px; line-height: 32px; letter-spacing: 1px; }
 .more a:hover { color: var(--navy); text-decoration: underline; }
 
 /* ---------- Recommendations ---------- */
@@ -332,7 +332,7 @@ main { display: block; }
 .reco-img .garnish { display: none; }
 .reco:hover .reco-img { transform: none; }
 .reco h4 {
-  margin-top: 16px; font-size: 16px; font-weight: 700; letter-spacing: .5px;
+  margin-top: 16px; font-size: 16px; line-height: 32px; font-weight: 500; letter-spacing: 1px;
   color: var(--navy);
 }
 
@@ -447,7 +447,7 @@ main { display: block; }
   .site-header { height: 58px; }
   .nav-bar { height: 58px; padding: 0 16px; }
   .main-nav { display: none; }
-  .menu-toggle { display: inline-flex; align-items: center; font-size: 14px; }
+  .menu-toggle { display: inline-flex; align-items: center; font-size: 16px; }
   .brand-text { font-size: 24px; }
   .brand-mark { width: 34px; height: 34px; }
   .hero { height: 52vh; min-height: 300px; margin-top: 58px; }
@@ -456,21 +456,25 @@ main { display: block; }
   .intro-copy { padding: 2.2em 16px 3em; }
   .recos { padding: 48px 16px 40px; }
   .recos-head { margin-bottom: 24px; }
-  .recos-head h2, .intro-copy h2 { font-size: 26px; line-height: 32px; }
+  body { font-size: 12.8px; line-height: 19.2px; }
+  .recos-head h2, .intro-copy h2 { font-size: 20.8px; line-height: 24.96px; }
+  .intro-copy h3 { font-size: 17.6px; line-height: 21.12px; }
+  .lede, .address { font-size: 12.8px; line-height: 19.2px; }
+  .more a, .see-menu { font-size: 12.8px; line-height: 25.6px; }
   .see-menu { position: static; transform: none; display: block; margin-top: 8px; text-align: center; }
   .reco-grid { gap: 14px; }
   .reco-img { height: 150px; }
   .tiles { padding: 0 16px 32px; }
   .tile-grid { grid-template-columns: 1fr; gap: 32px; }
   .tile-art { height: 240px; }
-  .tile-link h4 { font-size: 20px; line-height: 26px; letter-spacing: 1.5px; }
-  .site-footer { padding: 14px 16px; flex-direction: column; align-items: flex-start; font-size: 14px; line-height: 24px; }
+  .tile-link h4 { font-size: 17.6px; line-height: 21.12px; letter-spacing: 2px; }
+  .reco h4 { font-size: 12.8px; line-height: 25.6px; }
+  .site-footer { padding: 14px 16px; flex-direction: column; align-items: flex-start; font-size: 12.8px; line-height: 25.6px; }
   .foot-right { gap: 8px; }
 }
 
 @media (max-width: 420px) {
   .reco-grid { grid-template-columns: 1fr 1fr; }
-  .reco h4 { font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

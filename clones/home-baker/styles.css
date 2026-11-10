@@ -673,3 +673,61 @@ button { font: inherit; }
   .hero h1 { font-size: 28px; }
   .product-card h3 { font-size: 16px; }
 }
+
+/* ==========================================================
+   Typography roles (matched to source measurements)
+   Desktop values first, then the <=900px overrides below.
+   Source family: Poppins (SIL OFL, Google Fonts), used for every text role.
+   ========================================================== */
+.announcement { font-size: 14px; line-height: 18.2px; font-weight: 700; letter-spacing: 1px; }
+.announcement p { font-weight: 700; }
+.logo { font-size: 24px; font-weight: 700; line-height: 36px; letter-spacing: -0.4px; }
+.main-nav a { font-size: 14px; line-height: 18.2px; letter-spacing: -0.4px; }
+.hero h1 { font-size: 48px; line-height: 57.6px; font-weight: 700; letter-spacing: normal; }
+.hero-sub { font-size: 30px; line-height: 36px; font-weight: 500; letter-spacing: normal; }
+.hero-note { font-size: 16px; line-height: 24px; letter-spacing: -0.4px; }
+.section-title, .section-head h2, .story-copy h2 { font-size: 48px; line-height: 57.6px; font-weight: 500; letter-spacing: -1.2px; text-transform: capitalize; }
+.bestsellers .section-title { text-transform: capitalize; }
+.locations .section-title { font-size: 36px; line-height: 36px; font-weight: 700; letter-spacing: -0.9px; }
+.product-card h3, .ingr-card h3 { font-size: 22px; line-height: 28.6px; font-weight: 600; letter-spacing: -0.55px; text-transform: capitalize; }
+.product-card p, .ingr-card p, .section-head p { font-size: 16px; line-height: 25.6px; letter-spacing: -0.4px; }
+.btn-dark { font-size: 14px; line-height: 21px; font-weight: 600; letter-spacing: -0.4px; text-transform: none; }
+.story-copy .eyebrow { font-size: 21px; line-height: 31.5px; font-weight: 700; letter-spacing: -0.4px; }
+.story-copy p { font-size: 16px; line-height: 25.6px; letter-spacing: -0.4px; }
+.story-copy .btn { font-size: 16px; line-height: 24px; }
+.loc-card h3 { font-size: 20px; line-height: 20px; font-weight: 600; letter-spacing: -0.5px; text-transform: capitalize; }
+.loc-card address, .hours, .hours li { font-size: 14px; line-height: 21px; letter-spacing: -0.4px; }
+.social-title { font-size: 17px; line-height: 17px; font-weight: 400; letter-spacing: -0.425px; text-transform: capitalize; }
+.newsletter h2 { font-size: 48px; line-height: 57.6px; font-weight: 600; letter-spacing: -1.2px; }
+.newsletter > p { font-size: 16px; line-height: 24px; letter-spacing: -0.4px; }
+.news-form input { font-family: Arial, Helvetica, sans-serif; font-size: 13.3333px; letter-spacing: normal; }
+.btn-sub { font-size: 16px; font-weight: 600; line-height: normal; letter-spacing: normal; }
+.footer-brand .logo { font-size: 24px; }
+.footer-col h4 { font-size: 18px; line-height: 18px; font-weight: 600; letter-spacing: -0.45px; text-transform: capitalize; }
+.footer-col a { font-size: 14px; line-height: 21px; letter-spacing: -0.4px; }
+.footer-bottom { font-size: 11px; line-height: 16.5px; letter-spacing: -0.4px; }
+
+@media (max-width: 900px) {
+  .announcement { font-size: 12px; line-height: 15.6px; letter-spacing: 1px; }
+  .site-header .logo { font-size: 24px; }
+  .hero h1 { font-size: 32px; line-height: 38.4px; letter-spacing: normal; }
+  .hero-sub { font-size: 32px; line-height: 38.4px; letter-spacing: normal; }
+  .hero-note { font-size: 15px; line-height: 22.5px; letter-spacing: -0.375px; }
+  .hero .btn { font-size: 14px; line-height: 16.8px; }
+  .section-title, .section-head h2, .story-copy h2 { font-size: 32px; line-height: 38.4px; letter-spacing: -0.8px; }
+  .newsletter h2 { font-size: 32px; line-height: 38.4px; letter-spacing: -0.8px; }
+  .locations .section-title { font-size: 25.2px; line-height: 25.2px; letter-spacing: -0.63px; }
+  .product-card h3, .ingr-card h3 { font-size: 18px; line-height: 23.4px; letter-spacing: -0.45px; }
+  .product-card p, .ingr-card p, .section-head p, .story-copy p { font-size: 14px; line-height: 22.4px; letter-spacing: -0.375px; }
+  .btn-dark { font-size: 14px; line-height: 21px; letter-spacing: -0.375px; padding: 12px 18px; }
+  .story-copy .eyebrow { font-size: 21px; line-height: 31.5px; letter-spacing: -0.375px; }
+  .story-copy .btn { font-size: 14px; line-height: 21px; }
+  .loc-card h3 { font-size: 20px; line-height: 20px; letter-spacing: -0.5px; }
+  .loc-card address, .hours, .hours li { font-size: 14px; line-height: 21px; letter-spacing: -0.375px; }
+  .social-title { font-size: 17px; line-height: 17px; letter-spacing: -0.425px; }
+  .newsletter > p { font-size: 14px; line-height: 21px; letter-spacing: -0.375px; }
+  .btn-sub { font-size: 14px; }
+  .footer-col a { font-size: 14px; line-height: 21px; letter-spacing: -0.375px; }
+  .footer-bottom { font-size: 11px; letter-spacing: -0.375px; }
+  .footer-brand .logo { font-size: 24px; }
+}

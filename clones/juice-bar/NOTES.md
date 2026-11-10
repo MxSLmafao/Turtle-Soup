@@ -31,3 +31,25 @@ Render: YES (desktop 1440 and mobile 390 both rendered; full-page 2929px tall at
 
 ## Responsive
 - Breakpoint around 768px: nav collapses to hamburger, tile grid stacks to 1 column, IG grid to 2 columns.
+
+## Fonts
+
+| Role | Source family | Clone loads | Licence status |
+|---|---|---|---|
+| Hero h1, intro title, footer headings | Libre Baskerville (400, 700) | Google Fonts, same family | Free (SIL OFL) |
+| Body, captions, footer links, copyright | Open Sans (400, 700) | Google Fonts, same family | Free (SIL OFL) |
+| Nav links | Lato (400) | Google Fonts, same family | Free (SIL OFL) |
+| Nav CTA button | Almarai (400) | Google Fonts, same family | Free (SIL OFL) |
+
+All four families are open-licence Google Fonts, so no name-first fallback stack was needed.
+
+Computed values matched to the source (desktop 1440 / mobile 390):
+- Hero h1: Libre Baskerville 400, 128px / 86px (fluid), line-height 1.4, letter-spacing -0.02em.
+- Intro title (h3-level): Libre Baskerville 400, 28px / 23.6px fluid, line-height 1.17, -0.02em.
+- Nav: Lato 400 20px, line-height 1, letter-spacing 0.384px (desktop).
+- CTA: Almarai 400 16px.
+- Body: Open Sans 400 16px, line-height 1.4, letter-spacing 0.16px.
+- Footer headings: Libre Baskerville 400 21.184px. Footer links and copyright: Open Sans 14.272px, line-height 1.4.
+
+Known gaps: the source footer link colour (olive on cocoa) is low-contrast; the clone uses a lighter tan for legibility.
+Mobile nav sizes are not measured because the source collapses its nav behind a menu at 390px.

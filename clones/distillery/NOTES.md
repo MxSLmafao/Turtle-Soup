@@ -41,3 +41,41 @@ triggered by scrolling before capture.
 
 ## Imagery (not copied)
 All photography is replaced with inline SVG illustrations (copper still, bottles, coupes, botanicals) and CSS gradients at the same aspect ratios.
+
+## Fonts
+
+Source families (computed on the source homepage, 1440px and 390px):
+- **Bricolage Grotesque** (headings, marquees, footer headings, product names) and **Montserrat** (body, buttons, nav, captions). Both loaded by the source as Google Fonts-equivalent files from the Shopify CDN.
+- Only Bricolage 700 and Montserrat 400/500 are used in the rendered homepage. The source's theme CSS also declares Noka, DM Sans and Times, but none of them render on the homepage.
+
+Licence: both families are free and open-licence (SIL Open Font License 1.1). The clone loads them from Google Fonts, the official free host. No source font file was downloaded, copied, base64-encoded or hot-linked. No commercial licence is needed.
+
+Clone loads: `Bricolage+Grotesque:wght@700` and `Montserrat:wght@400;500;700` (exactly the weights in use).
+
+| Role | Source family | 1440px (size / weight / line-height / ls / case) | 390px (size / weight / line-height / ls / case) | Clone | Match |
+|---|---|---|---|---|---|
+| Body / paragraph | Montserrat | 15.936px / 400 / 27.0912px / normal / none | 14.94px / 400 / 25.398px / normal / none | body, `.section-lead`, `.gins__tag` | identical |
+| Hero h1, slide 1 (h0) | Bricolage Grotesque | 47.808px / 700 / 62.1504px / normal / none | 35.856px / 700 / 46.6128px / normal / none | `.hero__title` | identical |
+| Hero h1, slide 2 (h1) | Bricolage Grotesque | 39.84px / 700 / 51.792px / normal / none | 31.872px / 700 / 41.4336px / normal / none | `.hero__title--alt` | identical |
+| Hero text, slide 1 (small) | Montserrat | 13.944px / 400 / 23.7048px / normal / none | 12.948px / 400 / 22.0116px / normal / none | `.hero__text--sm` | identical |
+| Hero text, slide 2 (medium) | Montserrat | 15.936px / 400 / 27.0912px / normal / none | 14.94px / 400 / 25.398px / normal / none | `.hero__text--md` | identical |
+| Product name (h3) | Bricolage Grotesque | 27.888px / 700 / 36.2544px / normal / none | 21.912px / 700 / 28.4856px / normal / none | `.gins__name` | identical |
+| Section h2 (about and experiences) | Bricolage Grotesque | 31.872px / 700 / 41.4336px / normal / none | 27.888px / 700 / 36.2544px / normal / none | `.about__title`, `.section-title` | identical |
+| Eyebrow ("WHO WE ARE") | Montserrat | 11.952px / 500 / 20.3184px / 2px / uppercase | same | `.eyebrow` | identical |
+| Marquee | Bricolage Grotesque | 15.936px / 700 / 23.1072px / normal / none | 14.94px / 700 / 21.663px / normal / none | `.marquee` | identical |
+| Button | Montserrat | 15.6173px / 500 / 23.5853px / normal / none | same | `.btn` | identical |
+| Nav / drawer top-level | Montserrat | 23.904px / 500 / 31.0752px / normal / none | 22.41px / 500 / 29.133px / normal / none | `.drawer a` | identical (top-level size; source sub-links are 19.12px / 17.93px) |
+| Footer heading | Bricolage Grotesque | 15.936px / 700 / 23.1072px / normal / none | 14.94px / 700 / 21.663px / normal / none | `.footer__head` | identical |
+| Footer link | Montserrat | 15.936px / 400 / 27.0912px / normal / none | 14.94px / 400 / 25.398px / normal / none | `.footer__col ul a` | identical |
+| Footer legal | Montserrat | 12.7488px / 400 / 21.673px / normal / none | 11.952px / 400 / 20.3184px / normal / none | `.footer__legal` | identical |
+| Copyright | Montserrat | 13.944px / 400 / 23.7048px / normal / none | 12.948px / 400 / 22.0116px / normal / none | `.footer__bottom` | identical |
+| Newsletter heading | Bricolage Grotesque | 21.912px / 700 / 28.4856px / normal / none | 17.928px / 700 / 23.3064px / normal / none | `.news__title` | identical (checked in CSS; popup hidden in the computed-style run) |
+| Age gate heading | Bricolage Grotesque | 31.872px / 700 / 41.4336px / normal / none | 27.888px / 700 / 36.2544px / normal / none | `.gate__title` | identical (checked in CSS; gate hidden in the run) |
+| Social handle | Bricolage Grotesque | 27.888px / 700 / 36.2544px / normal / none | 21.912px / 700 / 28.4856px / normal / none | `.social__handle` | identical |
+| Announcement text | Montserrat | 15.936px / 400 / 27.0912px / normal / none | 14.94px / 400 / 25.398px / normal / none | `.announce` | identical; bar now wraps on mobile and the header offset follows it |
+| Stamp label (card title) | Bricolage Grotesque | not measured (text not captured by the probe); size inferred from the screenshot as the h3 scale: 27.888px / 700 / 36.2544px | 21.912px / 700 / 28.4856px | `.stamp__label` | inferred, not computed |
+| Slide counter ("1 / 2") | Montserrat | not measured; set to the small-text scale 13.944px / 400 | 12.948px / 400 | `.slide-nav__count` | inferred |
+
+Not a text role: the source logo is an image, so the clone's wordmark is a placeholder. It uses the loaded weights only (Bricolage 700 for the name, Montserrat 500 for the sub-line). It does not reproduce the source logo.
+
+Name-first font stacks: not needed. Both families are free, so each stack is the exact family name followed by `sans-serif`.
