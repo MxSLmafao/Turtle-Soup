@@ -1129,6 +1129,38 @@ body { font-family: var(--f-body); font-size: 16px; line-height: 22.4px; font-we
   .chat-fab__label { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
 
+
+/* ============================================================
+   Hero photo (generated): desktop feathered panel on the right,
+   mobile full-width photo under the stamp.
+   ============================================================ */
+.hero__photo {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  width: 62%;
+  height: auto;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+          mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+}
+@media (max-width: 989px) {
+  .hero { height: 585px; padding: 0; }
+  .hero__stage { display: block; height: 100%; }
+  .hero__copy { position: absolute; left: 1.25rem; right: 1.25rem; top: 2rem; width: auto; z-index: 3; }
+  .hero__figure { position: absolute; inset: 0; height: auto; width: auto; margin-top: 0; }
+  .hero__photo {
+    top: auto; bottom: 40px; left: 50%; width: 120%; height: auto;
+    transform: translateX(-50%);
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 55%, transparent 100%);
+            mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 55%, transparent 100%);
+  }
+  .hero__art { display: none; }
+  .hero__inset { left: auto; top: auto; right: 1.25rem; bottom: 1.25rem; width: 44%; height: auto; aspect-ratio: 1 / 1; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

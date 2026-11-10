@@ -220,18 +220,31 @@ button, input { font: inherit; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: block;
   height: 654px;
   overflow: hidden;
+  background: #14270b;
 }
-.hero-half { position: relative; overflow: hidden; }
-.hero-art { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero-left .hero-art { transform: scale(1.02); transition: transform 1.6s var(--ease); }
-.hero:hover .hero-left .hero-art { transform: scale(1.06); }
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 55%;
+  z-index: 0;
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(14, 24, 13, 0) 38%, rgba(14, 24, 13, .82) 80%);
+  pointer-events: none;
+}
 
 .hero-copy {
   position: absolute;
+  z-index: 2;
   left: 80%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -535,8 +548,10 @@ button, input { font: inherit; }
   .header-actions { gap: 14px; font-size: 11px; }
   .header-actions .action-link { display: none; }
 
-  .hero { grid-template-columns: 1fr; grid-template-rows: 260px 260px; height: auto; }
-  .hero-copy { left: 50%; width: calc(100% - 2 * var(--gutter)); text-align: left; }
+  .hero { height: 600px; }
+  .hero::after { content: ""; }
+  .hero-copy { left: 50%; top: auto; bottom: 28px; transform: translateX(-50%); width: calc(100% - 2 * var(--gutter)); text-align: left; }
+  .hero-shade { background: linear-gradient(180deg, rgba(14, 24, 13, .05) 20%, rgba(14, 24, 13, .85) 80%); }
   .hero-copy .eyebrow { font-size: 17px; }
   .hero h1 { font-size: 41px; line-height: 36.9px; }
   .lede { font-size: 13px; }

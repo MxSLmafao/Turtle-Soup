@@ -340,12 +340,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .cafe-hero {
   height: 380px; margin: 0 var(--gutter); max-width: calc(var(--wrap) - 0px); margin-left: auto; margin-right: auto;
   width: calc(100% - 2 * var(--gutter));
-  background:
-    radial-gradient(circle at 24% 52%, #f1ead8 0 110px, #d7ccb0 111px 126px, transparent 127px),
-    radial-gradient(circle at 64% 38%, #e8efd9 0 92px, #c9d2b3 93px 104px, transparent 105px),
-    radial-gradient(ellipse 150px 90px at 84% 72%, #f3e7d2 0 60%, transparent 62%),
-    radial-gradient(circle at 42% 70%, #f7f5ee 0 46px, transparent 47px),
-    linear-gradient(120deg, #7f5a3a 0%, #a77a50 35%, #5a3e28 70%, #8e6540 100%);
+    background: url("img/cafe-brunch.jpg") center 55% / cover no-repeat;
 }
 .cafe-row {
   display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;

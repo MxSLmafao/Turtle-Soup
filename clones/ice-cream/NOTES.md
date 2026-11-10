@@ -129,3 +129,19 @@ example.com; sample reviews with first names only (HTML comment marks them as sa
 
 Verification: one h1; JSON-LD parses (IceCreamShop, Organization, WebSite); zero images without alt;
 no horizontal overflow at 1440 or 390; no console errors or failed requests.
+
+## Photo slots
+
+Generated photos are in img/ (one file so far). Image generation returned a quota error (429, reset in about 4h48m) after the hero photo, so no further images were generated and the rest of the photo slots keep their drawn art.
+
+| Slot | Status | Asset / drawn art |
+|---|---|---|
+| Hero slide 1 | Photo | img/hero-gelato-botanicals.jpg (cover-fit, under the scrim); alt text set; og:image and JSON-LD image point at it on the placeholder domain |
+| Hero slides 2 and 3 | Drawn | CSS gradients with SVG tub and scoop |
+| Best-seller cards (4) | Drawn | SVG scoop on tinted backdrop (labelled role="img") |
+| Approach cards (4) | Drawn | SVG and petal stand-ins (labelled role="img") |
+| Scoop-bar tiles (6) | Drawn | CSS shopfront motifs |
+| Community gallery (4) | Drawn | SVG scoop, tub and sprig (labelled role="img") |
+| Awards, press band | Placeholder by design | Neutral badges and typeset press names (no logos) |
+
+Next step once the quota resets: generate the four product photos and the six scoop-bar interiors using the section 7b prompts, optimise to JPEG under 300 KB each, and swap them into the matching slots.

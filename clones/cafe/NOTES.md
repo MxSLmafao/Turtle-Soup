@@ -133,3 +133,17 @@ Placeholders used: domain `https://www.example.com/cafe/`, address "1 Sample Str
 | 9 | Chat or WhatsApp button | None | Fixed bottom-right green button, `aria-label`, placeholder WhatsApp link. Icon only on phones (52 px) so it covers less content. |
 
 Still open: no real address, phone, hours or reviews. The `og:image` and social URLs are placeholders on the example domain and will 404 until replaced.
+
+## Photo slots (update)
+
+Photos now (generated, JPEG, in `img/`):
+- Hero background: `img/hero-pour.jpg` (1264 x 848, about 108 KB). Text sits over a warm overlay; checked readable at 1440 and 390 px.
+- Feature carousel, slide 1: `img/origin-cherries.jpg` (about 162 KB).
+- Feature carousel, slide 2: `img/origin-beans.jpg` (about 133 KB).
+- Café banner: `img/cafe-brunch.jpg` (1264 x 848, about 188 KB). Replaces the drawn plates.
+
+Still drawn (CSS art): the six product tiles, the five café cards, the wholesale split photo, the isometric "at a glance" illustration (drawn SVG), and the step and bag icons.
+
+The image tool quota was hit again after the café banner (retry window about 4h48m). The remaining photo slots stay drawn.
+
+Total img/ size: about 592 KB. Generated images: 4.

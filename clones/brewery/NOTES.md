@@ -94,3 +94,17 @@ Source: `.claude/skills/fnb-site-gaps/SKILL.md` (nine gaps). Placeholders: domai
 | 9 | Chat / contact button | Round booking icon, desktop only. | Floating round contact button bottom-right (44px, `aria-label`) on all widths. Mobile hero badge moved to bottom-left to avoid overlap. | Link to `https://www.example.com/brewery/contact/`. |
 
 Verification: one `<h1>`; JSON-LD parses; no `<img>` without alt; 1440 and 390 show no horizontal overflow; no console errors or failed requests.
+
+## Photo slots and generated imagery
+
+Status after the hero wiring round. The image tool returned HTTP 429 (quota exhausted) on every call in this round, so the stop-on-429 rule applied and no further photos were generated or retried.
+
+| Slot | Original | Clone now | Notes |
+|---|---|---|---|
+| Hero (slide 1) | Full-bleed venue photo | Photo: `img/hero-cans-taproom.jpg` (1264x848, object-fit cover, centre 60%, light overlay, alt text) | Used as slide 1 and as og:image and JSON-LD image. |
+| Hero (slide 2) | Second slide (slider arrows) | Not present. Arrows are visual only. | No second photo generated. |
+| Pillar images (4) | Cut-out photos of a pint, burger, brewing tanks, festival stall | Drawn SVG with `role="img"` labels | Generation blocked by quota. |
+| Social tiles (8) | Instagram photos | Drawn gradient tiles with captions | Generation blocked by quota. |
+| Badges (3) | Award logos | Neutral drawn placeholders (`aria-hidden`) | Placeholders by design. |
+
+Generated images in `img/`: 1 file, 142.8 KB total. Earlier discarded output: one festival-stall image with readable signage, excluded.

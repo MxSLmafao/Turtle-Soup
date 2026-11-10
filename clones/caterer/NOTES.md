@@ -109,3 +109,22 @@ Placeholder data used (no real business): domain `https://www.example.com/catere
 | 9 | Chat or WhatsApp button | Present: floating button bottom-right with `aria-label`. | Unchanged. Footer social links now point to placeholder example.com URLs. |
 
 Verification: exactly one `h1`; 0 `<img>` elements; JSON-LD parses; title 52 chars, description 145 chars; no overflow at 1440 or 390; no console errors or warnings.
+
+## Photos
+
+Photo slots and status:
+
+| Slot | Source (original) | Clone | Status |
+|---|---|---|---|
+| Hero (full-bleed, 800px desktop, 400px mobile) | Festive table photo, centred headline | `img/hero-festive-spread.jpg` (1264x848, JPEG q80, 221 KB), `object-fit: cover`, centre 50% 45%, plus a 18-34% dark overlay and a central radial scrim behind the copy | Generated photo, wired in |
+| Product card: Daily Boxes | Takeaway boxes on a table | Drawn SVG/gradient art | Still drawn (quota) |
+| Product card: Celebrations | Wedding banquet | Drawn SVG/gradient art | Still drawn (quota) |
+| Product card: Catering | Buffet line | Drawn SVG/gradient art | Still drawn (quota) |
+| Banner, left half | Astronaut on a lunar surface | Drawn gradient | Still drawn (quota) |
+| Banner, right half | Hand salting roast carrots | Drawn gradient | Still drawn (quota) |
+
+Generation attempts: 1 photo generated (hero). Further generation stopped at the first quota error (429, reset in about 4h48m). Prompts for the remaining five slots are written in section 7b of the brief.
+
+Image metadata: hero `alt` describes the table; `og:image`, `og:image:width/height/alt`, `twitter:image` and JSON-LD `image` point to `https://www.example.com/caterer/img/hero-festive-spread.jpg`. Total img/ size: about 221 KB.
+
+Note: the hero source is 1264px wide, under the 1440px desktop slot. It is shown with `object-fit: cover`, so it is slightly soft on large screens.

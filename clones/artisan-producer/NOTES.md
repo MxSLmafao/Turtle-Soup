@@ -86,3 +86,14 @@ Placeholder data used: domain https://www.example.com/artisan-producer/, "1 Samp
 | 9 | Chat button | None | Fixed bottom-right pill "Chat with us" linking to #contact, aria-label; on mobile a 52px icon-only circle that sits clear of the footer buttons. |
 
 Verification (1440 and 390): one h1; 0 img elements; JSON-LD parses; no horizontal overflow; no console errors or failed requests.
+
+## Photo slots
+
+| Slot | Status | Asset |
+|---|---|---|
+| Hero (full-bleed, both former halves) | Photo | img/hero-chocolate-cacao.jpg (1264x848, generated, 167 KB). Object-fit cover, right-side shade for text contrast; alt text set. |
+| Category tiles: Bars, Confections, Gift Sets | Drawn SVG | Not generated: image quota blocked generation (4h48m reset). |
+| Split panels: Find Our Chocolates, Refined Cacao | Drawn SVG | Not generated: same quota block. |
+| Press band | Placeholder names | No logos on purpose (see Visual diff). |
+
+Image metadata: og:image, og:image:width/height/alt, twitter:image and JSON-LD image all point to https://www.example.com/artisan-producer/img/hero-chocolate-cacao.jpg.

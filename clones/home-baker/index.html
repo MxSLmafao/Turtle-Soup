@@ -18,9 +18,12 @@
   <meta property="og:description" content="Cocoa Lane bakes chewy, molten cookies and fudgy brownies daily in Singapore. Shop signature boxes and gift tins online, or visit a store today.">
   <meta property="og:url" content="https://www.example.com/home-baker/">
   <meta property="og:locale" content="en_SG">
+  <meta property="og:image" content="https://www.example.com/home-baker/img/hero-cookie-box.jpg">
+  <meta property="og:image:alt" content="Open blue gift box holding chocolate chip cookies and a fudgy brownie on a beige table">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Home Bakery Cookies and Brownies in Singapore | Cocoa Lane">
   <meta name="twitter:description" content="Cocoa Lane bakes chewy, molten cookies and fudgy brownies daily in Singapore. Shop signature boxes and gift tins online, or visit a store today.">
+  <meta name="twitter:image" content="https://www.example.com/home-baker/img/hero-cookie-box.jpg">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,7 +99,8 @@
       "potentialAction": {
         "@type": "OrderAction",
         "target": "https://www.example.com/home-baker/#bestsellers"
-      }
+      },
+      "image": "https://www.example.com/home-baker/img/hero-cookie-box.jpg"
     },
     {
       "@type": "Bakery",
@@ -358,43 +362,7 @@
       <a class="btn btn-coral" href="#bestsellers">Shop the box</a>
     </div>
     <div class="hero-art reveal">
-      <svg class="hero-svg" viewBox="0 0 640 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated navy gift box open to reveal cookies and brownies">
-        <defs>
-          <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#2c3b58"/>
-            <stop offset="1" stop-color="#101a30"/>
-          </linearGradient>
-          <linearGradient id="hero-fade" x1="0" x2="1">
-            <stop offset="0" stop-color="#e8e2d5"/>
-            <stop offset=".35" stop-color="#e8e2d5" stop-opacity=".0"/>
-          </linearGradient>
-          <linearGradient id="hero-inside" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#f7e2b8"/>
-            <stop offset="1" stop-color="#e0b57a"/>
-          </linearGradient>
-        </defs>
-        <rect width="640" height="440" fill="url(#hero-bg)"/>
-        <!-- lid -->
-        <path d="M120 96 L260 20 L560 60 L470 150 Z" fill="#1d4f9a"/>
-        <path d="M260 20 L560 60 L560 74 L260 34 Z" fill="#2c64b8" opacity=".7"/>
-        <!-- box front -->
-        <path d="M40 220 L330 130 L600 230 L600 400 L330 360 L40 300 Z" fill="url(#g-box)"/>
-        <!-- inside -->
-        <path d="M80 224 L330 150 L560 230 L330 316 Z" fill="url(#hero-inside)"/>
-        <path d="M80 224 L330 316 L330 340 L80 248 Z" fill="#c6894a" opacity=".5"/>
-        <!-- dividers -->
-        <path d="M205 190 L205 296 M330 230 L330 330 M450 190 L450 285" stroke="#0b2f66" stroke-width="5" stroke-linecap="round"/>
-        <!-- treats -->
-        <g transform="translate(128 180) skewY(-12) scale(.85)"><use href="#cookie" width="110" height="110"/></g>
-        <g transform="translate(232 152) skewY(-12) scale(.85)"><use href="#brownie" width="110" height="110"/></g>
-        <g transform="translate(348 186) skewY(-12) scale(.85)"><use href="#swirl" width="110" height="110"/></g>
-        <g transform="translate(138 262) skewY(-12) scale(.85)"><use href="#swirl" width="110" height="110"/></g>
-        <g transform="translate(252 232) skewY(-12) scale(.85)"><use href="#cookie" width="110" height="110"/></g>
-        <g transform="translate(372 258) skewY(-12) scale(.85)"><use href="#brownie" width="110" height="110"/></g>
-        <!-- brand badge -->
-        <circle cx="520" cy="320" r="30" fill="#f2e8e2" fill-opacity=".9"/>
-        <text x="520" y="326" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="12" fill="#004a98">BOX</text>
-      </svg>
+      <img class="hero-img" src="img/hero-cookie-box.jpg" alt="Open blue gift box holding chocolate chip cookies and a fudgy brownie on a beige table" width="1264" height="848" fetchpriority="high">
       <div class="hero-fade"></div>
     </div>
   </section>

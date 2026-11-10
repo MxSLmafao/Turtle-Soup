@@ -128,6 +128,14 @@ svg { display: block; }
 .slide-art { position: absolute; inset: 0; overflow: hidden; }
 .slide-art svg { width: 100%; height: 100%; transition: transform 6s linear; }
 .slide.is-active .slide-art svg { transform: scale(1.06); }
+.slide-art img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; display: block; transition: transform 6s linear; }
+.slide.is-active .slide-art img { transform: scale(1.05); }
+/* Photo slides: copy sits on the dark right-hand side so the subject stays readable */
+.slide-a .slide-copy, .slide-b .slide-copy {
+  align-items: flex-start; text-align: left; justify-content: center; padding: 0 44px 0 52%;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.72) 62%);
+}
+.slide-b .slide-art img { object-position: 30% 50%; }
 .slide-copy {
   position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 10px;
   padding: 0 110px; color: #fff; background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
@@ -336,6 +344,10 @@ svg { display: block; }
   .slides { gap: 10px; }
   .slide { flex-basis: 82vw; height: 220px; margin-top: 10px; }
   .slide-copy { padding: 0 22px; }
+  .slide-a .slide-copy, .slide-b .slide-copy {
+    justify-content: flex-end; padding: 0 18px 18px; background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.82) 100%);
+  }
+  .slide-a .slide-copy p:not(.kicker), .slide-b .slide-copy p:not(.kicker) { display: none; }
   .slide h2 { font-size: 16px; }
   .slide-copy p:not(.kicker) { font-size: 11px; }
   .arrow { display: none; }

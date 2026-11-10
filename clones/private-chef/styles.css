@@ -670,3 +670,7 @@ h4 { font-family: var(--head); font-weight: 500; font-size: 20px; line-height: 2
   .news-form .pill { width: 100%; }
   .chat-fab { right: 16px; bottom: 16px; width: 52px; height: 52px; }
 }
+
+/* ============ PHOTO SLOTS: real images ============ */
+.tile-photo { background: #2b2a28; }
+.tile-photo img, .tile img.ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }

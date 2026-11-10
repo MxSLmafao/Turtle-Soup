@@ -118,3 +118,20 @@ Skill: fnb-site-gaps (nine gaps). Placeholder business data only: domain https:/
 | 9 | Chat or WhatsApp button | None | Floating amber circular button, bottom-right, with `aria-label`. Appears after 700px of scroll and hides near the footer. Generic speech-bubble icon, not a trademark logo. | Links to `#contact` (no real chat provider). |
 
 Verification: exactly one h1; JSON-LD parses; no `<img>` tags; every SVG has an aria attribute; no overflow at 1440 or 390; no console errors or failed requests.
+
+## Photo slots
+
+Status after the hero-photo follow-up (image generation quota: 429 on the first request after the hero image, so generation stopped and nothing else was generated).
+
+| Slot | Original | Clone now | Notes |
+|---|---|---|---|
+| Hero slide 1 | Photo of gin bottles on a dark bar | Photo: `img/hero-gin-botanicals.jpg` (object-fit cover, dark overlay on the right for text contrast) | Generated image is a warmer, lighter still life. Overlay keeps headline contrast; checked at 1440 and 390. |
+| Hero slide 2 | Photo of a copper still and bottles | Drawn art | Still open. |
+| Product carousel (7 bottles) | Product photos | Drawn bottles (SVG) | Still open. |
+| Stamp cards (3) | Photos: still, tasting board, glasses | Drawn art | Still open. |
+| Cocktail band | Photo of three toasting cocktails | Drawn glasses | Still open (generation blocked). |
+| Social tiles (6) | Photos | Drawn tiles | Still open. |
+| Newsletter popup art | Photo of bottles | Drawn bottles | Still open. |
+| Logos, award badge, footer emblem | Logos and badges | Neutral placeholders | Deliberately not imitated. |
+
+Image metadata: `og:image` and `og:image:alt` and the JSON-LD `image` point to `https://www.example.com/distillery/img/hero-gin-botanicals.jpg`. The img/ folder holds one file, 120 KB, under the 4 MB limit.

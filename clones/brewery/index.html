@@ -19,6 +19,9 @@
 <meta property="og:url" content="https://www.example.com/brewery/">
 <meta property="og:locale" content="en_SG">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.example.com/brewery/img/hero-cans-taproom.jpg">
+<meta property="og:image:alt" content="Row of unlabelled coloured cans on a worn timber bar in a taproom">
+<meta name="twitter:image" content="https://www.example.com/brewery/img/hero-cans-taproom.jpg">
 <meta name="twitter:title" content="Craft Brewery and Taproom in Singapore | Driftwood">
 <meta name="twitter:description" content="Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.">
 <script type="application/ld+json">
@@ -30,7 +33,7 @@
       "@id": "https://www.example.com/brewery/#brewery",
       "name": "Driftwood Brewing Co.",
       "url": "https://www.example.com/brewery/",
-      "image": "https://www.example.com/brewery/img/hero.jpg",
+      "image": "https://www.example.com/brewery/img/hero-cans-taproom.jpg",
       "description": "Driftwood Brewing Co. is a craft brewery and taproom in Singapore with house ales, a Western and Asian-inspired kitchen and tasting flights. Book online.",
       "telephone": "+65 0000 0000",
       "priceRange": "$$",
@@ -61,8 +64,7 @@
       "@type": "Organization",
       "@id": "https://www.example.com/brewery/#organization",
       "name": "Driftwood Brewing Co.",
-      "url": "https://www.example.com/brewery/",
-      "logo": "https://www.example.com/brewery/img/logo.png"
+      "url": "https://www.example.com/brewery/"
     },
     {
       "@type": "WebSite",
@@ -123,33 +125,7 @@
 <!-- HERO: illustrated cans on timber, drawn in SVG -->
 <section class="hero" aria-label="Featured beers">
   <div class="hero-bg" aria-hidden="true"></div>
-  <svg class="hero-cans" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of canned craft beers on a timber shelf">
-    <defs>
-      <linearGradient id="can1" x1="0" x2="1"><stop offset="0" stop-color="#1f8a8a"/><stop offset=".5" stop-color="#5fd0c8"/><stop offset="1" stop-color="#1f8a8a"/></linearGradient>
-      <linearGradient id="can2" x1="0" x2="1"><stop offset="0" stop-color="#3d2c6b"/><stop offset=".5" stop-color="#8c6ad6"/><stop offset="1" stop-color="#3d2c6b"/></linearGradient>
-      <linearGradient id="can3" x1="0" x2="1"><stop offset="0" stop-color="#2d7a3a"/><stop offset=".5" stop-color="#8fd16b"/><stop offset="1" stop-color="#2d7a3a"/></linearGradient>
-      <linearGradient id="can4" x1="0" x2="1"><stop offset="0" stop-color="#b36a1e"/><stop offset=".5" stop-color="#f0a646"/><stop offset="1" stop-color="#b36a1e"/></linearGradient>
-      <linearGradient id="can5" x1="0" x2="1"><stop offset="0" stop-color="#14161c"/><stop offset=".5" stop-color="#3a3f4b"/><stop offset="1" stop-color="#14161c"/></linearGradient>
-      <linearGradient id="can6" x1="0" x2="1"><stop offset="0" stop-color="#c9a227"/><stop offset=".5" stop-color="#ffd966"/><stop offset="1" stop-color="#c9a227"/></linearGradient>
-      <linearGradient id="can7" x1="0" x2="1"><stop offset="0" stop-color="#9c2f3e"/><stop offset=".5" stop-color="#e96b7c"/><stop offset="1" stop-color="#9c2f3e"/></linearGradient>
-    </defs>
-    <rect x="0" y="330" width="1440" height="170" fill="#7a5630"/>
-    <g fill="none" stroke="#5a3d20" stroke-width="3" opacity=".5">
-      <path d="M0 360h1440M0 395h1440M0 430h1440M0 465h1440"/>
-    </g>
-    <g class="cans">
-      <rect x="-20" y="200" width="150" height="150" rx="10" fill="url(#can1)"/>
-      <rect x="150" y="190" width="150" height="160" rx="10" fill="url(#can2)"/>
-      <rect x="300" y="205" width="150" height="145" rx="10" fill="url(#can7)"/>
-      <rect x="450" y="185" width="150" height="165" rx="10" fill="url(#can3)"/>
-      <rect x="600" y="190" width="150" height="160" rx="10" fill="url(#can4)"/>
-      <rect x="750" y="195" width="150" height="155" rx="10" fill="url(#can5)"/>
-      <rect x="900" y="180" width="150" height="170" rx="10" fill="url(#can6)"/>
-      <rect x="1050" y="200" width="150" height="150" rx="10" fill="url(#can1)"/>
-      <rect x="1200" y="190" width="150" height="160" rx="10" fill="url(#can2)"/>
-      <rect x="1350" y="205" width="150" height="145" rx="10" fill="url(#can3)"/>
-    </g>
-  </svg>
+  <img class="hero-photo" src="img/hero-cans-taproom.jpg" width="1264" height="848" alt="Row of unlabelled coloured cans on a worn timber bar, with a blurred brewhouse and barrels behind" fetchpriority="high">
   <button class="hero-arrow prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
   <button class="hero-arrow next" aria-label="Next slide"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
   <div class="hero-chip" aria-hidden="true"><span>Book<br>now</span></div>

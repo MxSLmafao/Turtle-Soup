@@ -587,3 +587,16 @@ body { font-family: var(--font-body); font-weight: 400; font-size: 15.936px; lin
   .reviews { padding: 64px 16px 72px; }
   .chat-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; }
 }
+
+/* ---------- hero photo (slide 1) ---------- */
+.slide__art--photo { overflow: hidden; background: #2A211B; }
+.slide__art--photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgb(18 15 13 / .18) 0%, rgb(18 15 13 / .30) 38%, rgb(18 15 13 / .78) 68%, rgb(18 15 13 / .9) 100%);
+}
+.slide__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 60%; transform: scale(1.03); transition: transform 7s linear; }
+.slide.is-active .slide__photo { transform: scale(1); }
+@media (max-width: 989px) {
+  .slide__photo { object-position: 70% 55%; }
+  .slide__art--photo::after { background: linear-gradient(180deg, rgb(18 15 13 / .35) 0%, rgb(18 15 13 / .25) 35%, rgb(18 15 13 / .8) 75%, rgb(18 15 13 / .95) 100%); }
+}

@@ -94,18 +94,37 @@ Gaps are from the fnb-site-gaps checklist. Before/after is measured on the clone
 | # | Gap | Before | After | Placeholders used |
 |---|---|---|---|---|
 | 1 | Image alt text | No `<img>` elements. Drawn art was SVG or CSS. Logo and icon SVGs partly unmarked. | No `<img>` elements, so no alt needed yet. All decorative SVG and CSS art is `aria-hidden` or sits in labelled controls. Logo SVG marked decorative. Once 7b images are added, each needs specific alt text, width/height and `loading="lazy"` below the fold. | None |
-| 2 | Local business structured data | None. | JSON-LD `@graph` with `WebSite` and `Store` (name, url, description, telephone, priceRange, servesCuisine, PostalAddress, GeoCoordinates, OpeningHoursSpecification, hasMenu, OrderAction potentialAction, sameAs). Parses cleanly. `image` omitted (no `img/` file). | `https://www.example.com/butcher/`; 1 Sample Street, Singapore 000000; +65 0000 0000; sample hours 10:00-21:00 daily; geo set to approximate Singapore centre (1.3521, 103.8198); social links on example.com |
+| 2 | Local business structured data | None. | JSON-LD `@graph` with `WebSite` and `Store` (name, url, description, telephone, priceRange, servesCuisine, PostalAddress, GeoCoordinates, OpeningHoursSpecification, hasMenu, OrderAction potentialAction, sameAs). Parses cleanly. `image` set to `img/hero-smoked-brisket.jpg` on the placeholder domain. | `https://www.example.com/butcher/`; 1 Sample Street, Singapore 000000; +65 0000 0000; sample hours 10:00-21:00 daily; geo set to approximate Singapore centre (1.3521, 103.8198); social links on example.com |
 | 3 | Heading structure | No `<h1>`. | One `<h1>`, visually hidden (the design has no visible headline): "Hollis & Crane Butchery: fresh cuts, charcuterie and deli in Singapore". Sections use `<h2>`, product titles `<h3>`. | Placeholder brand name |
 | 4 | Title tag | "Hollis & Crane Butchery \| Sample Homepage" (brand plus generic "Sample"). | "Butcher and Deli in Singapore \| Hollis & Crane Butchery" (55 characters). | Placeholder brand |
 | 5 | Meta description | "Sample butcher and deli homepage design study." (46 characters, no offer or CTA). | One sentence, 148 characters, with offer, location and CTA ("Order for pickup today."). Also used for og and twitter descriptions. | Placeholder brand, Singapore |
-| 6 | Technical basics | `lang="en"`, viewport present. No canonical, OG, Twitter card, robots meta, robots.txt or sitemap. | `lang="en-SG"`. Canonical. `robots` meta (index, follow, max-image-preview:large). OG: type, site_name, title, description, url, locale en_SG. Twitter summary_large_image. `robots.txt` (points to sitemap) and `sitemap.xml` (one URL, lastmod 2026-11-10). `og:image` omitted: no file in `img/` yet. | example.com domain |
+| 6 | Technical basics | `lang="en"`, viewport present. No canonical, OG, Twitter card, robots meta, robots.txt or sitemap. | `lang="en-SG"`. Canonical. `robots` meta (index, follow, max-image-preview:large). OG: type, site_name, title, description, url, locale en_SG. Twitter summary_large_image. `robots.txt` (points to sitemap) and `sitemap.xml` (one URL, lastmod 2026-11-10). `og:image` (and `og:image:alt`, width, height) and `twitter:image` point to `img/hero-smoked-brisket.jpg` on the placeholder domain. | example.com domain |
 | 7 | Reviews | None. | "Kind words" section: three sample reviews with first name only, star rating, and an HTML comment marking them as sample content. | First names Ann, Marcus, Priya; invented wording |
 | 8 | Newsletter sign-up | None. | "Weekly cut sheet" section: labelled email input (`sr-only` label), one Subscribe button, reason line. Submit is handled client-side and sends nothing (shows a sample toast). | None |
 | 9 | Chat or WhatsApp button | None. | Floating red round button, bottom-right (18px inset; 12px inset and 46px on mobile), `aria-label`, link to a placeholder chat page. Styled with the clone's red and shadow tokens. | `https://www.example.com/butcher/chat/` |
 
 Verification: exactly one `<h1>`; JSON-LD parses; every `<img>` has alt (none present); no horizontal overflow at 1440 or 390; no console errors. Screenshots show the reviews and newsletter sections matching the site's type and spacing.
 
-Open: add `img/` photos (7b) and then `og:image` and an image in JSON-LD; add alt text to each photo.
+Open: the remaining drawn slots listed under "## Photo slots" still need photos when the image quota allows.
+
+## Photo slots
+
+Images live in `img/` (relative paths only, no leading slash). Total about 260 KB, under the 4 MB budget. All photos are generated, not copied from the source.
+
+Wired (real `<img>` with alt text):
+- Hero slide 1: `img/hero-smoked-brisket.jpg` (1264x848, 149 KB). Alt: sliced smoked brisket on a round oak board with a carving knife. Shown with `object-fit: cover`, `object-position: 40% 50%`, high fetch priority, and copy on the dark right-hand side.
+- Hero slide 2: `img/deli-cheese-board.jpg` (1264x848, 110 KB). Alt: aged cheese wedges, grapes, lemon and ginger on a dark slate board. Lazy-loaded.
+- `og:image`, `twitter:image` and JSON-LD `image` point to the brisket photo on the placeholder domain.
+
+Still drawn (SVG or CSS art, not photos):
+- Hero slide 3: sparkling wine cellar (drawn barrels and bottles).
+- Trending cards 1 to 3: gift tube, wine bottle, cured ham (drawn).
+- Store tiles 1 to 6: fresh cuts, charcuterie, cheese, ready meals, bakery, sausages (CSS gradients).
+- Video thumbnails 1 to 4 (CSS gradients).
+
+Generation: two images generated in total. The image model returned quota errors (429) on the third attempt, so generation stopped there, per the brief. Remaining prompts are drafted in the 7b rules: similar subject, composition and crop, "no text, no logos, no brand names, no watermarks, no packaging labels".
+
+Mobile: on photo slides the body paragraph is hidden below 768px so the headline and button fit over the photo.
 
 ## Known gaps
 - Scroll-reveal timing and the exact slider easing are approximated.

@@ -21,7 +21,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Croissant Bakery in Singapore | Lantern Row Bakehouse">
   <meta name="twitter:description" content="Slow-fermented croissants, pastries and sourdough baked in small batches at Lantern Row Bakehouse in Singapore.">
-  <!-- og:image is omitted: the clone has no photo files in img/ yet. Add one (1200x630) when available. -->
+  <meta name="twitter:image" content="https://www.example.com/bakery/img/hero-croissant-lilac.jpg">
+  <meta property="og:image" content="https://www.example.com/bakery/img/hero-croissant-lilac.jpg">
+  <meta property="og:image:width" content="1264">
+  <meta property="og:image:height" content="848">
+  <meta property="og:image:alt" content="Golden butter croissant on a lilac background">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,6 +50,7 @@
         "name": "Lantern Row Bakehouse",
         "url": "https://www.example.com/bakery/",
         "description": "Slow-fermented croissants, pastries and sourdough baked in small batches in Singapore.",
+        "image": "https://www.example.com/bakery/img/hero-croissant-lilac.jpg",
         "telephone": "+65 0000 0000",
         "priceRange": "$$",
         "servesCuisine": ["French", "Pastry"],
@@ -217,7 +222,8 @@
       </div>
 
       <div class="hero__figure">
-        <svg class="hero__art" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated golden croissant under a magnifying glass, with a honeycomb crumb callout">
+        <img class="hero__photo" src="img/hero-croissant-lilac.jpg" width="1264" height="848" alt="Golden butter croissant resting on a lilac background" fetchpriority="high">
+        <svg class="hero__art" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
           <!-- metal arms -->
           <path d="M-20 690 L560 730 Q640 738 672 782" fill="none" stroke="url(#gMetal)" stroke-width="10" stroke-linecap="round"/>
           <path d="M1470 520 L1240 460 Q1190 448 1158 420" fill="none" stroke="url(#gMetal)" stroke-width="9" stroke-linecap="round"/>
@@ -227,11 +233,6 @@
           <circle cx="950" cy="320" r="140" fill="rgba(255,255,255,0.22)" stroke="url(#gMetal)" stroke-width="7"/>
           <path d="M860 250 Q900 210 960 200" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
           <path d="M1078 382 L1095 398" stroke="#9AA0A8" stroke-width="14" stroke-linecap="round"/>
-          <!-- shadows -->
-          <ellipse cx="1210" cy="600" rx="170" ry="60" fill="#7E5A90" opacity="0.28"/>
-          <ellipse cx="1100" cy="770" rx="220" ry="36" fill="#7E5A90" opacity="0.2"/>
-          <!-- croissant (rotated upright) -->
-          <use href="#croissant" x="745" y="190" width="420" height="600" transform="rotate(0 955 490)" style="filter: drop-shadow(0 18px 14px rgba(70,20,70,0.25))"/>
         </svg>
         <div class="hero__inset">
           <svg class="hero__inset-pattern" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true">

@@ -106,3 +106,16 @@ placeholder social URLs on example.com, geo set to central Singapore as a stand-
 | 9 | Chat / contact button | None | Fixed bottom-right "Chat with us" pill linking to #contact (footer); icon-only on mobile; aria-label set |
 
 Verification: exactly one h1, every img has alt, JSON-LD parses, no console errors, no horizontal overflow at 1440 or 390.
+
+## Photo slots (after section 9)
+
+| Slot | Status |
+|---|---|
+| Hero (acai bowls) | Photo: img/hero-acai-bowls.jpg, object-fit cover, same overlay as before |
+| Join Us tile (cafe team) | Photo: img/tile-cafe-team.jpg |
+| Our Menu tile (smoothies) | Photo: img/tile-smoothies.jpg |
+| Our Base tile (acai sorbet close-up) | Photo: img/tile-acai-sorbet.jpg (generated in section 9) |
+| Social tiles 1–3 (chia pudding, cart, blender pour) | Still drawn art: the generator quota was exhausted again after one image in section 9 |
+| Social tile 4 (counter) | Still drawn art |
+
+Photo count: 4 generated images in img/, about 464 KB total. Hero og:image and JSON-LD image point at img/hero-acai-bowls.jpg.

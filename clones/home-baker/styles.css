@@ -842,3 +842,15 @@ button { font: inherit; }
   .float-contact { padding: 14px; }
   .float-contact span { display: none; }
 }
+
+/* ==========================================================
+   Photo wiring (section 9): hero photo replaces the drawn hero art
+   ========================================================== */
+.hero-img { display: block; width: 100%; height: 100%; min-height: 441px; object-fit: cover; object-position: 60% 50%; }
+@media (max-width: 900px) {
+  .hero-img { min-height: 0; height: 100%; }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { min-width: 0; }
+}

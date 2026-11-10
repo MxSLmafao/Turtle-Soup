@@ -112,13 +112,21 @@ Source: the fnb-site-gaps checklist (nine gaps). All business data is placeholde
 | # | Gap | Before | After | Placeholders / notes |
 |---|-----|--------|-------|----------------------|
 | 1 | Image alt text | No `<img>` tags. Meaningful SVG art was `aria-hidden`, and the hero wrapper was `aria-hidden`. | 20 meaningful art SVGs have `role="img"` and a specific `aria-label`. Decorative SVGs stay `aria-hidden`. Hero wrapper no longer hidden. | No `<img>`, so width/height and lazy loading do not apply yet. Add them when photos replace the art. |
-| 2 | Local business structured data | None. | One JSON-LD graph: Organization, WebSite, a main Bakery and four outlet Bakery entries. Parses as valid JSON. | Street address, phone, geo (Singapore centre, placeholder), sample hours, hasMenu and OrderAction on example.com, sameAs on example.com. `image` omitted because there are no files in img/. |
+| 2 | Local business structured data | None. | One JSON-LD graph: Organization, WebSite, a main Bakery and four outlet Bakery entries. Parses as valid JSON. | Street address, phone, geo (Singapore centre, placeholder), sample hours, hasMenu and OrderAction on example.com, sameAs on example.com. `image` set to the hero photo on example.com. |
 | 3 | Heading structure | Footer used `<h4>` with no `<h3>` above it (skipped levels). | Exactly one `<h1>` (hero). Sections and footer use `<h2>`, cards use `<h3>`. | None. |
 | 4 | Title tag | "Cocoa Lane \| Chewy, Molten, Baked Daily" (brand plus slogan). | "Home Bakery Cookies and Brownies in Singapore \| Cocoa Lane" (58 characters). | Brand is the placeholder Cocoa Lane. |
 | 5 | Meta description | "Sample bakery homepage design study." | 144-character sentence on what is sold, where, and a call to action. | Singapore. |
-| 6 | Technical basics | `lang="en"`. No canonical, robots, Open Graph or Twitter tags. robots.txt and sitemap.xml absent. | `lang="en-SG"`. Canonical, robots meta, og:type/site_name/title/description/url/locale, twitter:card summary_large_image. robots.txt and sitemap.xml created. | `og:image` omitted: no files in img/. Canonical and sitemap use example.com. |
+| 6 | Technical basics | `lang="en"`. No canonical, robots, Open Graph or Twitter tags. robots.txt and sitemap.xml absent. | `lang="en-SG"`. Canonical, robots meta, og:type/site_name/title/description/url/locale, twitter:card summary_large_image. robots.txt and sitemap.xml created. | `og:image` now set to the hero photo (see section 9). Canonical and sitemap use example.com. |
 | 7 | Reviews | None. | Three sample reviews in the site's card style, first names only, labelled as sample in an HTML comment. | Mei, Daniel and Priya are invented. No real or attributable reviews. |
 | 8 | Newsletter sign-up | Input labelled (sr-only). Form had no accessible name. | Form has `aria-label="Newsletter sign-up"`. Input and button unchanged. | None. |
 | 9 | Floating contact button | None. | Fixed bottom-right "Contact us" pill linking to #contact. On mobile it becomes an icon-only circle with an aria-label. | Links to the in-page contact section, not a real phone or chat service. |
 
 Verification: one `<h1>`, zero `<img>`, JSON-LD parses, no console errors, no horizontal overflow at 1440 or 390, no source-brand names in the code files.
+
+## Photo slots (section 9)
+
+Wired: the hero photo `img/hero-cookie-box.jpg` (1264x848, 113 KB) replaces the drawn hero art. It is an `<img>` with alt text, width and height, and `fetchpriority="high"`. It fills the right half with `object-fit: cover`, and the existing left fade keeps the headline readable on desktop and mobile. It is also the `og:image`, `twitter:image` and JSON-LD `image`, all on https://www.example.com/home-baker/.
+
+Still drawn (SVG or gradient art, with role="img" labels): bestseller cards 1 to 4, the story split panel, ingredient tiles 1 to 4, location storefronts 1 to 5, and Instagram tiles 1 to 6. Image generation stopped at the first call: the quota error came back (429, reset in about 4h48m). The brief says not to retry, so no further photos were generated. img/ holds only the hero photo.
+
+Notes: the `.hero-svg` CSS rules are now unused but harmless.

@@ -19,8 +19,11 @@
   <meta property="og:description" content="Halden is an art deco lobby bar in Singapore serving classic cocktails, small plates and afternoon tea. Reserve a table online or call +65 0000 0000.">
   <meta property="og:url" content="https://www.example.com/bar/">
   <meta property="og:locale" content="en_SG">
+  <meta property="og:image" content="https://www.example.com/bar/img/hero-lobby-bar.jpg">
+  <meta property="og:image:alt" content="Art deco bar lounge with a gilded ceiling and a lit back bar">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Art Deco Lobby Bar and Cocktail Lounge in Singapore | Halden">
+  <meta name="twitter:image" content="https://www.example.com/bar/img/hero-lobby-bar.jpg">
   <meta name="twitter:description" content="Halden is an art deco lobby bar in Singapore serving classic cocktails, small plates and afternoon tea. Reserve a table online or call +65 0000 0000.">
   <script type="application/ld+json">
 {
@@ -82,7 +85,8 @@
       "sameAs": [
         "https://www.example.com/halden-facebook",
         "https://www.example.com/halden-instagram"
-      ]
+      ],
+      "image": "https://www.example.com/bar/img/hero-lobby-bar.jpg"
     },
     {
       "@type": "WebSite",
@@ -103,7 +107,11 @@
       "about": {
         "@id": "https://www.example.com/bar/#business"
       },
-      "inLanguage": "en-SG"
+      "inLanguage": "en-SG",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.example.com/bar/img/hero-lobby-bar.jpg"
+      }
     }
   ]
 }
@@ -115,6 +123,13 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gold2" x1="0" x2="1">
+      <stop offset="0" stop-color="#93574d"/><stop offset=".49" stop-color="#e69d80"/><stop offset="1" stop-color="#e59d7f"/>
+    </linearGradient>
+  </defs>
+</svg>
 <div class="home-hero">
   <header class="site-header">
     <div class="header-bar">
@@ -157,64 +172,7 @@
     </div>
   </header>
 
-  <svg class="hero-art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <defs>
-      <radialGradient id="glow" cx="50%" cy="78%" r="60%">
-        <stop offset="0" stop-color="#b06a3c" stop-opacity=".9"/>
-        <stop offset=".4" stop-color="#55301b" stop-opacity=".7"/>
-        <stop offset="1" stop-color="#0b0907" stop-opacity="1"/>
-      </radialGradient>
-      <linearGradient id="ceil" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#0c0a09"/><stop offset="1" stop-color="#2a1d14"/>
-      </linearGradient>
-      <linearGradient id="gold2" x1="0" x2="1">
-        <stop offset="0" stop-color="#93574d"/><stop offset=".49" stop-color="#e69d80"/><stop offset="1" stop-color="#e59d7f"/>
-      </linearGradient>
-      <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#1b130d"/><stop offset="1" stop-color="#0a0806"/>
-      </linearGradient>
-    </defs>
-    <rect width="1440" height="900" fill="url(#glow)"/>
-    <rect width="1440" height="260" fill="url(#ceil)"/>
-    <!-- ceiling sunburst fan -->
-    <g fill="none" stroke="#e5a082" stroke-opacity=".28" stroke-width="1.2">
-      <path d="M720 40 L400 -20 M720 40 L480 -40 M720 40 L560 -60 M720 40 L640 -70 M720 40 L800 -70 M720 40 L880 -60 M720 40 L960 -40 M720 40 L1040 -20"/>
-      <circle cx="720" cy="40" r="70"/><circle cx="720" cy="40" r="120"/><circle cx="720" cy="40" r="180"/>
-    </g>
-    <!-- arched bays -->
-    <g fill="#120d09" stroke="#e5a082" stroke-opacity=".32" stroke-width="1.2">
-      <path d="M90 900 V360 Q90 250 200 250 Q310 250 310 360 V900 Z"/>
-      <path d="M380 900 V330 Q380 220 500 220 Q620 220 620 330 V900 Z"/>
-      <path d="M820 900 V330 Q820 220 940 220 Q1060 220 1060 330 V900 Z"/>
-      <path d="M1130 900 V360 Q1130 250 1240 250 Q1350 250 1350 360 V900 Z"/>
-    </g>
-    <!-- pilasters -->
-    <g fill="url(#panel)" stroke="#e5a082" stroke-opacity=".22">
-      <rect x="40" y="240" width="28" height="660"/><rect x="1372" y="240" width="28" height="660"/>
-      <rect x="650" y="300" width="40" height="600"/><rect x="740" y="300" width="40" height="600"/>
-    </g>
-    <!-- banquettes -->
-    <g fill="#1a110b" stroke="#e5a082" stroke-opacity=".18">
-      <path d="M0 640 Q120 600 330 610 L330 900 L0 900 Z"/>
-      <path d="M1110 610 Q1320 600 1440 640 L1440 900 L1110 900 Z"/>
-    </g>
-    <!-- round tables with lamps -->
-    <g fill="#140e09" stroke="#e5a082" stroke-opacity=".3">
-      <ellipse cx="230" cy="760" rx="150" ry="36"/><ellipse cx="1210" cy="740" rx="130" ry="32"/>
-    </g>
-    <g fill="#e5a082" fill-opacity=".85">
-      <circle cx="1210" cy="690" r="3"/><circle cx="235" cy="720" r="3"/>
-    </g>
-    <!-- warm light pools on the floor -->
-    <ellipse cx="720" cy="880" rx="520" ry="110" fill="#c27a4a" fill-opacity=".22"/>
-    <ellipse cx="230" cy="740" rx="170" ry="60" fill="#e5a082" fill-opacity=".10"/>
-    <ellipse cx="1210" cy="720" rx="160" ry="55" fill="#e5a082" fill-opacity=".10"/>
-    <!-- wall lamps -->
-    <g fill="#f0c9a6">
-      <rect x="1290" y="600" width="6" height="30" fill-opacity=".5"/>
-      <path d="M1278 590 H1308 L1302 556 H1284 Z" fill-opacity=".35"/>
-    </g>
-  </svg>
+  <img class="hero-photo" src="img/hero-lobby-bar.jpg" width="1264" height="848" alt="Art deco bar lounge with a gilded coffered ceiling, a lit back bar and velvet armchairs around marble tables" fetchpriority="high">
 
   <div class="hero-titles">
     <div class="title-block">

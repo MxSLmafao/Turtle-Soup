@@ -112,3 +112,17 @@ Placeholders used: domain `https://www.example.com/private-chef/`, address "1 Sa
 | 9 | Chat or WhatsApp button | None | Fixed bottom-right accent circle with aria-label, 56px desktop and 52px mobile, placed to avoid the content column |
 
 Still open: og:image (add once a photo exists in img/); the newsletter form has no backend, so `action="#"` is a placeholder.
+
+## Photo slots
+
+| Slot | Status |
+|---|---|
+| Hero mosaic, tall tile in column 3 (plated dish and dining table) | Photo: `img/hero-chef-plating.jpg` (generated, 1024x1024, 127 KB), `object-fit: cover`, alt text set, also used for og:image and JSON-LD `image` |
+| Hero mosaic, other 8 tiles | Drawn art (gradient/SVG stand-ins) |
+| Intro collage (6 tiles) | Drawn art |
+| Menu carousel (4 tiles) | Drawn art |
+| Custom-menu mosaic (4 tiles) | Drawn art |
+| Chef cards (4 portraits) | Drawn art |
+| About photo (dining table) | Drawn art |
+
+Image generation: one photo generated. The next generation attempt hit the 429 quota error again (reset in about 4h48m), so generation stopped and no further images were made. Remaining slots stay drawn until quota resets and the brief's generation step is repeated.

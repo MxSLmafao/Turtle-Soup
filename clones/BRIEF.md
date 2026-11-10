@@ -123,3 +123,18 @@ clone. Rules specific to the clones:
   show no overflow and the new sections look right; no console errors.
 - Add a "## Gap fixes" table to NOTES.md (nine gaps, before/after, placeholders used).
 Report briefly. Same rules: only your clones/<slug>/ folder, no git, no subagents, no image generation.
+
+## 9. Wire in hero photo and fill remaining photo slots (follow-up)
+A generated hero photo now exists in your `img/` folder (list the folder; Read the image to see it).
+1. Wire it into your hero (or the most prominent photo slot if the hero is not a photo in the source),
+   replacing the drawn art there: same crop/object-fit, overlays and text contrast as the source layout.
+   Add alt text or role="img"+aria-label, width/height. If the page has several hero slides, use it for
+   slide 1. Add `og:image` (and JSON-LD `image`) pointing at it on your placeholder domain.
+2. Then generate up to 4 more photos for your most visible remaining photo slots (cards, tiles,
+   split panels), following section 7b rules exactly (similar-looking new photos, "no text, no logos,
+   no brand names, no watermarks, no packaging labels", look at each image before using it, PIL
+   optimise, under ~300 KB each). Stop generating at the first quota/429 error; do not retry.
+3. Private scratch `<scratchpad>/img-<slug>/`. Verify at 1440 and 390: hero text readable over the
+   photo, no overflow, no console errors, no broken image paths.
+4. Update NOTES.md (which slots are photos, which are still drawn). Report briefly: images wired,
+   images generated, slots still drawn. Only your clones/<slug>/ folder, no git, no subagents.

@@ -128,3 +128,18 @@ Checked against `.claude/skills/fnb-site-gaps/SKILL.md`. Placeholder business da
 Footer social links now point to example.com placeholders and open in a new tab.
 
 Open items: og:image is omitted (no img/ folder, since photo generation is blocked by quota). Coordinates are placeholders and should be replaced with the real location. Reviews are sample content and must be replaced with real, attributable reviews before launch.
+
+## Photo slots (section 9)
+
+| Slot in source | Clone | Status |
+|---|---|---|
+| Hero background (full-bleed lobby photo) | `img/hero-lobby-bar.jpg` (1264x848, JPEG q80, 240 KB), `object-fit: cover`, `object-position: center bottom`, scrim 0.25 to 0.45 | Photo (generated, new) |
+| Popup image 1 (afternoon tea, 250x250) | Drawn SVG in index.html | Still drawn. Generation hit a 429 quota error and was not retried, per the brief |
+| Popup image 2 (festive gifting, 250x250) | Drawn SVG in index.html | Still drawn. Not attempted after the quota error |
+
+Images generated: 1 (hero). Total img/ size: 240 KB. Hidden blog and tile photos in the source are commented out and do not render, so they are not slots.
+Hero image: `og:image`, `twitter:image` and JSON-LD `image` point to `https://www.example.com/bar/img/hero-lobby-bar.jpg`.
+
+## Navigation (desktop)
+
+Items now sit on one row at 1440px. The list starts at x 110 (after the logo, as in the source) and uses `space-between`. Item padding is 4px and the text is unchanged at 12px with 3.2px tracking. Gaps are about 10px, tighter than the source's. Below 1400px the nav may wrap, as a fallback.

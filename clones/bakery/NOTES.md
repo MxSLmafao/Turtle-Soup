@@ -138,3 +138,23 @@ Open after the gap-fix pass:
 - og:image (see gap 6).
 - The JSON-LD `image` property is omitted for the same reason.
 - Geo coordinates are the Singapore centre, not a real address. Replace with the real address when known.
+
+## Photo slots (section 9)
+
+Status after the hero wiring pass (2026-11-10). Only one generated photo exists.
+
+| Slot | Original | Clone now | File |
+|---|---|---|---|
+| Hero (desktop: right-hand panel, feathered mask; mobile: full-width photo under the stamp) | Full-bleed photo of an upright croissant on lilac, with a magnifier and honeycomb callout over it | Generated photo `img/hero-croissant-lilac.jpg` (1264x848, 65 KB, alt text set). Magnifier, arms and honeycomb callout are still drawn over it. On mobile the drawn magnifier and arms are hidden. | photo |
+| Product studio image (660x660) | Studio photo: two croissants and espresso cup on dark-to-cream backdrop | Drawn SVG | still drawn |
+| Process centre card (544x543) | Close-up of hands holding a croissant broken open | Drawn SVG swirl | still drawn |
+| Process side cards (354x435) | Dough layers close-up; butter close-up | CSS textures with stamp labels | still drawn |
+| Pairing cutouts (about 380px) | Pain au chocolat; latte cup on cutout blob | Drawn SVG | still drawn |
+| Gallery cards (4 x 325x577) | Iced drink; café interior; picnic on lawn; strawberry pastries | Drawn SVG | still drawn |
+| Phone screen | UI illustration | Drawn | kept as drawn (it is UI, not a photo) |
+
+Generation attempts: in this pass the only generation call (the product image) returned a 429 quota error ("reset after 4h48m"), so generation stopped as the brief requires and the other four slots were not attempted. Those four slots are the next priority once quota returns.
+
+Scratch and verification: `<scratchpad>/img-bakery/`. Checked at 1440 and 390: hero text readable over the photo, no overflow, no console errors, no broken image paths, one h1, JSON-LD parses, `og:image`, `twitter:image` and JSON-LD `image` all point to `https://www.example.com/bakery/img/hero-croissant-lilac.jpg`.
+
+Note: the "Generated photography (7b)" section above is superseded for the hero slot.

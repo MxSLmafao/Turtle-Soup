@@ -126,3 +126,18 @@ Checklist from the fnb-site-gaps skill, applied to this clone. Placeholder data 
 | 9 | Chat / WhatsApp button | Present: floating pill bottom-right with `aria-label`, reduced to a 44px circle on phones. | Unchanged. Checked: does not cover the footer copyright (bottom padding reserved) or other controls. | Placeholder link `#chat`. |
 
 Checks: one `h1`; JSON-LD parses; no `<img>` tags; no horizontal overflow at 390 or 1440; no console errors.
+
+## Photo slots (section 9)
+
+| Slot | Original | Clone | Status |
+|---|---|---|---|
+| Hero right half (desktop), full-width panel (phone) | Food photography on the right of the hero | `img/hero-meal-trays.jpg` (overhead sample meal-prep containers on a plain lilac field, 1264x848, 117 KB). Object-fit cover, positioned right, with a left gradient so the text stays readable. Alt text set; `fetchpriority="high"`; width and height set. | Photo |
+| Hero collage labels and drawn trays | Five labels around the photo | Removed. The photo carries the visual and the copy column stays clean. | Replaced |
+| Popular meal cards (4) | Overhead meal photos | Drawn SVG trays with labels, aria-labelled as sample illustrations | Still drawn |
+| Dine-in banner background | Restaurant interior photo | Drawn gradient | Still drawn |
+| Option card headers (4) | Full-bleed cartoon illustrations | Drawn SVG trays | Illustration, not a photo |
+| Footer and sustainability badges | Colour logos | Neutral drawn shapes | Placeholder by design |
+
+Image generation: the first attempt in this round returned a 429 quota error (reset in about 4h48m). Per the brief, generation stopped there and no further images were attempted. The only generated image in `img/` is the hero photo above. Remaining photo slots stay drawn.
+
+Metadata: `og:image`, `og:image:alt`, `twitter:image` and the JSON-LD `image` all point at `https://www.example.com/meal-prep/img/hero-meal-trays.jpg`.

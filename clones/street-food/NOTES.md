@@ -104,3 +104,22 @@ placeholder social URLs on example.com, placeholder coordinates 1.3 / 103.8 (app
 
 Left open: the Subscribe form and chat button are not wired to any service. The sample review copy and
 placeholder coordinates should be replaced before launch.
+
+## Photo slots
+Generated photos live in img/ (4 files, about 580 KB total). Each was checked by eye before use.
+
+| Slot | Status | File |
+|------|--------|------|
+| Hero (full-bleed, 665px desktop / 180px mobile) | photo | img/hero-kitchen-steam.jpg (also og:image and JSON-LD image) |
+| Intro panel (full-bleed behind copy) | photo | img/intro-chicken-rice.jpg |
+| Recommendation card 1 | photo | img/reco-chicken-rice-plate.jpg |
+| Recommendation card 2 | photo | img/reco-roast-pork-beans.jpg |
+| Recommendation card 3 | drawn art (quota) | none |
+| Recommendation card 4 | drawn art (quota) | none |
+| Link tile: Our Locations | drawn art | none |
+| Link tile: Career | drawn art | none |
+| Link tile: News | drawn art | none |
+| Link tile: Contact Us | drawn art | none |
+
+The hero has no text overlay, so there is no text contrast to check. Image generation hit the quota
+again after the 4th request in this round, so the remaining slots stay drawn.
